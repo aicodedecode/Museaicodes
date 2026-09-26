@@ -44,6 +44,12 @@ export default function ReferralCodes({ compact = false }: { compact?: boolean }
           accounts may receive promotional credit subject to Muse&rsquo;s
           current terms — terms vary, confirm in the app.
         </p>
+        <a
+          href="/guides/muse-ai-referral-code#community-codes-h"
+          className="mt-4 inline-block text-sm font-bold text-accent underline-offset-4 hover:underline"
+        >
+          Have your own code? Share it with readers →
+        </a>
       </div>
     </Reveal>
   );
