@@ -67,7 +67,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.baseUrl },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE.baseUrl}/#guides` },
+      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE.baseUrl}/guides` },
       { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
     ],
   };
@@ -82,7 +82,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Guides", href: "/#guides" },
+              { label: "Guides", href: "/guides" },
               { label: guide.title },
             ]}
           />
@@ -136,7 +136,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                 All 15 guides
               </p>
               <Link
-                href="/#guides"
+                href="/guides"
                 className="mt-2 inline-block font-bold text-accent underline-offset-4 hover:underline"
               >
                 Browse the full library →

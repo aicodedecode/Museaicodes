@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { FAQS } from "@/lib/faqs";
-import { GUIDES } from "@/lib/guides";
+import { GUIDES, getGuide } from "@/lib/guides";
 import Reveal from "@/components/Reveal";
 import HeroConsole from "@/components/HeroConsole";
 import PromptLibrary from "@/components/PromptLibrary";
-import GuideSearch from "@/components/GuideSearch";
 import FaqAccordion from "@/components/FaqAccordion";
 import ReferralCodes from "@/components/ReferralCodes";
-import CompareTable from "@/components/CompareTable";
+import GuideCard from "@/components/GuideCard";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
 import { CopyButton } from "@/components/Toast";
@@ -27,8 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-const compareGuide = GUIDES.find((g) => g.slug === "muse-ai-vs-chatgpt-claude-meta-ai")!;
-
 function SectionHead({
   index,
   label,
@@ -42,16 +39,16 @@ function SectionHead({
 }) {
   return (
     <Reveal>
-      <div className="mb-12 grid gap-6 md:grid-cols-[170px_1fr]">
+      <div className="mb-8 grid gap-6 md:grid-cols-[170px_1fr]">
         <p className="kicker md:pt-3">
           {index} / {label}
         </p>
         <div>
-          <h2 className="font-display max-w-[850px] text-[clamp(2.4rem,5.4vw,4.5rem)] font-bold leading-[1.02] tracking-tight">
+          <h2 className="font-display max-w-[850px] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.02] tracking-tight">
             {title}
           </h2>
           {copy && (
-            <p className="mt-5 max-w-[670px] text-[1.1rem] text-muted">{copy}</p>
+            <p className="mt-4 max-w-[670px] text-[1.05rem] text-muted">{copy}</p>
           )}
         </div>
       </div>
@@ -101,7 +98,18 @@ const REDEEM_STEPS = [
 
 const TICKER_ITEMS = ["Research deeper", "Build faster", "Write clearer", "Automate the repeatable", "Turn ideas into artifacts"];
 
+const FEATURED_SLUGS = [
+  "what-is-muse-ai",
+  "muse-ai-invite-code",
+  "muse-ai-tutorial",
+  "muse-ai-billion-tokens",
+  "muse-ai-vs-chatgpt-claude-meta-ai",
+  "muse-ai-whatsapp",
+];
+
 export default function HomePage() {
+  const featured = FEATURED_SLUGS.map((s) => getGuide(s)!).filter(Boolean);
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -127,7 +135,7 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd} />
 
       {/* ---------- HERO ---------- */}
-      <section aria-labelledby="hero-title" className="mx-auto grid max-w-shell items-center gap-12 px-5 pb-14 pt-14 md:grid-cols-[1.05fr_0.75fr] md:px-6 md:pt-20">
+      <section aria-labelledby="hero-title" className="mx-auto grid max-w-shell items-center gap-12 px-5 pb-12 pt-14 md:grid-cols-[1.05fr_0.75fr] md:px-6 md:pt-20">
         <Reveal>
           <p className="flex justify-between gap-4 border-b border-line pb-3 font-mono text-xs uppercase tracking-[0.1em] text-faint">
             <span>Muse field notes / 01</span>
@@ -183,7 +191,7 @@ export default function HomePage() {
       </div>
 
       {/* ---------- 01 START HERE ---------- */}
-      <section id="start" aria-labelledby="start-h" className="mx-auto max-w-shell px-5 py-24 md:px-6 md:py-28">
+      <section id="start" aria-labelledby="start-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
         <SectionHead
           index="01"
           label="Start here"
@@ -208,7 +216,7 @@ export default function HomePage() {
 
       {/* ---------- REFERRAL STRIP ---------- */}
       <aside aria-label="Referral invitation" className="bg-moss text-moss-ink">
-        <div className="mx-auto grid max-w-shell items-center gap-8 px-5 py-11 md:grid-cols-[1fr_auto] md:px-6">
+        <div className="mx-auto grid max-w-shell items-center gap-8 px-5 py-10 md:grid-cols-[1fr_auto] md:px-6">
           <Reveal>
             <h2 className="font-display text-[clamp(1.9rem,4vw,3.1rem)] font-bold leading-tight tracking-tight">
               Explore the Muse token offer.
@@ -235,7 +243,7 @@ export default function HomePage() {
       </aside>
 
       {/* ---------- 02 PROMPT LIBRARY ---------- */}
-      <section id="prompts" aria-labelledby="prompts-h" className="mx-auto max-w-shell px-5 py-24 md:px-6 md:py-28">
+      <section id="prompts" aria-labelledby="prompts-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
         <SectionHead
           index="02"
           label="Prompt library"
@@ -247,15 +255,15 @@ export default function HomePage() {
 
       {/* ---------- 03 USE CASES (inverted) ---------- */}
       <section aria-labelledby="use-h" className="bg-ink text-bg">
-        <div className="mx-auto max-w-shell px-5 py-24 md:px-6 md:py-28">
+        <div className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
           <Reveal>
-            <div className="mb-12 grid gap-6 md:grid-cols-[170px_1fr]">
+            <div className="mb-8 grid gap-6 md:grid-cols-[170px_1fr]">
               <p className="kicker !text-bg/60 md:pt-3">03 / Use cases</p>
               <div>
-                <h2 id="use-h" className="font-display max-w-[850px] text-[clamp(2.4rem,5.4vw,4.5rem)] font-bold leading-[1.02] tracking-tight">
+                <h2 id="use-h" className="font-display max-w-[850px] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.02] tracking-tight">
                   One agent. Many kinds of work.
                 </h2>
-                <p className="mt-5 max-w-[670px] text-[1.1rem] text-bg/70">
+                <p className="mt-4 max-w-[670px] text-[1.05rem] text-bg/70">
                   Use Muse as a thinking partner, maker, researcher, and
                   operator — then keep human judgment at the important checkpoints.
                 </p>
@@ -278,42 +286,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- 04 GUIDE LIBRARY ---------- */}
-      <section id="guides" aria-labelledby="guides-h" className="mx-auto max-w-shell px-5 py-24 md:px-6 md:py-28">
+      {/* ---------- 04 FEATURED GUIDES ---------- */}
+      <section aria-labelledby="featured-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
         <SectionHead
           index="04"
-          label="Guide library"
-          title="15 focused Muse AI guides."
-          copy="Each guide begins with a direct answer, then adds practical steps, limits, and next actions. Search the library or open any article."
+          label="Featured guides"
+          title="Start with the guides that matter most."
+          copy="A shortlist of the essentials. The full library — all 15 guides with category tabs and search — lives on its own page."
         />
-        <GuideSearch />
-      </section>
-
-      <AdSlot />
-
-      {/* ---------- 05 COMPARE ---------- */}
-      <section id="compare" aria-labelledby="compare-h" className="mx-auto max-w-shell px-5 py-24 md:px-6 md:py-28">
-        <SectionHead
-          index="05"
-          label="Comparison"
-          title="Muse AI vs ChatGPT vs Claude vs Meta AI."
-          copy="Compare positioning, workflow, access, and best-fit tasks — not just brand names. There is no universal winner."
-        />
-        <Reveal>
-          <div className="rounded-2xl border border-line bg-surface p-5 md:p-8">
-            {compareGuide.table && <CompareTable table={compareGuide.table} />}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {featured.map((g, i) => (
+            <Reveal key={g.slug} delay={Math.min(i, 5) * 60} className="h-full">
+              <GuideCard guide={g} />
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={120}>
+          <div className="mt-10 flex justify-center">
             <Link
-              href="/guides/muse-ai-vs-chatgpt-claude-meta-ai"
-              className="mt-6 inline-flex items-center gap-2 font-bold text-accent underline-offset-4 hover:underline"
+              href="/guides"
+              className="inline-flex items-center gap-2 rounded-xl bg-ink px-7 py-4 font-bold text-bg transition-transform duration-150 hover:-translate-y-0.5"
             >
-              Read the full comparison guide <span aria-hidden="true">→</span>
+              Browse all {GUIDES.length} guides <span aria-hidden="true">→</span>
             </Link>
           </div>
         </Reveal>
       </section>
 
+      <AdSlot />
+
       {/* ---------- SKILLS BANNER ---------- */}
-      <section aria-labelledby="skills-h" className="mx-auto max-w-shell px-5 pb-24 md:px-6 md:pb-28">
+      <section aria-labelledby="skills-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <Reveal>
           <div className="grid items-center gap-8 rounded-[30px] bg-ink p-8 text-bg md:p-14 lg:grid-cols-[1fr_auto]">
             <div>
@@ -342,10 +345,10 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ---------- 06 REDEEM ---------- */}
-      <section id="redeem" aria-labelledby="redeem-h" className="mx-auto max-w-shell px-5 pb-24 md:px-6 md:pb-28">
+      {/* ---------- 05 REDEEM ---------- */}
+      <section id="redeem" aria-labelledby="redeem-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="06"
+          index="05"
           label="Get access"
           title="Join, redeem, and start building."
           copy="Choose either referral code. Redeem it within the eligibility window displayed in your Muse account."
@@ -374,16 +377,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- 07 FAQ ---------- */}
-      <section id="faq" aria-labelledby="faq-h" className="mx-auto max-w-shell px-5 pb-24 md:px-6 md:pb-28">
-        <SectionHead index="07" label="FAQ" title="The useful questions, answered plainly." />
+      {/* ---------- 06 FAQ ---------- */}
+      <section id="faq" aria-labelledby="faq-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
+        <SectionHead index="06" label="FAQ" title="The useful questions, answered plainly." />
         <Reveal>
           <FaqAccordion faqs={FAQS} />
         </Reveal>
       </section>
 
       {/* ---------- FINAL CTA ---------- */}
-      <section aria-labelledby="final-h" className="mx-auto max-w-shell px-5 pb-24 md:px-6 md:pb-32">
+      <section aria-labelledby="final-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-24">
         <Reveal>
           <div className="grid items-end gap-8 rounded-[30px] bg-accent p-8 text-accent-ink md:p-14 lg:grid-cols-[1fr_auto]">
             <div>
@@ -397,10 +400,10 @@ export default function HomePage() {
               </p>
             </div>
             <Link
-              href="#guides"
+              href="/guides"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-accent-ink px-6 py-4 font-bold text-accent transition-transform duration-150 hover:-translate-y-0.5 lg:justify-self-end"
             >
-              Choose a guide <span aria-hidden="true">↗</span>
+              Choose a guide <span aria-hidden="true">→</span>
             </Link>
           </div>
         </Reveal>

@@ -37,7 +37,7 @@ export default function AboutPage() {
       <ul>
         <li>
           <strong>15 focused guides</strong> — from “What is Muse AI?” to invite codes,
-          tutorials, reviews, and use cases. <a href="/#guides">Browse the library</a>.
+          tutorials, reviews, and use cases. <a href="/guides">Browse the library</a>.
         </li>
         <li>
           <strong>A copy-ready prompt library</strong> — starting points you can adapt to

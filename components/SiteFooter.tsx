@@ -42,12 +42,12 @@ export default function SiteFooter() {
         >
           <FooterGroup title="Site">
             <li>
-              <Link href="/#guides" className={linkCls}>
-                15 guides
+              <Link href="/guides" className={linkCls}>
+                Guides
               </Link>
             </li>
             <li>
-              <Link href="/#compare" className={linkCls}>
+              <Link href="/compare" className={linkCls}>
                 Compare
               </Link>
             </li>

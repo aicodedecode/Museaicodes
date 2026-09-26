@@ -2,11 +2,31 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { NAV_LINKS } from "@/lib/site";
+import { usePathname } from "next/navigation";
+import { NAV_LINKS, REDEEM_HREF } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
+
+/** True when the link's route matches the current page (exact for "/", prefix for the rest). */
+function isActiveLink(href: string, pathname: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+const desktopLinkCls = (active: boolean) =>
+  `rounded-lg px-3 py-2 text-sm font-semibold transition-colors duration-150 ${
+    active
+      ? "bg-raised text-ink"
+      : "text-muted hover:text-ink hover:bg-raised"
+  }`;
+
+const mobileLinkCls = (active: boolean) =>
+  `block rounded-lg px-2 py-3 text-[1.05rem] font-semibold transition-colors duration-150 ${
+    active ? "text-accent" : "text-ink"
+  }`;
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
@@ -21,17 +41,21 @@ export default function SiteHeader() {
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="rounded-lg px-3 py-2 text-sm font-semibold text-muted transition-colors duration-150 hover:text-ink hover:bg-raised"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((l) => {
+            const active = isActiveLink(l.href, pathname);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={desktopLinkCls(active)}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
           <Link
-            href="/#redeem"
+            href={REDEEM_HREF}
             className="ml-2 rounded-lg bg-ink px-4 py-2.5 text-sm font-bold text-bg transition-transform duration-150 hover:-translate-y-0.5"
           >
             Get access
@@ -58,16 +82,20 @@ export default function SiteHeader() {
 
       {open && (
         <div id="mobile-nav" className="border-t border-line px-5 py-3 md:hidden">
-          {[...NAV_LINKS, { href: "/#redeem", label: "Get access →" }].map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block rounded-lg px-2 py-3 text-[1.05rem] font-semibold text-ink"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {[...NAV_LINKS, { href: REDEEM_HREF, label: "Get access →" }].map((l) => {
+            const active = isActiveLink(l.href, pathname);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                aria-current={active ? "page" : undefined}
+                className={mobileLinkCls(active)}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </div>
       )}
     </header>

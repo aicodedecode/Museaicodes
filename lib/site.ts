@@ -12,8 +12,10 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
-  { href: "/#start", label: "Start" },
-  { href: "/#guides", label: "Guides" },
-  { href: "/#compare", label: "Compare" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/", label: "Home" },
+  { href: "/guides", label: "Guides" },
+  { href: "/compare", label: "Compare" },
+  { href: "/about", label: "About" },
 ] as const;
+
+export const REDEEM_HREF = "/#redeem" as const;

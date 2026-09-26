@@ -12,7 +12,7 @@ export default function NotFound() {
         ones do.
       </p>
       <Link
-        href="/#guides"
+        href="/guides"
         className="mt-8 inline-flex rounded-xl bg-accent px-6 py-3.5 font-bold text-accent-ink transition-transform duration-150 hover:-translate-y-0.5"
       >
         Browse all guides

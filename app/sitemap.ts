@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 import { GUIDES } from "@/lib/guides";
 
-/** All 23 URLs: homepage + 15 guide articles + 7 info/legal pages. */
+/** All 25 URLs: homepage + guides index + compare + 15 guide articles + 7 info/legal pages. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.baseUrl;
   const infoPages: { slug: string; priority: number; changeFrequency: "monthly" | "yearly" }[] = [
@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-09-26"),
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${base}/guides`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/compare`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     ...GUIDES.map((g) => ({
       url: `${base}/guides/${g.slug}`,
