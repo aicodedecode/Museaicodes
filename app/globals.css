@@ -9,6 +9,10 @@
  *  Stagger 40-90ms. All motion disabled under prefers-reduced-motion.
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg: #0c0d0a;
   --surface: #141611;
