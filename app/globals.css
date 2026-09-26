@@ -1,0 +1,185 @@
+/*
+ * Muse Hub design system.
+ * Editorial, warm, confident. No gradients, no glassmorphism.
+ * Dark is the default theme; .light overrides the tokens.
+ *
+ * Motion tokens (animation-systems skill):
+ *  --dur-micro 120-200ms (hovers) · --dur-ui 180-260ms (toggles)
+ *  --dur-rise 400-800ms (section entrances) · --ease-out gentle settle
+ *  Stagger 40-90ms. All motion disabled under prefers-reduced-motion.
+ */
+
+:root {
+  --bg: #0c0d0a;
+  --surface: #141611;
+  --raised: #1b1e16;
+  --ink: #f2efe4;
+  --muted: #a6ab99;
+  --faint: #7c8172;
+  --line: #2a2e24;
+  --accent: #ff6b47;
+  --accent-ink: #1b0c06;
+  --moss: #9ed7b4;
+  --moss-ink: #0a2a1a;
+  --focus: #8fb4ff;
+
+  --dur-micro: 160ms;
+  --dur-ui: 220ms;
+  --dur-rise: 620ms;
+  --ease-out: cubic-bezier(0.22, 0.8, 0.22, 1);
+  --shadow: 0 24px 64px rgba(0, 0, 0, 0.38);
+}
+
+.light {
+  --bg: #f4f1e6;
+  --surface: #fcfbf5;
+  --raised: #efe9d8;
+  --ink: #171510;
+  --muted: #5f5b4c;
+  --faint: #8a8471;
+  --line: #dcd5bf;
+  --accent: #c23f14;
+  --accent-ink: #fff7ef;
+  --moss: #1e5b3f;
+  --moss-ink: #eef7f0;
+  --focus: #1a56db;
+  --shadow: 0 24px 60px rgba(23, 21, 16, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.0625rem; /* 17px — mobile reading distance */
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  transition: background-color var(--dur-ui) var(--ease-out),
+    color var(--dur-ui) var(--ease-out);
+}
+
+/* ---- Type hierarchy (web-typography skill) ---- */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  text-wrap: balance; /* no orphaned headline words */
+}
+
+.prose-muse {
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  line-height: 1.7;
+  max-width: 68ch; /* 45–75ch optimal measure */
+}
+.prose-muse p + p { margin-top: 1.1em; }
+.prose-muse h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 2.2em 0 0.6em;
+  text-wrap: balance;
+}
+.prose-muse h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1.8em 0 0.5em;
+}
+.prose-muse ul, .prose-muse ol {
+  padding-left: 1.4em;
+  margin: 0.9em 0;
+}
+.prose-muse li + li { margin-top: 0.45em; }
+.prose-muse a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+}
+.prose-muse strong { color: var(--ink); }
+
+.kicker {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* ---- Focus (a11y: visible, ≥3:1) ---- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  left: 1rem;
+  top: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+  border-radius: 8px;
+  transform: translateY(-200%);
+  transition: transform var(--dur-ui) var(--ease-out);
+}
+.skip-link:focus { transform: none; }
+
+/* ---- Scroll reveal (animation-systems: fade + rise, once) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--dur-rise) var(--ease-out),
+    transform var(--dur-rise) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Ticker ---- */
+@keyframes ticker-scroll {
+  to { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 26s linear infinite;
+}
+
+/* ---- Reduced motion: content stays visible, motion becomes instant ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .ticker-track { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* ---- Thin scrollbars that don't fight the palette ---- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+  border: 2px solid var(--bg);
+}
