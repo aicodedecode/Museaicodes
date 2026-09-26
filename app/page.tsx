@@ -8,6 +8,7 @@ import HeroConsole from "@/components/HeroConsole";
 import PromptLibrary from "@/components/PromptLibrary";
 import FaqAccordion from "@/components/FaqAccordion";
 import ReferralCodes from "@/components/ReferralCodes";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import GuideCard from "@/components/GuideCard";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
@@ -313,6 +314,57 @@ export default function HomePage() {
         </Reveal>
       </section>
 
+      {/* ---------- TOOLS STRIP ---------- */}
+      <section aria-labelledby="tools-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
+        <SectionHead
+          index="05"
+          label="Tools"
+          title="Play with the interactive tools."
+          copy="Estimators, a quiz, and living pages that stay current."
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/token-calculator",
+              title: "Token Calculator",
+              desc: "How far do Muse tokens actually go? Dial in your usage.",
+            },
+            {
+              href: "/quiz",
+              title: "Which AI Fits You?",
+              desc: "5 questions → an honest Muse, ChatGPT, Claude, or Meta AI match.",
+            },
+            {
+              href: "/offer-status",
+              title: "Offer Status",
+              desc: "The referral offer right now — checked and dated.",
+            },
+            {
+              href: "/updates",
+              title: "News & Updates",
+              desc: "Muse traction, features, and official resources, verified.",
+            },
+          ].map((t, i) => (
+            <Reveal key={t.href} delay={i * 60} className="h-full">
+              <Link
+                href={t.href}
+                className="group flex h-full flex-col rounded-[22px] border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow)]"
+              >
+                <span className="font-display text-[1.3rem] font-bold tracking-tight group-hover:text-accent">
+                  {t.title}
+                </span>
+                <span className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                  {t.desc}
+                </span>
+                <span className="mt-4 text-sm font-bold text-accent">
+                  Open <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       <AdSlot />
 
       {/* ---------- SKILLS BANNER ---------- */}
@@ -345,10 +397,10 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ---------- 05 REDEEM ---------- */}
+      {/* ---------- 06 REDEEM ---------- */}
       <section id="redeem" aria-labelledby="redeem-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="05"
+          index="06"
           label="Get access"
           title="Join, redeem, and start building."
           copy="Choose either referral code. Redeem it within the eligibility window displayed in your Muse account."
@@ -377,12 +429,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- 06 FAQ ---------- */}
+      {/* ---------- 07 FAQ ---------- */}
       <section id="faq" aria-labelledby="faq-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
-        <SectionHead index="06" label="FAQ" title="The useful questions, answered plainly." />
+        <SectionHead index="07" label="FAQ" title="The useful questions, answered plainly." />
         <Reveal>
           <FaqAccordion faqs={FAQS} />
         </Reveal>
+      </section>
+
+      {/* ---------- NEWSLETTER ---------- */}
+      <section aria-label="Newsletter" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
+        <div className="mx-auto max-w-[760px]">
+          <NewsletterSignup />
+        </div>
       </section>
 
       {/* ---------- FINAL CTA ---------- */}

@@ -79,6 +79,33 @@ export default function SiteFooter() {
               </Link>
             </li>
           </FooterGroup>
+          <FooterGroup title="Tools">
+            <li>
+              <Link href="/token-calculator" className={linkCls}>
+                Token Calculator
+              </Link>
+            </li>
+            <li>
+              <Link href="/quiz" className={linkCls}>
+                AI Quiz
+              </Link>
+            </li>
+            <li>
+              <Link href="/offer-status" className={linkCls}>
+                Offer Status
+              </Link>
+            </li>
+            <li>
+              <Link href="/videos" className={linkCls}>
+                Videos
+              </Link>
+            </li>
+            <li>
+              <Link href="/updates" className={linkCls}>
+                Updates
+              </Link>
+            </li>
+          </FooterGroup>
           <FooterGroup title="Legal">
             <li>
               <Link href="/privacy" className={linkCls}>

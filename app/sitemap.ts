@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 import { GUIDES } from "@/lib/guides";
 
-/** All 25 URLs: homepage + guides index + compare + 15 guide articles + 7 info/legal pages. */
+/** All 30 URLs: homepage + guides/compare/updates/offer-status/quiz/videos/token-calculator + 15 guide articles + 7 info/legal pages. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.baseUrl;
   const infoPages: { slug: string; priority: number; changeFrequency: "monthly" | "yearly" }[] = [
@@ -32,6 +32,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-09-26"),
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${base}/updates`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/offer-status`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/token-calculator`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/quiz`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/videos`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     ...GUIDES.map((g) => ({
       url: `${base}/guides/${g.slug}`,
