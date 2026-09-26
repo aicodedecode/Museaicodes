@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Muse Hub",
   domain: "museaicodes.com",
-  baseUrl: "https://museaicodes.com",
+  baseUrl: "https://www.museaicodes.com",
   tagline: "The ultimate unofficial Muse AI guide hub",
   description:
     "Independent Muse AI guides: invite and referral codes, tutorials, WhatsApp tips, use cases, reviews, and honest comparisons with ChatGPT, Claude, and Meta AI.",

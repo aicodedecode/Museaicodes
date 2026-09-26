@@ -81,9 +81,9 @@ export const GUIDES: Guide[] = [
     deck: "Use an invite safely and verify the terms attached to your account.",
     category: "Access",
     keywords: "muse ai invite code, muse invite code, muse ai access code",
-    metaTitle: "Muse AI Invite Code: How Access Works (2026) | Muse Hub",
+    metaTitle: "Muse AI Invite Code: Get Access & Redeem Yours (2026) | Muse Hub",
     metaDescription:
-      "How Muse AI invite codes work, when to redeem one, what to verify first — plus working codes 3C77QC and N8DCUB with tap-to-copy.",
+      "Muse AI invite code guide: how invite codes work, when to redeem one in the app, what to verify first — plus working codes 3C77QC and N8DCUB with tap-to-copy.",
     shortAnswer:
       "A Muse AI invite code is a code shared by an existing user. If your account is eligible, enter it in Muse's invite or redeem screen within the window displayed there.",
     sections: [
@@ -120,9 +120,9 @@ export const GUIDES: Guide[] = [
     deck: "What referrers and new users should check before sharing a code.",
     category: "Access",
     keywords: "muse ai referral code, muse referral code, muse ai refer",
-    metaTitle: "Muse AI Referral Code Guide: Sharing Safely (2026) | Muse Hub",
+    metaTitle: "Muse AI Referral Code: How It Works & How to Redeem (2026) | Muse Hub",
     metaDescription:
-      "A practical guide to Muse AI referral codes: how they work, eligibility, safe sharing, and what both sides should verify before redeeming.",
+      "Muse AI referral code explained: how referral codes work, where to redeem (Settings → General), eligibility, and working codes 3C77QC and N8DCUB with tap-to-copy.",
     shortAnswer:
       "A Muse AI referral code connects a new eligible account with an existing user's invitation. Reward amounts are promotional, not universal guarantees.",
     sections: [
@@ -160,9 +160,9 @@ export const GUIDES: Guide[] = [
     deck: "Where to enter a code and how to confirm that it worked.",
     category: "Access",
     keywords: "muse ai redeem code, redeem muse code, muse code redemption",
-    metaTitle: "Muse AI Redeem Code: Step-by-Step Redemption (2026) | Muse Hub",
+    metaTitle: "Muse AI Redeem Code: Where to Enter It, Step by Step (2026) | Muse Hub",
     metaDescription:
-      "Where to enter a Muse AI redeem code, what to check before and after, and how to confirm the reward applied to your account.",
+      "Where to enter your Muse AI redeem code: step-by-step redemption in the app, what to check before and after, and how to confirm the reward applied.",
     shortAnswer:
       "Open the invite or redeem area in your Muse account, enter an eligible code, and check the resulting confirmation or balance. The exact menu can change as the product evolves.",
     sections: [
@@ -307,7 +307,7 @@ export const GUIDES: Guide[] = [
     deck: "Compare positioning, workflow, access, and best-fit tasks — not just brand names.",
     category: "Comparison",
     keywords: "muse ai vs chatgpt, muse ai vs claude, muse ai vs meta ai, ai assistant comparison",
-    metaTitle: "Muse AI vs ChatGPT vs Claude vs Meta AI (2026) | Muse Hub",
+    metaTitle: "Muse AI vs ChatGPT vs Claude vs Meta AI: Honest Comparison (2026) | Muse Hub",
     metaDescription:
       "Muse AI vs ChatGPT vs Claude vs Meta AI: an honest side-by-side comparison of positioning, workflows, access, and which assistant fits which task.",
     shortAnswer:
@@ -544,9 +544,9 @@ export const GUIDES: Guide[] = [
     deck: "Make short messages produce useful, structured work.",
     category: "WhatsApp",
     keywords: "muse ai whatsapp, muse whatsapp, use muse on whatsapp",
-    metaTitle: "Muse AI WhatsApp Guide: Chat Tips (2026) | Muse Hub",
+    metaTitle: "Muse AI on WhatsApp: Setup & Chat Tips (2026) | Muse Hub",
     metaDescription:
-      "How to use Muse AI on WhatsApp effectively: message habits that produce structured work, and the channel limits to know about.",
+      "How to use Muse AI on WhatsApp: setup, message habits that produce structured work, and the channel limits to know about.",
     shortAnswer:
       "If Muse is available in your WhatsApp experience, use it like a project conversation: send the goal, relevant context, desired format, and feedback in a focused thread.",
     sections: [
