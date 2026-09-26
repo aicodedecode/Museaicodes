@@ -23,9 +23,13 @@ export interface Guide {
   metaTitle: string;
   metaDescription: string;
   shortAnswer: string;
+  image: string;
+  imageAlt: string;
   sections: GuideSection[];
   table?: GuideTable;
 }
+
+import { SITE } from "./site";
 
 /**
  * Inline link syntax inside paragraph strings: [anchor text](https://url)
@@ -35,6 +39,8 @@ export interface Guide {
 export const GUIDES: Guide[] = [
   {
     slug: "what-is-muse-ai",
+    image: "/images/guides/what-is-muse-ai.jpg",
+    imageAlt: "Editorial illustration of Meta's Muse AI personal agent surrounded by task icons",
     title: "What Is Muse AI? A Clear Beginner's Guide",
     deck: "Understand what Muse is, what it can do, and where it fits among personal AI agents.",
     category: "Basics",
@@ -43,13 +49,28 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "What is Muse AI? A plain-English beginner's guide to Meta's personal AI agent — what it does, what it's good at, and how access works.",
     shortAnswer:
-      "Muse is Meta's personal AI agent: a conversational assistant designed to help move from a request to useful work such as research, plans, writing, visuals, and digital artifacts.",
+      "Muse is Meta's personal AI agent: a conversational assistant designed to carry work from a request to a finished output — research, plans, writing, visuals, and digital artifacts. As of September 2026, it is available in the US and Canada.",
     sections: [
       {
         heading: "Muse in one paragraph",
         paragraphs: [
           "Most chatbots answer questions and stop. Muse is built to carry work further: you describe an outcome, add context, and it helps produce something finished — a researched brief, a plan, a draft, a page, or a repeatable workflow. Think of it less as a search box and more as a capable collaborator that stays with a task from the first message to the final output.",
           "Like every AI product, what Muse can do depends on your account, your region, and the current version of the product. The capabilities below describe the general direction of the product, not a promise about any specific account.",
+        ],
+      },
+      {
+        heading: "Muse's fast start",
+        paragraphs: [
+          "Muse launched on September 8, 2026, and adoption has been unusually fast. Sensor Tower estimates put downloads above 3.4 million within weeks — other firms' estimates range from roughly 2.3 million to 4.3 million, and these are third-party estimates, not Meta's own numbers. On September 18 it reached #1 on the US App Store, followed by #1 on Google Play on September 19. For context, Sensor Tower reports Muse averaged 55% day-over-day download growth in its first two weeks, versus 24% for ChatGPT's launch — though download charts measure curiosity, not long-term retention.",
+          "Availability is currently limited to the US and Canada, as of September 2026. At its Meta Connect conference, Meta announced upcoming features including video chat with the Muse avatar, computer use on Mac, a dedicated email address, more connectors and partners, and smart-glasses integrations.",
+        ],
+      },
+      {
+        heading: "How Meta designed it",
+        paragraphs: [
+          "Meta's design notes describe Muse as an agent that acts, not just answers. The first line of its system prompt reads: “Your purpose is to make your user's life better.” To act on that, Muse has its own computer — a file system and terminal for writing code and building tools — plus a full web browser for searching, filling forms, and completing bookings and purchases.",
+          "Finished work arrives as Artifacts: documents, PDFs, web pages, spending trackers, study guides, or dashboards. Muse keeps working in the background on goals and schedules, notifying you only when something is meaningfully new. One long-running main chat stays interruptible (you can send several tasks at once), side chats hold separate topics, and memory persists across conversations.",
+          "Control is explicit: structured approval cards for consequential actions, human-in-the-loop checks before emails or purchases (standard browsing is allowed by default; hard-to-undo actions stop for review), a Goals tab for long-running tasks, permission controls you can tighten or loosen, and memory files you can read and edit. You can also name Muse, design its avatar, and dial its proactive messages up, down, or off.",
         ],
       },
       {
@@ -73,10 +94,23 @@ export const GUIDES: Guide[] = [
           "Access, channels, features, and usage limits can differ by region and account. If you are still waiting for access, the [invite code guide](/guides/muse-ai-invite-code) explains how invitations work.",
         ],
       },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
     ],
   },
   {
     slug: "muse-ai-invite-code",
+    image: "/images/guides/muse-ai-invite-code.jpg",
+    imageAlt: "Illustration of a vintage key unlocking a glowing doorway, symbolizing a Muse AI invite code",
     title: "Muse AI Invite Code: How Access Works",
     deck: "Use an invite safely and verify the terms attached to your account.",
     category: "Access",
@@ -116,6 +150,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-referral-code",
+    image: "/images/guides/muse-ai-referral-code.jpg",
+    imageAlt: "Illustration of two people exchanging a glowing gift, symbolizing a Muse AI referral code",
     title: "Muse AI Referral Code Guide",
     deck: "What referrers and new users should check before sharing a code.",
     category: "Access",
@@ -156,6 +192,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-redeem-code",
+    image: "/images/guides/muse-ai-redeem-code.jpg",
+    imageAlt: "Illustration of a ticket being stamped with approval, symbolizing Muse AI code redemption",
     title: "Muse AI Redeem Code: Step-by-Step",
     deck: "Where to enter a code and how to confirm that it worked.",
     category: "Access",
@@ -184,6 +222,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-to-get-muse-ai",
+    image: "/images/guides/how-to-get-muse-ai.jpg",
+    imageAlt: "Illustration of stepping stones leading to a glowing doorway, symbolizing getting Muse AI access",
     title: "How to Get Muse AI",
     deck: "A simple access path without relying on unofficial downloads.",
     category: "Access",
@@ -217,6 +257,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-tutorial",
+    image: "/images/guides/muse-ai-tutorial.jpg",
+    imageAlt: "Illustration of a compass over a map with a start flag, symbolizing a Muse AI beginner tutorial",
     title: "Muse AI Tutorial: Your First 15 Minutes",
     deck: "Turn a vague idea into one useful result with a repeatable workflow.",
     category: "Tutorial",
@@ -250,6 +292,13 @@ export const GUIDES: Guide[] = [
         ],
       },
       {
+        heading: "Use what makes Muse different",
+        paragraphs: [
+          "Prompting skill transfers everywhere, but a few Muse-native habits are worth learning early. Give finished work a home as an Artifact — ask for a study guide, tracker, or page rather than a wall of text. Park ongoing work in the Goals tab so Muse keeps at it in the background and reports back only when something is new. Use side chats to keep separate projects from contaminating each other's context.",
+          "And expect to be asked: Muse pauses for approval before consequential actions like sending an email or making a purchase. Treat those approval cards as part of the workflow, not an interruption — they're how you stay in charge while the agent does the legwork.",
+        ],
+      },
+      {
         heading: "Your first-15-minutes checklist",
         list: {
           ordered: false,
@@ -261,10 +310,23 @@ export const GUIDES: Guide[] = [
           ],
         },
       },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
     ],
   },
   {
     slug: "how-to-use-muse-ai",
+    image: "/images/guides/how-to-use-muse-ai.jpg",
+    imageAlt: "Illustration of hands shaping clay into a document, symbolizing how to use Muse AI effectively",
     title: "How to Use Muse AI for Better Results",
     deck: "A practical method for clearer prompts and stronger review.",
     category: "Workflow",
@@ -294,15 +356,35 @@ export const GUIDES: Guide[] = [
         ],
       },
       {
+        heading: "Work the agent way",
+        paragraphs: [
+          "Muse keeps working after you close the app — ask it to monitor something (prices, dates, inboxes) and it follows up on a schedule or when events change, notifying you only when the result is worth your attention. Its memory persists across conversations, and you can read and edit those memory files directly if it ever remembers something wrong.",
+          "Proactive messages are part of the design: Muse may message you without being asked when it spots something useful. If that ever feels like noise, tell it to dial the proactivity down or turn it off — the default is tuned for most people, not everyone.",
+        ],
+      },
+      {
         heading: "Keep humans at the checkpoints",
         paragraphs: [
           "Let Muse do the drafting, researching, and organizing. Keep approval with a human for anything consequential: money, hiring, legal language, medical decisions, or anything published under your name. Review important facts against primary sources.",
         ],
       },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
     ],
   },
   {
     slug: "muse-ai-vs-chatgpt-claude-meta-ai",
+    image: "/images/guides/muse-ai-vs-chatgpt-claude-meta-ai.jpg",
+    imageAlt: "Illustration of four different pillars in a row, symbolizing Muse AI vs ChatGPT vs Claude vs Meta AI",
     title: "Muse AI vs ChatGPT vs Claude vs Meta AI",
     deck: "Compare positioning, workflow, access, and best-fit tasks — not just brand names.",
     category: "Comparison",
@@ -363,6 +445,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-claude",
+    image: "/images/guides/muse-ai-vs-claude.jpg",
+    imageAlt: "Illustration of two abstract forms in dialogue, symbolizing Muse AI vs Claude comparison",
     title: "Muse AI vs Claude: Which Fits Your Workflow?",
     deck: "Choose based on the work you repeat, not a generic ranking.",
     category: "Comparison",
@@ -396,6 +480,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-download",
+    image: "/images/guides/muse-ai-download.jpg",
+    imageAlt: "Illustration of a download arrow landing in a safe box with a shield, symbolizing safe Muse AI download",
     title: "Muse AI Download: Find the Official Access Route",
     deck: "Avoid clones and verify the source before installing anything.",
     category: "Safety",
@@ -428,6 +514,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-billion-tokens",
+    image: "/images/guides/muse-ai-billion-tokens.jpg",
+    imageAlt: "Illustration of glowing tokens rising from an open hand, symbolizing Muse AI token rewards",
     title: "Muse AI 1 Billion Tokens: What the Offer Means",
     deck: "Separate the headline from the terms that actually apply.",
     category: "Tokens",
@@ -461,6 +549,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-review",
+    image: "/images/guides/muse-ai-review.jpg",
+    imageAlt: "Illustration of a magnifying glass examining shapes, symbolizing an honest Muse AI review",
     title: "Muse AI Review: Strengths, Limits, and Best Fit",
     deck: "A balanced review framework for deciding if Muse belongs in your workflow.",
     category: "Review",
@@ -491,15 +581,36 @@ export const GUIDES: Guide[] = [
         ],
       },
       {
+        heading: "Reception and momentum",
+        paragraphs: [
+          "Early reception has been strong. Within about two weeks of its September 8, 2026 launch, Muse reached #1 on the US App Store (September 18) and #1 on Google Play (September 19). Sensor Tower estimates more than 3.4 million downloads in that window — other firms estimate between roughly 2.3 and 4.3 million — with daily active users climbing 27% the day after Meta's Connect keynote, per Sensor Tower data reported by TechCrunch.",
+          "At Meta Connect, Meta announced what's next: video chat with the Muse avatar, computer use on Mac, a dedicated email address for Muse, more connectors and partners, and smart-glasses integrations. Notably, TechCrunch reports only about 6% of early download impressions came from Meta's own ads — most growth so far has been organic.",
+          "Treat all of this as a snapshot, not a verdict: launch charts measure curiosity, and the review that matters is whether the product earns a daily habit.",
+        ],
+      },
+      {
         heading: "Who it's best for",
         paragraphs: [
           "Muse fits people who think in projects rather than questions: creators, researchers, planners, and builders who want a collaborator that carries work to completion. If you mostly need quick factual answers inside social apps, a lighter assistant may serve you better.",
         ],
       },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
     ],
   },
   {
     slug: "muse-ai-use-cases",
+    image: "/images/guides/muse-ai-use-cases.jpg",
+    imageAlt: "Illustration of a grid of nine idea panels, symbolizing practical Muse AI use cases",
     title: "Muse AI Use Cases: 12 Practical Ideas",
     deck: "Useful projects for work, study, creativity, and everyday planning.",
     category: "Ideas",
@@ -531,15 +642,40 @@ export const GUIDES: Guide[] = [
         },
       },
       {
+        heading: "Agent-native ideas",
+        list: {
+          ordered: true,
+          items: [
+            "Set a goal — say, tracking a price or monitoring a topic — and let Muse work it in the background, checking the Goals tab for progress.",
+            "Ask for an Artifact instead of an answer: a spending tracker, an interactive study guide, or a dashboard over your own data.",
+            "Connect an app, then have Muse draft the email or booking while you keep the final approval.",
+            "Name it, give it an avatar, and treat it like a long-running collaboration: one main chat, side chats per project.",
+          ],
+        },
+      },
+      {
         heading: "Go deeper with skills",
         paragraphs: [
           "General prompting covers a lot, but specialized starting instructions go further. Explore [899 original Muse skills](https://aimuse-rho.vercel.app/) across coding, design, research, productivity, and marketing — each one is a reusable playbook you can hand to Muse for sharper results.",
         ],
       },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
     ],
   },
   {
     slug: "muse-ai-whatsapp",
+    image: "/images/guides/muse-ai-whatsapp.jpg",
+    imageAlt: "Illustration of flowing chat bubbles, symbolizing using Muse AI on WhatsApp",
     title: "Muse AI WhatsApp Guide",
     deck: "Make short messages produce useful, structured work.",
     category: "WhatsApp",
@@ -574,6 +710,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "is-muse-ai-free",
+    image: "/images/guides/is-muse-ai-free.jpg",
+    imageAlt: "Illustration of an open gift box with light streaming out, symbolizing free Muse AI access",
     title: "Is Muse AI Free? Costs, Limits, and What to Check",
     deck: "Understand free access, promotional tokens, and account-specific limits.",
     category: "Cost",
@@ -582,7 +720,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "Is Muse AI free? How to verify pricing, free access, usage limits, and promotional token terms for your specific account.",
     shortAnswer:
-      "Muse may provide free access or promotional usage, but the plan, token balance, limits, and eligibility shown in your account are what apply to you.",
+      "Meta says Muse is free with a usage limit: when you reach it, you can upgrade to a paid subscription or wait for the limit to refresh. As of September 2026, the exact allowance and plan details for your account are shown in the app itself.",
     sections: [
       {
         heading: "Where to check",
@@ -596,10 +734,28 @@ export const GUIDES: Guide[] = [
         },
       },
       {
+        heading: "What Meta officially says",
+        paragraphs: [
+          "Meta's own FAQ puts it plainly: Muse is available for free with a usage limit. If you reach your free limit and want more, you can upgrade to a paid subscription — or wait until your free usage limit refreshes. Meta does not publish the exact size of the free allowance on its public product page, so treat third-party numbers as unverified.",
+          "This is also why referral headlines and pricing are different things: a promotion adds a one-time balance; the plan determines what happens when any balance runs out.",
+        ],
+      },
+      {
         heading: "Don't confuse offers with pricing",
         paragraphs: [
           "A referral headline is a promotion, not permanent pricing — and the cost of a plan is different from how many tokens a specific task consumes. Product offers can change, so verify the live terms in your account rather than relying on what you read online, including on this page.",
         ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
       },
     ],
   },
@@ -626,5 +782,5 @@ export function guideUrl(slug: string): string {
 }
 
 export function guideCanonical(slug: string): string {
-  return `https://museaicodes.com/guides/${slug}`;
+  return `${SITE.baseUrl}/guides/${slug}`;
 }

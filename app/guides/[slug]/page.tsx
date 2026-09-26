@@ -18,6 +18,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const guide = getGuide(params.slug);
   if (!guide) return {};
   const canonical = guideCanonical(guide.slug);
+  const ogImage = `${SITE.baseUrl}${guide.image}`;
   return {
     title: guide.metaTitle,
     description: guide.metaDescription,
@@ -31,11 +32,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       siteName: SITE.name,
       publishedTime: "2026-09-26T00:00:00+05:30",
       modifiedTime: "2026-09-26T00:00:00+05:30",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: guide.imageAlt }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: guide.metaTitle,
       description: guide.metaDescription,
+      images: [ogImage],
     },
   };
 }
@@ -53,6 +56,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     "@type": "Article",
     headline: guide.title,
     description: guide.metaDescription,
+    image: `${SITE.baseUrl}${guide.image}`,
     inLanguage: "en",
     datePublished: "2026-09-26",
     dateModified: "2026-09-26",

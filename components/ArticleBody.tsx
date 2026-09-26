@@ -38,6 +38,21 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
         </p>
       </div>
 
+      <figure className="not-prose my-8 overflow-hidden rounded-2xl border border-line">
+        <img
+          src={guide.image}
+          alt={guide.imageAlt}
+          width={1200}
+          height={600}
+          loading="lazy"
+          decoding="async"
+          className="h-auto w-full"
+        />
+        <figcaption className="border-t border-line bg-raised px-5 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
+          Illustration: Muse Hub
+        </figcaption>
+      </figure>
+
       {guide.sections.map((section) => (
         <section key={section.heading} aria-label={section.heading}>
           <h2>{section.heading}</h2>
