@@ -6,6 +6,7 @@ import { GUIDES, getGuide, relatedGuides, guideCanonical } from "@/lib/guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleBody from "@/components/ArticleBody";
 import ReferralCodes from "@/components/ReferralCodes";
+import CommunityCodes from "@/components/CommunityCodes";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import AdSlot from "@/components/AdSlot";
@@ -105,6 +106,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1fr_360px]">
           <Reveal delay={80}>
             <ArticleBody guide={guide} />
+            {guide.slug === "muse-ai-referral-code" && <CommunityCodes />}
             <AdSlot />
 
             <section aria-labelledby="related-h" className="mt-16">

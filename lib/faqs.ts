@@ -39,4 +39,9 @@ export const FAQS: Faq[] = [
     answer:
       "No. This is an independent learning resource and referral guide for Muse. It is not affiliated with or endorsed by Meta.",
   },
+  {
+    question: "Can I share my own Muse referral code on this site?",
+    answer:
+      "Yes. Email your code to aiprofit.in@gmail.com and we will review it and publish it in the community codes section of the referral guide with your name. Our own codes always stay featured at the top.",
+  },
 ];
