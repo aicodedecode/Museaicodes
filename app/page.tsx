@@ -373,16 +373,18 @@ export default function HomePage() {
           <div className="grid items-center gap-8 rounded-[30px] bg-ink p-8 text-bg md:p-14 lg:grid-cols-[1fr_auto]">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-moss">
-                899 original skills · Open catalog
+                899 originals + 1,466 curated imports · Open catalog
               </span>
               <h2 id="skills-h" className="font-display mt-4 max-w-[740px] text-[clamp(2.1rem,5vw,3.9rem)] font-bold leading-[1.05] tracking-tight">
                 Supercharge Muse with a skill built for the job.
               </h2>
               <p className="mt-4 max-w-[670px] text-bg/70">
-                Awesome Muse Skills is an independent catalog of 899 original,
-                reusable skill guides across coding, design, research,
-                productivity, marketing, and more. Browse by category and copy
-                the ones that fit your workflow.
+                Awesome Muse Skills is an independent catalog of 2,365
+                reusable skill guides: 899 originals written for Muse, plus
+                1,466 curated imports — the best open-source skills from
+                across GitHub, safety-reviewed and republished with
+                attribution. Browse by category and copy the ones that fit
+                your workflow.
               </p>
             </div>
             <a
