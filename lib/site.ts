@@ -6,7 +6,7 @@ export const SITE = {
   description:
     "Independent Muse AI guides: invite and referral codes, tutorials, WhatsApp tips, use cases, reviews, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   referralCodes: ["3C77QC", "N8DCUB"] as const,
-  skillsUrl: "https://aimuse-rho.vercel.app/",
+  skillsUrl: "https://museai-eight.vercel.app/",
   contactEmail: "aiprofit.in@gmail.com",
   updated: "September 26, 2026",
 } as const;

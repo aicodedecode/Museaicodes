@@ -288,7 +288,7 @@ export const GUIDES: Guide[] = [
         heading: "Refine, don't restart",
         paragraphs: [
           "The first draft is a starting point, not a verdict. Once it appears, ask Muse to flag its own assumptions, improve the weakest section, and show what changed. Two focused refinement rounds usually beat five fresh attempts.",
-          "For specialized workflows beyond general prompting, browse the [awesome-muse-skills catalog](https://aimuse-rho.vercel.app/) — 899 original skill guides across coding, design, research, and productivity that give Muse sharper starting instructions.",
+          "For specialized workflows beyond general prompting, browse the [awesome-muse-skills catalog](https://museai-eight.vercel.app/) — 2,365 skill guides (899 originals plus 1,466 curated imports) across coding, design, research, and productivity that give Muse sharper starting instructions.",
         ],
       },
       {
@@ -656,7 +656,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Go deeper with skills",
         paragraphs: [
-          "General prompting covers a lot, but specialized starting instructions go further. Explore [899 original Muse skills](https://aimuse-rho.vercel.app/) across coding, design, research, productivity, and marketing — each one is a reusable playbook you can hand to Muse for sharper results.",
+          "General prompting covers a lot, but specialized starting instructions go further. Explore [2,365 Muse skills](https://museai-eight.vercel.app/) across coding, design, research, productivity, and marketing — each one is a reusable playbook you can hand to Muse for sharper results.",
         ],
       },
       {
