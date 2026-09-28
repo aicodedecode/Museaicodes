@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: "guides", priority: 0.9, changeFrequency: "weekly" },
     { slug: "compare", priority: 0.9, changeFrequency: "monthly" },
     { slug: "news", priority: 0.9, changeFrequency: "weekly" },
+    { slug: "tools", priority: 0.9, changeFrequency: "weekly" },
+    { slug: "prompts", priority: 0.9, changeFrequency: "weekly" },
     { slug: "codes", priority: 0.9, changeFrequency: "weekly" },
     { slug: "templates", priority: 0.9, changeFrequency: "weekly" },
     { slug: "encyclopedia", priority: 0.9, changeFrequency: "weekly" },
