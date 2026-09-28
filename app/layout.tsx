@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     template: "%s | Muse Hub",
   },
   description: SITE.description,
+  // Brand icons: app/favicon.ico, app/icon.png and app/apple-icon.png are
+  // served automatically by Next.js file conventions; manifest linked here.
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
@@ -68,6 +71,7 @@ export const metadata: Metadata = {
     title: "Muse AI Guide: Invite Codes, Tutorials & Comparisons",
     description: SITE.description,
     url: SITE.baseUrl,
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub — Muse AI guides, codes & tutorials" }],
   },
   twitter: {
     card: "summary",

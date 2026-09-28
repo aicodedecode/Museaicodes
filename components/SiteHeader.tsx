@@ -33,7 +33,27 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
       <nav aria-label="Main navigation" className="mx-auto flex min-h-[68px] max-w-shell items-center justify-between gap-4 px-5 md:px-6">
-        <Link href="/" className="flex items-baseline gap-2.5" aria-label="Muse Hub home">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Muse Hub home">
+          {/* Animated brand mark: Jolly in the Christmas dress, smiling and waving.
+              Static poster shows for prefers-reduced-motion. */}
+          <span className="block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-1 ring-line">
+            <video
+              className="h-full w-full object-cover motion-reduce:hidden"
+              src="/images/brand/jolly-logo-animated.mp4"
+              poster="/images/brand/jolly-logo-poster.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-hidden="true"
+            />
+            <img
+              className="hidden h-full w-full object-cover motion-reduce:block"
+              src="/images/brand/jolly-logo.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
           <span className="font-display text-[1.45rem] font-bold tracking-tight">
             Muse<span className="text-accent">·</span>Hub
           </span>
