@@ -93,6 +93,16 @@ export default function TokenCalculatorPage() {
                   What the “1 billion tokens” offer means →
                 </Link>
               </p>
+              <p>
+                Comparing per-token API prices across providers instead? Try
+                our{" "}
+                <Link
+                  href="/tools/token-price-compare"
+                  className="font-bold text-accent underline-offset-4 hover:underline"
+                >
+                  AI token price comparison →
+                </Link>
+              </p>
             </div>
           </div>
         </Reveal>

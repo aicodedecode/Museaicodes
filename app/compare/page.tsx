@@ -66,7 +66,15 @@ export default function ComparePage() {
           <p className="mt-4 max-w-[670px] text-muted">
             Positions shift as products evolve — verify current plan pages
             before making price- or feature-specific decisions. There is no
-            universal winner; there is only the right fit for your work.
+            universal winner; there is only the right fit for your work.{" "}
+            Comparing API costs instead of consumer plans? See the{" "}
+            <Link
+              href="/tools/token-price-compare"
+              className="font-bold text-accent underline-offset-4 hover:underline"
+            >
+              AI token price comparison
+            </Link>
+            .
           </p>
         </Reveal>
 

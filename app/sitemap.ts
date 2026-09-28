@@ -41,6 +41,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "task-generator",
     "prompt-optimizer",
     "workflow-generator",
+    "availability-checker",
+    "connector-wizard",
+    "muse-challenge",
+    "token-price-compare",
   ];
 
   const appSurfaces = ["android", "iphone", "web", "whatsapp", "mac"];

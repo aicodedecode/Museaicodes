@@ -86,6 +86,34 @@ export const INTERACTIVE_TOOLS: ToolEntry[] = [
     tag: "Planner",
     badge: "New",
   },
+  {
+    href: "/tools/availability-checker",
+    title: "Muse Availability Checker",
+    deck: "Is Muse available in your country? Check instantly",
+    tag: "Checker",
+    badge: "New",
+  },
+  {
+    href: "/tools/connector-wizard",
+    title: "Connector Setup Wizard",
+    deck: "Get Muse working with Gmail, Calendar, WhatsApp & more",
+    tag: "Setup",
+    badge: "New",
+  },
+  {
+    href: "/tools/muse-challenge",
+    title: "30 Things to Try with Muse",
+    deck: "An interactive challenge with progress tracking",
+    tag: "Challenge",
+    badge: "New",
+  },
+  {
+    href: "/tools/token-price-compare",
+    title: "AI Token Price Comparison",
+    deck: "Compare per-token API prices: GPT, Claude, Gemini, Grok & more",
+    tag: "Comparator",
+    badge: "New",
+  },
 ];
 
 export interface Integration {
