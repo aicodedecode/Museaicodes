@@ -20,8 +20,7 @@ export interface CommunityCode {
  * always featured and highlighted separately at the top of the section.
  */
 export const COMMUNITY_CODES: CommunityCode[] = [
-  // Example entry (uncomment and fill when the first real submission arrives):
-  // { code: "ABC123", name: "Reader", added: "September 2026" },
+  { code: "ZB1CJM", name: "A010", added: "September 2026" },
 ];
 
 /** Prefilled email for submitting a code for review. */
