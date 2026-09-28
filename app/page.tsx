@@ -293,7 +293,7 @@ export default function HomePage() {
           index="04"
           label="Featured guides"
           title="Start with the guides that matter most."
-          copy="A shortlist of the essentials. The full library — all 15 guides with category tabs and search — lives on its own page."
+          copy="A shortlist of the essentials. The full library — all 26 guides with category tabs and search — lives on its own page."
         />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((g, i) => (

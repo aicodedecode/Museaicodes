@@ -8,7 +8,7 @@ export const SITE = {
   referralCodes: ["3C77QC", "N8DCUB"] as const,
   skillsUrl: "https://museai-eight.vercel.app/",
   contactEmail: "aiprofit.in@gmail.com",
-  updated: "September 26, 2026",
+  updated: "September 28, 2026",
 } as const;
 
 export const NAV_LINKS = [

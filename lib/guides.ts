@@ -27,6 +27,7 @@ export interface Guide {
   imageAlt: string;
   sections: GuideSection[];
   table?: GuideTable;
+  modifiedTime: string;
 }
 
 import { SITE } from "./site";
@@ -39,6 +40,7 @@ import { SITE } from "./site";
 export const GUIDES: Guide[] = [
   {
     slug: "what-is-muse-ai",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/what-is-muse-ai.jpg",
     imageAlt: "Editorial illustration of Meta's Muse AI personal agent surrounded by task icons",
     title: "What Is Muse AI? A Clear Beginner's Guide",
@@ -91,7 +93,7 @@ export const GUIDES: Guide[] = [
         heading: "What should beginners remember?",
         paragraphs: [
           "Describe the desired result first, then provide only the context that matters — audience, constraints, source material, tone, deadline. Review important claims instead of trusting polished output, and keep approval with a human for anything consequential.",
-          "Access, channels, features, and usage limits can differ by region and account. If you are still waiting for access, the [invite code guide](/guides/muse-ai-invite-code) explains how invitations work.",
+          "Access, channels, features, and usage limits can differ by region and account. If you are still waiting for access, the [invite code guide](/guides/muse-ai-invite-code) explains how invitations work. Once you're in, [meet Jolly](/guides/muse-ai-jolly-avatar) — Muse's customizable avatar — and browse [what people actually use Muse for](/guides/muse-ai-use-cases). [Shopping with Muse](/guides/muse-ai-shopping) is the standout example — an agent that buys, not just chats. For everyday workflow patterns, see [how to use Muse AI](/guides/how-to-use-muse-ai).",
         ],
       },
       {
@@ -109,6 +111,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-invite-code",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-invite-code.jpg",
     imageAlt: "Illustration of a vintage key unlocking a glowing doorway, symbolizing a Muse AI invite code",
     title: "Muse AI Invite Code: How Access Works",
@@ -137,7 +140,7 @@ export const GUIDES: Guide[] = [
         heading: "What to verify before you redeem",
         paragraphs: [
           "Do not assume every code produces the same reward. Promotions can change by account, region, and date. Check three things on the redeem screen itself: who is eligible, the deadline for entering the code, and what the current reward actually is.",
-          "Reward amounts are promotional and vary — the in-app screen is the source of truth for your account. Never enter invite codes on third-party pages that ask for your login; the code goes inside the official Muse product only.",
+          "Reward amounts are promotional and vary — the in-app screen is the source of truth for your account. Never enter invite codes on third-party pages that ask for your login; the code goes inside the official Muse product only. Our [referral code guide](/guides/muse-ai-referral-code) explains codes from existing users, and the [redeem guide](/guides/muse-ai-redeem-code) walks through entering one. [How to get Muse AI](/guides/how-to-get-muse-ai) covers the whole access journey end to end.",
         ],
       },
       {
@@ -150,6 +153,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-referral-code",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-referral-code.jpg",
     imageAlt: "Illustration of two people exchanging a glowing gift, symbolizing a Muse AI referral code",
     title: "Muse AI Referral Code Guide",
@@ -166,7 +170,7 @@ export const GUIDES: Guide[] = [
         heading: "Invite code vs referral code",
         paragraphs: [
           "People use the terms interchangeably, and in practice they usually mean the same thing: a code from an existing user that a new account enters. The important distinction is the in-app rule — the screen should explain who qualifies, the deadline, and whether both parties receive a benefit.",
-          "If you're the one sharing, you're the referrer; if you're entering it, you're the new user. Both sides should read the same terms screen.",
+          "If you're the one sharing, you're the referrer; if you're entering it, you're the new user. Both sides should read the same terms screen. For the headline 1-billion-token offer specifically, see our [billion-tokens breakdown](/guides/muse-ai-billion-tokens); when you're ready to enter a code, use the [redeem guide](/guides/muse-ai-redeem-code).",
         ],
       },
       {
@@ -192,6 +196,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-redeem-code",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-redeem-code.jpg",
     imageAlt: "Illustration of a ticket being stamped with approval, symbolizing Muse AI code redemption",
     title: "Muse AI Redeem Code: Step-by-Step",
@@ -208,7 +213,7 @@ export const GUIDES: Guide[] = [
         heading: "Before you redeem",
         paragraphs: [
           "Check the deadline shown in your account first. If an invitation is time-limited, waiting can make an otherwise valid code ineligible — some offers expect redemption within a short window after joining, so don't sit on a code.",
-          "Make sure you're signed into the right account. Rewards attach to the account that redeems the code, and there's usually no way to move them later.",
+          "Make sure you're signed into the right account. Once the code is accepted, our [tutorial](/guides/muse-ai-tutorial) picks up where the redeem screen leaves off; the [invite code guide](/guides/muse-ai-invite-code) covers getting codes in the first place. Rewards attach to the account that redeems the code, and there's usually no way to move them later.",
         ],
       },
       {
@@ -222,6 +227,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-to-get-muse-ai",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/how-to-get-muse-ai.jpg",
     imageAlt: "Illustration of stepping stones leading to a glowing doorway, symbolizing getting Muse AI access",
     title: "How to Get Muse AI",
@@ -250,13 +256,14 @@ export const GUIDES: Guide[] = [
         heading: "If Muse is not available yet",
         paragraphs: [
           "Availability can roll out unevenly across regions and accounts. While you wait, avoid unofficial APKs, cloned download pages, or anyone requesting your credentials — these are the most common ways people get scammed around a hyped launch.",
-          "The safest move is patience: wait for an official route or an invitation tied to a real account. In the meantime, the [tutorial](/guides/muse-ai-tutorial) will have you ready for your first fifteen minutes.",
+          "The safest move is patience: wait for an official route or an invitation tied to a real account. You can also [join the early access program](/guides/muse-ai-early-access-program) for upcoming features, and check [current availability](/guides/muse-ai-availability) for your region. In the meantime, the [tutorial](/guides/muse-ai-tutorial) will have you ready for your first fifteen minutes.",
         ],
       },
     ],
   },
   {
     slug: "muse-ai-tutorial",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-tutorial.jpg",
     imageAlt: "Illustration of a compass over a map with a start flag, symbolizing a Muse AI beginner tutorial",
     title: "Muse AI Tutorial: Your First 15 Minutes",
@@ -295,7 +302,7 @@ export const GUIDES: Guide[] = [
         heading: "Use what makes Muse different",
         paragraphs: [
           "Prompting skill transfers everywhere, but a few Muse-native habits are worth learning early. Give finished work a home as an Artifact — ask for a study guide, tracker, or page rather than a wall of text. Park ongoing work in the Goals tab so Muse keeps at it in the background and reports back only when something is new. Use side chats to keep separate projects from contaminating each other's context.",
-          "And expect to be asked: Muse pauses for approval before consequential actions like sending an email or making a purchase. Treat those approval cards as part of the workflow, not an interruption — they're how you stay in charge while the agent does the legwork.",
+          "And expect to be asked: Muse pauses for approval before consequential actions like sending an email or making a purchase. For sharper requests from day one, see [10 prompts that get better results](/guides/muse-ai-prompt-tips), and when you'd rather talk than type, read the [voice mode guide](/guides/muse-ai-voice-mode). For the day-to-day workflow patterns, see [how to use Muse AI](/guides/how-to-use-muse-ai). Treat those approval cards as part of the workflow, not an interruption — they're how you stay in charge while the agent does the legwork.",
         ],
       },
       {
@@ -325,6 +332,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-to-use-muse-ai",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/how-to-use-muse-ai.jpg",
     imageAlt: "Illustration of hands shaping clay into a document, symbolizing how to use Muse AI effectively",
     title: "How to Use Muse AI for Better Results",
@@ -359,7 +367,7 @@ export const GUIDES: Guide[] = [
         heading: "Work the agent way",
         paragraphs: [
           "Muse keeps working after you close the app — ask it to monitor something (prices, dates, inboxes) and it follows up on a schedule or when events change, notifying you only when the result is worth your attention. Its memory persists across conversations, and you can read and edit those memory files directly if it ever remembers something wrong.",
-          "Proactive messages are part of the design: Muse may message you without being asked when it spots something useful. If that ever feels like noise, tell it to dial the proactivity down or turn it off — the default is tuned for most people, not everyone.",
+          "Proactive messages are part of the design: Muse may message you without being asked when it spots something useful. New to agents? Our [hands-on tutorial](/guides/muse-ai-tutorial) covers the same ideas step by step, and [prompt tips](/guides/muse-ai-prompt-tips) will sharpen your requests. If that ever feels like noise, tell it to dial the proactivity down or turn it off — the default is tuned for most people, not everyone.",
         ],
       },
       {
@@ -383,6 +391,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-chatgpt-claude-meta-ai",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-vs-chatgpt-claude-meta-ai.jpg",
     imageAlt: "Illustration of four different pillars in a row, symbolizing Muse AI vs ChatGPT vs Claude vs Meta AI",
     title: "Muse AI vs ChatGPT vs Claude vs Meta AI",
@@ -404,7 +413,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "How should you choose?",
         paragraphs: [
-          "Choose by the task and interface you will actually use. Test the same real brief in each available app and compare factual accuracy, useful depth, control, speed, and how much editing the result needs.",
+          "Choose by the task and interface you will actually use. For the deeper Muse-versus-Claude matchup specifically, see our [Muse vs Claude guide](/guides/muse-ai-vs-claude); for how Muse holds up in daily use, read the [Muse review](/guides/muse-ai-review). Test the same real brief in each available app and compare factual accuracy, useful depth, control, speed, and how much editing the result needs.",
           "The honest answer for most people: the best assistant is the one whose workflow you enjoy enough to use daily. Features matter less than fit.",
         ],
       },
@@ -416,7 +425,7 @@ export const GUIDES: Guide[] = [
           "Muse AI",
           "Personal AI agent",
           "Research-to-output projects, artifacts, personal workflows",
-          "Muse product surfaces and supported messaging channels",
+          "Muse product surfaces and supported messaging channelsMuse product surfaces and supported messaging channels (including [WhatsApp](/guides/muse-ai-whatsapp))",
           "Availability, limits, and features can vary by account",
         ],
         [
@@ -445,6 +454,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-claude",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-vs-claude.jpg",
     imageAlt: "Illustration of two abstract forms in dialogue, symbolizing Muse AI vs Claude comparison",
     title: "Muse AI vs Claude: Which Fits Your Workflow?",
@@ -455,7 +465,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "Muse AI vs Claude compared by workflow fit: a fair testing method, where each assistant shines, and how to decide without generic rankings.",
     shortAnswer:
-      "Choose Muse when its personal-agent workflows and product surface fit the job; choose Claude when its document, reasoning, or coding workflow better matches your process. Test both with the same brief.",
+      "Choose Muse when its personal-agent workflows and product surface fit the job; choose Claude when its document, reasoning, or coding workflow better matches your process. Comparing the full field instead? Our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) adds ChatGPT and Meta AI to the picture. Test both with the same brief.",
     sections: [
       {
         heading: "A fair test",
@@ -480,6 +490,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-download",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-download.jpg",
     imageAlt: "Illustration of a download arrow landing in a safe box with a shield, symbolizing safe Muse AI download",
     title: "Muse AI Download: Find the Official Access Route",
@@ -507,13 +518,14 @@ export const GUIDES: Guide[] = [
         heading: "Red flags to avoid",
         paragraphs: [
           "Unofficial APK files, “modded” versions promising unlimited access, download pages covered in pop-up ads, and anyone asking for your login in exchange for access. Around any hyped AI launch, clones and credential-harvesting pages multiply fast.",
-          "If the correct download or access option isn't visible, availability may simply not have reached your account yet. Waiting beats installing something you can't verify.",
+          "If the correct download or access option isn't visible, availability may simply not have reached your account yet. Waiting beats installing something you can't verify. Check [where Muse is available](/guides/muse-ai-availability) for the current rollout; Mac users should read the [computer-use guide](/guides/muse-ai-mac-computer-use) before granting the desktop app broad permissions.",
         ],
       },
     ],
   },
   {
     slug: "muse-ai-billion-tokens",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-billion-tokens.jpg",
     imageAlt: "Illustration of glowing tokens rising from an open hand, symbolizing Muse AI token rewards",
     title: "Muse AI 1 Billion Tokens: What the Offer Means",
@@ -541,7 +553,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Why the headline misleads",
         paragraphs: [
-          "A big round number travels fast on social media and loses its context along the way: which accounts, which regions, which dates, and under what conditions. The in-app invite or redeem screen is the only source of truth for your account — confirm there before planning work around a specific balance.",
+          "A big round number travels fast on social media and loses its context along the way: which accounts, which regions, which dates, and under what conditions. The in-app invite or redeem screen is the only source of truth for your account Background reading: how [referral codes](/guides/muse-ai-referral-code) work in general, and [whether Muse stays free](/guides/is-muse-ai-free) once the promotion ends. — confirm there before planning work around a specific balance.",
           "Terms vary, and offers change. Confirm the current terms in the app.",
         ],
       },
@@ -549,6 +561,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-review",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-review.jpg",
     imageAlt: "Illustration of a magnifying glass examining shapes, symbolizing an honest Muse AI review",
     title: "Muse AI Review: Strengths, Limits, and Best Fit",
@@ -591,7 +604,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Who it's best for",
         paragraphs: [
-          "Muse fits people who think in projects rather than questions: creators, researchers, planners, and builders who want a collaborator that carries work to completion. If you mostly need quick factual answers inside social apps, a lighter assistant may serve you better.",
+          "Muse fits people who think in projects rather than questions: creators, researchers, planners, and builders who want a collaborator that carries work to completion. On cost and trust, see [is Muse AI free?](/guides/is-muse-ai-free), the [privacy questions answered honestly](/guides/muse-ai-privacy), and the [security-flaw timeline](/guides/muse-ai-security-flaw). See how it stacks up in our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) and the deeper [Muse vs Claude](/guides/muse-ai-vs-claude) matchup. If you mostly need quick factual answers inside social apps, a lighter assistant may serve you better.",
         ],
       },
       {
@@ -609,6 +622,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-use-cases",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-use-cases.jpg",
     imageAlt: "Illustration of a grid of nine idea panels, symbolizing practical Muse AI use cases",
     title: "Muse AI Use Cases: 12 Practical Ideas",
@@ -649,7 +663,7 @@ export const GUIDES: Guide[] = [
             "Set a goal — say, tracking a price or monitoring a topic — and let Muse work it in the background, checking the Goals tab for progress.",
             "Ask for an Artifact instead of an answer: a spending tracker, an interactive study guide, or a dashboard over your own data.",
             "Connect an app, then have Muse draft the email or booking while you keep the final approval.",
-            "Name it, give it an avatar, and treat it like a long-running collaboration: one main chat, side chats per project.",
+            "Name it, give it an avatar, and treat it like a long-running collaboration: one main chat, side chats per project. Concrete starting points: [shopping with Muse](/guides/muse-ai-shopping), [talking instead of typing](/guides/muse-ai-voice-mode), [using Muse in WhatsApp](/guides/muse-ai-whatsapp), and [prompts that get better results](/guides/muse-ai-prompt-tips).",
           ],
         },
       },
@@ -674,6 +688,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-whatsapp",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-whatsapp.jpg",
     imageAlt: "Illustration of flowing chat bubbles, symbolizing using Muse AI on WhatsApp",
     title: "Muse AI WhatsApp Guide",
@@ -702,7 +717,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Know the channel limits",
         paragraphs: [
-          "Messaging is brilliant for speed and terrible for sprawling context. Long documents, precise formatting, and multi-file projects are easier on a bigger surface — use WhatsApp for thinking and deciding, then move heavy production where it belongs.",
+          "Messaging is brilliant for speed and terrible for sprawling context. The [tutorial](/guides/muse-ai-tutorial) covers the full app workflow for those bigger jobs, and [voice mode](/guides/muse-ai-voice-mode) is the fastest hands-free alternative. Long documents, precise formatting, and multi-file projects are easier on a bigger surface — use WhatsApp for thinking and deciding, then move heavy production where it belongs.",
           "Messaging availability and capabilities can vary. Use the official Muse contact or entry point connected to your account, and never share sensitive credentials in chat.",
         ],
       },
@@ -710,6 +725,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "is-muse-ai-free",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/is-muse-ai-free.jpg",
     imageAlt: "Illustration of an open gift box with light streaming out, symbolizing free Muse AI access",
     title: "Is Muse AI Free? Costs, Limits, and What to Check",
@@ -743,7 +759,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Don't confuse offers with pricing",
         paragraphs: [
-          "A referral headline is a promotion, not permanent pricing — and the cost of a plan is different from how many tokens a specific task consumes. Product offers can change, so verify the live terms in your account rather than relying on what you read online, including on this page.",
+          "A referral headline is a promotion, not permanent pricing — and the cost of a plan is different from how many tokens a specific task consumes. Product offers can change, so verify the live terms in your account rather than relying on what you read online, incl Related: the [billion-tokens offer](/guides/muse-ai-billion-tokens) explained, our [Muse review](/guides/muse-ai-review), and the [privacy questions](/guides/muse-ai-privacy) worth asking before you commit.uding on this page.",
         ],
       },
       {
@@ -761,6 +777,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-meta-connect-2026",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-meta-connect-2026.jpg",
     imageAlt: "Editorial illustration of a tech keynote stage with a glowing AI avatar face on a giant screen",
     title: "Meta Connect 2026: Every Muse AI Announcement",
@@ -786,7 +803,7 @@ export const GUIDES: Guide[] = [
             "A dedicated email address for Muse — the agent sends and receives mail on your behalf. Announced; no date yet.",
             "Smart glasses integration — wake Muse by saying its name, with vision of what you're looking at. Coming in the months ahead.",
             "Voice mode and customizable voices — talk in real time while Muse keeps working in the background.",
-            "Muse Charm — a small new gadget for voice-based AI interaction.",
+            "Muse Charm — a small new gadget for voice-based AI interaction.Muse Charm — a small new gadget for voice-based AI interaction ([full Charm breakdown](/guides/muse-ai-charm)).",
             "More shopping partners and connectors — expanding what Muse can plug into.",
           ],
         },
@@ -795,7 +812,7 @@ export const GUIDES: Guide[] = [
         heading: "Muse Realtime Avatar: a face for your agent",
         paragraphs: [
           "The most striking demo was the Realtime Avatar: a new model that turns Muse's real-time voice into an interactive, expressive avatar you can video chat with. Instead of typing into a chat window, you talk to a face — assigning tasks and asking questions through voice, expression, and presence.",
-          "This is the one to treat as a preview, not a product. Meta showed the technology but gave no public release date, and current reporting doesn't point to one either. If you're waiting for this specifically, the [early access program](/guides/muse-ai-early-access-program) is the official way to raise your hand for upcoming features.",
+          "This is the one to treat as a preview, not a product. The avatar has a name — [meet Jolly](/guides/muse-ai-jolly-avatar) and learn to personalize yours. Meta showed the technology but gave no public release date, and current reporting doesn't point to one either. If you're waiting for this specifically, the [early access program](/guides/muse-ai-early-access-program) is the official way to raise your hand for upcoming features.",
         ],
       },
       {
@@ -844,6 +861,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-mac-computer-use",
+    modifiedTime: "2026-09-26",
     image: "/images/guides/muse-ai-mac-computer-use.jpg",
     imageAlt: "Editorial illustration of a laptop with a glowing cursor arranging floating app windows",
     title: "Muse AI on Mac: Computer Use Explained",
@@ -928,6 +946,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-early-access-program",
+    modifiedTime: "2026-09-26",
     image: "/images/guides/muse-ai-early-access-program.jpg",
     imageAlt: "Editorial illustration of a glowing golden ticket floating toward an open doorway of light",
     title: "Muse AI Early Access Program: How to Join",
@@ -996,6 +1015,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-security-flaw",
+    modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-security-flaw.jpg",
     imageAlt: "Editorial illustration of a magnifying glass over a laptop revealing a cracked padlock",
     title: "The Muse Mac Security Flaw: What Actually Happened",
@@ -1027,7 +1047,7 @@ export const GUIDES: Guide[] = [
         heading: "How serious was it, really",
         paragraphs: [
           "Two things are true at once. The exploit required local code execution — malware already running on the machine, physical access, or a social-engineering trick like a ClickFix prompt getting the user to paste a terminal command. It was not remotely exploitable over the internet, which is why Meta assessed real-world risk as low.",
-          "But the deeper point stands: an agent designed to act across your files, email, messages, and calendar with broad permissions becomes the single highest-value target on the machine. Compromise the agent and you inherit everything it can touch. That structural reality doesn't disappear with one hotfix — it's the permanent trade-off of [computer-use agents](/guides/muse-ai-mac-computer-use).",
+          "But the deeper point stands: an agent designed to act across your files, email, messages, and calendar with broad permissions becomes the single highest-value target on the machine. Compromise the agent and you inherit everything it can touch. That structural reality doesn't disappear with one hotfix — it's the permanent trade-off of [computer-use agents](/guides/muse-ai-mac-computer-use). Our [privacy guide](/guides/muse-ai-privacy) answers what Muse can see and what you can opt out of.",
         ],
       },
       {
@@ -1067,6 +1087,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-availability",
+    modifiedTime: "2026-09-26",
     image: "/images/guides/muse-ai-availability.jpg",
     imageAlt: "Editorial illustration of a world globe with North America glowing and other regions as faint outlines",
     title: "Is Muse AI Available in My Country?",
@@ -1112,7 +1133,7 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "If you want the closest available experience today, Meta AI inside WhatsApp, Instagram, or Facebook is the practical option on Meta's own platforms — it's the assistant, not the agent, but it's there now.",
           "If you're technically inclined, the model behind Muse — Muse Spark 1.3 — is available through OpenRouter on a pay-per-token basis. That gives you the model, not the full Muse agent experience with tasks, browsing, and memory, so set expectations accordingly.",
-          "And when Muse does arrive in your country, access will likely involve the invite system — our [invite code guide](/guides/muse-ai-invite-code) and [referral code guide](/guides/muse-ai-referral-code) explain how that works.",
+          "And when Muse does arrive in your country, access will likely involve the invite system — our [invite code guide](/guides/muse-ai-invite-code) and [referral code guide](/guides/muse-ai-referral-code) explain how that works. Start with [how to get Muse AI](/guides/how-to-get-muse-ai) for the full access walkthrough, and read [how to download safely](/guides/muse-ai-download) once you're eligible.",
         ],
       },
       {
@@ -1124,6 +1145,409 @@ export const GUIDES: Guide[] = [
             "[Where your AI data actually goes: UK residency in 2026 — SpotDev, September 2026](https://www.spotdev.co.uk/blog/ai-data-residency-uk-chatgpt-claude-gemini-grok-muse)",
             "[Meta Muse: inside the AI agent that actually does your tasks — Social Nation, September 2026](https://blog.socialnationnow.com/meta-muse-ai-agent-explained-features-pricing)",
             "[What is Muse? Mark Zuckerberg's new AI agent — The Statesman, September 2026](https://www.thestatesman.com/technology/what-is-muse-mark-zuckerbergs-new-ai-agent-that-could-end-up-knowing-your-life-better-than-you-do-1503636756.html)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-jolly-avatar",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-jolly-avatar.jpg",
+    imageAlt: "Jolly, Muse's fluffy cream-colored default avatar, smiling on a warm watercolor background",
+    title: "Meet Jolly: Muse's Avatar & How to Personalize Yours",
+    deck: "Jolly is Muse's default avatar — cream-colored, beady-eyed, and fully customizable. How to rename, redesign, and tune your agent.",
+    category: "Basics",
+    keywords: "muse ai avatar, jolly muse, muse ai customize, change muse avatar",
+    metaTitle: "Meet Jolly: Muse's Avatar & Personalization Guide",
+    metaDescription:
+      "Jolly is Muse's default avatar — a cute, fully customizable companion. Learn how to rename, redesign, and tune your Muse's personality.",
+    shortAnswer:
+      "Jolly is the cream-colored default avatar of Meta's Muse AI agent, named by Mark Zuckerberg at Connect 2026. You can rename your Muse, redesign its avatar and attire, and adjust how proactively it messages you.",
+    sections: [
+      {
+        heading: "Who is Jolly?",
+        paragraphs: [
+          "Every Muse agent comes with a face — and that face has a name. At Meta Connect on September 23, 2026, Mark Zuckerberg introduced the default Muse avatar: a cream-colored, doll-like creature with beady black eyes and an upward smile, named Jolly for its \u201cjolly and completely customizable character and personality.\u201d",
+          "The design is deliberate. Where rival AI assistants present as impersonal interfaces, Meta gave its agent something closer to a plush toy — a look commentators have compared to Labubu collectibles and Fall Guys beans. Meta's chief AI officer Alexandr Wang leaned into it hard, posting a flood of AI-generated Jolly memes that turned the little creature into a minor internet celebrity within days of the keynote.",
+        ],
+      },
+      {
+        heading: "What you can customize",
+        paragraphs: [
+          "Jolly is only the starting point. Meta built Muse's identity to be reshaped: users can change their agent's name, redesign its appearance, and even dress it — Zuckerberg's own agent, for example, is named Agrippa after the Roman general, and wears a toga with a laurel wreath.",
+          "Personality is adjustable too. Muse can be proactive — checking in with reminders, suggestions, and updates — and you control the volume: keep its messages frequent, quiet them down, or switch proactive nudges off entirely. If you want the full walkthrough of what Muse can do day to day, start with our [beginner's guide](/guides/what-is-muse-ai).",
+        ],
+      },
+      {
+        heading: "How to personalize yours",
+        list: {
+          ordered: true,
+          items: [
+            "Open the Muse app and find your agent's profile or settings — look for avatar, appearance, or personalization options.",
+            "Give your Muse a name. Pick something you'll naturally say out loud, since voice and the upcoming smart-glasses integration wake the agent by name.",
+            "Redesign the look. Start from Jolly or build something entirely different — the avatar is meant to be yours, not Meta's.",
+            "Set the personality. Decide how your Muse talks to you and how often it reaches out on its own; you can always tune this later.",
+            "Revisit it monthly. As you learn what you actually use Muse for, the name, look, and chattiness that felt right on day one may deserve a refresh.",
+          ],
+        },
+      },
+      {
+        heading: "The Realtime Avatar: video-chatting your agent",
+        paragraphs: [
+          "Personalization is about to get a lot more literal. At Connect, Meta announced the Muse Realtime Avatar — live video chat with an animated version of your agent, demonstrated publicly by Alexandr Wang on September 24. Speech and video generate from a shared stream, so the avatar's voice, lip movement, and expressions stay synchronized as you talk.",
+          "Notably, the system can animate a reference image during a live conversation — a photographic portrait, an illustration, an animal, or even an everyday object. There is no public release date yet, so treat it as a preview rather than a product. Our [Connect 2026 roundup](/guides/muse-ai-meta-connect-2026) tracks every announcement and its status.",
+        ],
+      },
+      {
+        heading: "Jolly on your keychain",
+        paragraphs: [
+          "If you'd rather carry the little guy around, that's the idea behind the [Muse Charm](/guides/muse-ai-charm): a Tamagotchi-style keychain gadget with a small screen, a fingerprint sensor, and Jolly as its default avatar. Tap, speak, and Jolly toddles off to handle the task — no phone required. It ships in December 2026.",
+          "Whether you keep Jolly, design your own Agrippa, or wait for the video-chat avatar, the principle is the same: Muse works best when it feels like yours. A name and a face turn an app into a companion — and companions get used.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[It\u2019s cute. It\u2019s cuddly. And it wants all your data \u2014 newsline24, September 2026](https://newsline24.online/meta-muse-ai-agent-response-animated-avatar-cute-rcna599736/)",
+            "[Meta Launches Adults-Only Muse AI Agent with Kawaii Mascot Jolly \u2014 Memesita, September 2026](https://www.memesita.com/meta-launches-adults-only-muse-ai-agent-with-kawaii-mascot-jolly/)",
+            "[The Identity Shift \u2014 Zoe Scaman, September 2026](https://zoescaman.substack.com/p/the-identity-shift)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-shopping",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-shopping.jpg",
+    imageAlt: "Jolly, Muse's cream avatar, beside a watercolor shopfront with shopping bags and gift boxes",
+    title: "Shopping with Muse: Walmart, Sephora & Agent Checkout",
+    deck: "Muse can shop Walmart, Best Buy, and Sephora for you — with your approval. How agent shopping works, who partnered, and who said no.",
+    category: "Workflow",
+    keywords: "muse ai shopping, muse walmart, ai shopping agent, muse ai buy",
+    metaTitle: "Shopping with Muse: How the AI Agent Buys for You",
+    metaDescription:
+      "Muse shops Walmart, Best Buy, Sephora and more with your approval. Partners, payments, the approval step \u2014 and why Amazon blocked it.",
+    shortAnswer:
+      "Muse can shop partner retailers like Walmart, Best Buy, Gap, and Sephora: it builds the cart, shows the total, and only pays after you approve. Amazon has refused to participate and blocked the agent.",
+    sections: [
+      {
+        heading: "How agent shopping works",
+        paragraphs: [
+          "Shopping is the feature Meta talks about most, because it's the clearest demo of an agent versus a chatbot. You describe the outcome in plain language \u2014 the widely used example is \u201cI\u2019m hosting a Christmas dinner for 10 people on Friday. Order everything I need from Walmart.\u201d Muse then navigates to the retailer, checks inventory, builds the cart, applies discounts, and calculates local taxes.",
+          "The purchase itself is deliberately careful. Muse generates a secure, one-time-use digital payment card via Stripe — your real card number is never revealed to the merchant — and then pings you for final confirmation: \u201cI\u2019ve set up your Christmas dinner order for $50. Tap to approve purchase.\u201d Nothing is charged until you say yes, and you can close the app entirely while it works.",
+        ],
+      },
+      {
+        heading: "Who partnered with Muse",
+        paragraphs: [
+          "At Connect on September 23, Meta unveiled a long roster of retail partners integrating directly with Muse: Walmart, Best Buy, Gap, Sephora, Wayfair, Dick\u2019s Sporting Goods, Ulta Beauty, Fanatics, Michael Kors, American Eagle Outfitters, and GameStop. Travel and grocery ordering run through Expedia and Instacart, with restaurant reservations via OpenTable.",
+          "Underneath, the commerce plumbing is Stripe\u2019s Link and Shop Pay plus PayPal for payments, and Shopify\u2019s catalogue for product search. Meta also opened its connector framework to outside developers and received more than 1,500 applications for new integrations in under a week \u2014 so the partner list should keep growing.",
+        ],
+      },
+      {
+        heading: "The business model: no ads, a cut of transactions",
+        paragraphs: [
+          "Zuckerberg has been explicit that Meta does not plan to sell ads inside Muse. Instead, the company expects to profit \u201cby taking a small fee from transactions\u201d the agent completes \u2014 purchases, bookings, bill negotiations. That is also why Muse stays free for most usage: Meta bets the agent will earn its keep by saving and spending your money. For the bigger picture, see [Muse use cases](/guides/muse-ai-use-cases) and [whether Muse is free](/guides/is-muse-ai-free).",
+          "The saving side is real. Meta's Alexandr Wang described Muse negotiating with a cable company through its online support chat and knocking $85 a month off the bill, plus hunting down car-insurance savings and refunds users didn't know they were owed. An agent that pays for itself is a much easier sell than a subscription.",
+        ],
+      },
+      {
+        heading: "Who said no: Amazon and the holdouts",
+        paragraphs: [
+          "The biggest name missing is Amazon \u2014 deliberately. Amazon blocked Muse from its store, saying it was given no notice or choice about participation, and citing concerns about how account credentials are handled and that the agent doesn't identify itself as AI during transactions. Resy, the restaurant-booking platform, likewise says it does not permit unapproved third-party agents.",
+          "This is the industry's open fight, playing out in real time: retailers deciding whether AI agents are welcome shoppers or unwelcome bots. Expect the partner list \u2014 and the block list \u2014 to keep shifting through the rest of 2026.",
+        ],
+      },
+      {
+        heading: "Shopping safely with an agent",
+        list: {
+          ordered: false,
+          items: [
+            "Always review the total before approving. The approval ping is the safety net \u2014 actually read it.",
+            "Start with low-stakes orders (groceries, household basics) before handing over big purchases.",
+            "Set a mental spending cap per order and tell Muse explicitly: \u201ckeep it under $60.\u201d",
+            "Prefer partner retailers with direct integrations over agents improvising checkout on unfamiliar sites.",
+            "Remember the one-time payment cards: even if something goes wrong, your real card number was never exposed.",
+            "Keep the app updated \u2014 commerce features and their safeguards are evolving fast.",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Walmart, Sephora, and Gap introduce \u2018concierge\u2019 service for shoppers \u2014 The Sun, September 2026](https://www.the-sun.com/money/17052697/walmart-sephora-gap-launch-muse-ai-concierge-service/)",
+            "[Zuckerberg says Muse will stay free for many as major retailers join new AI shopping push \u2014 Dimsum Daily, September 2026](https://www.dimsumdaily.hk/zuckerberg-says-muse-will-stay-free-for-many-as-major-retailers-join-new-ai-shopping-push/)",
+            "[Meta Muse AI agent will earn from transaction fees, not ads \u2014 MediaNama, September 2026](https://www.medianama.com/2026/09/223-signals-meta-connect-muse/)",
+            "[AI agents promise to do everything for you. There may be a big wrinkle in that plan \u2014 CNN, September 2026](https://www.cnn.com/2026/09/28/tech/meta-muse-ai-agents-amazon?cid=external-feeds_iluminar_meta)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-voice-mode",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-voice-mode.jpg",
+    imageAlt: "Jolly, Muse's cream avatar, with watercolor sound waves flowing across the scene",
+    title: "Muse Voice Mode: Talking to Your Agent",
+    deck: "Muse listens, talks back, and is gaining a face. How voice mode works today and what's coming next.",
+    category: "Tutorial",
+    keywords: "muse ai voice, muse voice chat, talk to muse ai",
+    metaTitle: "Muse Voice Mode: Talk to Your AI Agent (2026)",
+    metaDescription:
+      "Muse's voice mode lets you talk instead of type \u2014 with live video chat and custom voices rolling out. How it works and how to use it well.",
+    shortAnswer:
+      "Muse supports voice conversations with real-time speech, plus newly added live video chat with customizable voices. Voice is becoming the primary way to direct your agent.",
+    sections: [
+      {
+        heading: "What voice mode does today",
+        paragraphs: [
+          "The simplest way to use Muse may be to stop typing. Voice support, dictation, and voice notes are built into the app: hold to talk, and Muse transcribes, understands, and replies out loud while it keeps working on your task in the background. It's the difference between operating software and briefing a colleague.",
+          "Voice shines for the fuzzy stuff \u2014 brainstorming, thinking through a decision, describing a complicated errand while your hands are busy. Save the keyboard for precision work like reviewing a contract or editing a draft line by line.",
+        ],
+      },
+      {
+        heading: "Live video chat and custom voices",
+        paragraphs: [
+          "Voice just leveled up. Around September 23, Meta added live video chat and real-time voice conversations with customizable voice options to Muse, demonstrated publicly by Alexandr Wang on September 24. Instead of a voice in a chat window, you talk to an animated presence \u2014 the [Realtime Avatar](/guides/muse-ai-meta-connect-2026) system.",
+          "The technical trick is that speech and video generate from a shared stream, so the avatar's voice, lip movement, and expressions stay synchronized. Strikingly, the system can animate a reference image during a live conversation \u2014 a photographic portrait, an illustration, an animal, or even an everyday object. Pair that with [Jolly](/guides/muse-ai-jolly-avatar), and your agent is well on its way to having a face you chose.",
+        ],
+      },
+      {
+        heading: "The tech underneath: Muse Voice Transcribe",
+        paragraphs: [
+          "Meta's voice push rests on Muse Voice Transcribe, a real-time audio perception model its Superintelligence Labs launched on September 1, 2026. It evaluates streaming audio every 80 milliseconds and handles speech-to-text, speaker identification, and endpoint detection in a single model \u2014 following conversations across more than 20 speakers and 25 validated languages, including mid-sentence language switching.",
+          "This is what powers dictation in the Muse apps today. The model was built for exactly the messy reality of talking to an agent: interruptions, accents, overlapping speech, hour-long sessions. When Muse seems to \u201cjust get\u201d what you said, this is usually why.",
+        ],
+      },
+      {
+        heading: "Custom voices: coming, not here yet",
+        paragraphs: [
+          "The most requested voice feature \u2014 generating your own custom voice for Muse, saved to a personal library \u2014 is reportedly in internal testing only, according to TestingCatalog's September 2026 reporting. It is disabled for public users and Meta has announced no release date.",
+          "Treat this as a roadmap item, not a feature. The [early access program](/guides/muse-ai-early-access-program) is the official channel for raising your hand for upcoming capabilities like this one.",
+        ],
+      },
+      {
+        heading: "Getting the most out of voice",
+        list: {
+          ordered: false,
+          items: [
+            "Speak in outcomes, not menus: \u201cbook me a table for two Friday at 7 near downtown\u201d beats \u201copen OpenTable.\u201d",
+            "Think out loud. Voice is ideal for rambling first drafts of a task \u2014 Muse is good at extracting the actual request.",
+            "Confirm before consequences. If a voice request could spend money or send messages, ask Muse to read back the plan first.",
+            "Use it hands-free moments: cooking, driving (parked or via car audio), walking \u2014 anywhere typing is awkward.",
+            "Switch to text for anything you need quoted precisely: addresses, numbers, names with unusual spellings.",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta adds live video chat to Muse, giving its AI agent a face and voice \u2014 Runtime Wire, September 2026](https://runtimewire.com/article/meta-muse-live-video-chat-voice)",
+            "[Meta Muse Custom Voices Leak: 80ms Model \u2014 Tech Insider, September 2026](https://tech-insider.org/meta-muse-custom-voices-leak-2026/)",
+            "[Muse Voice Transcribe: Meta's Real-Time Speech Model \u2014 Dataconomy, September 2026](https://dataconomy.com/2026/09/02/meta-muse-voice-transcribe-real-time-audio-model-20-speakers/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-charm",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-charm.jpg",
+    imageAlt: "Watercolor illustration of the Muse Charm keychain gadget with a tiny screen and fingerprint sensor",
+    title: "Muse Charm: Meta's AI Keychain Gadget Explained",
+    deck: "A Tamagotchi-style keychain with a screen, fingerprint sensor, and Jolly inside. What the Muse Charm is, when it ships, and what it costs.",
+    category: "News",
+    keywords: "muse charm, meta ai keychain, muse wearable, muse charm price",
+    metaTitle: "Muse Charm: Meta's AI Keychain Gadget (2026)",
+    metaDescription:
+      "The Muse Charm is a Tamagotchi-like keychain for talking to Muse on the go. Release date, price, features \u2014 everything announced so far.",
+    shortAnswer:
+      "The Muse Charm is a small keychain gadget with a screen and fingerprint sensor for voice chats with Muse without your phone. It ships in December 2026; pricing is undisclosed.",
+    sections: [
+      {
+        heading: "What the Muse Charm is",
+        paragraphs: [
+          "At Meta Connect on September 23, 2026, Mark Zuckerberg held up a keychain with a face on it: the Muse Charm, a Tamagotchi-style handheld device for interacting with Muse on the go. It has a little screen, a fingerprint sensor, and a Pixar-esque character \u2014 [Jolly](/guides/muse-ai-jolly-avatar), Muse's default avatar \u2014 living inside it.",
+          "Press the button, have a chat, and Jolly gets to work: booking, emailing, buying the thing you mentioned in passing. The pitch is a companion you carry, not an app you open.",
+        ],
+      },
+      {
+        heading: "How you use it",
+        paragraphs: [
+          "The interaction is deliberately minimal: tap the fingerprint sensor and speak, \u201cwithout having to unlock a phone or open an app,\u201d as Zuckerberg put it. No screen-tapping through menus, no pulling out your phone on a run or in the kitchen \u2014 just a question, an answer, and the agent handling the rest in the background.",
+          "It's the purest expression of Meta's bet that voice is the primary interface for agents. The phone stays in your pocket; the conversation doesn't.",
+        ],
+      },
+      {
+        heading: "Release date and price",
+        paragraphs: [
+          "The Charm ships in December 2026 \u2014 timing Meta surely chose with the holiday gift season in mind. Pricing, however, remains undisclosed; Meta hasn't said what the little keychain will cost.",
+          "That leaves the value question open. If it's priced like an accessory, it's an impulse buy for Muse enthusiasts. If it's priced like hardware, it'll need to prove it's more than a novelty. Watch for pricing news closer to launch \u2014 we'll update this guide when it's announced.",
+        ],
+      },
+      {
+        heading: "Why a keychain at all?",
+        paragraphs: [
+          "The Charm only makes sense inside Meta's bigger hardware story. At the same Connect event, Meta unveiled $349 camera-free Ray-Ban Meta Audio glasses shipping October 13, premium VR glasses arriving in spring 2027, and \u2014 the thread connecting them \u2014 Muse coming to its smart glasses, where you wake the agent by saying its name.",
+          "The strategy is ambient AI: the assistant follows you from phone to glasses to keychain, always a spoken sentence away. The Charm is the cheapest, most giftable entry point into that vision \u2014 a Tamagotchi for the agent age.",
+        ],
+      },
+      {
+        heading: "Should you wait for one?",
+        paragraphs: [
+          "If you love the idea of talking to Muse without touching your phone, the Charm is worth watching \u2014 but remember it's a first-generation gadget for a three-week-old product. Early hardware plus early software is a double gamble.",
+          "The alternative is already here: [voice mode](/guides/muse-ai-voice-mode) in the Muse app does most of what the Charm promises, minus the keychain. If you're on the fence, try living with voice-first Muse for a month; by December you'll know whether you want it dangling from your bag. Want future hardware first? The [early access program](/guides/muse-ai-early-access-program) is the official way to raise your hand.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta Connect 2026: Meta unveils new AI glasses, VR glasses and Muse Charm \u2014 Financial Express, September 2026](https://www.financialexpress.com/life/technology-meta-connect-2026-meta-unveils-new-ai-glasses-vr-glasses-and-muse-charm-4346067/)",
+            "[Meta Connect 2026: Muse AI, VR Glasses & Audio Frames \u2014 Tech Mansion, September 2026](https://techmansion.tech/meta-connect-2026-muse-ai-vr-glasses-audio-frames/)",
+            "[What Is Meta Muse? Meta\u2019s Consumer AI Agent and What It Means for Businesses \u2014 ChatMaxima, September 2026](https://chatmaxima.com/blog/meta-muse-ai-agent-businesses-whatsapp-messenger/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-privacy",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-privacy.jpg",
+    imageAlt: "Watercolor illustration of a shield with a padlock surrounded by sealed envelopes",
+    title: "Is Muse AI Safe? The Privacy Questions, Answered Honestly",
+    deck: "Human concierges, message-reading claims, and a zero-day. A clear-eyed look at every Muse privacy controversy \u2014 and Meta's answers.",
+    category: "Safety",
+    keywords: "is muse ai safe, muse ai privacy, muse reads messages",
+    metaTitle: "Is Muse AI Safe? Privacy Concerns Explained (2026)",
+    metaDescription:
+      "Human concierges, message access claims, security flaws \u2014 we walk through every Muse privacy controversy and what Meta says in response.",
+    shortAnswer:
+      "Muse runs in an isolated Secure VM with approval gates, but real controversies \u2014 a human-concierge phone test, disputed message access, a Mac zero-day \u2014 show an agent with deep permissions deserves caution.",
+    sections: [
+      {
+        heading: "Meta's privacy design",
+        paragraphs: [
+          "Start with what's supposed to protect you. Muse runs in what Meta calls a Secure VM \u2014 the agent's work happens in an isolated environment rather than loose on your device \u2014 and anything sensitive (payments, messages, account access) is gated behind explicit approval prompts you have to confirm.",
+          "Connectors to outside apps like email or calendars are opt-in, and on desktop they can require system-level permissions like Full Disk Access. The architecture is genuinely more careful than a browser extension with the same powers. The controversies below are about what happens at the edges of that design.",
+        ],
+      },
+      {
+        heading: "The human-concierge phone test",
+        paragraphs: [
+          "The most damaging story broke around September 22, 2026, via Reuters: for at least some Muse phone calls \u2014 the agent can call US businesses on your behalf \u2014 Meta had quietly routed the conversations to human contractors instead of AI, without telling users. Employees internally raised privacy concerns about customers being recorded by people they didn't know were listening.",
+          "A Meta vice president acknowledged the company had made a \u201cmiss\u201d and the feature was temporarily rolled back. Meta says the test was small and meant to improve the product \u2014 but the core complaint stands: a privacy-sensitive agent should never have humans secretly in the loop. If you use Muse's calling features, know this happened.",
+        ],
+      },
+      {
+        heading: "The message-reading claims",
+        paragraphs: [
+          "In late September, Inc. columnist Jason Aten reported that Muse had read more than 187,000 of his iMessage records \u2014 and argued he'd never given it permission. Meta's David Singleton responded that the Messages integration is strictly opt-in and requires macOS Full Disk Access, which Aten must have granted; Aten says he doesn't recall doing so. Elon Musk amplified the dispute on September 27\u201328, giving it a much larger audience.",
+          "A related Marketplace report claimed a Muse web session accessed private messages there \u2014 Meta says the test was flawed because Muse was signed into a real account. Where this lands: connectors this deep will always be one misunderstood permission away from a scandal. Read every access prompt, and revoke anything you don't actively use.",
+        ],
+      },
+      {
+        heading: "The security flaws",
+        paragraphs: [
+          "Two technical incidents are on the record. Security researcher Patrick Wardle disclosed a Mac zero-day letting malware bypass the privacy prompt that protects files Muse can see \u2014 we covered it in detail in [Muse AI Security Flaw: The Wardle Zero-Day](/guides/muse-ai-security-flaw). Separately, The Information reported a bug-bounty researcher found a way to break into Muse's Secure VM itself; Meta fixed it and made safety warnings clearer.",
+          "Neither flaw was exploited at scale as far as anyone has shown. But they confirm the stakes: an agent with your calendar, inbox, and payment cards is a high-value target, and its sandbox is exactly where attackers will poke.",
+        ],
+      },
+      {
+        heading: "Our honest take",
+        paragraphs: [
+          "Muse is neither a surveillance nightmare nor provably safe \u2014 it's a powerful, three-week-old product with deep permissions and a company still learning how to operate it. The privacy design is serious; the operational mistakes so far are real. Grant it the least access that still does the job, review connected apps monthly, keep approvals on for anything irreversible, and remember you must be 18+ to use it. Mac users: the [computer-use guide](/guides/muse-ai-mac-computer-use) explains exactly which permissions desktop control needs., and remember you must be 18+ to use it \u2014 it was never built for kids.",
+          "The rule of thumb for any AI agent: it should know exactly what it needs, and nothing it doesn't. Hold Muse \u2014 and Meta \u2014 to that standard.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta testing a human concierge for its new personal AI agent Muse \u2014 Economic Times / Reuters, September 2026](https://hr.economictimes.indiatimes.com/news/industry/meta-testing-a-human-concierge-for-its-new-personal-ai-agent-muse/134442930)",
+            "[Elon Musk amplifies privacy concerns over Meta's Muse \u2014 Benzinga via TradingView, September 2026](https://www.tradingview.com/news/benzinga:8fa19d276094b:0-elon-musk-amplifies-privacy-concerns-over-meta-s-muse-after-reports-emerge-ai-agent-accessed-private-messages/)",
+            "[Meta's Muse accused of reading private iMessages without permission \u2014 Binance News via TradingView, September 2026](https://www.tradingview.com/news/binance_news:5e7ac3b9f094b:0-meta-s-muse-ai-assistant-accused-of-reading-private-imessages-without-permission/)",
+            "[Meta Muse Safety Warning: AI Security Flaw \u2014 Shafaqna, September 2026](https://en.shafaqna.com/480095/meta-muse-safety-warning-ai-security-flaw/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-prompt-tips",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-prompt-tips.jpg",
+    imageAlt: "Watercolor illustration of chat bubbles and sparkles rising from an open notebook with a pencil",
+    title: "10 Muse Prompts That Get Better Results",
+    deck: "Muse rewards clear outcomes, good context, and approval checkpoints. Ten prompt patterns that turn the agent from chatbot into coworker.",
+    category: "Ideas",
+    keywords: "muse ai prompts, muse ai tips, best muse prompts",
+    metaTitle: "10 Muse Prompts That Get Better Results (2026)",
+    metaDescription:
+      "Better Muse results start with better prompts. 10 proven patterns \u2014 outcome-first requests, approval checkpoints, and voice tricks.",
+    shortAnswer:
+      "The best Muse prompts state the desired outcome first, give only relevant context, set approval checkpoints, and let the agent plan before acting.",
+    sections: [
+      {
+        heading: "Why prompting matters more for agents",
+        paragraphs: [
+          "With a chatbot, a bad prompt gets you a bad paragraph. With an agent like Muse, a bad prompt gets you a bad afternoon \u2014 wrong flights booked, the wrong groceries ordered, hours of work in the wrong direction. Because Muse acts, the prompt is the instruction set, not just a question.",
+          "The good news: agent prompting is a learnable skill, and it mostly comes down to saying what you want, what it needs to know, and where the guardrails are. These ten patterns cover nearly every situation you'll run into.",
+        ],
+      },
+      {
+        heading: "The 10 patterns",
+        list: {
+          ordered: true,
+          items: [
+            "Outcome first. Start with the end state: \u201cBook me a flight to Chicago next Friday morning, under $300, aisle seat.\u201d Muse plans backward from the goal far better than it assembles one from hints.",
+            "The context sandwich. Give the three facts that actually matter \u2014 who it's for, the constraints, the deadline \u2014 and skip the rest. \u201cVegetarian dinner for 6, under $80, delivered by 7pm\u201d beats a paragraph of backstory.",
+            "Plan before acting. For anything multi-step, ask Muse to show you the plan first: \u201cOutline how you'd research this before you start.\u201d You catch misunderstandings when they're free.",
+            "Approval checkpoints. Tell Muse where to pause: \u201cFind three options, then stop and let me pick before booking.\u201d This is the single highest-leverage habit for agent work.",
+            "Iterate on drafts. Muse's first pass is a starting point. \u201cMake it shorter,\u201d \u201cadd prices,\u201d \u201csort by rating\u201d \u2014 agents handle revision rounds gracefully.",
+            "Voice for brainstorming, text for precision. Ramble out loud when you're exploring; switch to typing for addresses, numbers, and anything that must be quoted exactly.",
+            "Connect first, ask second. A prompt that needs your calendar, inbox, or a store works ten times better after you've set up the [right connections](/guides/muse-ai-mac-computer-use). Check integrations before blaming the prompt.",
+            "Schedule the boring stuff. Anything you check weekly \u2014 flight prices, restocks, bill reminders \u2014 should be a standing instruction, not a repeated conversation.",
+            "Teach it your preferences once. Favorite airline, dietary restrictions, budget ranges, how you like summaries formatted \u2014 put them in your profile so every future prompt inherits them.",
+            "Review, don't trust. Skim what Muse did before it finalizes anything \u2014 especially totals, dates, and recipients. Five seconds of review is the whole safety model.",
+          ],
+        },
+      },
+      {
+        heading: "Three mistakes that waste your time",
+        paragraphs: [
+          "The most common failure is vagueness: \u201cplan my trip\u201d will get you a generic itinerary for a generic person. Add dates, budget, and who's going and the same prompt becomes useful. Second is skipping constraints \u2014 Muse can't respect a budget or dietary need you never mentioned. Third is approving without reading: the approval ping exists because agents are confident even when wrong.",
+          "Notice the theme: every mistake is a missing sentence in the prompt. Agents don't read minds; they read instructions. Write the sentence.",
+        ],
+      },
+      {
+        heading: "Keep learning",
+        paragraphs: [
+          "Prompting well compounds: every preference you teach Muse and every standing instruction you set makes the next hundred prompts better. If you're just getting started, our [tutorial](/guides/muse-ai-tutorial) walks through your first real tasks, and the [voice mode guide](/guides/muse-ai-voice-mode) shows when to stop typing entirely.",
+          "And remember the golden rule of the agent era: the human is the quality control. Muse does the work; you own the judgment.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse AI Tutorial: Your First Tasks, Step by Step](/guides/muse-ai-tutorial)",
+            "[Muse Voice Mode: Talking to Your Agent](/guides/muse-ai-voice-mode)",
+            "[What Is Muse AI? The Beginner's Guide](/guides/what-is-muse-ai)",
           ],
         },
       },

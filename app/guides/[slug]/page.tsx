@@ -20,6 +20,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!guide) return {};
   const canonical = guideCanonical(guide.slug);
   const ogImage = `${SITE.baseUrl}${guide.image}`;
+  const publishedTime = "2026-09-26T00:00:00+05:30";
+  const modifiedTime = `${guide.modifiedTime}T00:00:00+05:30`;
   return {
     title: guide.metaTitle,
     description: guide.metaDescription,
@@ -31,8 +33,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: guide.metaDescription,
       url: canonical,
       siteName: SITE.name,
-      publishedTime: "2026-09-26T00:00:00+05:30",
-      modifiedTime: "2026-09-26T00:00:00+05:30",
+      publishedTime,
+      modifiedTime,
       images: [{ url: ogImage, width: 1200, height: 630, alt: guide.imageAlt }],
     },
     twitter: {
@@ -54,33 +56,42 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.metaDescription,
-    image: `${SITE.baseUrl}${guide.image}`,
-    inLanguage: "en",
-    datePublished: "2026-09-26",
-    dateModified: "2026-09-26",
-    mainEntityOfPage: canonical,
-    author: { "@type": "Organization", name: "Muse Hub" },
-    publisher: { "@type": "Organization", name: "Muse Hub" },
-    keywords: guide.keywords,
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE.baseUrl },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE.baseUrl}/guides` },
-      { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${canonical}#article`,
+        headline: guide.title,
+        description: guide.metaDescription,
+        image: `${SITE.baseUrl}${guide.image}`,
+        inLanguage: "en",
+        datePublished: "2026-09-26",
+        dateModified: guide.modifiedTime,
+        mainEntityOfPage: canonical,
+        author: { "@id": `${SITE.baseUrl}#organization` },
+        publisher: { "@id": `${SITE.baseUrl}#organization` },
+        keywords: guide.keywords,
+      },
+      {
+        "@type": "Organization",
+        "@id": `${SITE.baseUrl}#organization`,
+        name: SITE.name,
+        url: SITE.baseUrl,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonical}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE.baseUrl },
+          { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE.baseUrl}/guides` },
+          { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
+        ],
+      },
     ],
   };
 
   return (
     <main id="main">
       <JsonLd data={articleJsonLd} />
-      <JsonLd data={breadcrumbJsonLd} />
 
       <article className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
         <Reveal>
@@ -139,7 +150,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             <ReferralCodes />
             <div className="mt-6 rounded-2xl border border-line bg-surface p-5">
               <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-faint">
-                All 15 guides
+                All {GUIDES.length} guides
               </p>
               <Link
                 href="/guides"

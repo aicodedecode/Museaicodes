@@ -1,9 +1,11 @@
-/** Renders a JSON-LD <script> tag. Pass a plain object; it's serialized safely. */
+/** Renders a JSON-LD <script> tag. Serialized with a real JSON encoder and
+ *  made script-safe (no literal "</" sequences) before embedding. */
 export default function JsonLd({ data }: { data: Record<string, unknown> }) {
+  const json = JSON.stringify(data).replace(/<\//g, "<\\/").replace(/</g, "\\u003c");
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: json }}
     />
   );
 }
