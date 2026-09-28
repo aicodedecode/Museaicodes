@@ -44,8 +44,8 @@ export const GUIDES: Guide[] = [
     title: "What Is Muse AI? A Clear Beginner's Guide",
     deck: "Understand what Muse is, what it can do, and where it fits among personal AI agents.",
     category: "Basics",
-    keywords: "what is muse ai, muse ai explained, meta muse ai",
-    metaTitle: "What Is Muse AI? A Clear Beginner's Guide (2026) | Muse Hub",
+    keywords: "what is muse ai, muse ai explained, meta muse ai, muse ai kya hai",
+    metaTitle: "What Is Muse AI? A Clear Beginner's Guide (2026)",
     metaDescription:
       "What is Muse AI? A plain-English beginner's guide to Meta's personal AI agent — what it does, what it's good at, and how access works.",
     shortAnswer:
@@ -115,7 +115,7 @@ export const GUIDES: Guide[] = [
     deck: "Use an invite safely and verify the terms attached to your account.",
     category: "Access",
     keywords: "muse ai invite code, muse invite code, muse ai access code",
-    metaTitle: "Muse AI Invite Code: Get Access & Redeem Yours (2026) | Muse Hub",
+    metaTitle: "Muse AI Invite Code: Get Access & Redeem Yours (2026)",
     metaDescription:
       "Muse AI invite code guide: how invite codes work, when to redeem one in the app, what to verify first — plus working codes 3C77QC and N8DCUB with tap-to-copy.",
     shortAnswer:
@@ -156,7 +156,7 @@ export const GUIDES: Guide[] = [
     deck: "What referrers and new users should check before sharing a code.",
     category: "Access",
     keywords: "muse ai referral code, muse referral code, muse ai refer",
-    metaTitle: "Muse AI Referral Code: How It Works & How to Redeem (2026) | Muse Hub",
+    metaTitle: "Muse AI Referral Code: How It Works & How to Redeem (2026)",
     metaDescription:
       "Muse AI referral code explained: how referral codes work, where to redeem (Settings → General), eligibility, and working codes 3C77QC and N8DCUB with tap-to-copy.",
     shortAnswer:
@@ -198,7 +198,7 @@ export const GUIDES: Guide[] = [
     deck: "Where to enter a code and how to confirm that it worked.",
     category: "Access",
     keywords: "muse ai redeem code, redeem muse code, muse code redemption",
-    metaTitle: "Muse AI Redeem Code: Where to Enter It, Step by Step (2026) | Muse Hub",
+    metaTitle: "Muse AI Redeem Code: Where to Enter It, Step by Step (2026)",
     metaDescription:
       "Where to enter your Muse AI redeem code: step-by-step redemption in the app, what to check before and after, and how to confirm the reward applied.",
     shortAnswer:
@@ -228,7 +228,7 @@ export const GUIDES: Guide[] = [
     deck: "A simple access path without relying on unofficial downloads.",
     category: "Access",
     keywords: "how to get muse ai, get muse ai access, muse ai sign up",
-    metaTitle: "How to Get Muse AI: Access Steps (2026) | Muse Hub",
+    metaTitle: "How to Get Muse AI: Access Steps (2026)",
     metaDescription:
       "How to get Muse AI access: the official route, account setup, invite codes, and what to do if Muse isn't available in your region yet.",
     shortAnswer:
@@ -263,7 +263,7 @@ export const GUIDES: Guide[] = [
     deck: "Turn a vague idea into one useful result with a repeatable workflow.",
     category: "Tutorial",
     keywords: "muse ai tutorial, muse ai beginner tutorial, how to prompt muse ai",
-    metaTitle: "Muse AI Tutorial: Your First 15 Minutes (2026) | Muse Hub",
+    metaTitle: "Muse AI Tutorial: Your First 15 Minutes (2026)",
     metaDescription:
       "A beginner Muse AI tutorial: the four-part prompt formula (outcome, context, constraints, format) and how to refine results instead of restarting.",
     shortAnswer:
@@ -331,7 +331,7 @@ export const GUIDES: Guide[] = [
     deck: "A practical method for clearer prompts and stronger review.",
     category: "Workflow",
     keywords: "how to use muse ai, muse ai tips, muse ai prompting guide",
-    metaTitle: "How to Use Muse AI for Better Results (2026) | Muse Hub",
+    metaTitle: "How to Use Muse AI for Better Results (2026)",
     metaDescription:
       "The outcome–context–checks method for better Muse AI results: clearer prompts, stronger review, and the mistakes that waste your time.",
     shortAnswer:
@@ -389,11 +389,11 @@ export const GUIDES: Guide[] = [
     deck: "Compare positioning, workflow, access, and best-fit tasks — not just brand names.",
     category: "Comparison",
     keywords: "muse ai vs chatgpt, muse ai vs claude, muse ai vs meta ai, ai assistant comparison",
-    metaTitle: "Muse AI vs ChatGPT vs Claude vs Meta AI: Honest Comparison (2026) | Muse Hub",
+    metaTitle: "Muse vs ChatGPT vs Claude vs Meta AI: Which to Use? (2026)",
     metaDescription:
-      "Muse AI vs ChatGPT vs Claude vs Meta AI: an honest side-by-side comparison of positioning, workflows, access, and which assistant fits which task.",
+      "We compare 4 AI assistants side by side — features, pricing, availability, and best use cases — so you can pick the right one in 5 minutes. Honest, no hype.",
     shortAnswer:
-      "Muse is positioned around personal-agent work and finished outputs; ChatGPT and Claude are broad assistants with mature work ecosystems; Meta AI emphasizes quick assistance inside Meta's consumer products. There is no universal winner.",
+      "Quick answer: choose Muse if you want an agent that completes tasks and delivers finished work; ChatGPT for the most mature all-round assistant and app ecosystem; Claude for careful long-form writing and coding; Meta AI for a free assistant already inside WhatsApp, Instagram, and Facebook. Trade-offs and details below.",
     sections: [
       {
         heading: "Side-by-side comparison",
@@ -451,7 +451,7 @@ export const GUIDES: Guide[] = [
     deck: "Choose based on the work you repeat, not a generic ranking.",
     category: "Comparison",
     keywords: "muse ai vs claude, claude vs muse, which ai assistant",
-    metaTitle: "Muse AI vs Claude: Which Fits Your Workflow? (2026) | Muse Hub",
+    metaTitle: "Muse AI vs Claude: Which Fits Your Workflow? (2026)",
     metaDescription:
       "Muse AI vs Claude compared by workflow fit: a fair testing method, where each assistant shines, and how to decide without generic rankings.",
     shortAnswer:
@@ -486,7 +486,7 @@ export const GUIDES: Guide[] = [
     deck: "Avoid clones and verify the source before installing anything.",
     category: "Safety",
     keywords: "muse ai download, download muse ai app, muse ai apk",
-    metaTitle: "Muse AI Download: Find the Official Access Route (2026) | Muse Hub",
+    metaTitle: "Muse AI Download: Find the Official Access Route (2026)",
     metaDescription:
       "How to find the official Muse AI download and access route — and how to spot clone apps, fake APKs, and phishing pages.",
     shortAnswer:
@@ -520,7 +520,7 @@ export const GUIDES: Guide[] = [
     deck: "Separate the headline from the terms that actually apply.",
     category: "Tokens",
     keywords: "muse ai 1 billion tokens, muse ai tokens, muse token reward",
-    metaTitle: "Muse AI 1 Billion Tokens: What the Offer Means (2026) | Muse Hub",
+    metaTitle: "Muse AI 1 Billion Tokens: What the Offer Means (2026)",
     metaDescription:
       "What the Muse AI 1 billion tokens referral offer means: eligibility, deadlines, what to verify in-app, and why the headline isn't a guarantee.",
     shortAnswer:
@@ -555,7 +555,7 @@ export const GUIDES: Guide[] = [
     deck: "A balanced review framework for deciding if Muse belongs in your workflow.",
     category: "Review",
     keywords: "muse ai review, muse ai pros cons, is muse ai good",
-    metaTitle: "Muse AI Review: Strengths, Limits, Best Fit (2026) | Muse Hub",
+    metaTitle: "Muse AI Review: Strengths, Limits, Best Fit (2026)",
     metaDescription:
       "An honest Muse AI review: strengths to test, limits to remember, and a framework for deciding whether Muse fits your workflow.",
     shortAnswer:
@@ -615,7 +615,7 @@ export const GUIDES: Guide[] = [
     deck: "Useful projects for work, study, creativity, and everyday planning.",
     category: "Ideas",
     keywords: "muse ai use cases, what can muse ai do, muse ai examples",
-    metaTitle: "Muse AI Use Cases: 12 Practical Ideas (2026) | Muse Hub",
+    metaTitle: "Muse AI Use Cases: 12 Practical Ideas (2026)",
     metaDescription:
       "12 practical Muse AI use cases across research, writing, planning, study, and building — each ending in a clear, usable output.",
     shortAnswer:
@@ -680,7 +680,7 @@ export const GUIDES: Guide[] = [
     deck: "Make short messages produce useful, structured work.",
     category: "WhatsApp",
     keywords: "muse ai whatsapp, muse whatsapp, use muse on whatsapp",
-    metaTitle: "Muse AI on WhatsApp: Setup & Chat Tips (2026) | Muse Hub",
+    metaTitle: "Muse AI on WhatsApp: Setup & Chat Tips (2026)",
     metaDescription:
       "How to use Muse AI on WhatsApp: setup, message habits that produce structured work, and the channel limits to know about.",
     shortAnswer:
@@ -716,7 +716,7 @@ export const GUIDES: Guide[] = [
     deck: "Understand free access, promotional tokens, and account-specific limits.",
     category: "Cost",
     keywords: "is muse ai free, muse ai pricing, muse ai cost",
-    metaTitle: "Is Muse AI Free? Pricing, Limits & Costs (2026) | Muse Hub",
+    metaTitle: "Is Muse AI Free? Pricing, Limits & Costs (2026)",
     metaDescription:
       "Is Muse AI free? How to verify pricing, free access, usage limits, and promotional token terms for your specific account.",
     shortAnswer:
@@ -754,6 +754,376 @@ export const GUIDES: Guide[] = [
             "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
             "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
             "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-meta-connect-2026",
+    image: "/images/guides/muse-ai-meta-connect-2026.jpg",
+    imageAlt: "Editorial illustration of a tech keynote stage with a glowing AI avatar face on a giant screen",
+    title: "Meta Connect 2026: Every Muse AI Announcement",
+    deck: "Video avatars, Mac computer use, a dedicated email address, and smart glasses — what Meta announced and what's live now.",
+    category: "News",
+    keywords: "meta connect 2026 muse, muse ai new features, muse realtime avatar",
+    metaTitle: "Meta Connect 2026: Every Muse AI Announcement",
+    metaDescription:
+      "Meta Connect 2026 brought big Muse AI news: video avatars, Mac computer use, a dedicated email address, and smart-glasses integration. What's live, what's next.",
+    shortAnswer:
+      "At Meta Connect 2026 on September 23, Meta announced Muse Realtime Avatar video chat, Mac computer use (available now), a dedicated Muse email address, and smart-glasses integration arriving in the coming months.",
+    sections: [
+      {
+        heading: "The announcements, in 60 seconds",
+        paragraphs: [
+          "Two weeks after Muse launched, Meta used its Connect 2026 keynote on September 23 to sketch where the agent goes next. CEO Mark Zuckerberg called Muse 'the centerpiece of our vision for what we're building,' and framed the announcements as steps toward what he described as 'personal superintelligence' used by billions of people.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Muse Realtime Avatar — video chat with a visible, animated avatar of your agent. Announced; no release date yet.",
+            "Mac computer use — Muse operates apps on your Mac with permission. Available now.",
+            "A dedicated email address for Muse — the agent sends and receives mail on your behalf. Announced; no date yet.",
+            "Smart glasses integration — wake Muse by saying its name, with vision of what you're looking at. Coming in the months ahead.",
+            "Voice mode and customizable voices — talk in real time while Muse keeps working in the background.",
+            "Muse Charm — a small new gadget for voice-based AI interaction.",
+            "More shopping partners and connectors — expanding what Muse can plug into.",
+          ],
+        },
+      },
+      {
+        heading: "Muse Realtime Avatar: a face for your agent",
+        paragraphs: [
+          "The most striking demo was the Realtime Avatar: a new model that turns Muse's real-time voice into an interactive, expressive avatar you can video chat with. Instead of typing into a chat window, you talk to a face — assigning tasks and asking questions through voice, expression, and presence.",
+          "This is the one to treat as a preview, not a product. Meta showed the technology but gave no public release date, and current reporting doesn't point to one either. If you're waiting for this specifically, the [early access program](/guides/muse-ai-early-access-program) is the official way to raise your hand for upcoming features.",
+        ],
+      },
+      {
+        heading: "Mac computer use: the announcement that's live now",
+        paragraphs: [
+          "The most immediately useful news is computer use on Mac. With your permission, Muse can operate applications on your desktop — clicking, typing, and working through a queued list of tasks even after you walk away from the computer. Meta's chief AI officer Alexandr Wang framed it plainly: users will be able to 'walk away from your computer' while Muse keeps working.",
+          "This puts Muse in direct company with Anthropic's computer-use features and OpenAI's Operator. The Mac app itself shipped in mid-September; computer use is the expansion. Because this one hands an agent the keys to your desktop, it's worth reading our [Mac computer-use guide](/guides/muse-ai-mac-computer-use) on permissions and safety before turning it on.",
+        ],
+      },
+      {
+        heading: "A dedicated email address for Muse",
+        paragraphs: [
+          "Meta also announced that Muse will get its own email address. The idea: you can email Muse directly, add it to an email thread, or forward messages for it to act on — letting the agent work in the background without the app staying open.",
+          "No date was given, and Meta hasn't said what the address will look like. Conceptually it's a big step: an agent with a persistent inbox becomes reachable asynchronously, not just when you're chatting with it. As with all agent email access, the permission model will matter more than the feature itself.",
+        ],
+      },
+      {
+        heading: "Smart glasses: Muse you can talk to hands-free",
+        paragraphs: [
+          "Muse is coming to Meta's smart-glasses line in the coming months — no firm date. You'll wake the agent by saying the name you gave it, and because the glasses see what you see, Muse can act on your surroundings without you describing them first: ask about a product on a shelf, a flyer on a wall, or a long list of school supplies.",
+          "Meta's examples skew everyday-practical: guided workouts, meal logging, booking appointments, checking flight prices while driving or cooking. The agent works in the background and checks back when the job is done. This landed alongside new hardware — Ray-Ban Meta Audio glasses and a Meta VR glasses announcement — plus the small Muse Charm voice gadget.",
+        ],
+      },
+      {
+        heading: "What to do with this news",
+        paragraphs: [
+          "If you're in the US or Canada and already using Muse, computer use on Mac is the one to try today — carefully, with app-by-app permissions. Everything else is a roadmap: exciting, but not something to plan around until dates exist.",
+          "If you're outside the supported regions, none of these announcements change [availability](/guides/muse-ai-availability) yet. And if you want to be first in line when the avatar, email, and glasses features roll out, join the [early access program](/guides/muse-ai-early-access-program).",
+          "As always: this is an unofficial guide. Meta's own announcements are the source of truth, and dates slip — treat every 'coming months' as a direction, not a promise.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta opens early access program for new Muse features — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/)",
+            "[Meta Muse update: new avatar, Mac control, shopping partners — TPS Report, September 24, 2026](https://tpsreport.news/news/meta-muse-ai-agent-new-features-connect-2026)",
+            "[Meta gives its Muse AI agent video avatars, email addresses, and Mac control — gen-ai.news, September 24, 2026](https://gen-ai.news/stories/meta-gives-its-muse-ai-agent-video-avatars-email-addresses-and-mac-control-432e47)",
+            "[Meta's Muse will answer to its own name on AI glasses, and it gets an email address — Mixed News, September 2026](https://mixed-news.com/en/meta-muse-agent-ai-glasses-connect-2026-email-address/)",
+            "[Meta expands Muse with Mac computer use, agent email and planned glasses access — AI-Generative, September 2026](https://www.ai-generative.org/news/meta-expands-muse-with-mac-computer-use-agent-email-and-planned-glasses-access)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-mac-computer-use",
+    image: "/images/guides/muse-ai-mac-computer-use.jpg",
+    imageAlt: "Editorial illustration of a laptop with a glowing cursor arranging floating app windows",
+    title: "Muse AI on Mac: Computer Use Explained",
+    deck: "What the Mac app's computer-use feature does, how to use it, and the permissions to understand first.",
+    category: "Tutorial",
+    keywords: "muse ai mac, muse mac computer use, muse mac app",
+    metaTitle: "Muse AI on Mac: Computer Use Explained (2026)",
+    metaDescription:
+      "Muse's Mac app can now operate apps on your computer with permission. How computer use works, what it can do, and the safety prompts to know.",
+    shortAnswer:
+      "With your permission, Muse for Mac can operate apps on your desktop and keep working through queued tasks after you step away. Sensitive actions still stop for your approval.",
+    sections: [
+      {
+        heading: "What 'computer use' actually means",
+        paragraphs: [
+          "Computer use means Muse stops being a chat window and starts operating your Mac's graphical interface the way you would: opening applications, clicking buttons, typing into fields, and moving between apps to complete a task. You describe the outcome — 'organize these downloads into folders by project' — and Muse drives the apps to do it.",
+          "This is the same category as Anthropic's computer-use capability and OpenAI's Operator. What makes Muse's version notable is that it combines desktop control with everything else Muse already does: its own cloud computer, browser, connectors, and memory of your goals.",
+        ],
+      },
+      {
+        heading: "What it can do today",
+        paragraphs: [
+          "Reporting on the Mac app describes it interacting with files, messages, calendar, notes, and mail inside their native applications. The signature move, per Meta's chief AI officer Alexandr Wang: you queue up tasks, walk away from your desk, and Muse keeps working through the list.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Work across native Mac apps — files, mail, messages, calendar, and notes.",
+            "Chain multi-step tasks: research in the browser, draft in notes, attach in mail.",
+            "Continue through a queued task list while you're away from the computer.",
+            "Combine with connectors so desktop work and cloud work happen in one flow.",
+          ],
+        },
+      },
+      {
+        heading: "How to use it",
+        list: {
+          ordered: true,
+          items: [
+            "Install the Muse Mac app from the official source — never a third-party download. (See our [download safety guide](/guides/muse-ai-download).)",
+            "Grant access app by app. Computer use is opt-in: decide which applications Muse may operate, and start narrow.",
+            "Describe the task in plain language, including the outcome you want and anything that must not happen.",
+            "Queue follow-up tasks while the first runs — Muse works through the list in order.",
+            "Review what it did when you return. Check the results in the apps themselves, not just Muse's summary.",
+          ],
+        },
+      },
+      {
+        heading: "The permission model, and why it matters",
+        paragraphs: [
+          "Meta's approach is opt-in and app-by-app, with approval prompts gating sensitive actions. That design is doing real work: an agent that can click anything needs hard boundaries around payments, messages sent as you, file deletions, and account settings. The rule of thumb is least privilege — grant Muse access to the apps a task needs, not your whole machine, and widen access only when a task genuinely requires it.",
+          "Sensitive actions should always stop for your approval. If you ever find Muse doing something consequential without asking, treat that as a bug to report, not a convenience.",
+        ],
+      },
+      {
+        heading: "What to watch out for",
+        paragraphs: [
+          "Desktop control is the highest-trust feature Muse offers, so it deserves the most caution. Shortly after the Mac app launched, security researcher Patrick Wardle disclosed a serious flaw that could let local malware hijack the agent — Meta patched it within a day, but the episode is a reminder that an agent with broad permissions is a high-value target. Read the [full timeline](/guides/muse-ai-security-flaw) before granting wide access.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Keep the Mac app updated — security fixes ship as app updates.",
+            "Never paste terminal commands from strangers; social-engineering tricks are the cheapest way in.",
+            "Review connected apps and permissions periodically, and revoke what you no longer use.",
+            "Don't grant control of apps holding your most sensitive data until you've tested with low-stakes tasks.",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta Muse adds video avatars, email, Mac control — Tech Insider, September 2026](https://tech-insider.org/meta-muse-video-avatars-mac-control-2026/)",
+            "[Meta gives its Muse AI agent video avatars, email addresses, and Mac control — gen-ai.news, September 24, 2026](https://gen-ai.news/stories/meta-gives-its-muse-ai-agent-video-avatars-email-addresses-and-mac-control-432e47)",
+            "[Meta expands Muse with Mac computer use, agent email and planned glasses access — AI-Generative, September 2026](https://www.ai-generative.org/news/meta-expands-muse-with-mac-computer-use-agent-email-and-planned-glasses-access)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-early-access-program",
+    image: "/images/guides/muse-ai-early-access-program.jpg",
+    imageAlt: "Editorial illustration of a glowing golden ticket floating toward an open doorway of light",
+    title: "Muse AI Early Access Program: How to Join",
+    deck: "Meta is letting users request early access to upcoming Muse features. The exact prompt and what's included.",
+    category: "News",
+    keywords: "muse early access, muse ai early access program, muse ai beta features",
+    metaTitle: "Muse AI Early Access: How to Join (2026)",
+    metaDescription:
+      "Meta opened an early access program for upcoming Muse features on September 25, 2026. How to request access with one prompt, and what's included.",
+    shortAnswer:
+      "Ask Muse: 'Can you let the Muse team know I want to be part of the Muse early access program?' Meta opened requests on September 25, 2026 for enthusiasts to try new features first.",
+    sections: [
+      {
+        heading: "What the program is",
+        paragraphs: [
+          "On September 25, 2026 — two days after the Connect keynote — Meta opened requests for an early access program for Muse's upcoming features. Instead of a closed beta or a randomized test group, Meta is asking AI enthusiasts to put themselves forward to try new capabilities before anyone else.",
+          "The logic is straightforward: the people most likely to stress-test an agent are the people already comparing AI apps side by side. If that's you, Meta wants you in the pool.",
+        ],
+      },
+      {
+        heading: "How to join: the exact prompt",
+        list: {
+          ordered: true,
+          items: [
+            "Open Muse (you'll need an active account in a supported region — see [availability](/guides/muse-ai-availability)).",
+            "Send this exact message: 'Can you let the Muse team know I want to be part of the Muse early access program?'",
+            "Muse will log your interest with the team. That's the whole signup — there's no separate form or waitlist page.",
+            "Wait. Meta hasn't said how quickly invitations go out or how many people will be admitted.",
+          ],
+        },
+      },
+      {
+        heading: "What early access may include",
+        paragraphs: [
+          "Meta hasn't published a definitive feature list for testers, but the Connect announcements are the obvious candidates:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Muse Realtime Avatar — video chat with an animated avatar of your agent.",
+            "Expanded Mac computer-use capabilities.",
+            "New shopping partners and connectors.",
+            "Smart-glasses integration as it approaches release.",
+          ],
+        },
+      },
+      {
+        heading: "What to expect as a tester",
+        paragraphs: [
+          "Early features are early: expect rough edges, changing behavior, and the occasional dead end. That's the trade — you get the future first, and Meta gets feedback from people who actually push the product.",
+          "A few honest caveats: requesting access doesn't guarantee admission; features may arrive in stages rather than all at once; and everything is still limited to regions where Muse operates. If you're outside the US and Canada, the program doesn't change that — check [availability](/guides/muse-ai-availability) for the current picture.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta opens early access program for new Muse features — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/)",
+            "[Meta opens early access for Muse AI app — Inshorts, September 2026](https://inshorts.com/en/amp_news/meta-opens-early-access-for-muse-ai-app-1790525054478)",
+            "[Meta opens early access for upcoming Muse AI features — Digital Market Reports, September 2026](https://digitalmarketreports.com/news/92716/meta-opens-early-access-for-upcoming-muse-ai-features/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-security-flaw",
+    image: "/images/guides/muse-ai-security-flaw.jpg",
+    imageAlt: "Editorial illustration of a magnifying glass over a laptop revealing a cracked padlock",
+    title: "The Muse Mac Security Flaw: What Actually Happened",
+    deck: "A researcher found a serious Mac app flaw; Meta patched it within a day. The full timeline and what it means for you.",
+    category: "Safety",
+    keywords: "muse ai security flaw, muse mac vulnerability, is muse ai safe",
+    metaTitle: "Muse Mac Security Flaw Explained: Timeline & Fix",
+    metaDescription:
+      "Security researcher Patrick Wardle disclosed a Muse Mac zero-day on September 21, 2026; Meta hot-fixed it on September 22. What happened and what to do.",
+    shortAnswer:
+      "On September 21, 2026, researcher Patrick Wardle disclosed a zero-day in the Muse Mac app that could let local malware hijack the agent; Meta issued a hotfix on September 22. Keep the app updated.",
+    sections: [
+      {
+        heading: "The timeline",
+        paragraphs: [
+          "September 21, 2026: macOS security researcher Patrick Wardle published an X thread warning users about serious flaws in the Muse Mac app, alongside a proof-of-concept repository he titled 'not-a-mused.' His opening line: 'Please don't install — it's trivial to turn Muse into the ultimate backdoor.'",
+          "September 22, 2026: Wardle posted 'Hooray, hot-fixed!' confirming Meta had patched the vulnerability — roughly a day after disclosure. David Singleton of Meta Superintelligence Labs confirmed the hotfix on X, describing the issue as a local privilege escalation attack, not a remote exploit, and assessing the practical risk to users as 'quite low.'",
+        ],
+      },
+      {
+        heading: "What the flaw was",
+        paragraphs: [
+          "The vulnerability centered on an undocumented preference setting in the Mac app — endo_voyager_dictation_endpoint — which controlled where Muse sent voice dictation for processing. Any app or script running under the user's account could modify this setting without triggering macOS permission alerts, redirecting transcription from Meta's servers to an attacker's endpoint.",
+          "That redirection exposed the user's account authentication token. With the token, an attacker gained full control of the agent — and because Muse holds broad system permissions by design, Wardle's proof of concept could take pictures and write malicious files to disk, often without alerting the user. As he told Ars Technica: 'We can manipulate the agent and leverage its privileges to do whatever we want. So instead of us having to write a very comprehensive Mac malware stealer, we can just leverage the AI assistant itself.'",
+          "Several design choices enabled it: dictation processed in the cloud rather than on-device (unlike Apple's on-device transcription), and undocumented settings left writable by any local process.",
+        ],
+      },
+      {
+        heading: "How serious was it, really",
+        paragraphs: [
+          "Two things are true at once. The exploit required local code execution — malware already running on the machine, physical access, or a social-engineering trick like a ClickFix prompt getting the user to paste a terminal command. It was not remotely exploitable over the internet, which is why Meta assessed real-world risk as low.",
+          "But the deeper point stands: an agent designed to act across your files, email, messages, and calendar with broad permissions becomes the single highest-value target on the machine. Compromise the agent and you inherit everything it can touch. That structural reality doesn't disappear with one hotfix — it's the permanent trade-off of [computer-use agents](/guides/muse-ai-mac-computer-use).",
+        ],
+      },
+      {
+        heading: "What to do as a user",
+        list: {
+          ordered: false,
+          items: [
+            "Update the Muse Mac app and keep it updated — this is how security fixes reach you.",
+            "Never paste terminal commands from strangers, popups, or videos. ClickFix-style tricks are the cheapest attack path.",
+            "Keep macOS itself updated; OS-level protections are part of the defense.",
+            "Grant Muse the narrowest permissions each task needs, and revoke access you no longer use.",
+            "Treat any agent with deep system access as high-trust software: powerful, useful, and worth a skeptical eye.",
+          ],
+        },
+      },
+      {
+        heading: "The bigger picture",
+        paragraphs: [
+          "This episode landed in a week when platforms started pushing back on autonomous agents more broadly — Amazon began blocking Muse from placing automated orders, saying the agent violated its terms. The industry is negotiating, in real time, what agents are allowed to do and who is responsible when they do it.",
+          "Our honest take: Muse's capabilities are real, and so are the risks that come with an agent holding your credentials and permissions. Use it, but grant least privilege, keep everything updated, and remember that the most powerful assistant on your machine is also the most attractive target on it.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta hot-fixes Muse zero-day that let attackers hijack the AI agent — Unite.AI, September 2026](https://www.unite.ai/meta-hot-fixes-muse-zero-day-that-let-attackers-hijack-the-ai-agent/)",
+            "[Meta Muse hit by zero-day flaw: is your Mac safe? — Android Headlines, September 2026](https://www.androidheadlines.com/2026/09/meta-muse-ai-mac-zero-day-vulnerability.html)",
+            "[Muse Mac app security flaw allows hackers to exploit the AI agent — iPhone in Canada, September 22, 2026](https://www.iphoneincanada.ca/2026/09/22/muse-mac-app-security-flaw-allows-hackers-to-exploit-the-ai-agent/)",
+            "[Meta patches Muse exploit that let attackers control the AI agent — GNN, September 25, 2026](https://gnnhd.tv/news/56482/meta-patches-muse-exploit-that-let-attackers-control-the-ai-agent)",
+            "[Muse's undocumented endpoint turns macOS agent into a local backdoor — Forkast, September 2026](https://forkast.news/muses-undocumented-endpoint-turns-macos-agent-into-a-local-backdoor/)",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-availability",
+    image: "/images/guides/muse-ai-availability.jpg",
+    imageAlt: "Editorial illustration of a world globe with North America glowing and other regions as faint outlines",
+    title: "Is Muse AI Available in My Country?",
+    deck: "The US and Canada have it; India, Pakistan, the UK, and Europe don't yet. The full availability picture and why a VPN won't help.",
+    category: "Access",
+    keywords: "muse ai india, muse ai availability, muse ai uk release date, muse ai region, muse ai pakistan",
+    metaTitle: "Muse AI Availability: Countries & Release Dates",
+    metaDescription:
+      "Muse AI is available in the US and Canada only, as of September 2026. No India, UK, or EU date yet — and VPNs violate the terms. What to use instead.",
+    shortAnswer:
+      "As of September 2026, Muse is available only in the US and Canada. Meta has announced no dates for India, the UK, or Europe, and using a VPN to bypass the restriction violates Meta's terms.",
+    sections: [
+      {
+        heading: "Where Muse works today",
+        paragraphs: [
+          "Muse launched in the United States on September 8, 2026, and reached Canada on September 18. Those two countries are the complete list as of late September 2026. Access is limited to adults 18 and older, and the product runs on iOS, Android, the web, and a Mac app.",
+          "Meta's help centre describes availability plainly: subscriptions are 'in limited testing and aren't available in all locations yet,' and you must be located in a country where Muse operates. Meta publishes no country list and no expansion timeline.",
+          "The demand outside those two countries is real: searches for Muse availability come heavily from India, Pakistan, the UK, South Korea, and South Africa — regions where the product doesn't exist yet. If you're searching from one of them, this page is for you: the short version is that waiting is currently the only legitimate option."
+        ],
+      },
+      {
+        heading: "India and Pakistan: not yet, no date",
+        paragraphs: [
+          "Muse is not available in India or Pakistan, and Meta has said nothing about when — or whether — that changes. This surprises people because Meta AI is already everywhere in both countries through WhatsApp, Instagram, and Facebook. But Muse is a different product: Meta AI answers questions inside Meta's apps, while Muse is a standalone agent with its own computer and browser that completes tasks across apps.",
+          "The pricing often quoted alongside availability — a free tier, a $20/month Power plan, and a $100/month Maximum plan — only matters once the product reaches you. For now, those tiers describe the US and Canadian product.",
+        ],
+      },
+      {
+        heading: "UK and Europe: also waiting",
+        paragraphs: [
+          "The UK and EU are in the same position: no availability, no date. Regulatory complexity is the usual suspect — data residency and platform rules mean a European rollout needs its own trust architecture — but Meta hasn't confirmed any of that publicly. There is no business or enterprise tier and no published data-processing terms for Muse yet, which also keeps it out of workplaces that require them.",
+        ],
+      },
+      {
+        heading: "Why a VPN won't help",
+        paragraphs: [
+          "The workaround everyone suggests — a US-based VPN — doesn't work and isn't safe. Meta's terms require you to be physically located in a country where Muse operates; a VPN doesn't change your actual location, so using one breaks the rules. Reports note that attempting it risks suspension of the linked Meta account.",
+          "It's also technically fragile: whether Muse appears in the App Store or Google Play depends on your account's region settings, and the app simply isn't listed on storefronts outside supported countries. A VPN can't fix any of that.",
+        ],
+      },
+      {
+        heading: "What to use while you wait",
+        paragraphs: [
+          "If you want the closest available experience today, Meta AI inside WhatsApp, Instagram, or Facebook is the practical option on Meta's own platforms — it's the assistant, not the agent, but it's there now.",
+          "If you're technically inclined, the model behind Muse — Muse Spark 1.3 — is available through OpenRouter on a pay-per-token basis. That gives you the model, not the full Muse agent experience with tasks, browsing, and memory, so set expectations accordingly.",
+          "And when Muse does arrive in your country, access will likely involve the invite system — our [invite code guide](/guides/muse-ai-invite-code) and [referral code guide](/guides/muse-ai-referral-code) explain how that works.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta Muse stays off the table for Indian users, for now — Dailyhunt, September 2026](https://m.dailyhunt.in/news/india/english/analytics%20insight-epaper-anycinst/meta%20muse%20stays%20off%20the%20table%20for%20indian%20users%20for%20now-newsid-n728366895)",
+            "[Where your AI data actually goes: UK residency in 2026 — SpotDev, September 2026](https://www.spotdev.co.uk/blog/ai-data-residency-uk-chatgpt-claude-gemini-grok-muse)",
+            "[Meta Muse: inside the AI agent that actually does your tasks — Social Nation, September 2026](https://blog.socialnationnow.com/meta-muse-ai-agent-explained-features-pricing)",
+            "[What is Muse? Mark Zuckerberg's new AI agent — The Statesman, September 2026](https://www.thestatesman.com/technology/what-is-muse-mark-zuckerbergs-new-ai-agent-that-could-end-up-knowing-your-life-better-than-you-do-1503636756.html)",
           ],
         },
       },
