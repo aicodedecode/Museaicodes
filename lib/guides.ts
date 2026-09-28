@@ -47,9 +47,9 @@ export const GUIDES: Guide[] = [
     deck: "Understand what Muse is, what it can do, and where it fits among personal AI agents.",
     category: "Basics",
     keywords: "what is muse ai, muse ai explained, meta muse ai, muse ai kya hai",
-    metaTitle: "What Is Muse AI? A Clear Beginner's Guide (2026)",
+    metaTitle: "What Is Muse AI? Meta's Personal AI Agent Explained (2026)",
     metaDescription:
-      "What is Muse AI? A plain-English beginner's guide to Meta's personal AI agent — what it does, what it's good at, and how access works.",
+      "Muse AI explained simply: what Meta's personal agent actually does, how to get access, what it costs, and how it compares to ChatGPT and Meta AI.",
     shortAnswer:
       "Muse is Meta's personal AI agent: a conversational assistant designed to carry work from a request to a finished output — research, plans, writing, visuals, and digital artifacts. As of September 2026, it is available in the US and Canada.",
     sections: [
