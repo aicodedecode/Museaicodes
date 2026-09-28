@@ -557,6 +557,15 @@ export default function AvailabilityChecker() {
                   — bypassing region checks violates Meta&rsquo;s terms and
                   can get an account banned.
                 </p>
+                {country === "Mexico" && (
+                  <p className="mt-3 rounded-2xl border border-line bg-bg px-4 py-3 text-[0.92rem] leading-relaxed text-muted">
+                    <strong className="text-ink">A note on Mexico:</strong>{" "}
+                    a few press outlets report Muse is available here, but
+                    we couldn&rsquo;t find any direct confirmation from Meta
+                    — so we list it as unconfirmed for now. This page updates
+                    the moment Meta says otherwise.
+                  </p>
+                )}
                 <ul className="mt-5 space-y-2.5 text-[0.95rem] leading-relaxed text-muted">
                   <li>
                     <strong className="text-ink">Watch for the launch:</strong>{" "}

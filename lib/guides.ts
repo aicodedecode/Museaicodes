@@ -1197,6 +1197,7 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "Muse launched in the United States on September 8, 2026, and reached Canada on September 18. Those two countries are the complete list as of late September 2026. Access is limited to adults 18 and older, and the product runs on iOS, Android, the web, and a Mac app.",
           "Meta's help centre describes availability plainly: subscriptions are 'in limited testing and aren't available in all locations yet,' and you must be located in a country where Muse operates. Meta publishes no country list and no expansion timeline.",
+          "A note on Mexico: a few press outlets (GSMArena, Gulf News) have reported that Muse also covers Mexico, and one Connect live blog claims Meta's event materials listed the US, Canada, and Mexico. We could not find any direct statement from Meta confirming Mexico, and major outlets as recent as September 25 still describe availability as US and Canada only — so we treat Mexico as reported but unconfirmed, and this page will be updated the moment Meta says otherwise.",
           "The demand outside those two countries is real: searches for Muse availability come heavily from India, Pakistan, the UK, South Korea, and South Africa — regions where the product doesn't exist yet. If you're searching from one of them, this page is for you: the short version is that waiting is currently the only legitimate option. Not sure where your country stands? [Check instantly with our availability checker](/tools/availability-checker)."
         ],
       },
