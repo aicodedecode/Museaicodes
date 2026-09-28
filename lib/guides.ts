@@ -731,16 +731,64 @@ export const GUIDES: Guide[] = [
     modifiedTime: "2026-09-28",
     image: "/images/guides/muse-ai-whatsapp.jpg",
     imageAlt: "Illustration of flowing chat bubbles, symbolizing using Muse AI on WhatsApp",
-    title: "Muse AI WhatsApp Guide",
-    deck: "Make short messages produce useful, structured work.",
+    title: "Muse AI on WhatsApp: Connect, Setup & What Works",
+    deck: "Muse is live inside WhatsApp — connect it once, then chat like you would with a person.",
     category: "WhatsApp",
-    keywords: "muse ai whatsapp, muse whatsapp, use muse on whatsapp",
-    metaTitle: "Muse AI on WhatsApp: Setup & Chat Tips (2026)",
+    keywords: "muse ai whatsapp, muse whatsapp, use muse on whatsapp, connect muse whatsapp",
+    metaTitle: "Muse AI on WhatsApp: How to Connect & Use It (2026)",
     metaDescription:
-      "How to use Muse AI on WhatsApp: setup, message habits that produce structured work, and the channel limits to know about.",
+      "Muse AI is live on WhatsApp. How to connect it step by step, what works well in chat vs the app, limitations, and chat habits that get better results.",
     shortAnswer:
-      "If Muse is available in your WhatsApp experience, use it like a project conversation: send the goal, relevant context, desired format, and feedback in a focused thread.",
+      "Muse is available as a chat inside WhatsApp — find the Muse contact, sign in with your Meta account, confirm you're 18+, and start messaging. It's best for quick asks, reminders, and short threads; heavy production work belongs in the app.",
     sections: [
+      {
+        heading: "How to connect Muse on WhatsApp",
+        paragraphs: [
+          "Muse has been a WhatsApp surface since its September 2026 launch — TechCrunch, CNET, SiliconANGLE, and the Associated Press all confirmed WhatsApp alongside the iOS app, Android app, and web at launch. You talk to it like messaging another person: no separate download required.",
+        ],
+        list: {
+          ordered: true,
+          items: [
+            "Open WhatsApp on your phone and look for the Muse chat — it appears as a contact you can message directly.",
+            "If prompted, sign in with your Meta account. Muse uses the same Meta login tied to your Facebook, Instagram, or WhatsApp identity — you can create one with an email address or phone number if you don't have one.",
+            "Confirm you're 18 or older. Muse is an adults-only product across every surface.",
+            "Send your first message. Start small — ask a question or give it a quick task — to confirm the connection is live on your account.",
+            "The exact entry point can vary by account as Meta rolls features out in stages, so if the chat isn't visible yet, check back — and never install an unofficial 'Muse for WhatsApp' app or share login codes with strangers promising access.",
+          ],
+        },
+      },
+      {
+        heading: "What works well on WhatsApp",
+        list: {
+          ordered: false,
+          items: [
+            "Quick asks: 'summarize this article,' 'remind me at 6pm,' 'what's a good gift under $50?'",
+            "Thinking through a decision in a short back-and-forth thread.",
+            "Drafting and iterating on a tricky message before sending it.",
+            "Follow-ups on work you started in the app — 'how's that research going?'",
+            "Planning something small: a weekend trip, a dinner, a shopping shortlist.",
+          ],
+        },
+      },
+      {
+        heading: "What belongs in the app instead",
+        paragraphs: [
+          "WhatsApp is the quick-ask surface. Anything that produces a real deliverable — a researched brief, a tracker, a document, a multi-step goal — belongs in the Muse app or on the web, where artifacts, side chats, and the Goals tab live. Long threads also fragment: one focused thread per project keeps context clean.",
+          "Computer use, voice mode, and background goal tracking are app and web features — don't expect them inside a WhatsApp chat. And while Muse asks for approval before sensitive actions everywhere, review anything consequential on a bigger screen before saying yes.",
+        ],
+      },
+      {
+        heading: "Limitations to know",
+        list: {
+          ordered: false,
+          items: [
+            "Availability rolls out in stages — the launch was US-only, and the site tracks the current picture on the [availability guide](/guides/muse-ai-availability). If the chat isn't in your WhatsApp yet, it hasn't reached your account.",
+            "Small screen, small context: long documents, precise formatting, and multi-file projects are painful in a chat window. Use WhatsApp for thinking and deciding, then move heavy production to the app.",
+            "Don't confuse Muse with Meta AI — the assistant already inside WhatsApp, Instagram, and Messenger. Muse is the personal agent; Meta AI answers questions.",
+            "Never share sensitive credentials, payment details, or one-time codes in chat. Muse never needs your passwords to do its job.",
+          ],
+        },
+      },
       {
         heading: "Good WhatsApp habits",
         list: {
@@ -755,11 +803,15 @@ export const GUIDES: Guide[] = [
         },
       },
       {
-        heading: "Know the channel limits",
-        paragraphs: [
-          "Messaging is brilliant for speed and terrible for sprawling context. The [tutorial](/guides/muse-ai-tutorial) covers the full app workflow for those bigger jobs, and [voice mode](/guides/muse-ai-voice-mode) is the fastest hands-free alternative. Long documents, precise formatting, and multi-file projects are easier on a bigger surface — use WhatsApp for thinking and deciding, then move heavy production where it belongs.",
-          "Messaging availability and capabilities can vary. Use the official Muse contact or entry point connected to your account, and never share sensitive credentials in chat.",
-        ],
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse on WhatsApp — app surface guide](/apps/whatsapp) — setup, tips, and honest limits for the WhatsApp surface.",
+            "[Connector directory](/connectors) — every verified Muse connector with setup steps.",
+            "[Muse AI Voice Mode](/guides/muse-ai-voice-mode) — the fastest hands-free alternative in the app.",
+          ],
+        },
       },
     ],
   },

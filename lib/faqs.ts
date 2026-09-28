@@ -22,7 +22,7 @@ export const FAQS: Faq[] = [
   {
     question: "Can I use Muse AI on WhatsApp?",
     answer:
-      "Some users can chat with Muse through WhatsApp. Availability and supported capabilities can vary, so use the official access route associated with your Muse account.",
+      "Yes — Muse is live inside WhatsApp as a chat you message directly, no separate download needed. Find the Muse chat, sign in with your Meta account, and confirm you're 18+. It's best for quick asks and short threads; heavy work belongs in the app. Rollout is staged, so if the chat isn't visible, it hasn't reached your account yet.",
   },
   {
     question: "How is Muse AI different from ChatGPT, Claude, and Meta AI?",

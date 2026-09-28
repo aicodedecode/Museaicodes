@@ -142,16 +142,20 @@ const SURFACES: Record<string, Surface> = {
   whatsapp: {
     name: "WhatsApp",
     tagline: "Muse on WhatsApp",
-    lede: "Using Muse inside WhatsApp — what exists, what's been reported, and how it differs from the standalone app.",
-    where: "Inside WhatsApp · availability varies",
+    lede: "Muse is live inside WhatsApp — no separate download. Chat with it like you'd message a person: quick asks, reminders, and short threads.",
+    where: "Inside WhatsApp · sign in with a Meta account",
     steps: [
       {
-        title: "Check what's available to you",
-        body: "WhatsApp-based access to Muse has been reported as rolling out rather than universally available. Open WhatsApp and look for Muse in your chat list or AI features — if it isn't there, it hasn't reached your account yet.",
+        title: "Find the Muse chat in WhatsApp",
+        body: "Open WhatsApp and look for the Muse chat — it appears as a contact you can message directly. It's been a launch surface since September 2026, confirmed by TechCrunch, CNET, and the Associated Press.",
       },
       {
-        title: "Start from a chat",
-        body: "Where available, you talk to Muse like any other chat: type or voice-note your request and it responds in the thread.",
+        title: "Sign in with your Meta account",
+        body: "Muse uses the same Meta login tied to your Facebook, Instagram, or WhatsApp identity. You can create a Meta account with an email address or phone number if you don't have one.",
+      },
+      {
+        title: "Confirm you're 18 or older",
+        body: "Muse is an adults-only product on every surface, and you may be asked to confirm your age.",
       },
       {
         title: "Use the full app for heavy work",
@@ -160,17 +164,17 @@ const SURFACES: Record<string, Surface> = {
     ],
     tips: [
       "Treat WhatsApp as the quick-ask surface: 'remind me', 'summarize this', 'find me a…'.",
-      "Anything that needs documents, trackers, or background work deserves the main app.",
-      "Don't confuse Meta AI (the assistant already inside WhatsApp) with the full Muse personal agent — they're different products.",
+      "Lead with the outcome in the first line and keep one thread per project.",
+      "Don't confuse Muse with Meta AI — the assistant already inside WhatsApp. Muse is the personal agent.",
     ],
     limitations:
-      "Availability is the honest caveat here: WhatsApp access has been reported rather than officially documented for everyone, and features lag the standalone app. Confirm what your account can do inside WhatsApp itself.",
+      "Availability rolls out in stages — if the chat isn't in your WhatsApp yet, it hasn't reached your account. Small screens make long documents and precise formatting painful; use WhatsApp for thinking and deciding, then move heavy production to the app.",
     guides: [
-      { label: "Muse AI on WhatsApp", href: "/guides/muse-ai-whatsapp" },
+      { label: "Muse AI on WhatsApp — full guide", href: "/guides/muse-ai-whatsapp" },
       { label: "Connector directory", href: "/connectors" },
       { label: "App guide hub", href: "/apps" },
     ],
-    keywords: "muse ai whatsapp, muse whatsapp chat",
+    keywords: "muse ai whatsapp, muse whatsapp chat, connect muse whatsapp",
   },
   mac: {
     name: "Mac",

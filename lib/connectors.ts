@@ -330,17 +330,18 @@ export const CONNECTORS: Connector[] = [
     slug: "whatsapp",
     name: "WhatsApp",
     category: "Chat",
-    status: "reported",
+    status: "live",
     lastVerified: "September 28, 2026",
     tagline: "Muse inside WhatsApp — for short, focused threads.",
     whatItDoes: [
       "Muse ships as a chat you can reach inside WhatsApp — no separate app needed for quick asks.",
       "Suited to short, focused threads: thinking through a decision, drafting a message, planning something small.",
-      "Meta says the same underlying Muse system also powers the Meta AI assistant now coming to WhatsApp, Instagram, Facebook, and Messenger.",
+      "Distinct from Meta AI, the assistant already inside WhatsApp — Muse is the personal agent.",
     ],
     howToConnect: [
-      "Meta hasn't published a uniform WhatsApp onboarding flow — availability varies by account.",
-      "Check our WhatsApp guide for what's currently known about getting and using Muse there.",
+      "Open WhatsApp and look for the Muse chat — it appears as a contact you can message directly.",
+      "Sign in with your Meta account if prompted, and confirm you're 18 or older.",
+      "Start chatting. If the chat isn't visible, it hasn't rolled out to your account yet.",
     ],
     exampleTasks: [
       "Think through a decision in a short chat thread.",
@@ -360,12 +361,12 @@ export const CONNECTORS: Connector[] = [
       },
     ],
     limitations: [
-      "Reported, not formally launched as a connector — availability varies by account and region.",
+      "Live since the September 2026 launch, but rolling out in stages — availability varies by account and region.",
       "WhatsApp is best for short threads; heavy multi-app tasks belong in the full Muse app.",
       "Available only where Muse is available (US and Canada).",
     ],
-    sourceName: "RuntimeWire — Meta opens Muse connectors",
-    sourceUrl: "https://runtimewire.com/article/meta-opens-muse-connectors-developers",
+    sourceName: "TechCrunch — Muse launch coverage (September 2026)",
+    sourceUrl: "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/",
     guideSlug: "muse-ai-whatsapp",
   },
   {

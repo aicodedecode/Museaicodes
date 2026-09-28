@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Muse Hub",
   description:
-    "Muse Hub is an independent, unofficial guide to Muse AI — 15 practical guides on access, prompts, WhatsApp, tokens, and honest comparisons.",
+    "Muse Hub is an independent, unofficial guide to Muse AI — 31 practical guides on access, prompts, WhatsApp, tokens, and honest comparisons.",
   alternates: { canonical: `${SITE.baseUrl}/about` },
 };
 
