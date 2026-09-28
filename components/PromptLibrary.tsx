@@ -5,7 +5,10 @@ import { PROMPTS, type PromptCard } from "@/lib/prompts";
 import { useToast } from "./Toast";
 import Reveal from "./Reveal";
 
-const FILTERS = ["All", "Build", "Research", "Create", "Decide"] as const;
+const FILTERS: readonly string[] = [
+  "All",
+  ...Array.from(new Set(PROMPTS.map((p) => p.category))),
+];
 
 async function copyPrompt(text: string): Promise<boolean> {
   try {
@@ -65,7 +68,7 @@ function PromptTile({ card, index }: { card: PromptCard; index: number }) {
 }
 
 export default function PromptLibrary() {
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
+  const [filter, setFilter] = useState<string>("All");
   const visible = PROMPTS.filter((p) => filter === "All" || p.category === filter);
 
   return (

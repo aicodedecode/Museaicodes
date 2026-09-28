@@ -107,6 +107,16 @@ export const GUIDES: Guide[] = [
           ],
         },
       },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse encyclopedia](/encyclopedia) — 40 terms, plainly explained.",
+            "[Muse news](/news) — launches, features, and traction, dated and sourced.",
+          ],
+        },
+      },
     ],
   },
   {
@@ -191,6 +201,15 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "Referral rewards are promotional offers, not permanent pricing. Amounts, eligibility, timing, and availability can differ by account and region, and offers can change without notice. Treat any headline number as a starting point and confirm the live terms in Muse's invite or redeem screen.",
         ],
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Codes directory](/codes) — featured and community codes in one place, with the submit board.",
+          ],
+        },
       },
     ],
   },
@@ -557,6 +576,16 @@ export const GUIDES: Guide[] = [
           "Terms vary, and offers change. Confirm the current terms in the app.",
         ],
       },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Token Runway Estimator](/tools/token-runway) — see how long a token balance lasts at your pace.",
+            "[Codes directory](/codes) — invite and referral codes in one place.",
+          ],
+        },
+      },
     ],
   },
   {
@@ -681,6 +710,17 @@ export const GUIDES: Guide[] = [
             "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
             "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
             "[Meta is putting its muscle behind Muse — TechCrunch, September 25, 2026](https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/)",
+          ],
+        },
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Use-case directory](/use-cases) — 31 real workflows across 7 personas, with starter prompts.",
+            "[Muse for students](/for/students) — one of 20 intent pages tuned to who you are.",
+            "[Can Muse Do This?](/tools/can-muse-do-this) — honest yes / depends / no answers for 64 tasks.",
           ],
         },
       },
@@ -1548,6 +1588,470 @@ export const GUIDES: Guide[] = [
             "[Muse AI Tutorial: Your First Tasks, Step by Step](/guides/muse-ai-tutorial)",
             "[Muse Voice Mode: Talking to Your Agent](/guides/muse-ai-voice-mode)",
             "[What Is Muse AI? The Beginner's Guide](/guides/what-is-muse-ai)",
+          ],
+        },
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Prompt library](/prompts) — 40 copy-paste prompts across 8 categories.",
+            "[Agent templates](/templates) — 10 specialist setups with copy-ready instructions.",
+            "[Prompt Generator](/tools/prompt-generator) — compose a polished prompt from guided questions.",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-50-things",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-50-things.jpg",
+    imageAlt: "Minimal navy title card reading 50 Things Muse AI Can Do",
+    title: "50 Things Muse AI Can Do: The Big List",
+    deck: "From morning briefings to full trip plans — 50 real jobs Muse can take off your plate, grouped so you can steal them.",
+    category: "Ideas",
+    keywords: "things muse ai can do, muse ai capabilities, what can muse ai do, muse ai ideas list",
+    metaTitle: "50 Things Muse AI Can Do: The Big List (2026)",
+    metaDescription:
+      "50 real things Muse AI can do — everyday tasks, work, learning, money, shopping, and automation ideas to steal for your own agent.",
+    shortAnswer:
+      "Muse AI can research and plan trips, draft documents and emails, build interactive pages and trackers, shop and compare prices, set reminders and routines, summarize files, brainstorm ideas, and handle recurring tasks with your approval. Here are 50 concrete jobs to try.",
+    sections: [
+      {
+        heading: "How to read this list",
+        paragraphs: [
+          "Muse is an agent, not a chatbot: it doesn't just answer, it does. Every item below is a job you can hand it in a single message — describe the outcome, add the relevant context, and let it work. The list is grouped so you can scan for your life, not someone else's.",
+          "New to agents? Start with [what Muse actually is](/guides/what-is-muse-ai), browse [how people really use it](/guides/muse-ai-use-cases), then run your [first tasks step by step](/guides/muse-ai-tutorial). Three items from this list, tried today, will teach you more than any guide.",
+        ],
+      },
+      {
+        heading: "Everyday life (1–12)",
+        list: {
+          ordered: true,
+          items: [
+            "Give you a morning briefing: calendar, weather, and the day's priorities in one message.",
+            "Plan a full trip — flights to compare, hotels, daily itinerary, and a packing list.",
+            "Summarize a long article, PDF, or document into five bullet points.",
+            "Draft a difficult email: the complaint, the apology, the follow-up you keep avoiding.",
+            "Write a grocery list from a week of meal ideas, grouped by store section.",
+            "Compare two products side by side with a verdict for your actual needs.",
+            "Explain a confusing topic — taxes, insurance, a medical term — in plain English.",
+            "Brainstorm birthday, anniversary, or holiday gift ideas within a budget.",
+            "Turn a rambling voice note into a clean to-do list.",
+            "Plan a dinner party: menu, shopping list, and a cooking timeline.",
+            "Draft a polite-but-firm message to a landlord, contractor, or customer service.",
+            "Create a packing checklist tailored to your destination, season, and trip length.",
+          ],
+        },
+      },
+      {
+        heading: "Work & productivity (13–25)",
+        list: {
+          ordered: true,
+          items: [
+            "Turn messy meeting notes into action items with owners and deadlines.",
+            "Draft a project plan with phases, milestones, and risks before you start.",
+            "Write a job description, interview questions, and a scorecard for a hire.",
+            "Summarize a long thread or document for your boss in three sentences.",
+            "Build a competitive comparison table from your own research notes.",
+            "Draft a proposal, quote, or statement of work for a client.",
+            "Create a content calendar: a month of post ideas from one briefing.",
+            "Write standard operating procedures from how you actually do the task.",
+            "Prepare for a sales call with an account brief and likely objections.",
+            "Draft meeting agendas that force decisions instead of discussions.",
+            "Turn a spreadsheet of raw numbers into a plain-English summary.",
+            "Write follow-up emails after meetings, interviews, or networking events.",
+            "Build a personal dashboard page tracking your goals, habits, or KPIs.",
+          ],
+        },
+      },
+      {
+        heading: "Learning & creating (26–37)",
+        list: {
+          ordered: true,
+          items: [
+            "Explain any concept at your level — fifth-grader, undergrad, or expert.",
+            "Build a study plan for an exam, certification, or new skill with daily tasks.",
+            "Generate practice quizzes and flashcards from your study material.",
+            "Learn a language through conversation practice with gentle corrections.",
+            "Outline an essay, report, or presentation before you write a word.",
+            "Give honest feedback on your writing: what's unclear, what's missing.",
+            "Brainstorm story, video, or business ideas with a devil's-advocate round.",
+            "Create a reading list on any topic, ordered from beginner to advanced.",
+            "Summarize a book chapter-by-chapter so you can decide if it's worth reading.",
+            "Design a workout plan around your schedule, equipment, and goals.",
+            "Write lyrics, poems, or toasts when you need words for an occasion.",
+            "Make a simple browser game, quiz, or interactive page as a shareable artifact.",
+          ],
+        },
+      },
+      {
+        heading: "Money, shopping & home (38–46)",
+        list: {
+          ordered: true,
+          items: [
+            "Compare prices and options before a big purchase, with the trade-offs spelled out.",
+            "Build a monthly budget with categories, targets, and a spending review.",
+            "Audit your subscriptions and flag what to cancel.",
+            "Draft a negotiation script for a salary discussion, car purchase, or bill.",
+            "Create a home maintenance schedule: what to check, and when.",
+            "Plan a move: timeline, vendor comparisons, and an address-change checklist.",
+            "Organize a cleaning schedule split fairly across the household.",
+            "Research the real cost of a project — renovation, trip, or event — before committing.",
+            "Write a polite payment reminder for a client who owes you money.",
+          ],
+        },
+      },
+      {
+        heading: "Plans, reminders & automation (47–50)",
+        list: {
+          ordered: true,
+          items: [
+            "Set a standing weekly check-in: bills due, calendar conflicts, priorities.",
+            "Track prices or restocks and ping you when something changes.",
+            "Remind you of recurring tasks — with the context of why they matter.",
+            "Run a Friday review: what got done, what's stuck, what's next week.",
+          ],
+        },
+        paragraphs: [
+          "The pattern across all fifty: outcome first, relevant context second, approval checkpoint third. Pick three items that match your actual week and try them today — then keep the ones that stick as standing instructions instead of repeated conversations. For the reusable patterns behind them, grab the [cheat sheet](/guides/muse-ai-cheat-sheet), and when you're ready to plug in your real tools, read the [connectors guide](/guides/muse-ai-connectors).",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-connectors",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-connectors.jpg",
+    imageAlt: "Minimal navy title card reading Muse AI Connectors Guide",
+    title: "Muse AI Connectors: The Beginner's Guide",
+    deck: "Connect your calendar, inbox, and favorite apps — and know exactly what you're granting. A calm, complete walkthrough.",
+    category: "Workflow",
+    keywords: "muse ai connectors, muse connectors, connect apps to muse ai, muse ai integrations",
+    metaTitle: "Muse AI Connectors: The Beginner's Guide (2026)",
+    metaDescription:
+      "What Muse AI connectors are, which connections to set up first, how permissions and approval checkpoints work, and how to stay safe.",
+    shortAnswer:
+      "Muse AI connectors link your agent to outside services — your calendar, email, or store accounts — so it can act on real information instead of guessing. Connect only what a task needs, keep approval checkpoints on, and review permissions regularly.",
+    sections: [
+      {
+        heading: "What a connector actually is",
+        paragraphs: [
+          "A connector is a permissioned link between Muse and one of your other services. Without connectors, Muse works from what you tell it; with them, it can check your real calendar before scheduling, read the actual email thread before drafting a reply, or look at live store listings before comparing prices.",
+          "Think of it this way: the chat is Muse's mouth, and connectors are its hands. You decide which hands it gets, one connection at a time — nothing is linked by default, and every link can be removed.",
+          "Availability of specific connectors depends on your account and region, and the roster grows over time — Meta has said more connectors and partners are on the way. The principles below hold no matter which services appear in your list.",
+        ],
+      },
+      {
+        heading: "The connections worth setting up first",
+        paragraphs: [
+          "Don't connect everything on day one. Start with the two or three services where Muse having real data changes the quality of its work:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Calendar — the highest-leverage connection. Scheduling, briefings, and conflict checks all get dramatically better when Muse sees your real calendar.",
+            "Email — worth it once you trust the agent: triage summaries, draft replies, and follow-up detection. Keep approval checkpoints on for anything sent.",
+            "Shopping and store accounts — price comparisons and purchase help stop being hypothetical when Muse can see real listings.",
+            "Files and cloud storage — summarizing your own documents and drafting inside your files beats copy-pasting every time.",
+            "Music and entertainment — lower stakes, great for learning how connectors feel: playlists, recommendations, and watchlists.",
+          ],
+        },
+      },
+      {
+        heading: "How connecting works, step by step",
+        list: {
+          ordered: true,
+          items: [
+            "Open the integrations or connections area in your Muse app or settings.",
+            "Pick the service you want to link and read what access it requests — scopes matter more than the brand name.",
+            "Sign in to that service through its official login page (never type credentials into a chat message).",
+            "Confirm exactly what Muse may do: read-only is the safe default for anything you don't fully trust yet.",
+            "Test with something small and reversible — 'summarize my inbox from today' — before handing it real responsibility.",
+            "Tell Muse your preference once ('always ask before sending email') so it becomes a standing rule.",
+          ],
+        },
+      },
+      {
+        heading: "Permissions, approvals & staying safe",
+        paragraphs: [
+          "Connectors are powerful precisely because they touch your real accounts, so treat them with the same seriousness. The single most important habit: keep human approval on for anything hard to undo — sending messages, making purchases, deleting files, or changing settings. Muse's approval cards exist for exactly this; don't train yourself to tap 'approve' without reading.",
+          "Prefer read access where you can, grant write access only to services where Muse genuinely needs to act, and audit your connections every few months the way you'd audit app permissions on your phone. If a task is finished — the trip is booked, the project is done — disconnect what you no longer need. Our [privacy guide](/guides/muse-ai-privacy) covers the data side in more depth.",
+          "Never share passwords, one-time codes, or payment credentials inside a chat, even if asked. Legitimate connections happen through official sign-in screens, not conversation.",
+        ],
+      },
+      {
+        heading: "Connectors vs. channels vs. computer use",
+        paragraphs: [
+          "Muse reaches the outside world three ways, and it helps to keep them straight. Connectors are persistent, permissioned links to your accounts — set up once, used for months. Channels are where you talk to Muse: the app, WhatsApp, or voice mode. Computer use is the heavy machinery: Muse operating a real browser or desktop to complete bookings, forms, and purchases step by step, usually with you watching the approval checkpoints.",
+          "A good rule of thumb: connect for information (calendar, inbox, files), use channels for conversation, and reserve computer use for transactions. If you're curious about the heaviest of the three, the [Mac computer-use guide](/guides/muse-ai-mac-computer-use) explains what granting desktop access really means.",
+        ],
+      },
+      {
+        heading: "Stuck? Troubleshoot, then keep exploring",
+        paragraphs: [
+          "Most connector problems are boring: an expired login, a revoked permission, or a service that changed its own API. Reconnect from the integrations screen, check the service's own 'connected apps' page, and try the smallest possible test before assuming something is broken. If a connector you expected isn't listed at all, it may simply not have reached your account or region yet.",
+          "Once your first two connections are working, the real unlock is combining them: 'find a free hour this week, draft the invite, and stop for my approval before sending.' That sentence uses a connector, a channel, and an approval card together — which is the whole agent idea in one line. For the patterns that make it sing, see [how to use Muse AI](/guides/how-to-use-muse-ai) and the [prompt cheat sheet](/guides/muse-ai-cheat-sheet).",
+        ],
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Connector directory](/connectors) — every verified connector with setup steps and example prompts.",
+          ],
+        },
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-cheat-sheet",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-cheat-sheet.jpg",
+    imageAlt: "Minimal navy title card reading Muse AI Cheat Sheet",
+    title: "Muse AI Cheat Sheet: Prompts, Features & Settings",
+    deck: "One page to bookmark: the five prompt formulas, every major feature, and the settings worth changing today.",
+    category: "Tutorial",
+    keywords: "muse ai cheat sheet, muse ai shortcuts, muse ai features list, muse ai settings guide",
+    metaTitle: "Muse AI Cheat Sheet: Prompts, Features & Settings (2026)",
+    metaDescription:
+      "The one-page Muse AI cheat sheet: 5 prompt formulas, every major feature at a glance, settings to change, and what Muse can't do.",
+    shortAnswer:
+      "The Muse AI cheat sheet in one line: state the outcome first, give only relevant context, set approval checkpoints, connect your apps, and review before anything becomes final.",
+    sections: [
+      {
+        heading: "The 5 prompt formulas",
+        list: {
+          ordered: true,
+          items: [
+            "Outcome first: “Book me a flight to Chicago next Friday morning, under $300, aisle seat.” Muse plans backward from a clear goal.",
+            "Context sandwich: who it's for + constraints + deadline. “Vegetarian dinner for 6, under $80, delivered by 7pm.”",
+            "Plan before acting: “Outline how you'd research this before you start.” Catches misunderstandings when they're free.",
+            "Approval checkpoint: “Find three options, then stop and let me pick before booking.” The highest-leverage habit in agent work.",
+            "Iterate, don't restart: “Make it shorter,” “add prices,” “sort by rating.” Agents handle revision rounds gracefully.",
+          ],
+        },
+      },
+      {
+        heading: "Features at a glance",
+        paragraphs: [
+          "Every major Muse feature, what it does, and when to reach for it:",
+        ],
+      },
+      {
+        heading: "Settings worth changing today",
+        list: {
+          ordered: false,
+          items: [
+            "Approvals: keep human review ON for sending messages, purchases, and file changes — the whole safety model is five seconds of your attention.",
+            "Notifications: allow approval pings so Muse can reach you when it's waiting on a decision; mute everything else.",
+            "Profile preferences: favorite airline, dietary needs, budget ranges, how you like summaries formatted — teach once, benefit forever.",
+            "Memory controls: review what Muse remembers about you; tighten or loosen to taste.",
+            "Voice: enable voice mode for brainstorming and hands-free moments; keep text for anything that must be quoted exactly.",
+          ],
+        },
+      },
+      {
+        heading: "What Muse can't do",
+        paragraphs: [
+          "Honest limits, so you don't learn them the embarrassing way:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Read your mind — every missing constraint (budget, date, audience) is a guess it has to make.",
+            "Guarantee facts — verify prices, dates, and recipients before acting; polished output isn't proof.",
+            "Reach services you never connected — no connector, no real data, just general knowledge.",
+            "Undo the irreversible — sent emails and completed purchases are why approval checkpoints exist.",
+            "Work outside its availability — features, limits, and access vary by region and account.",
+          ],
+        },
+      },
+      {
+        heading: "Quick answers",
+        paragraphs: [
+          "Do I need to learn prompt engineering? No — the five formulas above cover nearly everything. Agent prompting is mostly saying what you want, what it needs to know, and where to pause.",
+          "What's the one habit that matters most? Approval checkpoints. Tell Muse where to stop and wait for you, especially before money moves or messages send.",
+          "When should I use voice vs. typing? Voice for exploring and brainstorming; typing for addresses, numbers, and anything quoted exactly. Details: [voice mode guide](/guides/muse-ai-voice-mode).",
+          "Where do I go deeper? The [prompt patterns guide](/guides/muse-ai-prompt-tips) expands these formulas into ten full patterns, and the [tutorial](/guides/muse-ai-tutorial) walks through your first real tasks.",
+        ],
+      },
+      {
+        heading: "Keep this bookmarked",
+        paragraphs: [
+          "Print it, screenshot it, or just remember the one-liner: outcome first, context second, checkpoint third. When you're ready for the full vocabulary behind these features, the [glossary](/guides/muse-ai-glossary) defines every term plainly — and the [50-things list](/guides/muse-ai-50-things) gives you fifty jobs to try this week.",
+        ],
+      },
+    ],
+    table: {
+      headers: ["Feature", "What it does", "Reach for it when"],
+      rows: [
+        ["Artifacts", "Finished documents, pages, and dashboards Muse builds for you", "You want something to keep, share, or print"],
+        ["Voice mode", "Talk instead of typing, hands-free", "Brainstorming, driving, cooking, walking"],
+        ["Memory", "Remembers your preferences across conversations", "You repeat the same context every time"],
+        ["Goals", "Long-running projects Muse advances in the background", "Multi-week outcomes with checkpoints"],
+        ["Connectors", "Links to your calendar, inbox, and apps", "Muse needs your real data, not guesses"],
+        ["Computer use", "Operates a browser or desktop to finish bookings and forms", "Multi-step transactions with your approval"],
+        ["Approval cards", "Pause points where you review before Muse continues", "Anything hard to undo"],
+        ["Side chats", "Separate conversations with their own context", "A new topic that shouldn't pollute the main thread"],
+        ["Jolly", "Your customizable Muse avatar", "You want a face on the agent"],
+      ],
+    },
+  },
+  {
+    slug: "muse-ai-glossary",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-glossary.jpg",
+    imageAlt: "Minimal navy title card reading Muse AI Glossary",
+    title: "Muse AI Glossary: Every Term, Plainly Explained",
+    deck: "Agent, artifact, connector, approval card, Jolly, tokens — the whole Muse vocabulary in plain English.",
+    category: "Basics",
+    keywords: "muse ai glossary, muse ai terms explained, muse ai definitions, what is artifact muse ai",
+    metaTitle: "Muse AI Glossary: Every Term, Plainly Explained (2026)",
+    metaDescription:
+      "Every Muse AI term explained in plain English — agent, artifact, connector, approval card, memory, Jolly, tokens, and more.",
+    shortAnswer:
+      "Muse AI's core vocabulary: an agent acts on your behalf, artifacts are the finished documents and pages it makes, connectors link your apps, approval cards are your review checkpoints, and Jolly is your customizable avatar.",
+    sections: [
+      {
+        heading: "Agent basics",
+        list: {
+          ordered: false,
+          items: [
+            "AI agent — software that carries a task from request to finished output, not just an answer. Muse is one: you describe an outcome, it plans and acts.",
+            "Artifact — a finished piece Muse produces: a document, web page, tracker, or dashboard you can keep, share, or revisit.",
+            "Approval card — a structured pause where Muse shows you what it's about to do and waits for your go-ahead. Your checkpoint before anything consequential.",
+            "Memory — what Muse remembers about you across conversations: preferences, facts, and standing instructions. You can review and edit it.",
+            "Goals — long-running projects Muse advances in the background, checking in at milestones instead of needing constant prompting.",
+            "Side chat — a separate conversation with its own context, so a new topic doesn't pollute your main thread.",
+            "Proactive message — Muse reaching out on its own about something meaningfully new. You can dial these up, down, or off.",
+            "Reasoning — the agent's internal plan for your request. You see the result; the plan is how it got there.",
+          ],
+        },
+      },
+      {
+        heading: "Access & account terms",
+        list: {
+          ordered: false,
+          items: [
+            "Invite code — a code from an existing user or Meta that grants access during limited rollouts.",
+            "Referral code — a code you share so others can join; ours is on the community board if you need one.",
+            "Redeem — entering a code to activate the access or credit attached to it.",
+            "Early access — trying features before general release, usually with rougher edges.",
+            "Availability — where and for whom Muse currently works. As of September 2026: the US and Canada.",
+            "Waitlist — signing up to be notified when access reaches you.",
+          ],
+        },
+        paragraphs: [
+          "Access mechanics change as the product rolls out — the [invite code guide](/guides/muse-ai-invite-code) and [availability guide](/guides/muse-ai-availability) stay current on the details.",
+        ],
+      },
+      {
+        heading: "Ways to reach Muse",
+        list: {
+          ordered: false,
+          items: [
+            "App — the main home: iPhone and Android apps plus desktop. See the [app setup guide](/guides/muse-ai-app-guide).",
+            "WhatsApp — Muse inside your messaging app, best for quick thinking and deciding. See the [WhatsApp guide](/guides/muse-ai-whatsapp).",
+            "Voice mode — talking instead of typing; fastest for brainstorming and hands-free moments.",
+            "Computer use — Muse operating a real browser or Mac desktop to finish multi-step bookings and forms, with your approval at checkpoints.",
+            "Connectors — permissioned links to your calendar, inbox, and other services so Muse works from real data.",
+            "Channels — the general word for wherever a conversation happens: app, messaging, or voice.",
+          ],
+        },
+      },
+      {
+        heading: "Cost & limits",
+        list: {
+          ordered: false,
+          items: [
+            "Tokens — the units of text (and work) AI models process; heavy usage is measured in them.",
+            "Usage limits — caps on how much you can do in a period; they vary by plan and account.",
+            "Free tier — what you can do without paying. The specifics change, so check the [cost guide](/guides/is-muse-ai-free) for the current picture.",
+          ],
+        },
+      },
+      {
+        heading: "Still confused? Start here",
+        paragraphs: [
+          "Read the [beginner's guide](/guides/what-is-muse-ai) for the full picture, keep the [cheat sheet](/guides/muse-ai-cheat-sheet) bookmarked for daily use, and try the [50-things list](/guides/muse-ai-50-things) when you want ideas. Vocabulary learned fastest is vocabulary used.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "muse-ai-app-guide",
+    modifiedTime: "2026-09-28",
+    image: "/images/guides/muse-ai-app-guide.jpg",
+    imageAlt: "Minimal navy title card reading Muse AI App iPhone and Android Guide",
+    title: "Muse AI App on iPhone & Android: The Setup Guide",
+    deck: "Get the official app, set it up right, and learn the mobile-only tricks — voice, sharing, and the notifications that matter.",
+    category: "Tutorial",
+    keywords: "muse ai app, muse ai iphone, muse ai android, muse ai mobile app setup",
+    metaTitle: "Muse AI App on iPhone & Android: Setup Guide (2026)",
+    metaDescription:
+      "Set up the Muse AI app on iPhone and Android: the official download, first-run setup, notifications, voice, sharing, and mobile tips.",
+    shortAnswer:
+      "Get the Muse AI app only from the official app listing for your region, sign in with your account, enable notifications for approval checkpoints, and try voice mode for hands-free tasks.",
+    sections: [
+      {
+        heading: "Get the real app first",
+        paragraphs: [
+          "Muse hit #1 on the US App Store and Google Play within days of launch — and wherever there's a chart-topping app, clones follow. Install only from the official listing linked by Meta or your invite; never from third-party download pages, forwarded APK files, or 'modded' versions promising unlimited access. The full clone-spotting checklist lives in our [download safety guide](/guides/muse-ai-download) — read it before you tap install anywhere unfamiliar.",
+          "If the official app doesn't appear in your store, availability likely hasn't reached your account or region yet (currently the US and Canada). Waiting beats installing something you can't verify — check [where Muse is available](/guides/muse-ai-availability) for the current rollout.",
+        ],
+      },
+      {
+        heading: "First-run setup that pays off",
+        list: {
+          ordered: true,
+          items: [
+            "Sign in with the account your invite or access is tied to — mixing accounts is the #1 cause of 'where did my chats go.'",
+            "Complete the profile basics: name, how you like to be addressed, and your timezone so reminders land correctly.",
+            "Allow notifications, but plan to prune them next (see below) — approval pings are the ones that matter.",
+            "Connect your calendar before anything else; it's the single connection that upgrades every scheduling task.",
+            "Try one voice message and one photo upload so you know both inputs work before you need them.",
+            "Tell Muse three preferences (format you like, budget style, topics to avoid) — this is the seed of its memory of you.",
+          ],
+        },
+      },
+      {
+        heading: "Notifications: the one setting that matters",
+        paragraphs: [
+          "Muse's whole safety model rests on approval cards — pauses where it waits for your go-ahead before anything consequential. Those pauses arrive as notifications, which makes notification permission the most important toggle in the app. Allow approval pings; mute marketing, tips, and anything else that isn't a decision waiting on you.",
+          "If Muse ever seems stuck 'waiting,' it's usually a silenced approval notification. Check notification settings before assuming the app is broken — this fixes more 'bugs' than any reinstall.",
+        ],
+      },
+      {
+        heading: "Mobile-only superpowers",
+        paragraphs: [
+          "The phone in your pocket gives Muse inputs a desktop can't. Voice mode turns dead time — commuting, cooking, walking — into productive conversation; ramble when exploring, then switch to typing for anything that must be quoted exactly. The system share sheet lets you send articles, photos, and files straight into a Muse chat instead of copy-pasting. And the camera turns Muse into a 'what is this / what should I do with this' tool for documents, labels, menus, and whiteboards.",
+          "Keep one thread per project so context doesn't fragment across a dozen chats, and remember the WhatsApp option when you want Muse inside your messaging app instead — the [WhatsApp guide](/guides/muse-ai-whatsapp) covers that channel's habits and limits.",
+        ],
+      },
+      {
+        heading: "iPhone tips & Android tips",
+        paragraphs: [
+          "On iPhone: add Muse to your home screen for one-tap access, enable voice input in the keyboard for quick dictation anywhere, and use Focus modes to make sure approval pings break through when Muse is waiting on you. If you use Siri Shortcuts, a simple 'ask Muse' shortcut can route quick questions without opening the app.",
+          "On Android: long-press the app icon for quick actions into a new chat or voice mode, pin the widget if one is offered for glanceable access, and check battery-optimization settings if notifications arrive late — aggressive power saving is the usual culprit behind delayed approval pings.",
+        ],
+      },
+      {
+        heading: "Troubleshooting & keep going",
+        paragraphs: [
+          "App won't sign in? Confirm you're using the account tied to your invite, and that your region currently has access. Chats missing? Same fix — you're likely in a different account. Features absent that a friend has? Rollouts are staggered; availability varies by account and region, not just by app version.",
+          "Once setup is solid, the [tutorial](/guides/muse-ai-tutorial) walks through your first real tasks, [voice mode](/guides/muse-ai-voice-mode) is worth a dedicated read, and the [cheat sheet](/guides/muse-ai-cheat-sheet) compresses everything into one bookmarkable page.",
+        ],
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[App guide hub](/apps) — the full tour, plus per-surface guides for iPhone, Android, web, WhatsApp, and Mac.",
           ],
         },
       },

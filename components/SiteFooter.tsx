@@ -67,6 +67,43 @@ export default function SiteFooter() {
               </a>
             </li>
           </FooterGroup>
+          <FooterGroup title="Explore">
+            <li>
+              <Link href="/encyclopedia" className={linkCls}>
+                Encyclopedia
+              </Link>
+            </li>
+            <li>
+              <Link href="/use-cases" className={linkCls}>
+                Use Cases
+              </Link>
+            </li>
+            <li>
+              <Link href="/prompts" className={linkCls}>
+                Prompts
+              </Link>
+            </li>
+            <li>
+              <Link href="/connectors" className={linkCls}>
+                Connectors
+              </Link>
+            </li>
+            <li>
+              <Link href="/templates" className={linkCls}>
+                Templates
+              </Link>
+            </li>
+            <li>
+              <Link href="/codes" className={linkCls}>
+                Codes
+              </Link>
+            </li>
+            <li>
+              <Link href="/apps" className={linkCls}>
+                App Guide
+              </Link>
+            </li>
+          </FooterGroup>
           <FooterGroup title="Company">
             <li>
               <Link href="/about" className={linkCls}>
@@ -101,8 +138,8 @@ export default function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/updates" className={linkCls}>
-                Updates
+              <Link href="/news" className={linkCls}>
+                News
               </Link>
             </li>
           </FooterGroup>

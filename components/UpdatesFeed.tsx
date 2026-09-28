@@ -8,6 +8,7 @@ const TAG_STYLES: Record<UpdateTag, string> = {
   Launch: "bg-accent text-white",
   Features: "bg-ink text-bg",
   Traction: "bg-moss text-moss-ink",
+  Security: "border border-accent bg-accent-ink text-accent",
 };
 
 /**

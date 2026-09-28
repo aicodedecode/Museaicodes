@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS, REDEEM_HREF } from "@/lib/site";
+import { NAV_LINKS, MORE_LINKS, REDEEM_HREF } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
 
 /** True when the link's route matches the current page (exact for "/", prefix for the rest). */
@@ -26,7 +26,9 @@ const mobileLinkCls = (active: boolean) =>
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const pathname = usePathname();
+  const moreActive = MORE_LINKS.some((l) => isActiveLink(l.href, pathname));
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
@@ -54,6 +56,42 @@ export default function SiteHeader() {
               </Link>
             );
           })}
+          <div className="relative">
+            <button
+              type="button"
+              aria-haspopup="true"
+              aria-expanded={moreOpen}
+              onClick={() => setMoreOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") setMoreOpen(false);
+              }}
+              className={desktopLinkCls(moreActive)}
+            >
+              More <span aria-hidden="true">{moreOpen ? "▴" : "▾"}</span>
+            </button>
+            {moreOpen && (
+              <div className="absolute right-0 top-full z-50 mt-2 w-56 rounded-xl border border-line bg-surface p-2 shadow-xl">
+                {MORE_LINKS.map((l) => {
+                  const active = isActiveLink(l.href, pathname);
+                  return (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setMoreOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={`block rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
+                        active
+                          ? "bg-raised text-ink"
+                          : "text-muted hover:bg-raised hover:text-ink"
+                      }`}
+                    >
+                      {l.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
           <Link
             href={REDEEM_HREF}
             className="ml-2 rounded-lg bg-ink px-4 py-2.5 text-sm font-bold text-bg transition-transform duration-150 hover:-translate-y-0.5"
@@ -82,7 +120,7 @@ export default function SiteHeader() {
 
       {open && (
         <div id="mobile-nav" className="border-t border-line px-5 py-3 md:hidden">
-          {[...NAV_LINKS, { href: REDEEM_HREF, label: "Get access →" }].map((l) => {
+          {[...NAV_LINKS, ...MORE_LINKS, { href: REDEEM_HREF, label: "Get access →" }].map((l) => {
             const active = isActiveLink(l.href, pathname);
             return (
               <Link

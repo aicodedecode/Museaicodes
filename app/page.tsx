@@ -17,12 +17,12 @@ import { CopyButton } from "@/components/Toast";
 export const metadata: Metadata = {
   title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
   description:
-    "Muse Hub — the ultimate unofficial Muse AI guide hub: invite & referral codes, 15 focused tutorials, WhatsApp tips, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
+    "Muse Hub — the ultimate unofficial Muse AI guide hub: invite & referral codes, 31 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   alternates: { canonical: SITE.baseUrl },
   openGraph: {
     title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
     description:
-      "15 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
+      "31 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
     url: SITE.baseUrl,
   },
 };
@@ -293,7 +293,7 @@ export default function HomePage() {
           index="04"
           label="Featured guides"
           title="Start with the guides that matter most."
-          copy="A shortlist of the essentials. The full library — all 26 guides with category tabs and search — lives on its own page."
+          copy={`A shortlist of the essentials. The full library — all ${GUIDES.length} guides with category tabs and search — lives on its own page.`}
         />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((g, i) => (
@@ -340,9 +340,88 @@ export default function HomePage() {
               desc: "The referral offer right now — checked and dated.",
             },
             {
-              href: "/updates",
+              href: "/news",
               title: "News & Updates",
               desc: "Muse traction, features, and official resources, verified.",
+            },
+          ].map((t, i) => (
+            <Reveal key={t.href} delay={i * 60} className="h-full">
+              <Link
+                href={t.href}
+                className="group flex h-full flex-col rounded-[22px] border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow)]"
+              >
+                <span className="font-display text-[1.3rem] font-bold tracking-tight group-hover:text-accent">
+                  {t.title}
+                </span>
+                <span className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                  {t.desc}
+                </span>
+                <span className="mt-4 text-sm font-bold text-accent">
+                  Open <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/tools"
+            className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-6 py-3 text-sm font-bold text-ink transition-colors hover:border-accent"
+          >
+            Browse all 10 interactive tools <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ---------- EXPLORE ---------- */}
+      <section aria-labelledby="explore-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
+        <SectionHead
+          index="06"
+          label="Explore"
+          title="More ways to use Muse Hub."
+          copy="Directories, libraries, and hubs for every kind of Muse question."
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              href: "/encyclopedia",
+              title: "Encyclopedia",
+              desc: "40 Muse terms, plainly explained — the jargon buster.",
+            },
+            {
+              href: "/use-cases",
+              title: "Use Cases",
+              desc: "31 real workflows across 7 personas, with starter prompts.",
+            },
+            {
+              href: "/prompts",
+              title: "Prompt Library",
+              desc: "40 copy-paste prompts across 8 categories, plus prompt of the day.",
+            },
+            {
+              href: "/connectors",
+              title: "Connectors",
+              desc: "Every verified Muse connector: what it does and how to link it.",
+            },
+            {
+              href: "/templates",
+              title: "Agent Templates",
+              desc: "10 specialist agent setups — copy the instructions, make it yours.",
+            },
+            {
+              href: "/codes",
+              title: "Codes",
+              desc: "Invite and referral codes in one place, with the submit board.",
+            },
+            {
+              href: "/apps",
+              title: "App Guide",
+              desc: "Muse on iPhone, Android, web, WhatsApp, and Mac — setup and tour.",
+            },
+            {
+              href: "/for/students",
+              title: "For You",
+              desc: "20 intent pages: Muse for students, developers, marketers, and more.",
             },
           ].map((t, i) => (
             <Reveal key={t.href} delay={i * 60} className="h-full">
@@ -402,7 +481,7 @@ export default function HomePage() {
       {/* ---------- 06 REDEEM ---------- */}
       <section id="redeem" aria-labelledby="redeem-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="06"
+          index="07"
           label="Get access"
           title="Join, redeem, and start building."
           copy="Choose either referral code. Redeem it within the eligibility window displayed in your Muse account."
@@ -433,7 +512,7 @@ export default function HomePage() {
 
       {/* ---------- 07 FAQ ---------- */}
       <section id="faq" aria-labelledby="faq-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
-        <SectionHead index="07" label="FAQ" title="The useful questions, answered plainly." />
+        <SectionHead index="08" label="FAQ" title="The useful questions, answered plainly." />
         <Reveal>
           <FaqAccordion faqs={FAQS} />
         </Reveal>

@@ -15,8 +15,20 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/guides", label: "Guides" },
   { href: "/compare", label: "Compare" },
-  { href: "/updates", label: "Updates" },
+  { href: "/news", label: "News" },
+  { href: "/tools", label: "Tools" },
+  { href: "/prompts", label: "Prompts" },
   { href: "/about", label: "About" },
+] as const;
+
+/** Secondary hubs, shown in the desktop "More" dropdown and the mobile menu. */
+export const MORE_LINKS = [
+  { href: "/encyclopedia", label: "Encyclopedia" },
+  { href: "/use-cases", label: "Use Cases" },
+  { href: "/connectors", label: "Connectors" },
+  { href: "/templates", label: "Templates" },
+  { href: "/codes", label: "Codes" },
+  { href: "/apps", label: "App Guide" },
 ] as const;
 
 export const REDEEM_HREF = "/#redeem" as const;
