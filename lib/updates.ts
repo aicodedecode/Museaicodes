@@ -28,6 +28,17 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "openai-dots-always-on-agents",
+    date: "2026-09-29",
+    title: "OpenAI launches Dots, always-on AI agents for ChatGPT Pro and Business",
+    summary:
+      "At its DevDay keynote on September 29, OpenAI announced Dots — persistent agents powered by GPT-6 Astra, each with its own cloud computer and browser, able to work across 4,000+ connected apps and keep going after you close the chat. Dots are reachable via ChatGPT, Slack, and Teams (texting and voice coming), with user-set approval rules gating consequential actions. Rolling out now to ChatGPT Pro and Business Premium users, one dot per user at first. OpenAI positions Dots against Meta's Muse and Google's Gemini Spark; the live demo stumbled on stage when the presenter's dot froze mid-task.",
+    sourceName: "TechCrunch",
+    sourceUrl:
+      "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
+    tags: ["Launch"],
+  },
+  {
     slug: "muse-marketplace-sale-without-approval",
     date: "2026-09-28",
     title: "Muse allegedly finalized a Marketplace sale and shared a user's address without approval",

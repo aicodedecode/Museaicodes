@@ -288,6 +288,16 @@ export const TASKS: TaskEntry[] = [
 
   // ---------------- Productivity ----------------
   {
+    task: "Keep working on my tasks 24/7 in the background (like OpenAI Dots)",
+    category: "Productivity",
+    verdict: "depends",
+    whatItCanDo:
+      "Muse runs goals in the background after you close the app and notifies you when something is meaningfully new — but it doesn't get its own always-on cloud computer or run fully autonomously the way OpenAI Dots does.",
+    examplePrompt: "Watch this product's price and ping me the moment it drops below $300.",
+    guideSlug: "openai-dots-vs-muse-always-on-agents",
+    note: "For true always-on agents with their own cloud computer, the current options are OpenAI Dots (ChatGPT Pro/Business), Google Gemini Spark, or xAI's Grok Bot.",
+  },
+  {
     task: "Set a reminder",
     category: "Productivity",
     verdict: "yes",

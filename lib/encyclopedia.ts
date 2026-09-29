@@ -18,6 +18,14 @@ export const TERMS: Term[] = [
     guideSlugs: ["how-to-get-muse-ai", "muse-ai-privacy"],
   },
   {
+    term: "Always-on agent",
+    definition:
+      "An AI agent that keeps working after you close the app — holding ongoing responsibilities, checking connected apps on its own, and bringing finished work back for approval.",
+    context:
+      "The category went mainstream in September 2026 when OpenAI launched Dots (persistent ChatGPT agents with their own cloud computer) alongside Meta's Muse, Google's Gemini Spark, and xAI's Grok Bot. Muse participates with background goals and notifications rather than a fully autonomous always-on computer — see the comparison guide.",
+    guideSlugs: ["openai-dots-vs-muse-always-on-agents", "what-is-muse-ai"],
+  },
+  {
     term: "Agents",
     definition:
       "An agent is AI that acts on your behalf, not just answers questions — the whole premise of Muse.",

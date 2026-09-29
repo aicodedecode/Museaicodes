@@ -2811,6 +2811,105 @@ export const GUIDES: Guide[] = [
       ],
     },
   },
+  {
+    slug: "openai-dots-vs-muse-always-on-agents",
+    modifiedTime: "2026-09-30",
+    image: "/images/guides/openai-dots-vs-muse-always-on-agents.jpg",
+    imageAlt: "Editorial illustration of a desk lamp glowing at night beside chat bubbles, a calendar, and a small robot working through a to-do list",
+    title: "OpenAI Dots vs Muse: Every 24/7 AI Agent, Compared",
+    deck: "OpenAI's Dots joined the always-on agent race on September 29, 2026. What Dots actually does, every rival you can get today, and the honest answer on where Muse fits.",
+    category: "Comparison",
+    keywords: "openai dots, always on ai agent, 24/7 ai agent, dots vs muse, gemini spark vs muse, ai agent that works while you sleep",
+    metaTitle: "OpenAI Dots vs Muse: 24/7 AI Agents Compared (2026)",
+    metaDescription:
+      "OpenAI Dots launched Sept 29, 2026: always-on agents with their own cloud computer for Pro and Business users. How Dots compares to Muse, Gemini Spark, and every 24/7 agent available now.",
+    shortAnswer:
+      "OpenAI Dots (announced September 29, 2026) are always-on agents inside ChatGPT with their own cloud computer and browser, 4,000+ app connections, and approval-gated actions — rolling out to ChatGPT Pro and Business Premium users. The current alternatives: Meta's Muse (free tier, background goals and notifications), Google's Gemini Spark (AI Pro/Ultra), Google's CC family agent (free Labs experiment), and xAI's Grok Bot teammates.",
+    sections: [
+      {
+        heading: "What “always-on” actually means",
+        paragraphs: [
+          "A normal chatbot waits for you. An always-on agent keeps going after you close the app: it holds ongoing responsibilities, checks connected apps on its own, and brings finished work back for approval. The industry landed on this idea from several directions at once — scheduled tasks, background browser agents, and persistent memory — and in September 2026 it became a product category with a name.",
+          "Three things separate a true always-on agent from a chatbot with reminders: it acts without a fresh prompt, it keeps state across days (not just one conversation), and it can touch your other apps through connections rather than asking you to paste things in.",
+        ],
+      },
+      {
+        heading: "OpenAI Dots: the verified facts",
+        paragraphs: [
+          "Announced at OpenAI's DevDay keynote on September 29, 2026, Dots are persistent agents that live in ChatGPT. Here is what OpenAI and press coverage confirm:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Each dot runs on GPT-6 Astra and gets its own cloud computer and browser, so it can research, draft, and code after you've closed your laptop.",
+            "Dots connect to more than 4,000 apps through OpenAI's plugin ecosystem, and can reach you via ChatGPT, Slack, and Microsoft Teams — texting and voice calls are coming.",
+            "You set approval rules: Dots ship with defaults for when to act alone vs. ask, and you can add custom rules to allow, gate, or block specific actions. An auto-review system checks actions against your rules.",
+            "When idle, a dot does “proactive research” with read-only access — it can look but not send messages, edit files, or change your apps without approval.",
+            "Rollout started September 29 for ChatGPT Pro and Business Premium users in eligible markets (reportedly the $200/month Pro tier and $125/seat Business Premium), one dot per user at first, with more dots later. Enterprise, Edu, and Healthcare workspaces can enable it via an admin.",
+            "OpenAI also launched ChatGPT Space: a shared layer where people, ChatGPT, Codex, and Dots work against the same documents and context.",
+            "The launch demo stumbled — the presenter's dot froze live on stage, which is worth remembering when anyone promises you can “walk away and trust it.”",
+          ],
+        },
+      },
+      {
+        heading: "Every 24/7 agent you can get right now",
+        paragraphs: [
+          "Dots didn't appear in a vacuum. Here is the full current lineup as of September 30, 2026 — what each one is, what it costs, and who it's for.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "OpenAI Dots — the newest. Best for: ChatGPT power users and teams who want agents embedded in Slack/Teams with deep app connections. Catch: the price of entry is Pro or Business Premium.",
+            "Meta Muse — launched earlier in September 2026. Best for: personal life-admin (it handles things like finding subscriptions in your email, booking appointments, comparing insurance quotes). Catch: it asks permission before consequential actions, and background depth varies by task.",
+            "Google Gemini Spark — announced at I/O in May 2026. A 24/7 personal agent living in a Gemini tab with background tasks, recurring schedules, and triggers across Gmail, Calendar, Docs, Sheets, Slides, and Drive. Best for: people living in Google Workspace. Catch: reports say US-only, on AI Pro ($19.99) and up.",
+            "Google CC — expanded September 17, 2026. An agent for families and groups with its own Google account and isolated cloud computer; up to six members share context. Best for: households coordinating over email. Catch: a free Labs experiment, so expect rough edges.",
+            "xAI Grok Bot teammates — xAI's entry in the always-on race, pitched as AI teammates with blob-style avatars. Best for: X-centric workflows. Catch: the least documented of the bunch so far.",
+            "ChatGPT's built-in agent mode — scheduled tasks and a cloud browser inside ChatGPT on lower tiers. Best for: a taste of background agents without the Pro price. Catch: largely superseded by Dots for Pro users.",
+          ],
+        },
+      },
+      {
+        heading: "Where Muse honestly fits",
+        paragraphs: [
+          "Muse belongs on this list, with honest boundaries. Per Meta's official FAQ, Muse is free with a usage limit, asks permission before sending messages, making purchases, or sharing information — and it keeps working in the background after you close the app. Set a goal (watch a price, follow a story, remind you weekly) and Muse works it in the background, notifying you only when something is meaningfully new.",
+          "What Muse doesn't give you: its own always-on cloud computer, autonomous multi-app marathons, or the deep enterprise plumbing (Slack/Teams-native agents, admin governance) that Dots and Gemini Spark are selling. Muse is a personal assistant with background superpowers, not an employee that never sleeps.",
+          "The practical read: if your “24/7” need is “keep an eye on this and ping me,” Muse's goals plus notifications cover it free. If your need is “run my team's workflows across forty apps while I'm asleep,” that's the Dots/Spark pitch — at their prices. Try the free thing first; most people overestimate how much autonomy they actually want.",
+        ],
+      },
+      {
+        heading: "Which one should you pick?",
+        paragraphs: [
+          "Match the agent to the job, not the hype:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Life admin on a budget → Muse (free tier, background goals, approval-gated actions).",
+            "Team workflows in Slack/Teams → Dots, if you're already paying for Pro or Business Premium.",
+            "Google Workspace household → Gemini Spark (AI Pro) or the free CC Labs experiment for families.",
+            "Just curious about background agents → ChatGPT's built-in agent mode or Muse's goals before spending $200/month.",
+          ],
+        },
+      },
+      {
+        heading: "The honest catches",
+        paragraphs: [
+          "Three things to keep in mind before handing any of these agents the keys. First, autonomy is a dial, not a switch: every serious agent here gates consequential actions behind approvals — if yours doesn't, that's a red flag, not a feature. Second, always-on means always-spending: background work burns tokens or usage budget around the clock, so check what idle agents cost on your plan. Third, the demos are the best day these products will ever have — Dots froze on stage at its own launch. Start every agent with read-only, low-stakes jobs and promote it to real responsibilities only after it earns your trust.",
+          "For the Muse-specific side of this — what it can and can't do in the background — see [what Muse AI is](/guides/what-is-muse-ai) and [the invite-code guide](/guides/muse-ai-invite-code). For breaking developments, watch [the updates feed](/updates).",
+        ],
+      },
+    ],
+    table: {
+      headers: ["Agent", "Maker", "Price", "Availability", "Standout trait"],
+      rows: [
+        ["Dots", "OpenAI", "ChatGPT Pro / Business Premium (reportedly $200/mo and $125/seat)", "Rolling out since Sept 29, 2026; one dot per user at first", "Own cloud computer + browser; 4,000+ apps; Slack/Teams-native"],
+        ["Muse", "Meta", "Free with usage limit; paid tiers available", "Launched Sept 2026; invite/region-gated", "Background goals with notifications; approval-gated actions"],
+        ["Gemini Spark", "Google", "AI Pro ($19.99) and AI Ultra", "US only, per reports", "Deep Workspace integration; recurring schedules and triggers"],
+        ["CC", "Google", "Free (Labs experiment)", "Limited rollout", "Family/group agent with its own Google account"],
+        ["Grok Bot", "xAI", "Not disclosed", "Early", "AI teammates for X-centric workflows"],
+      ],
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
