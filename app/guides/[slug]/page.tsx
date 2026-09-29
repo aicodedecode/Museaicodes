@@ -115,12 +115,13 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         </Reveal>
 
         <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1fr_360px]">
-          <Reveal delay={80}>
+          <div>
             <ArticleBody guide={guide} />
             {guide.slug === "muse-ai-referral-code" && <CommunityCodes />}
             <AdSlot />
 
-            <section aria-labelledby="related-h" className="mt-16">
+            <Reveal>
+              <section aria-labelledby="related-h" className="mt-16">
               <h2 id="related-h" className="font-display text-[1.9rem] font-bold tracking-tight">
                 Keep reading
               </h2>
@@ -144,7 +145,8 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
                 ))}
               </div>
             </section>
-          </Reveal>
+            </Reveal>
+          </div>
 
           <aside aria-label="Referral codes" className="lg:pt-2">
             <ReferralCodes />

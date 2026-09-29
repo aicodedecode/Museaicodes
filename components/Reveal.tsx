@@ -39,7 +39,12 @@ export default function Reveal({ children, delay = 0, className = "", as = "div"
           }
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+      // Guard: for elements taller than the viewport, a ratio threshold can
+      // never be satisfied (e.g. 14% of a 6000px article > a phone viewport),
+      // leaving the content stuck at opacity: 0. Reveal those on first entry.
+      el.getBoundingClientRect().height > window.innerHeight * 0.85
+        ? { threshold: 0 }
+        : { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
     );
     io.observe(el);
     return () => io.disconnect();
