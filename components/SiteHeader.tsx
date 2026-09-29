@@ -31,7 +31,7 @@ export default function SiteHeader() {
   const moreActive = MORE_LINKS.some((l) => isActiveLink(l.href, pathname));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg">
       <nav aria-label="Main navigation" className="mx-auto flex min-h-[68px] max-w-shell items-center justify-between gap-4 px-5 md:px-6">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Muse Hub home">
           {/* Animated brand mark: Jolly in the Christmas dress, smiling and waving.
