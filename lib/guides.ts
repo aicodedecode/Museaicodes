@@ -40,16 +40,16 @@ import { SITE } from "./site";
 export const GUIDES: Guide[] = [
   {
     slug: "what-is-muse-ai",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-09-29",
     image: "/images/guides/what-is-muse-ai.jpg",
     imageAlt: "Editorial illustration of Meta's Muse AI personal agent surrounded by task icons",
     title: "What Is Muse AI? A Clear Beginner's Guide",
     deck: "Understand what Muse is, what it can do, and where it fits among personal AI agents.",
     category: "Basics",
     keywords: "what is muse ai, muse ai explained, meta muse ai, muse ai kya hai",
-    metaTitle: "What Is Muse AI? Meta's Personal AI Agent Explained (2026)",
+    metaTitle: "What Is Muse AI? Meta's Agent That Does Your Tasks (2026)",
     metaDescription:
-      "Muse AI explained simply: what Meta's personal agent actually does, how to get access, what it costs, and how it compares to ChatGPT and Meta AI.",
+      "Muse AI is Meta's personal agent that books travel, shops, and manages tasks for you. What it does, what it costs, and how to get access.",
     shortAnswer:
       "Muse is Meta's personal AI agent: a conversational assistant designed to carry work from a request to a finished output — research, plans, writing, visuals, and digital artifacts. As of September 2026, it is available in the US and Canada.",
     sections: [
@@ -473,16 +473,16 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-claude",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-09-29",
     image: "/images/guides/muse-ai-vs-claude.jpg",
     imageAlt: "Illustration of two abstract forms in dialogue, symbolizing Muse AI vs Claude comparison",
     title: "Muse AI vs Claude: Which Fits Your Workflow?",
     deck: "Choose based on the work you repeat, not a generic ranking.",
     category: "Comparison",
     keywords: "muse ai vs claude, claude vs muse, which ai assistant",
-    metaTitle: "Muse AI vs Claude: Which Fits Your Workflow? (2026)",
+    metaTitle: "Muse AI vs Claude (2026): Which AI Assistant Should You Use?",
     metaDescription:
-      "Muse AI vs Claude compared by workflow fit: a fair testing method, where each assistant shines, and how to decide without generic rankings.",
+      "Muse AI vs Claude head-to-head: pricing, connectors, privacy, and everyday tasks compared. See which assistant fits you before you commit.",
     shortAnswer:
       "Choose Muse when its personal-agent workflows and product surface fit the job; choose Claude when its document, reasoning, or coding workflow better matches your process. Comparing the full field instead? Our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) adds ChatGPT and Meta AI to the picture. Test both with the same brief.",
     sections: [
@@ -2520,7 +2520,7 @@ export const GUIDES: Guide[] = [
     keywords: "muse ai pricing, muse ai cost, muse ai power plan, muse ai maximum plan, is muse ai free, muse ai subscription",
     metaTitle: "Muse AI Pricing Explained: Free, Power $20, Maximum $100 (2026)",
     metaDescription:
-      "Muse AI pricing explained: the free usage meter, Power at $20/month, Maximum at $100/month, what's press-reported vs official, and how agent plans differ from Muse Spark API pricing.",
+      "Muse AI pricing: free usage meter, Power $20/month, Maximum $100/month. What's official vs press-reported, and how agent plans differ from API pricing.",
     shortAnswer:
       "Muse AI has three tiers: a free tier with a usage meter, Power at $20/month, and Maximum at $100/month. Paid-tier weekly token ceilings (500M for Power, 3B for Maximum) are listed in Meta's Help Center; the free allowance is not published as a fixed quota. A payment card is required to start, even on free. This is separate from Muse Spark Model API token pricing.",
     sections: [

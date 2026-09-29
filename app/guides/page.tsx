@@ -35,7 +35,7 @@ export default function GuidesIndexPage() {
     "@type": "ItemList",
     name: "Muse AI guide library",
     description:
-      "15 practical Muse AI guides covering access, prompting, WhatsApp, tokens, use cases, reviews, and comparisons.",
+      "38 practical Muse AI guides covering access, prompting, WhatsApp, tokens, use cases, reviews, and comparisons.",
     numberOfItems: GUIDES.length,
     itemListElement: GUIDES.map((g, i) => ({
       "@type": "ListItem",
@@ -65,7 +65,7 @@ export default function GuidesIndexPage() {
             <em className="font-medium italic text-accent">in one place.</em>
           </h1>
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
-            15 focused guides covering access and invite codes, prompting,
+            38 focused guides covering access and invite codes, prompting,
             WhatsApp, token rewards, real use cases, honest reviews, and
             head-to-head comparisons. Each one starts with a direct answer,
             then adds the steps that matter.
