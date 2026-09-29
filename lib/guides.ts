@@ -2509,6 +2509,106 @@ export const GUIDES: Guide[] = [
       modifiedTime: "2026-09-29"
     },
 
+  {
+    slug: "muse-ai-pricing-explained",
+    modifiedTime: "2026-09-29",
+    image: "/images/guides/muse-ai-pricing-explained.jpg",
+    imageAlt: "Typographic editorial card: Muse AI Pricing, Explained",
+    title: "Muse AI Pricing Explained: Free Meter, Power, and Maximum",
+    deck: "What Muse AI actually costs — the free usage meter, the $20 Power and $100 Maximum plans, and which numbers are official vs press-reported.",
+    category: "Cost",
+    keywords: "muse ai pricing, muse ai cost, muse ai power plan, muse ai maximum plan, is muse ai free, muse ai subscription",
+    metaTitle: "Muse AI Pricing Explained: Free, Power $20, Maximum $100 (2026)",
+    metaDescription:
+      "Muse AI pricing explained: the free usage meter, Power at $20/month, Maximum at $100/month, what's press-reported vs official, and how agent plans differ from Muse Spark API pricing.",
+    shortAnswer:
+      "Muse AI has three tiers: a free tier with a usage meter, Power at $20/month, and Maximum at $100/month. Paid-tier weekly token ceilings (500M for Power, 3B for Maximum) are listed in Meta's Help Center; the free allowance is not published as a fixed quota. A payment card is required to start, even on free. This is separate from Muse Spark Model API token pricing.",
+    sections: [
+      {
+        heading: "AI Takeaway",
+        list: {
+          ordered: false,
+          items: [
+            "Muse AI's consumer pricing is three tiers: Free ($0), Power ($20/month), and Maximum ($100/month) — press-reported from Meta's launch materials and Help Center.",
+            "The free tier runs on a usage meter in the app that warns you before it runs out — but a payment card is required to sign up, even if you never pay.",
+            "Meta's Help Center lists weekly ceilings for paid tiers: 500 million Muse tokens/week on Power, 3 billion/week on Maximum. Meta has not published what a 'Muse token' buys in practice.",
+            "The free allowance is the least settled number: Meta's own FAQ only says it's limited and refreshes; Zuckerberg said up to 100 million tokens/week at launch. Treat third-party figures as directional.",
+            "Agent-plan dollars and Muse Spark API cents are two different bills — don't mix the $20/month subscription with per-token developer pricing.",
+            "Meta Enterprise Platform (announced September 29, 2026) has no pricing yet. Check the live meter in your Muse app or at muse.ai before committing.",
+          ],
+        },
+      },
+      {
+        heading: "The three tiers",
+        paragraphs: [
+          "Meta structures Muse's consumer pricing the way it structured the product: free to try, paid to run hard. Reporting from TechCrunch, Axios, Reuters, and CNBC around the September 8, 2026 launch all describe the same three levels — and Meta's Help Center has since listed weekly token ceilings for the paid tiers. Here's the picture as of September 2026.",
+        ],
+      },
+      {
+        heading: "The free meter — what it is, and isn't",
+        paragraphs: [
+          "The free tier is 'free until you use it a lot,' not free with no strings. You still have to add a payment card to sign up — because, as TechCrunch reported, subscriptions kick in as your usage rises — and Meta requires you to confirm you're in the US and 18 or older before the agent will do anything.",
+          "What makes the free tier usable is the meter: the app shows what percentage of your allowance you have left and warns you before it runs out. Meta says most people will stay on free, and Alexandr Wang set the expectation plainly: 'the vast majority of users should be able to do what they need within the free tier.'",
+          "What Meta won't pin down is the free quota. Its own FAQ says only that free use is limited and refreshes. On launch day Zuckerberg wrote on Threads that Meta was 'providing Muse for free for up to 100 million tokens per week' — but that figure doesn't appear in Meta's public product pages, so treat it as a launch-day statement, not a contractual guarantee. Related: our guide to [is Muse AI free](/guides/is-muse-ai-free) explains how to verify your own account's terms.",
+        ],
+      },
+      {
+        heading: "Power vs Maximum",
+        paragraphs: [
+          "Power ($20/month) and Maximum ($100/month) buy the same thing: more usage. Per Meta's Help Center, as reported by press, Power gets 500 million Muse tokens a week and Maximum gets 3 billion — a 6x jump between paid tiers, and a steep ladder from free. Neither requires an annual commitment; both renew monthly.",
+          "In practice, the choice is about how much background work you hand off. Casual users asking questions and doing occasional tasks fit the free tier Meta designed for them. Power suits people who lean on the agent daily across email, scheduling, and household admin. Maximum is priced for the heaviest users — people running Muse continuously, closer to a personal-assistant service than a chatbot subscription.",
+          "One honest gap: Meta has not published how many real tasks a week of 'Muse tokens' buys, or how Muse tokens relate to developer token pricing. Until it does, treat the token ceilings as a relative scale (Maximum is roughly 6x Power) rather than a task budget.",
+        ],
+      },
+      {
+        heading: "Agent dollars vs API cents",
+        paragraphs: [
+          "The most common pricing confusion is mixing two products. The Power/Maximum subscriptions pay for agent handoff capacity — Muse doing work for you as a consumer. The [Muse Spark Model API and Contributor rates](/tools/token-price-compare) are a separate developer bill, priced per million tokens, for calling the models directly.",
+          "If you're a developer comparing model costs, our [token price comparison tool](/tools/token-price-compare) tracks per-token pricing across providers — including the September 2026 price war that cut several flagship models. And note: Meta One, the subscription bundle Meta expanded on September 15, is a different product — we could not confirm any Meta One tier includes Muse usage, so don't assume it does.",
+        ],
+      },
+      {
+        heading: "What's not priced yet",
+        paragraphs: [
+          "The [Meta Enterprise Platform](/guides/meta-enterprise-platform-explained) — Muse for business, the Muse/Business Agent stack, Muse API, and Muse Code — was announced on September 29, 2026 with no pricing, no launch dates, and no named customers. It's announced, not launched; any 'enterprise pricing' figure you see floating around is speculation.",
+          "Meta's Help Center also notes that Muse and its subscriptions are still in limited testing and not available everywhere, so terms may change. That's another reason to check the live plan copy rather than screenshots of it.",
+        ],
+      },
+      {
+        heading: "Honest advice before you pay",
+        list: {
+          ordered: false,
+          items: [
+            "Start on free and watch the meter — Meta built it precisely so you can see your usage before committing.",
+            "Check the live plan terms in your app or at muse.ai before paying; launch numbers can move while the product is in limited testing.",
+            "Keep the card-on-file requirement in mind: it's part of the design (subscriptions kick in as usage rises), not a dark pattern — but it's still a card on file.",
+            "If you're comparing Muse against other assistants, price is only half the question — see our [head-to-head comparison](/compare) and the [latest Muse news](/news) for what each agent actually does.",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta Muse AI agent launch: $20 & $100 tiers — Tech Insider, September 2026](https://tech-insider.org/meta-muse-personal-ai-agent-launch-2026/)",
+            "[Muse AI explained: features, pricing, updates — Medium, September 2026](https://medium.com/@aidiscoverywire/muse-ai-explained-metas-personal-agent-features-pricing-updates-more-6d3b8f03b6d6)",
+            "[Meta Muse pricing: free, Power, and Maximum tiers — Layer3 Labs](https://www.layer3labs.io/guides/meta-muse-pricing)",
+            "[What is Meta Muse AI? Features, price, how to get it — DrawPie](https://drawpie.com/blog/what-is-meta-muse-ai/)",
+            "[Muse agent — DataCamp](https://www.datacamp.com/blog/muse-agent)",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Tier", "Price", "Weekly allowance", "How it's sourced"],
+      rows: [
+        ["Free", "$0", "Limited; refreshes (Zuckerberg: up to 100M tokens/week at launch)", "Meta FAQ + launch-day statement"],
+        ["Power", "$20/month", "500 million Muse tokens/week", "Meta Help Center (via press)"],
+        ["Maximum", "$100/month", "3 billion Muse tokens/week", "Meta Help Center (via press)"],
+      ],
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
