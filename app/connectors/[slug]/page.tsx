@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { CONNECTORS, connectorBySlug, type ConnectorStatus } from "@/lib/connectors";
 import { guideUrl } from "@/lib/guides";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ConnectorIcon from "@/components/ConnectorIcon";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import CopyPromptButton from "@/components/CopyPromptButton";
 import Reveal from "@/components/Reveal";
@@ -67,7 +68,7 @@ export default function ConnectorDetailPage({
     headline: `Does Muse Connect to ${c.name}?`,
     description: c.tagline,
     url: `${SITE.baseUrl}/connectors/${c.slug}`,
-    dateModified: "2026-09-28",
+    dateModified: "2026-09-29",
     author: { "@type": "Organization", name: SITE.name },
     mainEntityOfPage: `${SITE.baseUrl}/connectors/${c.slug}`,
     articleSection: "Muse AI connectors",
@@ -103,6 +104,17 @@ export default function ConnectorDetailPage({
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
             {c.tagline}
           </p>
+          <a
+            href={c.website}
+            target="_blank"
+            rel="noopener"
+            className="mt-4 inline-flex items-center gap-2.5"
+          >
+            <ConnectorIcon website={c.website} name={c.name} size={32} />
+            <span className="text-sm font-semibold text-accent underline-offset-4 hover:underline">
+              {c.name} official site ↗
+            </span>
+          </a>
         </Reveal>
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_340px]">

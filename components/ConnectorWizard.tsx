@@ -41,10 +41,10 @@ const GOALS: { id: GoalId; title: string; blurb: string }[] = [
  * goal fit falls back to its own first documented prompt — nothing is invented.
  */
 const GOAL_CONNECTORS: Record<GoalId, string[]> = {
-  inbox: ["gmail", "outlook"],
-  "plan-week": ["google-calendar", "outlook"],
+  inbox: ["gmail", "google-workspace"],
+  "plan-week": ["google-calendar", "gmail"],
   "create-content": ["instagram", "threads", "facebook"],
-  "stay-on-messages": ["whatsapp", "messenger", "instagram", "facebook"],
+  "stay-on-messages": ["android-sms", "instagram", "facebook"],
 };
 
 interface TryPrompt {

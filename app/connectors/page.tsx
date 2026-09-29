@@ -3,30 +3,31 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { CONNECTORS, type ConnectorStatus } from "@/lib/connectors";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ConnectorIcon from "@/components/ConnectorIcon";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Muse AI Connectors: Gmail, Calendar, Instagram, Spotify & More (2026)",
+  title: "Muse AI Connectors: The Official Directory (2026) — 29 Verified + Shopify",
   description:
-    "An honest, verified directory of the services Muse connects to — Gmail, Google Calendar, Outlook, Facebook, Instagram, Threads, Messenger, WhatsApp, Spotify, and Plaid. Each entry is verified and dated.",
+    "The official-only Muse connector directory, verified against Meta's own channels: Facebook, Instagram, Threads, Gmail, Google Calendar, Spotify, Plaid, OpenTable, the full Shopify catalogue, Walmart, Best Buy, Sephora, and 17 more.",
   keywords:
-    "muse ai connectors, does muse connect to gmail, muse ai google calendar, muse ai instagram integration, muse ai spotify, muse ai whatsapp",
+    "muse ai connectors, does muse connect to gmail, muse ai google calendar, muse ai instagram integration, muse ai spotify, muse ai shopify, muse ai github, muse ai notion",
   alternates: { canonical: `${SITE.baseUrl}/connectors` },
   openGraph: {
     type: "website",
-    title: "Muse AI Connectors: The Honest Directory",
+    title: "Muse AI Connectors: The Official Directory",
     description:
-      "Every service Muse actually connects to — verified against Meta's launch lists and dated so you know what's fresh.",
+      "29 connectors verified against Meta's own announcements — plus the entire Shopify catalogue — stamped and dated.",
     url: `${SITE.baseUrl}/connectors`,
     siteName: SITE.name,
   },
   twitter: {
     card: "summary",
-    title: "Muse AI Connectors: The Honest Directory",
+    title: "Muse AI Connectors: The Official Directory",
     description:
-      "Every service Muse actually connects to — verified and dated.",
+      "29 connectors verified against Meta's own announcements — stamped and dated.",
   },
 };
 
@@ -94,11 +95,13 @@ export default function ConnectorsPage() {
             <em className="font-medium italic text-accent">actually plugs into.</em>
           </h1>
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
-            Readers ask us constantly: does Muse connect to Gmail? Google
-            Calendar? Instagram? This directory answers it honestly — every
-            entry is checked against Meta's own announcements and launch-week
-            reporting, stamped with a verification date, and marked clearly
-            as live, announced, or merely reported.
+            Readers ask us constantly: does Muse connect to Gmail? Spotify?
+            Instagram? This directory answers it honestly — and only from
+            Meta's own channels (the Help Center, the Meta Connect 2026
+            recap, and announcements quoting Meta's AI leadership). Every
+            entry is stamped with a verification date and marked live or
+            announced. Anything Meta hasn't named officially doesn't make
+            this page.
           </p>
         </Reveal>
 
@@ -111,13 +114,16 @@ export default function ConnectorsPage() {
               Short answer
             </p>
             <p className="mt-3 leading-relaxed">
-              As of September 28, 2026, Muse ships with live connectors for
-              Gmail, Google Calendar, Outlook, Facebook, Instagram, Threads,
-              Messenger, Spotify, and Plaid — plus WhatsApp access that
-              varies by account. Everything is US and Canada only. Connect
-              them in the Muse app under Settings → Connectors; the Meta
-              family (Facebook, Instagram, Threads) links through Accounts
-              Center.
+              As of September 29, 2026, Muse ships with live connectors for
+              Facebook, Instagram, and Threads (linked via Accounts Center),
+              Gmail, Google Calendar, OpenTable, Plaid, Spotify, Apple
+              Health, Android SMS, and the entire Shopify catalogue — plus 18
+              announced at Meta Connect 2026 rolling out now: Walmart, Best
+              Buy, American Eagle, DICK'S Sporting Goods, Fanatics, Gap,
+              Michael Kors, Sephora, Ulta, Wayfair, Shop Pay, PayPal,
+              Instacart, Notion, Granola, GitHub, Box, and Expedia (coming
+              soon). Everything is US and Canada only. Connect them in the
+              Muse app under Settings → Connectors.
             </p>
           </aside>
         </Reveal>
@@ -157,26 +163,39 @@ export default function ConnectorsPage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {CONNECTORS.map((c, i) => (
               <Reveal key={c.slug} delay={Math.min(i, 5) * 60}>
-                <Link
-                  href={`/connectors/${c.slug}`}
-                  className="group flex h-full min-h-[230px] flex-col rounded-2xl border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow)]"
-                >
+                <div className="group flex h-full min-h-[230px] flex-col rounded-2xl border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow)]">
                   <span className="flex items-center justify-between gap-3">
                     <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent">
                       {c.category}
                     </span>
                     <StatusPill status={c.status} />
                   </span>
-                  <span className="font-display mt-3 text-[1.35rem] font-bold leading-tight tracking-tight group-hover:text-accent">
-                    {c.name}
-                  </span>
+                  <a
+                    href={c.website}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-3 flex items-center gap-3"
+                  >
+                    <ConnectorIcon website={c.website} name={c.name} />
+                    <span className="font-display text-[1.35rem] font-bold leading-tight tracking-tight group-hover:text-accent">
+                      {c.name}
+                    </span>
+                  </a>
                   <span className="mt-2 text-[0.95rem] leading-relaxed text-muted">
                     {c.tagline}
                   </span>
-                  <span className="mt-auto pt-4 font-mono text-[10px] uppercase tracking-[0.1em] text-faint">
-                    Last verified {c.lastVerified}
+                  <span className="mt-auto flex items-center justify-between gap-3 pt-4">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-faint">
+                      Last verified {c.lastVerified}
+                    </span>
+                    <Link
+                      href={`/connectors/${c.slug}`}
+                      className="font-mono text-[10px] uppercase tracking-[0.1em] text-accent underline-offset-4 hover:underline"
+                    >
+                      Guide →
+                    </Link>
                   </span>
-                </Link>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -194,16 +213,14 @@ export default function ConnectorsPage() {
               A note on what's missing
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              Meta's Meta emails and smart-glasses links are announced but not
-              shipped, and shopping partners (Walmart, Best Buy, OpenTable,
-              Expedia, Instacart) live in our{" "}
-              <Link href="/tools" className="text-accent underline underline-offset-4">
-                tools hub
-              </Link>
-              . Where no built-in connector exists, Muse can wire up a custom
-              one from a public API with credentials you provide — or drive
-              the site in its own browser. Only connectors we could verify
-              made this page.
+              This directory only lists connectors Meta has named in its own
+              channels — so Outlook and Messenger are out (press-sourced, not
+              Meta-confirmed), and WhatsApp isn't a connector at all: Meta's
+              own Connect 2026 recap calls it a Muse <em>surface</em> (the
+              app, WhatsApp, web, and Mac are where you reach Muse), not
+              something you connect. Where no built-in connector exists, Muse
+              can wire up a custom one from a public API with credentials you
+              provide — or drive the site in its own browser.
             </p>
           </section>
         </Reveal>

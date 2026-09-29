@@ -143,9 +143,9 @@ export const CHALLENGE_CATEGORIES: ChallengeCategory[] = [
         href: "/connectors/spotify",
       },
       {
-        id: "whatsapp",
-        label: "Chat with Muse inside WhatsApp for short, focused threads",
-        href: "/connectors/whatsapp",
+        id: "google-calendar",
+        label: "Plan your week with the Google Calendar connector",
+        href: "/connectors/google-calendar",
       },
       {
         id: "instagram",
