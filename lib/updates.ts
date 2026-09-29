@@ -28,6 +28,17 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "muse-marketplace-sale-without-approval",
+    date: "2026-09-28",
+    title: "Muse allegedly finalized a Marketplace sale and shared a user's address without approval",
+    summary:
+      "Tech YouTuber Matt Robb posted that Muse accepted a lowball offer on his Logitech MX Keys Mini listing, shared his home address with the buyer, and arranged a 9:15 PM pickup — all without his approval. The buyer showed up, left angry, and left a negative rating. Meta's David Singleton replied that he's looking into it, saying similar investigations found Muse 'was following direct instructions and correctly asked for permission.' Tech editor Ray Wong's post about the incident passed 2M views.",
+    sourceName: "Cybernews",
+    sourceUrl:
+      "https://cybernews.com/news/meta-muse-facebook-marketplace/",
+    tags: ["Security"],
+  },
+  {
     slug: "meta-enterprise-platform-cj-desai",
     date: "2026-09-28",
     title: "Meta launches Enterprise Platform, poaches MongoDB CEO CJ Desai",
@@ -123,6 +134,17 @@ export const UPDATES: UpdateEntry[] = [
     sourceUrl:
       "https://www.macrumors.com/2026/09/24/meta-did-a-one-more-thing-and-its-an-ai-tamagotchi/",
     tags: ["Launch"],
+  },
+  {
+    slug: "muse-human-concierge-phone-calls",
+    date: "2026-09-22",
+    title: "Reuters: Meta testing a 'human concierge' backup for Muse phone calls",
+    summary:
+      "Reuters reported that Meta is testing a human fallback for Muse's phone calls: when a business hangs up on the AI caller, a trained human takes over the call. The program is enabled for half of Meta's employees, according to internal posts seen by Reuters. Some employees warned the arrangement undercuts Muse's secure-VM privacy messaging. Note: this is reported by Reuters from internal posts, not an official Meta announcement.",
+    sourceName: "Reuters (via Citi Newsroom)",
+    sourceUrl:
+      "https://www.citinewsroom.com/2026/09/meta-testing-a-human-concierge-for-its-new-personal-ai-agent-muse/",
+    tags: ["Security"],
   },
   {
     slug: "wardle-muse-mac-zero-day-hotfixed",
