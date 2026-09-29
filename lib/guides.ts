@@ -410,7 +410,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-chatgpt-claude-meta-ai",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-09-29",
     image: "/images/guides/muse-ai-vs-chatgpt-claude-meta-ai.jpg",
     imageAlt: "Illustration of four different pillars in a row, symbolizing Muse AI vs ChatGPT vs Claude vs Meta AI",
     title: "Muse AI vs ChatGPT vs Claude vs Meta AI",
@@ -424,53 +424,114 @@ export const GUIDES: Guide[] = [
       "Quick answer: choose Muse if you want an agent that completes tasks and delivers finished work; ChatGPT for the most mature all-round assistant and app ecosystem; Claude for careful long-form writing and coding; Meta AI for a free assistant already inside WhatsApp, Instagram, and Facebook. Trade-offs and details below.",
     sections: [
       {
+        heading: "AI Takeaway",
+        list: {
+          ordered: false,
+          items: [
+            "All four start free — but free means different things: Muse needs a payment card even at $0; ChatGPT, Claude, and Meta AI don't.",
+            "The $20/month tier is the industry's standard serious-use price (Muse Power, ChatGPT Plus, Claude Pro) — compare what each unlocks, not the number.",
+            "Muse is the only true agent of the four: it acts on connected accounts with your approval. The others assist; Muse executes.",
+            "Meta AI is the odd one out — a free conversational assistant inside Meta's apps, now with optional Meta One paid bundles for heavier AI media generation.",
+            "Pricing moves fast in 2026: verify the live plan page before paying. Our [Muse pricing guide](/guides/muse-ai-pricing-explained) tracks the agent side.",
+          ],
+        },
+      },
+      {
         heading: "Side-by-side comparison",
         paragraphs: [
-          "Positions shift as products evolve — verify current plan pages before making price- or feature-specific decisions.",
+          "Positions shift as products evolve — verify current plan pages before making price- or feature-specific decisions. The table below reflects September 2026: tier names and prices are per pricing trackers verified against the companies' official pages that month, except where marked press-reported.",
+        ],
+      },
+      {
+        heading: "What each one is actually for",
+        paragraphs: [
+          "Muse AI is Meta's personal agent: it doesn't just answer, it does — booking, buying, planning, and monitoring across connected apps, with your approval gating consequential actions. It lives in its own app and on the web, plus natively inside WhatsApp, and it keeps working in the background via goals. The trade: it's the newest, in limited testing, and currently available only in the US and Canada ([availability details](/guides/muse-ai-availability)).",
+          "ChatGPT is the most mature all-rounder: broad chat, coding, analysis, image and voice, and the deepest third-party ecosystem — an app/plugin directory built on MCP, with multi-account plugin support extended to all plans in September 2026. In July 2026 OpenAI bundled its agent ambitions into ChatGPT Work (Codex, Sites, desktop computer use). The trade: the lineup is crowded — Free, Go, Plus, two Pro tiers, Business — and the $200 Pro tier reportedly paused new sign-ups in September 2026.",
+          "Claude is the careful one: long documents, structured reasoning, and coding, with Claude Code inside paid plans widely treated as the AI-coding benchmark. Its integration system is MCP-native and workplace-leaning (Google Workspace, Slack, GitHub, Microsoft 365 as official first-party connectors), and September 2026 merged its Cowork agent capabilities into the main chat. The trade: the consumer app ecosystem is real but its true size is press-reported rather than officially enumerated.",
+          "Meta AI is the free default: the conversational assistant already inside WhatsApp, Instagram, Facebook, and Messenger for everyday questions and creation. Since September 15, 2026, heavier users can layer on Meta One — Core at $7.99/month or Premium at $19.99/month — which bundles the Plus app plans with expanded AI media-generation capacity. The trade: it's a chatbot where you already chat, not an agent that acts on your accounts. Don't confuse it with Muse; Meta positions them as different products.",
+        ],
+      },
+      {
+        heading: "Pricing in detail",
+        paragraphs: [
+          "Muse: Free ($0, usage-metered, card required), Power at $20/month, Maximum at $100/month — with weekly ceilings of 500 million and 3 billion Muse tokens respectively, per Meta's Help Center as reported by press. The free allowance is the fuzziest number: Meta's FAQ says only “limited and refreshes,” while Zuckerberg's launch-day statement mentioned up to 100 million tokens a week. Full sourcing in our [pricing guide](/guides/muse-ai-pricing-explained).",
+          "ChatGPT: Free ($0, unlimited basic text chat since August 2026), Go at $8/month (a budget tier that may include ads, with regional variation), Plus at $20/month, and a split Pro tier — $100/month at roughly 5x Plus usage and $200/month at 20x. Press reported in September 2026 that new sign-ups for the $200 Pro tier were paused, leaving $100 as the top for new subscribers. Business (renamed from Team) runs $25/user/month, Enterprise is custom-quoted.",
+          "Claude: Free ($0, full feature set including connectors, rationed by usage — the broadest free tier of the four), Pro at $20/month ($17/month billed annually), Max at $100 or $200/month for 5x and 20x usage. Team seats run $25 standard or $125 premium.",
+          "Meta AI: core use remains free. Meta One's individual bundles — Core $7.99/month, Premium $19.99/month — differ mainly in AI usage ceilings, which Meta hasn't published as exact numbers; creator and business tiers scale from $14.99 to $499/month. Meta reported 15 million subscriptions-plus-trials for Meta One at launch — a company figure, not an audited one.",
+        ],
+      },
+      {
+        heading: "Connectors and ecosystems",
+        paragraphs: [
+          "Muse's catalog is the most concrete: [29 named connectors plus the entire Shopify merchant catalogue](/connectors), officially listed — shopping (Walmart, Best Buy, Sephora), travel (Expedia, OpenTable), money (Plaid, PayPal, Shop Pay), productivity (Gmail, Google Calendar, Notion, GitHub, Box), social (Facebook, Instagram, Threads). September added a developer connector platform (1,500+ applications per Meta's Connect keynote), a deepened Spotify integration, and — on September 29 — business connectors (Asana, Slack, Stripe, Zoom, QuickBooks and more) under the Muse for Small Business announcement.",
+          "ChatGPT's ecosystem went through two generations: the App Directory (late 2025, MCP-based) became the Plugin Directory in July 2026 — installable packages of skills plus connected apps — with multi-account support reaching all plans including Free in September 2026. Claude's system is MCP-native from the start, with official first-party connectors for Google Workspace, Slack, GitHub, and Microsoft 365; press describes a much larger ecosystem (including a September “Marketplace” reportedly carrying thousands of connectors), but Anthropic hasn't officially enumerated it, so treat the big counts as press-reported.",
+          "Meta AI has no connector story to speak of — it's a conversational layer inside Meta's apps, not a platform for acting on third-party accounts. That's the cleanest dividing line in this comparison: three platforms racing to connect everything, one assistant staying where you already are.",
+        ],
+      },
+      {
+        heading: "Availability and access",
+        paragraphs: [
+          "Muse is the constrained one: launched September 8, 2026 in the US (18+), added Canada on September 18, and — per Meta's Help Center — “not yet available everywhere.” Press outlets report Mexico as a third market, but no Meta announcement confirms it, so treat Mexico as reported, not official. A payment card is required even for the free tier.",
+          "The other three are effectively global consumer products with free tiers that need no card: ChatGPT and Claude are available broadly on web, mobile, and (for Claude) desktop; Meta AI rides inside apps most of the world already has installed. If you're outside North America, the practical comparison today is ChatGPT vs Claude vs Meta AI — with Muse as the one to watch, not the one to buy.",
         ],
       },
       {
         heading: "How should you choose?",
         paragraphs: [
           "Choose by the task and interface you will actually use. For the deeper Muse-versus-Claude matchup specifically, see our [Muse vs Claude guide](/guides/muse-ai-vs-claude); for how Muse holds up in daily use, read the [Muse review](/guides/muse-ai-review). Test the same real brief in each available app and compare factual accuracy, useful depth, control, speed, and how much editing the result needs.",
-          "The honest answer for most people: the best assistant is the one whose workflow you enjoy enough to use daily. Features matter less than fit.",
+          "A shortcut that works for most people: if your week is errands with outcomes (shopping, travel, bookings, admin), start with Muse — it's the only one built to finish those. If your week is thinking with documents (research, writing, code), start with Claude. If you want the biggest ecosystem and the most mature all-rounder, start with ChatGPT. If you just want a free helper where you already chat, Meta AI is already there.",
+          "The honest answer for most people: the best assistant is the one whose workflow you enjoy enough to use daily. Features matter less than fit — and at $20/month across all three paid flagships, fit is the only differentiator that counts.",
         ],
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse vs Claude](/guides/muse-ai-vs-claude) — the deep head-to-head on pricing, connectors, privacy, and everyday tasks.",
+            "[Muse AI pricing explained](/guides/muse-ai-pricing-explained) — Free, Power, and Maximum with per-source attribution.",
+            "[What people actually use Muse for](/guides/muse-ai-use-cases) — 12 practical ideas across 7 personas.",
+            "[Agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) — approvals, safety models, and what September 2026 changed.",
+            "[Muse for business](/guides/meta-enterprise-platform-explained) — the announced enterprise stack, honestly framed.",
+          ],
+        },
       },
     ],
     table: {
-      headers: ["App", "Core position", "Best fit", "Typical access", "Watch for"],
+      headers: ["Assistant", "Free tier", "Main paid tier", "Power tier", "Know before you pick"],
       rows: [
         [
           "Muse AI",
-          "Personal AI agent",
-          "Research-to-output projects, artifacts, personal workflows",
-          "Muse product surfaces and supported messaging channelsMuse product surfaces and supported messaging channels (including [WhatsApp](/guides/muse-ai-whatsapp))",
-          "Availability, limits, and features can vary by account",
+          "$0 — usage meter, card required",
+          "Power $20/mo (500M tokens/wk)",
+          "Maximum $100/mo (3B tokens/wk)",
+          "US + Canada only (Mexico press-reported); 29+ official connectors; approvals gate actions",
         ],
         [
           "ChatGPT",
-          "General-purpose AI assistant",
-          "Broad chat, coding, analysis, creation, tool-based workflows",
-          "Web, mobile, and supported integrations",
-          "Capabilities differ by plan, model, and enabled tools",
+          "$0 — unlimited basic chat",
+          "Plus $20/mo",
+          "Pro $100/$200 mo (new $200 sign-ups paused, press)",
+          "Plugin directory (MCP); ChatGPT Work agent; $8 Go tier may include ads",
         ],
         [
           "Claude",
-          "General-purpose AI assistant",
-          "Long-form reasoning, document work, coding, structured collaboration",
-          "Web, mobile, desktop, and supported integrations",
-          "Usage and feature availability differ by plan",
+          "$0 — full features incl. connectors, usage-rationed",
+          "Pro $20/mo ($17 annual)",
+          "Max $100/$200 mo",
+          "MCP-native connectors; Cowork agent merged Sept 2026; coding benchmark",
         ],
         [
           "Meta AI",
-          "Consumer assistant across Meta products",
-          "Everyday questions and creation inside social or messaging apps",
-          "Supported Meta apps and web experiences",
-          "Regional and product-level differences",
+          "$0 — core use free in Meta apps",
+          "Meta One Core $7.99 / Premium $19.99",
+          "Creator/business tiers to $499/mo",
+          "Conversational assistant, not an agent; expanded AI media generation",
         ],
       ],
     },
   },
+
   {
     slug: "muse-ai-vs-claude",
     modifiedTime: "2026-09-29",
@@ -487,6 +548,19 @@ export const GUIDES: Guide[] = [
       "Choose Muse when its personal-agent workflows and product surface fit the job; choose Claude when its document, reasoning, or coding workflow better matches your process. Comparing the full field instead? Our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) adds ChatGPT and Meta AI to the picture. Test both with the same brief.",
     sections: [
       {
+        heading: "AI Takeaway",
+        list: {
+          ordered: false,
+          items: [
+            "Pricing mirrors: both start free and land the main paid tier at $20/month — Muse's Power and Claude's Pro. The difference is what the money buys: agent handoff capacity vs deeper model access.",
+            "Muse's connector catalog (29 named services plus the Shopify catalogue) is shopping-and-errand heavy; Claude's official integrations lean workplace (Google Workspace, Slack, GitHub, Microsoft 365), with a larger press-reported ecosystem behind them.",
+            "Muse requires a payment card even for the free tier; Claude's free tier includes connectors with usage limits and no card mentioned.",
+            "Pick by workflow: Muse for errands, shopping, and tasks across Meta's messaging surfaces; Claude for long documents, careful reasoning, and coding.",
+            "Both charge for heavy use — [Muse's pricing](/guides/muse-ai-pricing-explained) is agent-capacity based, so compare what each tier actually unlocks before paying.",
+          ],
+        },
+      },
+      {
         heading: "A fair test",
         list: {
           ordered: true,
@@ -501,12 +575,69 @@ export const GUIDES: Guide[] = [
       {
         heading: "Where each tends to shine",
         paragraphs: [
-          "Muse leans toward personal-agent work: carrying a request through to a finished artifact, keeping context across a project, and operating across chat and messaging surfaces. Claude leans toward deep document work, long-form reasoning, and structured collaboration with careful, well-organized output.",
+          "Muse leans toward personal-agent work: carrying a request through to a finished artifact, keeping context across a project, and operating across chat and messaging surfaces — including WhatsApp, where Meta's reach gives it a home-field advantage no competitor can copy. Its connector catalog is built for errands: stores, travel, food, and payments, with approvals gating anything it does on your behalf.",
+          "Claude leans toward deep document work, long-form reasoning, and structured collaboration with careful, well-organized output. Its reputation was built on handling long, complex material without losing the thread — and September 2026 gave that reputation a headline when [researchers used Claude to discover a previously unknown enzyme system](/guides/claude-discovers-enzyme-system-explained). Coding is the other stronghold: Claude Code ships inside paid Claude plans and is widely treated as the benchmark for AI-assisted programming.",
           "These are tendencies, not verdicts. The better assistant is the one that reliably reduces your work while keeping you in control — and that answer is personal to your workflow.",
         ],
       },
+      {
+        heading: "Pricing head-to-head",
+        paragraphs: [
+          "The price bands are near-identical, which makes the comparison about value, not sticker price. Muse runs three consumer tiers: Free ($0, usage-metered), Power at $20/month, and Maximum at $100/month — with Meta's Help Center listing weekly ceilings of 500 million tokens for Power and 3 billion for Maximum, as reported by press. One catch unique to Muse: a payment card is required to sign up even for the free tier, and Meta asks you to confirm US residence and 18+ age. Full sourcing in our [pricing guide](/guides/muse-ai-pricing-explained).",
+          "Claude's consumer tiers, verified against Anthropic's pricing page by trackers in September 2026: Free ($0, with the full feature set including connectors, rationed by usage), Pro at $20/month (or $17/month billed annually), and Max at $100 or $200/month for 5x and 20x usage respectively. Claude's free tier is the broader one — no card required to start, connectors included.",
+          "The honest read: at $20/month both buy you “serious use,” but of different things. Muse's Power buys agent handoff capacity — more background errands, more connected-app work. Claude's Pro buys deeper model access — longer reasoning, more coding, the Cowork agent features that merged into Claude chat in September 2026. If your usage is light, both free tiers are genuinely usable; if it's heavy, match the tier to the work you actually do, not the brand you like.",
+        ],
+      },
+      {
+        heading: "Connectors and integrations",
+        paragraphs: [
+          "This is where the two products reveal different theories of what an assistant is for. Muse's official catalog — [29 named connectors plus the entire Shopify merchant catalogue](/connectors) — is built around life admin: Walmart, Best Buy, Sephora, Expedia, Instacart, OpenTable, Spotify, PayPal and Shop Pay for checkout, Gmail and Google Calendar for the inbox-and-schedule layer, plus Facebook, Instagram, and Threads on the social side. It's a shopping-and-errands catalog with a productivity spine.",
+          "Claude's officially documented integrations lean the other way: Google Workspace (Gmail, Calendar, Drive), GitHub, Microsoft 365, and Slack are the first-party connectors in Anthropic's docs, with the whole system built on MCP — including remote MCP servers on web and mobile. Press reports describe a larger ecosystem behind that: an April 2026 wave of consumer connectors (Booking.com, Uber, Spotify, Instacart among them) and a September 2026 “Claude Marketplace” reportedly carrying thousands of connectors and plugins — but no official Anthropic announcement surfaced for the marketplace figure, so treat the big numbers as press-reported, not confirmed.",
+          "Net: Muse's catalog is smaller, newer, and verified service-by-service — you can see exactly what's connected. Claude's ecosystem is older (connectors launched July 2025) and structurally more open via MCP, but its true size is harder to pin down from official sources. If your must-have service is a specific store or travel site, check Muse's directory; if it's a workplace tool or a custom MCP server, Claude's openness is the advantage.",
+        ],
+      },
+      {
+        heading: "Privacy and control",
+        paragraphs: [
+          "Neither company publishes a simple privacy scorecard, so the honest comparison is about what each product requires of you and what controls it gives you — both verifiable, both meaningful.",
+          "Muse asks for more up front: a payment card to create even a free account, plus confirmation that you're in the US and 18 or older. In exchange, the control model is explicit — the agent proposes, you approve. Purchases, bookings, and messages go through an approval step, and our [agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) details how that model works and what September 2026 changed. Connectors are opt-in per service via OAuth, so Muse sees only what you link.",
+          "Claude asks for less to start — the free tier needs no card — and its agent features (Cowork, merged into the main chat in September 2026 on paid plans) run with their own permission model for multi-step work. Both assistants are cloud products from large AI companies: assume your prompts may be used per each company's published policy, and don't hand either one credentials, private documents, or sensitive data you wouldn't want processed off-device. The practical privacy move is the same on both: link the minimum, approve the consequential, and read the actual policy — not the marketing page — before connecting work accounts.",
+        ],
+      },
+      {
+        heading: "Everyday tasks: five matchups",
+        paragraphs: [
+          "“Plan a 4-day trip and book the hotel.” Muse. The Expedia and OpenTable connectors plus approval-gated booking are built for exactly this — research that ends in a reservation, not a reading list.",
+          "“Read this 80-page report and brief me.” Claude. Long-document comprehension is its home turf; it holds structure across material that makes most assistants drift.",
+          "“Find the cheapest price and buy it if it drops under $X.” Muse. Price-watching across connected stores with a budget ceiling and your final approval is the agent pattern shopping was designed around — see [shopping with Muse](/guides/muse-ai-shopping).",
+          "“Help me debug this codebase / write this function.” Claude. Claude Code inside paid plans is the established benchmark for AI-assisted programming. Muse's coding story (Muse Code) currently lives inside the [announced-but-unlaunched Enterprise Platform](/guides/meta-enterprise-platform-explained) — don't buy Muse for coding on promises.",
+          "“Handle this over WhatsApp while I'm out.” Muse, uncontested. Meta's messaging surfaces are the moat: no competitor operates natively inside WhatsApp at this depth. Our [WhatsApp guide](/guides/muse-ai-whatsapp) covers what actually works there.",
+        ],
+      },
+      {
+        heading: "The verdict: which should you pick",
+        paragraphs: [
+          "Prefer Muse when your work is errands with outcomes — shopping, travel, reservations, household admin — especially if you live in WhatsApp or Instagram DMs, and when you want an agent that acts (with your approval) rather than a brilliant conversationalist. It's the newer product with the smaller ecosystem, so expect rough edges and check [availability](/guides/muse-ai-availability) for your region.",
+          "Prefer Claude when your work is thinking with documents — research, writing, analysis, code — and when you want the broadest free tier to start. Its MCP-based integration system also wins if you have unusual or custom tools to connect, or you work in a GitHub/Slack/Microsoft 365 environment all day.",
+          "Use both when your week splits both ways — and it probably does. There's no rule that says one assistant must do everything; many people keep Claude for deep work and Muse for life admin. Run the same real brief through each once a quarter. The products are moving fast enough that today's answer deserves re-testing — which is why our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) and the [latest Muse news](/news) stay updated.",
+        ],
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[Four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) — Muse vs ChatGPT vs Claude vs Meta AI in five minutes.",
+            "[Muse AI pricing explained](/guides/muse-ai-pricing-explained) — what Free, Power, and Maximum actually buy.",
+            "[Agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) — approvals, safety models, September 2026.",
+            "[What people actually use Muse for](/guides/muse-ai-use-cases) — 12 practical ideas across 7 personas.",
+            "[Muse review](/guides/muse-ai-review) — how it holds up in daily use.",
+          ],
+        },
+      },
     ],
   },
+
   {
     slug: "muse-ai-download",
     modifiedTime: "2026-09-28",
@@ -651,7 +782,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-use-cases",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-09-29",
     image: "/images/guides/muse-ai-use-cases.jpg",
     imageAlt: "Illustration of a grid of nine idea panels, symbolizing practical Muse AI use cases",
     title: "Muse AI Use Cases: 12 Practical Ideas",
@@ -665,41 +796,108 @@ export const GUIDES: Guide[] = [
       "The strongest Muse AI use cases end in a clear output: a researched brief, working page, study plan, edited draft, decision memo, or repeatable workflow.",
     sections: [
       {
-        heading: "12 ideas to try",
+        heading: "AI Takeaway",
         list: {
-          ordered: true,
+          ordered: false,
           items: [
-            "Compare sources for a decision brief.",
-            "Turn rough notes into a structured article.",
-            "Build a landing page or calculator.",
-            "Create a study curriculum with practice checkpoints.",
-            "Generate practice questions from your material.",
-            "Plan and revise a presentation end to end.",
-            "Audit a resume against a job description.",
-            "Design a month-long content calendar.",
-            "Analyze a spreadsheet or report and summarize the story.",
-            "Map a product or event launch plan.",
-            "Draft and critique a difficult message before sending.",
-            "Create a recurring weekly review workflow.",
+            "The use cases that stick end in a finished artifact — a brief, a page, a plan, a draft, a decision memo — not a chat transcript.",
+            "Muse's edge over a plain chatbot is handoff: background goals, connected apps, and approvals that let it act while you do something else.",
+            "Start with one repeatable weekly workflow (a review, a briefing, a content batch) rather than ten one-off experiments.",
+            "Heavy agent use is where paid tiers matter — check the [pricing guide](/guides/muse-ai-pricing-explained) if the free meter keeps running out.",
+            "Anything the agent does on your behalf (bookings, purchases, messages) goes through your approval — see the [agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) for how approvals work.",
           ],
         },
       },
       {
-        heading: "Agent-native ideas",
-        list: {
-          ordered: true,
-          items: [
-            "Set a goal — say, tracking a price or monitoring a topic — and let Muse work it in the background, checking the Goals tab for progress.",
-            "Ask for an Artifact instead of an answer: a spending tracker, an interactive study guide, or a dashboard over your own data.",
-            "Connect an app, then have Muse draft the email or booking while you keep the final approval.",
-            "Name it, give it an avatar, and treat it like a long-running collaboration: one main chat, side chats per project. Concrete starting points: [shopping with Muse](/guides/muse-ai-shopping), [talking instead of typing](/guides/muse-ai-voice-mode), [using Muse in WhatsApp](/guides/muse-ai-whatsapp), and [prompts that get better results](/guides/muse-ai-prompt-tips).",
-          ],
-        },
+        heading: "What makes a use case worth your time",
+        paragraphs: [
+          "Most AI assistants answer questions and stop. Muse is built to carry work from a request to a finished output — research, plans, writing, visuals, digital artifacts — so the test of a good use case is simple: does it end with something you can use, file, send, or publish? “Explain photosynthesis” is a demo. “Build me a two-week study plan for photosynthesis with daily checkpoints and a quiz at the end” is a use case. The second kind is where the agent earns its keep, and it's the kind this guide is built around.",
+          "A second filter: repetition. A task you do weekly — a status update, a lesson plan, a grocery run, a content batch — repays the setup time many times over. One-off curiosities don't. Pick workflows, not stunts. Everything below is organized by who you are, because the best use case is the one that matches work you already do.",
+        ],
+      },
+      {
+        heading: "For students",
+        paragraphs: [
+          "Students get two things from an agent that a chatbot doesn't quite deliver: structure and follow-through. Instead of asking for explanations one by one, hand Muse the whole arc: “I'm studying the French Revolution for an exam in three weeks. Build a study plan with daily 45-minute sessions, a one-page summary per topic, and a practice quiz every Friday.” The output is a curriculum, not a chat.",
+          "Then use it as a tutor with a memory: paste your notes and ask it to find the gaps, generate practice questions from your own material (harder and more useful than generic ones), and quiz you out loud — [voice mode](/guides/muse-ai-voice-mode) turns revision into a conversation. For essays and assignments, the honest workflow is draft-then-critique: write it yourself first, then ask Muse to attack the argument like a strict marker. You'll learn more, and you'll stay on the right side of academic-integrity rules — most institutions allow AI as a study aid but not as the author, so keep the authorship yours.",
+          "Concrete starting points: a weekly revision workflow that re-quizzes you on last week's mistakes; an “explain it like I'm 12, then like I'm an examiner” ladder for hard topics; a reading-list digest that turns a stack of papers into a two-page brief. Our [student intent page](/for/students) has more tuned to campus life.",
+        ],
+      },
+      {
+        heading: "For professionals",
+        paragraphs: [
+          "The professional pitch is delegation of the repeatable 20%: status updates, meeting prep, research briefs, first drafts. The pattern that works: give Muse the raw material and the format, and let it do the assembly. “Here are my notes from three client calls — turn them into a one-page brief with decisions, owners, and deadlines.” “Here's last quarter's report — pull the story into five slides' worth of talking points.”",
+          "Connect [Gmail and Google Calendar](/guides/muse-ai-connectors) and the agent can draft the follow-up email while you keep the final approval — the approval step matters, and our [agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) explains what the agent can and can't do on your behalf. For job seekers, the highest-value loop is resume-vs-job-description: paste both, ask where the resume undersells you, iterate. For managers, a weekly review workflow — wins, blockers, next week's priorities — compiled from your own notes beats any generic template because it's built from your data.",
+          "If your team is evaluating Muse as more than a personal tool, read about the [Meta Enterprise Platform](/guides/meta-enterprise-platform-explained) — announced, not launched, but it's where business deployment is heading.",
+        ],
+      },
+      {
+        heading: "For shoppers",
+        paragraphs: [
+          "Shopping is the use case Meta demos most, because it's the clearest “agent, not chatbot” moment: Muse doesn't just recommend a product, it can check prices, compare options, and complete the purchase across connected retailers. Start small and concrete: “Find the best price for [exact model] across the connected stores, and only buy if it's under [your ceiling].” The ceiling is the point — set the budget in the instruction and keep the approval on, so the agent proposes and you dispose.",
+          "Connect the retailers you actually use — [Walmart, Best Buy, Sephora, and the full Shopify catalogue are on the connector list](/guides/muse-ai-connectors) — and Muse can watch a price over days rather than in one session. Gift season is the killer app: give it a person, a budget, and three interests, and ask for five options with links — then approve the one you like. Full playbook in our [shopping guide](/guides/muse-ai-shopping); the [connector directory](/connectors) shows every store you can link.",
+        ],
+      },
+      {
+        heading: "For travelers and planners",
+        paragraphs: [
+          "Trip planning is research with a deadline, which is exactly what agents are for. The workflow: “Plan a 4-day trip to [city] in [month], mid-range budget, two adults who like food markets and hate museums. Flights from [city], hotel under [price]/night, day-by-day itinerary with booking links.” Muse can pull [Expedia](/guides/muse-ai-connectors) for stays and [OpenTable](/guides/muse-ai-connectors) for restaurants, then hand you the plan for approval.",
+          "Two things make this work better than a chatbot: it keeps the constraints (budget, dates, dislikes) across the whole plan instead of forgetting them by paragraph three, and it can keep monitoring — ask it to watch flight prices for your dates and nudge you when they drop. Event planning runs the same engine: a birthday dinner for twelve with dietary restrictions, a weekend itinerary for visiting parents. Always verify times, prices, and availability before you commit — the agent assembles fast, but bookings deserve your eyes, which is why approvals exist.",
+        ],
+      },
+      {
+        heading: "For creators",
+        paragraphs: [
+          "Creators get a production assistant, not a muse. The reliable pattern is batch-and-system: “Here's my topic for the month — build a 4-week content calendar with hooks, formats per platform, and a shot list for each piece.” Then run each piece through draft-critique-revise: Muse drafts, you direct, it tightens. For newsletters, the workflow is curation-to-draft: “Here are the five articles I saved this week — turn them into a 400-word digest in my voice, with my take at the top.”",
+          "Video and visual creators can use it for the unglamorous half: titles, descriptions, chapters, thumbnail text options. The honest caveat: audiences can smell fully AI-written content, and platforms are getting stricter about disclosure — use the agent for structure, research, and editing leverage, and keep the ideas and the voice yours. If you publish comparisons or reviews, our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) is a useful model for the “honest, no hype” format readers trust.",
+        ],
+      },
+      {
+        heading: "For households",
+        paragraphs: [
+          "The household use case is invisible productivity: the admin nobody wants to do. Weekly meal planning is the classic — “Plan five weeknight dinners for two adults and a picky seven-year-old, under [budget], using what's already in the fridge [list it], with one grocery order.” Connect [Instacart](/guides/muse-ai-connectors) and the plan becomes an order you approve.",
+          "Recurring admin works the same way: a Sunday-evening briefing built from your calendar and messages (what's due, what's moved, what needs a reply), bill and subscription tracking with renewal nudges, a shared packing list for family trips that remembers what you forgot last time. Set these as recurring goals and they run in the background — check the Goals tab rather than re-asking every week. The rule for anything involving money or other people: approvals on, always. Nobody wants an agent texting the babysitter unsupervised.",
+        ],
+      },
+      {
+        heading: "For builders and developers",
+        paragraphs: [
+          "If you build things, Muse is a prototyping partner: “Build me a landing page for [idea] with a working waitlist form” ends with an artifact you can open, not a code snippet to assemble. The same goes for calculators, dashboards, and internal tools — describe the outcome, iterate on the result.",
+          "For model and API work, keep the two bills straight: Muse's consumer tiers (Free, [Power $20, Maximum $100](/guides/muse-ai-pricing-explained)) pay for agent capacity, while per-token developer pricing is a different product — our [token price comparison tool](/tools/token-price-compare) tracks the market, and September's [model price war](/guides/ai-model-price-war-september-2026) moved several flagship prices. Developers in the AWS ecosystem should also see our [Grok 4.7 on Bedrock guide](/guides/grok-4-7-amazon-bedrock-developer-guide) for the current state of model access there. And if you're comparing assistants for serious work, the [Muse vs Claude](/guides/muse-ai-vs-claude) head-to-head covers the coding and reasoning trade-offs.",
+        ],
+      },
+      {
+        heading: "Agent-native patterns",
+        paragraphs: [
+          "Four patterns separate agent use from chatbot use. First, goals: set an objective — track a price, monitor a topic, nudge you about a deadline — and let it work in the background; check the Goals tab for progress instead of re-prompting. Second, artifacts over answers: ask for the thing, not the text about the thing — a spending tracker, an interactive study guide, a dashboard over your own data.",
+          "Third, connected apps with approvals: link Gmail, Calendar, or a store, then have Muse draft the email or the booking while you keep final approval. The approval model is the safety story — read the [safety roundup](/guides/ai-agent-safety-roundup-september-2026) before handing off anything with money or other people involved. Fourth, long-running collaboration: name it, give it an avatar ([meet Jolly](/guides/muse-ai-jolly-avatar)), keep one main chat and side chats per project. The agent compounds context the way a good assistant does — but only if you keep the thread.",
+        ],
       },
       {
         heading: "Go deeper with skills",
         paragraphs: [
           "General prompting covers a lot, but specialized starting instructions go further. Explore [2,365 Muse skills](https://museai-eight.vercel.app/) across coding, design, research, productivity, and marketing — each one is a reusable playbook you can hand to Muse for sharper results.",
+        ],
+      },
+      {
+        heading: "Make it actually work",
+        list: {
+          ordered: false,
+          items: [
+            "Say the output, not just the topic: “a one-page brief with owners and deadlines” beats “summarize this.”",
+            "Give constraints up front: budget, dates, audience, tone, length. The agent can't read your mind; it can read your instructions.",
+            "[Talk instead of typing](/guides/muse-ai-voice-mode) for anything conversational — revision quizzes, brainstorming, thinking aloud.",
+            "Use [WhatsApp](/guides/muse-ai-whatsapp) for on-the-go tasks; keep deep work in the main app where context persists.",
+            "Learn the [prompt patterns](/guides/muse-ai-prompt-tips) once — role, context, format, constraints — and every use case above gets sharper.",
+            "Verify before you act on anything with money, bookings, or other people. Fast assembly plus your eyes is the whole point of approvals.",
+          ],
+        },
+      },
+      {
+        heading: "What Muse won't do for you",
+        paragraphs: [
+          "Honest limits, so you don't waste an afternoon. Muse is in limited testing — availability, limits, and features vary by account and region (currently the US and Canada; [check availability](/guides/muse-ai-availability) for the latest). It won't browse or act on sites and apps it isn't connected to, it can't do anything you've denied approval for, and heavy use hits the free meter — [pricing](/guides/muse-ai-pricing-explained) explains the tiers.",
+          "It can be wrong with confidence, especially on prices, times, and niche facts; treat its output as a strong draft, not a source of truth. And it won't replace judgment on sensitive calls — hiring, medical, legal, and financial decisions deserve a professional, with the agent as research help. The [safety roundup](/guides/ai-agent-safety-roundup-september-2026) and our [review](/guides/muse-ai-review) go deeper on where the edges are.",
         ],
       },
       {
@@ -718,6 +916,10 @@ export const GUIDES: Guide[] = [
         list: {
           ordered: false,
           items: [
+            "[Muse AI pricing explained](/guides/muse-ai-pricing-explained) — know what the free meter and paid tiers buy before you lean on the agent daily.",
+            "[Muse vs Claude](/guides/muse-ai-vs-claude) — the head-to-head for serious work.",
+            "[Four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) — Muse vs ChatGPT vs Claude vs Meta AI in five minutes.",
+            "[Agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) — approvals, safety models, and what September 2026 changed.",
             "[Use-case directory](/use-cases) — 31 real workflows across 7 personas, with starter prompts.",
             "[Muse for students](/for/students) — one of 20 intent pages tuned to who you are.",
             "[Can Muse Do This?](/tools/can-muse-do-this) — honest yes / depends / no answers for 64 tasks.",
