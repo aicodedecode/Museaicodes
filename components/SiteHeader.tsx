@@ -5,6 +5,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, MORE_LINKS, REDEEM_HREF } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
+import SearchPalette from "./search/SearchPalette";
+import SearchTrigger from "./search/SearchTrigger";
 
 /** True when the link's route matches the current page (exact for "/", prefix for the rest). */
 function isActiveLink(href: string, pathname: string): boolean {
@@ -27,11 +29,13 @@ const mobileLinkCls = (active: boolean) =>
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
   const moreActive = MORE_LINKS.some((l) => isActiveLink(l.href, pathname));
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg">
+      <SearchPalette open={searchOpen} onOpenChange={setSearchOpen} />
       <nav aria-label="Main navigation" className="mx-auto flex min-h-[68px] max-w-shell items-center justify-between gap-4 px-5 md:px-6">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Muse Hub home">
           {/* Animated brand mark: Jolly in the Christmas dress, smiling and waving.
@@ -118,12 +122,19 @@ export default function SiteHeader() {
           >
             Get access
           </Link>
+          <span className="ml-2 hidden lg:block">
+            <SearchTrigger variant="pill" onOpen={() => setSearchOpen(true)} />
+          </span>
+          <span className="ml-2 hidden md:block lg:hidden">
+            <SearchTrigger variant="icon" onOpen={() => setSearchOpen(true)} />
+          </span>
           <span className="ml-2">
             <ThemeToggle />
           </span>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <SearchTrigger variant="icon" onOpen={() => setSearchOpen(true)} />
           <ThemeToggle />
           <button
             type="button"

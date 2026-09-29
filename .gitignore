@@ -10,3 +10,4 @@ out/
 *.log
 # system
 .DS_Store
+public/search-index.json
