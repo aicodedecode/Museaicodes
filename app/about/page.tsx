@@ -3,9 +3,9 @@ import LegalPage from "@/components/LegalPage";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Muse Hub",
+  title: "About museaicodes (Muse Hub)",
   description:
-    "Muse Hub is an independent, unofficial guide to Muse AI — 31 practical guides on access, prompts, WhatsApp, tokens, and honest comparisons.",
+    "museaicodes (Muse Hub) is an independent, unofficial guide to Muse AI — 38 practical guides on access, prompts, WhatsApp, tokens, and honest comparisons.",
   alternates: { canonical: `${SITE.baseUrl}/about` },
 };
 
@@ -14,12 +14,12 @@ export default function AboutPage() {
     <LegalPage
       slug="about"
       kicker="About"
-      title="About Muse Hub"
+      title="About museaicodes (Muse Hub)"
       deck="An independent field guide to Muse AI — built to help you go from your first message to finished work."
     >
       <h2>What this is</h2>
       <p>
-        Muse Hub is a practical, independent guide to Muse AI — Meta’s personal AI agent.
+        museaicodes (Muse Hub) is a practical, independent guide to Muse AI — Meta’s personal AI agent.
         We publish clear, jargon-free explainers on getting access, writing better prompts,
         using Muse on channels like WhatsApp, understanding token rewards, and choosing
         between Muse, ChatGPT, Claude, and Meta AI.
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <h2>What you’ll find here</h2>
       <ul>
         <li>
-          <strong>15 focused guides</strong> — from “What is Muse AI?” to invite codes,
+          <strong>38 focused guides</strong> — from “What is Muse AI?” to invite codes,
           tutorials, reviews, and use cases. <a href="/guides">Browse the library</a>.
         </li>
         <li>
@@ -56,7 +56,7 @@ export default function AboutPage() {
 
       <h2>Independent and unofficial</h2>
       <p>
-        Muse Hub is not affiliated with, endorsed by, or sponsored by Meta. It’s run by an
+        museaicodes (Muse Hub) is not affiliated with, endorsed by, or sponsored by Meta. It’s run by an
         independent creator who uses AI tools daily and writes about what actually works.
         That independence is the point: we can say what official pages can’t.
       </p>

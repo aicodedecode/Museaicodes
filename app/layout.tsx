@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { SITE } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import JsonLd from "@/components/JsonLd";
 import { ToastProvider } from "@/components/Toast";
 import "./globals.css";
 
@@ -81,6 +82,33 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE.baseUrl },
 };
 
+const ORG_JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE.baseUrl}#organization`,
+      name: "museaicodes",
+      alternateName: "Muse Hub",
+      url: SITE.baseUrl,
+      description:
+        "museaicodes (Muse Hub) is an independent, unofficial guide hub for Meta's Muse AI — practical guides, invite and referral codes, tools, and honest comparisons.",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE.baseUrl}/images/brand/jolly-logo.png`,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE.baseUrl}#website`,
+      name: "museaicodes",
+      alternateName: "Muse Hub",
+      url: SITE.baseUrl,
+      publisher: { "@id": `${SITE.baseUrl}#organization` },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -96,6 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           <ToastProvider>
+            <JsonLd data={ORG_JSON_LD} />
             <a href="#main" className="skip-link">
               Skip to content
             </a>

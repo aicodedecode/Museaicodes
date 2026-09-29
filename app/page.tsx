@@ -17,14 +17,14 @@ import JsonLd from "@/components/JsonLd";
 import { CopyButton } from "@/components/Toast";
 
 export const metadata: Metadata = {
-  title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
+  title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
   description:
-    "Muse Hub — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
+    "museaicodes (Muse Hub) — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   alternates: { canonical: SITE.baseUrl },
   openGraph: {
-    title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
+    title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
     description:
-      "38 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
+      "museaicodes: 38 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
     url: SITE.baseUrl,
   },
 };
