@@ -2910,6 +2910,112 @@ export const GUIDES: Guide[] = [
       ],
     },
   },
+  {
+    slug: "muse-ai-creators-vs-claude-chatgpt",
+    modifiedTime: "2026-09-30",
+    image: "/images/guides/muse-ai-creators-vs-claude-chatgpt.jpg",
+    imageAlt: "Editorial illustration of a creator desk with video play buttons, a robot assistant, and versus panels comparing three AI assistants",
+    title: "Muse AI in the Wild: 23 Creator Tests, Use Cases & Verdicts vs Claude and ChatGPT",
+    deck: "What 23 YouTube creators actually did with Meta's Muse AI — real jobs, connectors, money-making attempts — and how they stack it against Claude and ChatGPT's GPT-6 Astra.",
+    category: "Comparison",
+    keywords: "muse ai vs claude, muse ai vs chatgpt, muse ai use cases, muse ai review, muse ai connectors, what to build with muse ai, gpt-6 astra vs muse, meta muse ai real test",
+    metaTitle: "Muse AI vs Claude vs ChatGPT: 23 Creator Tests Compared (2026)",
+    metaDescription:
+      "What 23 YouTube creators actually did with Meta's Muse AI — real use cases, connectors, things people built — and how they compare it to Claude and ChatGPT (GPT-6 Astra).",
+    shortAnswer:
+      "Across 23 creator videos, the recurring pattern is: Claude (Fable 5.1) wins deep analysis and nuanced writing; ChatGPT on GPT-6 Astra wins autonomous computer use and workflow automation; Muse wins personal life-admin inside the Meta ecosystem — and it's free, which is why creators keep calling it underrated. These are creator verdicts from hands-on tests, not independent benchmarks.",
+    sections: [
+      {
+        heading: "How this comparison was built",
+        paragraphs: [
+          "Instead of re-running benchmarks, we went to where the real-world evidence is: YouTube. We ran 11 searches (\"Muse AI review\", \"Muse AI vs Claude\", \"Muse AI vs ChatGPT\", \"what to build with Muse AI\", and more), collected 23 distinct videos, and pulled full transcripts from the six that had captions — including Meta's official tour, a CBS/CNET segment, a three-way benchmark test, and two long hands-on reviews. The rest we summarized from their descriptions and published details.",
+          "One honesty rule for everything below: numbers and verdicts are attributed to the creator who said them. YouTube creators cite benchmarks, download counts, and test scores that we could not independently verify — so every claim carries its source. When creators disagree, we say so.",
+        ],
+      },
+      {
+        heading: "What 23 creators actually did with Muse",
+        paragraphs: [
+          "The most useful videos aren't the hype ones — they're the week-long tests. Full Value Dan spent a week putting Muse through four real jobs (booking dinner without handing over a real card, selling on Facebook Marketplace, triaging DMs). His scorecard: 9/10 as an assistant and social-media agent, 8.5/10 overall — with the walls clearly marked: image edits, dropped follow-ups, and video generation limits.",
+          "Peter Yang ran ten real workflows and says they save him over $800 a year, mostly bill negotiation and busywork automation — he calls Muse the best personal agent he's used. Rich Rose tested it on a messy calendar (calendar access, tasks, memory, goals). Nicky Saunders had it build her entire Instagram strategy for free: profile optimization, content pillars, a reels calendar, captions, CTAs, and a growth plan. Brandon Carter and The Next New Thing both tried to make money with it — Carter by monetizing the free-token program itself.",
+          "The official tour (hosted by Alex Cornell on Meta's Muse channel) is the cleanest statement of what the product is: a chat tab, a status display showing what its VM computer is doing in the background, permission grants for consequential actions, a personalized feed, proactive ideas, goals that fill in as it learns what you care about, and a library of artifacts — documents, PDFs, and interactive things like a chess-analysis dashboard.",
+          "And the CBS News segment with CNET's AI reporter drew the sharpest line of the month: a chatbot finds your NFL team's schedule; an agent like Muse puts the reminders in your calendar itself. That acting-without-being-asked is the whole category — and, she noted, the whole privacy dilemma.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Life admin that pays: bill negotiation and subscription busywork (Peter Yang, $800+/year claimed).",
+            "Calendar and inbox triage: messy-calendar cleanup, DM triage, task and goal tracking (Rich Rose, Full Value Dan).",
+            "Content strategy: a complete Instagram plan — pillars, reels calendar, captions, CTAs (Nicky Saunders).",
+            "Research and artifacts: websites, images, podcasts, and dashboards built in the library (WEBdoze, official tour).",
+            "Money experiments: monetizing free tokens and cost-cutting workflows (Brandon Carter, The Next New Thing).",
+            "Outreach automation: one creator had Muse find influencers, draft emails, and send LinkedIn DMs (Mark Savant) — reported as his tactic; see the honest catches below before copying it.",
+          ],
+        },
+      },
+      {
+        heading: "Muse vs Claude vs ChatGPT Astra: the verdicts",
+        paragraphs: [
+          "The three-way test from Try AI With Me is the most structured comparison we found. It pits Claude Fable 5.1 (released Sept 1), GPT-6 Astra (Sept 3), and Meta Muse (Sept 8) against each other, citing third-party benchmarks: Claude takes the Artificial Analysis intelligence index and Terminal Bench Science (52.6% claimed) — the thinker, best for deep analysis, long documents, and nuanced writing. GPT-6 Astra takes OSWorld 2.0 autonomous computer use 72.6% to Claude's 41.7% — a 30-point lead — plus claimed perfect scores on exploit bench and 98% on Frontier Math Tier 4: the doer. Muse's assigned lane: personal social-media and commerce actions inside the Meta ecosystem, which neither rival can replicate.",
+          "On pricing, that video notes both frontier models list at a claimed $10/$50 per million input/output tokens — but calls the identical pricing an illusion: Claude's claimed 75% cache-read discount favors long-context work, while Astra's claimed token efficiency (about a third of the output tokens per task) favors high-volume short tasks. Creator-cited figures again — treat them as directional, not gospel.",
+          "The broader creator consensus rhymes: The Information's segment argues agents that complete tasks (not just chat) are the next major shift and that Meta is better positioned than Anthropic or OpenAI; Fox Business's segment cited a Spear Invest CIO claiming Muse topped the App Store with 3M+ downloads, scored 9.3/10 across 15 tasks, and hit 700K daily active users out of the gate; Mark Savant calls Muse \"the most underrated AI power move of the year\" and claims 2.5M+ downloads. Riley Brown frames Muse passing ChatGPT as the #1 App Store app as a potential \"ChatGPT moment\" for Zuckerberg. And Webronaq's side-by-side adds the price spread across the whole agent field — free tiers to $300/month — matching each agent to its best use case.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Pick Claude (Fable 5.1) for: deep analysis, long documents, nuanced writing, research pipelines.",
+            "Pick ChatGPT (GPT-6 Astra) for: autonomous computer use, software operation, business workflow automation.",
+            "Pick Muse for: personal life-admin and social/commerce actions inside Instagram, WhatsApp, and Facebook — free.",
+            "The quote that sums it up, from the three-way test: “Neither is a clean sweep. The right question is not which is smarter. It is which is right for this specific task.”",
+          ],
+        },
+      },
+      {
+        heading: "Connectors: the quiet land grab",
+        paragraphs: [
+          "The most strategically interesting video we found is Greg Isenberg's breakdown of Muse connectors as \"the App Store for AI\": developers can plug their services into Muse so the agent uses them when asked, submitting connectors for Meta's review. His argument is that being early in that directory — before every Meta advertiser is connected — is the advantage.",
+          "The CBS/CNET segment shows why connectors matter to users: the more programs you grant access to, the more value you get — but shopping means handing over a credit card, and agents are asking all of us to trust them with sensitive information most people don't feel they've earned yet. The working model, per Meta's tour: Muse asks permission before consequential actions, and you can grant it in chat or from the status display.",
+          "What creators have actually connected so far: Gmail and Google Drive (per WEBdoze's walkthrough), calendar, messaging channels including WhatsApp, plus permission-scoped access to local files and app data. Expect this list to be the thing that changes fastest — check the official tour and [the updates feed](/updates) for what's new.",
+        ],
+      },
+      {
+        heading: "What to build on Muse, according to creators",
+        paragraphs: [
+          "Two build patterns kept showing up. First, build a connector: if you run a service, getting it into Muse's directory early is the land-grab play Isenberg describes — the agent recommends and uses your service at the moment of intent. Second, build artifacts for an audience: WEBdoze's test had Muse generate a complete solar-panel website, blog images, a 5-second animated video, and a full podcast from one of his articles — the podcast was the standout, the video and image work were merely okay.",
+          "The honest version: creators are bullish on building distribution through Muse (connectors, content, affiliate-style outreach) and mixed on building finished creative work with it. Dan's week-long test is the reality check — the agent shines at coordination and research, and hits walls on precise creative edits. Build for the coordination layer first.",
+        ],
+      },
+      {
+        heading: "The honest catches",
+        paragraphs: [
+          "Four things to keep in mind, all sourced from the videos above. First, privacy is the real price: Meta trains on your data, and multiple creators (WEBdoze, Alex Finn, CNET) say the same thing — don't hand it anything sensitive, use it for public or low-stakes projects, and think hard before granting card or account access. Second, autonomy is uneven: Dan documented dropped follow-ups, and OpenAI's own Dots demo froze on stage at launch — start every agent on read-only, low-stakes jobs. Third, the automation ethics: Mark Savant's reported tactic of having Muse send LinkedIn DMs and post YouTube comments for a brand is exactly the kind of automation that violates most platforms' terms and reads as spam — we run an organic-only stance and don't recommend it. Fourth, the big numbers (downloads, test scores, stock moves) are creator-reported and sometimes disagree with each other (2.5M vs 3M+ downloads) — Meta hasn't published official figures, so treat them as hype-adjacent until confirmed.",
+          "For the Muse-specific fundamentals — what it is, how the free tokens and invite codes work, and how it compares to the always-on agent wave — see [what Muse AI is](/guides/what-is-muse-ai), [the invite-code guide](/guides/muse-ai-invite-code), and [OpenAI Dots vs Muse](/guides/openai-dots-vs-muse-always-on-agents).",
+        ],
+      },
+      {
+        heading: "The full watch list: all 23 videos",
+        paragraphs: [
+          "Every video below is linked so you can verify anything in this guide yourself. Dates and view counts are as observed on September 30, 2026.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "Hands-on tests & use cases: [what can muse actually do? — Full Value Dan](https://www.youtube.com/watch?v=_cx6wD_4cRs) · [Meta's Muse AI Agent Saved Me $800+ a Year on My Bills (10 Real Use Cases) — Peter Yang](https://www.youtube.com/watch?v=eU1ICyI9bCs) · [Meta's New Muse AI Agent Just Blew My Mind! (Real-World Test) — Rich Rose](https://www.youtube.com/watch?v=iP_jf9WxE9s) · [I Can't Believe Meta's Muse AI Built My Instagram Strategy For Free — Nicky Saunders](https://www.youtube.com/watch?v=v-Ax6uQaM0U) · [Meta Muse is Best AI Agent Yet (Here's How I'm Making Money With It) — Brandon Carter](https://www.youtube.com/watch?v=RcIwN5RG6ik) · [Make money, cut costs & run your life with Meta's Muse — The Next New Thing](https://www.youtube.com/watch?v=dfFKE7EetoA) · [I Tested Meta's Muse AI (Browser Control, Local Access, & Free 1B Tokens) — WEBdoze](https://www.youtube.com/watch?v=UaMdJFd7xJw) · [Meta Destroyed Claude and ChatGPT. But Noone is Talking About It! — Mark Savant](https://www.youtube.com/watch?v=UBLQ5qlgX8E)",
+            "Features, tips & connectors: [Take the full tour of Muse, Meta's personal AI agent — Muse (official)](https://www.youtube.com/watch?v=wHn0hTjvFoo) · [Meta Muse Is Incredible - 5 Features You Need To Try — Paul J Lipsky](https://www.youtube.com/watch?v=lC_-9TD3TfA) · [Meta Muse Tips & Tricks: 6 Features You Should Be Using — The Tech Girl](https://www.youtube.com/watch?v=jbGYcOWvCZI) · [Meta Muse AI Connectors: The App Store for AI? — Greg Isenberg](https://www.youtube.com/watch?v=84q4WA3kA8Q) · [Meta Muse is an INCREDIBLE AI agent — Alex Finn](https://www.youtube.com/watch?v=Wod_A8xIy4E) · [NEW Meta Muse AI Agent is ABSURD! — Julian Goldie SEO](https://www.youtube.com/watch?v=CHJF3SnKe5s)",
+            "Comparisons vs Claude & ChatGPT: [Meta Muse vs Claude Fable 5.1 vs GPT-6 Astra — Which AI Should YOU Actually Use? — Try AI With Me](https://www.youtube.com/watch?v=4FY9dU8rbzA) · [Claude Opus 5.5 Is Insane… But Muse is EVEN Bigger — Riley Brown](https://www.youtube.com/watch?v=_NRuT_d1PZE) · [Meta Muse: Will It Replace ChatGPT — The Tech Girl](https://www.youtube.com/watch?v=7BeAeTo2evo) · [Meta's New AI Does It All? — Simply AI](https://www.youtube.com/watch?v=g0BCZR8xJbk) · [Why Meta's AI Agents Are Better Than Anthropic & OpenAI — The Information](https://www.youtube.com/watch?v=GbvPSdMPoTM) · [AI Race Updates: Which AI Model Is the Best Value? Astra vs Opus vs Grok vs Muse — Buy Hold Rant](https://www.youtube.com/watch?v=SUdodtyZvKw) · [Grok Bot vs Muse vs GPT-6 Astra: Personal AI Agents — Webronaq](https://www.youtube.com/watch?v=kNR4QpgwacU)",
+            "Press: [How new Meta AI agent Muse differs from chatbots — CBS News](https://www.youtube.com/watch?v=wiG0T7MJBMY) · [Meta's Muse AI emerges as TOP-PERFORMING agent — Fox Business Clips](https://www.youtube.com/watch?v=0J0lM7hkZJk)",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Assistant", "Best at (per creators)", "Price angle", "The catch"],
+      rows: [
+        ["Meta Muse", "Personal life-admin and social/commerce actions inside Instagram, WhatsApp, Facebook", "Free tier with usage limit; paid tiers available", "Region/invite-gated; uneven autonomy — dropped follow-ups documented"],
+        ["Claude (Fable 5.1)", "Deep analysis, long documents, nuanced writing, research pipelines", "Claimed $10/$50 per M tokens with 75% cache-read discount", "Weaker at autonomous computer use (claimed 41.7% OSWorld vs Astra's 72.6%)"],
+        ["ChatGPT (GPT-6 Astra)", "Autonomous computer use, software operation, workflow automation", "Claimed $10/$50 per M tokens; ~1/3 the output tokens per task", "Highest capability, highest price of entry for agent features"],
+      ],
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
