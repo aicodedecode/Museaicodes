@@ -27,8 +27,10 @@ export default function SiteFooter() {
           <p className="font-display text-xl font-bold">
             Muse<span className="text-accent">·</span>Hub
           </p>
-          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-faint">
-            museaicodes.com
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em]">
+            <span className="text-accent">museai</span>
+            <span className="text-moss">codes</span>
+            <span className="text-faint">.com</span>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted">
             Unofficial guide. Not affiliated with Meta. An independent learning
