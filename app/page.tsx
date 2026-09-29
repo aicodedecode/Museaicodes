@@ -3,6 +3,8 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { FAQS } from "@/lib/faqs";
 import { GUIDES, getGuide } from "@/lib/guides";
+import { INTENT_PAGES_1 } from "@/lib/intent-pages-1";
+import { INTENT_PAGES_2 } from "@/lib/intent-pages-2";
 import Reveal from "@/components/Reveal";
 import HeroConsole from "@/components/HeroConsole";
 import PromptLibrary from "@/components/PromptLibrary";
@@ -17,12 +19,12 @@ import { CopyButton } from "@/components/Toast";
 export const metadata: Metadata = {
   title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
   description:
-    "Muse Hub — the ultimate unofficial Muse AI guide hub: invite & referral codes, 31 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
+    "Muse Hub — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   alternates: { canonical: SITE.baseUrl },
   openGraph: {
     title: "Muse Hub: Muse AI Guides, Invite Codes & Tutorials (2026)",
     description:
-      "31 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
+      "38 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
     url: SITE.baseUrl,
   },
 };
@@ -108,8 +110,21 @@ const FEATURED_SLUGS = [
   "muse-ai-whatsapp",
 ];
 
+const LATEST_SLUGS = [
+  "muse-ai-pricing-explained",
+  "ai-model-price-war-september-2026",
+  "grok-4-7-amazon-bedrock-developer-guide",
+  "meta-enterprise-platform-explained",
+  "ai-agent-safety-roundup-september-2026",
+  "claude-discovers-enzyme-system-explained",
+  "why-openai-shelved-gpt-6-1-astra",
+];
+
+const INTENT_PAGES = [...INTENT_PAGES_1, ...INTENT_PAGES_2];
+
 export default function HomePage() {
   const featured = FEATURED_SLUGS.map((s) => getGuide(s)!).filter(Boolean);
+  const latest = LATEST_SLUGS.map((s) => getGuide(s)!).filter(Boolean);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -150,7 +165,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-7 max-w-[610px] text-[clamp(1.1rem,2vw,1.4rem)] leading-relaxed text-muted">
             A practical, independent Muse AI guide with clear access steps,
-            useful prompts, 15 focused tutorials, and honest comparisons.
+            useful prompts, 38 focused guides, and honest comparisons.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
@@ -287,10 +302,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- 04 FEATURED GUIDES ---------- */}
-      <section aria-labelledby="featured-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
+      {/* ---------- 04 WHO IS MUSE FOR ---------- */}
+      <section aria-labelledby="who-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
         <SectionHead
           index="04"
+          label="Who is Muse for?"
+          title="Muse AI, tuned to your lane."
+          copy="Twenty intent pages — each one shows how a specific kind of person actually uses Muse: the prompts, the workflows, and what to watch for."
+        />
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {INTENT_PAGES.map((p, i) => (
+            <Reveal key={p.slug} delay={Math.min(i, 7) * 40} className="h-full">
+              <Link
+                href={`/for/${p.slug}`}
+                className="group flex h-full items-center justify-between gap-3 rounded-[18px] border border-line bg-surface p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow)]"
+              >
+                <span className="font-display text-[1.05rem] font-bold tracking-tight group-hover:text-accent">
+                  {p.title}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="shrink-0 font-bold text-accent transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- 05 FEATURED GUIDES ---------- */}
+      <section aria-labelledby="featured-h" className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
+        <SectionHead
+          index="05"
           label="Featured guides"
           title="Start with the guides that matter most."
           copy={`A shortlist of the essentials. The full library — all ${GUIDES.length} guides with category tabs and search — lives on its own page.`}
@@ -298,6 +343,25 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((g, i) => (
             <Reveal key={g.slug} delay={Math.min(i, 5) * 60} className="h-full">
+              <GuideCard guide={g} />
+            </Reveal>
+          ))}
+        </div>
+        <Reveal>
+          <div className="mb-6 mt-16">
+            <p className="kicker">New in the library</p>
+            <h3 className="font-display mt-3 max-w-[850px] text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold tracking-tight">
+              Fresh guides, September 2026.
+            </h3>
+            <p className="mt-3 max-w-[670px] text-[1.05rem] text-muted">
+              The latest additions: pricing explainers, enterprise breakdowns,
+              and what&rsquo;s new in AI models and agent safety.
+            </p>
+          </div>
+        </Reveal>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {latest.map((g, i) => (
+            <Reveal key={g.slug} delay={Math.min(i, 6) * 60} className="h-full">
               <GuideCard guide={g} />
             </Reveal>
           ))}
@@ -317,7 +381,7 @@ export default function HomePage() {
       {/* ---------- TOOLS STRIP ---------- */}
       <section aria-labelledby="tools-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="05"
+          index="06"
           label="Tools"
           title="Play with the interactive tools."
           copy="Estimators, a quiz, and living pages that stay current."
@@ -376,7 +440,7 @@ export default function HomePage() {
       {/* ---------- EXPLORE ---------- */}
       <section aria-labelledby="explore-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="06"
+          index="07"
           label="Explore"
           title="More ways to use Muse Hub."
           copy="Directories, libraries, and hubs for every kind of Muse question."
@@ -417,11 +481,6 @@ export default function HomePage() {
               href: "/apps",
               title: "App Guide",
               desc: "Muse on iPhone, Android, web, WhatsApp, and Mac — setup and tour.",
-            },
-            {
-              href: "/for/students",
-              title: "For You",
-              desc: "20 intent pages: Muse for students, developers, marketers, and more.",
             },
           ].map((t, i) => (
             <Reveal key={t.href} delay={i * 60} className="h-full">
@@ -478,10 +537,10 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ---------- 06 REDEEM ---------- */}
+      {/* ---------- 08 REDEEM ---------- */}
       <section id="redeem" aria-labelledby="redeem-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="07"
+          index="08"
           label="Get access"
           title="Join, redeem, and start building."
           copy="Choose either referral code. Redeem it within the eligibility window displayed in your Muse account."
@@ -510,9 +569,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- 07 FAQ ---------- */}
+      {/* ---------- 09 FAQ ---------- */}
       <section id="faq" aria-labelledby="faq-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
-        <SectionHead index="08" label="FAQ" title="The useful questions, answered plainly." />
+        <SectionHead index="09" label="FAQ" title="The useful questions, answered plainly." />
         <Reveal>
           <FaqAccordion faqs={FAQS} />
         </Reveal>
