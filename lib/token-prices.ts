@@ -1,9 +1,13 @@
 /**
  * Verified API token prices for the /tools/token-price-compare tool.
  *
+ * GENERATED FILE — do not hand-edit. Source of truth is
+ * data/token-prices.csv; regenerate with:
+ *   ~/workspace/.venvs/scrape/bin/python scripts/build-token-prices.py
+ *
  * Every figure below was checked against the provider's official pricing
  * page on PRICE_VERIFIED. Prices move constantly — to update the table,
- * open each pricingUrl, change the numbers, and bump PRICE_VERIFIED.
+ * edit the CSV (newest verified_date wins) and re-run the script.
  *
  * IMPORTANT: never take a price from training memory or a third-party
  * roundup. Unverifiable rows must be excluded or marked "unverified".

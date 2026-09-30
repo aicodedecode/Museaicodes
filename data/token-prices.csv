@@ -1,0 +1,7 @@
+id,provider,model,input_per_million,output_per_million,context_window,pricing_url,pricing_note,verified_date
+openai-gpt6-sol,OpenAI,GPT-6 Sol,2.0,10.0,≈1M,https://developers.openai.com/api/docs/pricing,"Standard short-context rate; requests over 272K prompt tokens bill at 2× input / 1.5× output.",2026-09-29
+anthropic-sonnet-5-5,Anthropic,Claude Sonnet 5.5,2.0,10.0,1M,https://platform.claude.com/docs/en/about-claude/pricing,,2026-09-29
+xai-grok-4-7,xAI,Grok 4.7,2.0,6.0,500K,https://docs.x.ai/developers/grok-4-7,"Standard rate below 200K prompt tokens; long-context requests bill at 2×.",2026-09-29
+google-gemini-3-8-flash,Google,Gemini 3.8 Flash,0.75,3.75,1M,https://ai.google.dev/gemini-api/docs/pricing,"Introductory rate through Dec 31, 2026; $1.50 / $7.50 from Jan 1, 2027.",2026-09-29
+deepseek-v4-pro,DeepSeek,DeepSeek V4 Pro,1.32,3.96,1M,https://api-docs.deepseek.com/quick_start/pricing,"Peak hours; off-peak (nights & weekends UTC) is half.",2026-09-29
+mistral-large-3,Mistral,Mistral Large 3,0.5,1.5,256K,https://mistral.ai/pricing,,2026-09-29

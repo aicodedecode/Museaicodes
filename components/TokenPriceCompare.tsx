@@ -33,6 +33,8 @@ export default function TokenPriceCompare() {
   const [inputM, setInputM] = useState(2);
   const [outputM, setOutputM] = useState(0.5);
   const [presetId, setPresetId] = useState<string | null>("medium");
+  const [period, setPeriod] = useState<"month" | "year">("month");
+  const factor = period === "year" ? 12 : 1;
 
   const applyPreset = (id: string) => {
     const p = PRESETS.find((x) => x.id === id);
@@ -46,9 +48,9 @@ export default function TokenPriceCompare() {
     () =>
       PRICED_MODELS.map((m) => ({
         ...m,
-        cost: monthlyCost(m, inputM, outputM),
+        cost: monthlyCost(m, inputM, outputM) * factor,
       })).sort((a, b) => a.cost - b.cost),
-    [inputM, outputM]
+    [inputM, outputM, factor]
   );
 
   const cheapest = rows[0];
@@ -165,6 +167,94 @@ export default function TokenPriceCompare() {
         </div>
       </Reveal>
 
+      {/* ---- visual dashboard ---- */}
+      <Reveal delay={40}>
+        <div className="rounded-[22px] border border-line bg-surface p-5 md:p-7">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="font-display text-[1.35rem] font-bold tracking-tight">
+              Cost dashboard
+            </h2>
+            <div className="flex gap-2" role="group" aria-label="Billing period">
+              {(
+                [
+                  { id: "month", label: "Monthly" },
+                  { id: "year", label: "Annual" },
+                ] as const
+              ).map((p) => (
+                <button
+                  key={p.id}
+                  type="button"
+                  onClick={() => setPeriod(p.id)}
+                  aria-pressed={period === p.id}
+                  className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
+                    period === p.id
+                      ? "bg-ink text-bg"
+                      : "border border-line bg-bg text-ink hover:border-ink"
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            Estimated {period === "month" ? "monthly" : "annual"} spend at{" "}
+            {fmtM(inputM)} input / {fmtM(outputM)} output tokens — move the
+            sliders above and watch the bars move.
+          </p>
+          <ul className="mt-6 space-y-5">
+            {rows.map((r, i) => {
+              const pct = Math.max(
+                maxCost > 0 ? (r.cost / maxCost) * 100 : 0,
+                r.cost > 0 ? 1.5 : 0
+              );
+              return (
+                <li key={r.id}>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <p className="font-bold">
+                      {r.model}{" "}
+                      <span className="text-sm font-medium text-muted">
+                        {r.provider}
+                      </span>
+                      {i === 0 && (
+                        <span className="ml-2 rounded-full bg-accent px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-bg">
+                          Cheapest
+                        </span>
+                      )}
+                    </p>
+                    <p
+                      aria-live="polite"
+                      className="font-mono text-[1.1rem] font-bold tabular-nums"
+                    >
+                      {fmtMoney(r.cost)}
+                      <span className="text-sm font-medium text-faint">
+                        {period === "month" ? "/mo" : "/yr"}
+                      </span>
+                    </p>
+                  </div>
+                  <div
+                    role="img"
+                    aria-label={`${r.model}: ${fmtMoney(r.cost)} per ${
+                      period === "month" ? "month" : "year"
+                    }, ${Math.round(
+                      maxCost > 0 ? (r.cost / maxCost) * 100 : 0
+                    )}% of the priciest option`}
+                    className="mt-2 h-3.5 overflow-hidden rounded-full bg-line"
+                  >
+                    <div
+                      className={`h-full rounded-full transition-[width] duration-500 ease-out ${
+                        i === 0 ? "bg-accent" : "bg-muted"
+                      }`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </Reveal>
+
       {/* ---- ranked table ---- */}
       <Reveal delay={80}>
         <div className="rounded-[22px] border border-line bg-surface p-5 md:p-7">
@@ -184,7 +274,8 @@ export default function TokenPriceCompare() {
               </p>
               <p className="font-display mt-2 text-[1.6rem] font-extrabold leading-tight tracking-tight">
                 <span className="text-accent">{cheapest.model}</span> saves you{" "}
-                {fmtMoney(savings)}/mo{" "}
+                {fmtMoney(savings)}
+                {period === "month" ? "/mo" : "/yr"}{" "}
                 <span className="font-medium text-bg/70">vs {priciest.model}</span>
               </p>
               <p className="mt-2 text-sm leading-relaxed text-bg/70">
@@ -211,7 +302,7 @@ export default function TokenPriceCompare() {
                     Context
                   </th>
                   <th scope="col" className="py-3 pl-2 text-right font-medium">
-                    Your monthly cost
+                    Your {period === "month" ? "monthly" : "annual"} cost
                   </th>
                 </tr>
               </thead>
