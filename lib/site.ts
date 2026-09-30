@@ -28,6 +28,7 @@ export const MORE_LINKS = [
   { href: "/connectors", label: "Connectors" },
   { href: "/templates", label: "Templates" },
   { href: "/codes", label: "Codes" },
+  { href: "/deals", label: "Deals" },
   { href: "/apps", label: "App Guide" },
 ] as const;
 
