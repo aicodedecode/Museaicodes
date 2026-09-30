@@ -3310,6 +3310,123 @@ export const GUIDES: Guide[] = [
       ],
     },
   },
+  {
+    slug: "muse-ai-small-business",
+    title: "Muse AI for Small Business: Setup, Integrations & Real Uses",
+    deck: "Meta's push to put Muse to work for small businesses — the 22 integrations, what it can actually do, pricing, and the honest caveats.",
+    category: "Workflow",
+    keywords: "muse ai small business, muse for small business, muse business integrations, muse shopify quickbooks",
+    metaTitle: "Muse AI for Small Business: Integrations, Pricing & Setup (2026)",
+    metaDescription: "Meta's Muse for Small Business connects to Shopify, QuickBooks, Stripe, Canva, Slack and more. What it does, what it costs, how approvals work, and how to get started.",
+    shortAnswer: "Muse for Small Business is Meta's version of its Muse AI agent aimed at business owners: it connects to the tools a business already runs — storefront, books, ads, design, chat — and does operational work like analyzing sales, drafting marketing content, and flagging what needs attention. It is free with usage limits, with subscriptions for heavier use, and it asks for approval before publishing, messaging, or spending.",
+    image: "/images/guides/muse-ai-small-business.jpg",
+    imageAlt: "Watercolor illustration of a small shop counter with a laptop showing charts and connected app icons floating above it",
+    sections: [
+      {
+        heading: "What Muse for Small Business is",
+        paragraphs: [
+          "On September 29, 2026, Meta announced it was expanding Muse — its personal AI agent — to small businesses, adding integrations with the software owners already use to run their companies. The pitch is aimed at a real constraint: as Meta put it, small businesses are short on hours, not ideas.",
+          "In practice, Muse for Small Business is the same agentic Muse underneath — it can browse, draft, analyze, and take actions across apps — pointed at business operations instead of personal chores. It learns what your business sells, how your brand sounds, and the questions customers ask most, then applies that context across everything it does for you. Meta tested the concept with 35 business owners at its Los Angeles campus in early September before the wider announcement.",
+          "Two of those early testers show the intended audience. Tom Mulholland, 66, runs Mulholland Grocery in Malvern, Iowa, and describes himself as not a technical person — he uses Muse to create ads and track orders. April Polk, founder of the Columbus-based JaeLuxe Shoetique, calls it her 'secret weapon': it revamped her brand guidelines, overhauled her website, corrected her email flows, and watches her numbers for when to change strategy.",
+        ],
+      },
+      {
+        heading: "The integrations: what connects to what",
+        list: {
+          ordered: false,
+          items: [
+            "Meta's own surfaces: Instagram professional account analytics, Facebook Pages, and Meta ad accounts — so Muse can see how your social and ads are performing.",
+            "Storefront and payments: Shopify, Stripe, and Shop Pay — your catalog, orders, and transactions.",
+            "Books and money: Intuit QuickBooks — expenses, invoices, and the unusual-spend flagging Meta describes.",
+            "Design and content: Canva and Figma — brand assets and marketing creative.",
+            "Team operations: Slack, Zoom, Notion, Asana, Box, and Dropbox — conversations, meetings, docs, and files.",
+            "Marketing and customers: Klaviyo, HighLevel, Granola, and Lovable — email/SMS marketing, lead workflows, and customer records.",
+            "Anything missing: businesses can build custom connectors for tools Meta doesn't cover yet, and partners can apply through Meta's platform program.",
+          ],
+        },
+        paragraphs: [
+          "The count Meta announced is 22 business tool integrations, and the list is still growing — Meta says more connectors are coming, and the full current list lives in the Muse app's settings. According to Vishal Shah, Meta's VP of AI products, about one-third of Muse's early users had already connected some kind of business account before the official launch, which is why Meta moved to productize it.",
+          "The HighLevel connection, announced September 30, is a good example of how deep these go: businesses can run their Muse across the customer conversations, calendars, and workflows they already manage in HighLevel — managing leads, booking meetings, updating customer records, and prepping for calls. It's the second Meta–HighLevel collaboration in three months, after HighLevel became an early scheduling partner for Facebook Lead Ads in June.",
+        ],
+      },
+      {
+        heading: "What it can actually do for you",
+        list: {
+          ordered: false,
+          items: [
+            "Analyze sales and advertising performance — pull numbers from your store, ad accounts, and social analytics into one read of what's working.",
+            "Draft marketing content in your brand voice — posts, emails, and ad creative grounded in how you actually sound.",
+            "Watch the money — flag unusual expenses and surface invoices or cash-flow patterns worth a look.",
+            "Help with inventory and operations — track what's selling and what's sitting, across your storefront data.",
+            "Write growth plans — Meta's framing is planning with your real data, not generic advice.",
+            "Work proactively — an Ideas tab inside the app suggests things itself, like flagging emails still awaiting your reply and writing first drafts for you.",
+          ],
+        },
+        paragraphs: [
+          "Meta also published five of its favorite starter uses to help new business owners get going — the pattern across all of them is the same: connect the tools, describe the outcome, and let Muse pull the context together instead of you copy-pasting between apps.",
+          "Set expectations by the product's age: this is a weeks-old expansion of a weeks-old agent. Start it on read-only, low-stakes jobs — analysis and drafts — before letting it near anything that touches customers or money, and keep the approval habit described below.",
+        ],
+      },
+      {
+        heading: "The approval rule: it asks before it acts",
+        paragraphs: [
+          "The single most important thing to know: Meta says Muse will not publish content, send messages, or make purchases without your approval. When it wants to take a consequential action, it pauses and asks — those pauses arrive as notifications, so keep them enabled.",
+          "That rule is doing real work here. A business agent touches customer conversations, payment records, and public-facing content — exactly the places where an autonomous mistake is expensive. Treat the approval ping as the product, not an annoyance: review what Muse proposes, especially anything customer-facing or money-moving, before you tap yes.",
+          "On the data side, the same cautions from the consumer product apply. Connect the accounts the work genuinely needs and no more, and don't hand the agent anything you wouldn't want summarized back to you — our [privacy guide](/guides/muse-ai-privacy) walks through what Muse can see and how to tighten it.",
+        ],
+      },
+      {
+        heading: "Pricing: free with limits, subscriptions for more",
+        paragraphs: [
+          "Meta says Muse for Small Business is free for most uses, with usage limits — businesses that want higher usage can buy a subscription plan. Meta hasn't published the plan prices or the exact free-tier limits in the announcement, so treat any specific numbers you see quoted elsewhere as unverified until Meta or the in-app screens confirm them.",
+          "The pattern matches the consumer product: a genuinely usable free tier with a paid ladder above it. If you're evaluating it for your business, the honest test is a two-week trial on real work — connect two or three tools, run it on analysis and drafts, and see whether you hit the free limits before you see the value. Our [is Muse AI free guide](/guides/is-muse-ai-free) keeps the current picture of the free tier.",
+        ],
+      },
+      {
+        heading: "Getting started",
+        list: {
+          ordered: true,
+          items: [
+            "Get Muse access first — it's currently US and Canada only, 18+. Start with [how to get Muse AI](/guides/how-to-get-muse-ai) if you haven't.",
+            "Install the official Muse app and sign in with the account you want tied to the business.",
+            "Open settings and connect your tools — Instagram professional account, Facebook Page, ad account, then Shopify, QuickBooks, Stripe, and whichever of the 22 you actually use. Connect only what the work needs.",
+            "Tell it about your business in plain words: what you sell, who your customers are, how you sound. This context compounds — the better the briefing, the better the drafts.",
+            "Give it a first low-stakes job: 'summarize last month's sales and ad spend' or 'draft three post ideas for this week.' Review everything before it goes anywhere public.",
+            "Turn on notifications so approval requests reach you, and check the Ideas tab periodically — that's where its proactive suggestions land.",
+          ],
+        },
+        paragraphs: [
+          "Resist the urge to connect everything on day one. Each connection is access you're granting; add tools as you find jobs for them, and revoke anything that isn't earning its keep.",
+        ],
+      },
+      {
+        heading: "Who it's for — and the honest caveats",
+        list: {
+          ordered: false,
+          items: [
+            "Best for: owner-operators drowning in admin — the grocery owner, the boutique founder, the freelancer wearing every hat. If your bottleneck is hours, not ideas, this is built for you.",
+            "Not a replacement for judgment: it's weeks old, autonomy is uneven across agents in this whole category, and anything customer-facing or financial deserves your eyes first.",
+            "Availability is the gate: Muse remains US and Canada only, so most of the world is waiting. Check [where Muse is available](/guides/muse-ai-availability) for the current map.",
+            "Privacy posture matters more for businesses: customer data, employee conversations, and financials flow through these connections. Read the [privacy guide](/guides/muse-ai-privacy) before connecting your books.",
+            "This is an unofficial guide — we're not Meta. Announcements describe intentions; the in-app screens and Meta's own terms are the source of truth for pricing, limits, and availability.",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Connects to", "Examples", "What it unlocks"],
+      rows: [
+        ["Social & ads", "Instagram professional analytics, Facebook Pages, Meta ad accounts", "One read on social performance and ad spend"],
+        ["Storefront & payments", "Shopify, Stripe, Shop Pay", "Sales analysis, inventory help, order context"],
+        ["Books & money", "Intuit QuickBooks", "Expense monitoring, unusual-spend flags, invoice awareness"],
+        ["Design & content", "Canva, Figma", "Marketing drafts in your actual brand assets"],
+        ["Team ops", "Slack, Zoom, Notion, Asana, Box, Dropbox", "Meetings, docs, and files as working context"],
+        ["Marketing & customers", "Klaviyo, HighLevel, Granola, Lovable", "Lead workflows, customer records, campaign drafts"],
+        ["Everything else", "Custom connectors (build your own)", "Tools Meta doesn't cover yet"],
+      ],
+    },
+    modifiedTime: "2026-09-30",
+  },
 
 ];
 

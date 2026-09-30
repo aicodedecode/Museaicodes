@@ -28,6 +28,28 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "highlevel-connects-to-muse",
+    date: "2026-09-30",
+    title: "HighLevel connects to Muse, bringing the agent into business workflows",
+    summary:
+      "HighLevel announced that its platform now connects to Meta's Muse, letting businesses run the agent across the customer conversations, calendars, and workflows they already manage in HighLevel — handling leads, booking meetings, updating customer records, and prepping for calls. Co-founder Shaun Clark framed it as the difference between AI that answers questions and AI that gets work done. The connector is the second Meta–HighLevel collaboration in three months, after HighLevel became an early scheduling partner for Embedded Appointment Booking for Facebook Lead Ads in June.",
+    sourceName: "PR Newswire (via Morningstar)",
+    sourceUrl:
+      "https://www.morningstar.com/news/pr-newswire/20260930da59531/highlevel-connects-to-muse-a-new-ai-product-from-meta-bringing-ai-into-everyday-business-workflows",
+    tags: ["Features"],
+  },
+  {
+    slug: "bofa-muse-apple-services-risk",
+    date: "2026-09-29",
+    title: "Bank of America warns Muse could threaten Apple's services revenue",
+    summary:
+      "Bank of America analyst Wamsi Mohan issued an investor note arguing AI agents like Meta's Muse could increasingly capture the product discovery, referrals, and transactions that currently flow through Apple's ecosystem — 'whomever the agent chooses becomes the merchant, and whoever owns the agent collects the routing economics.' Apple shares fell more than 2.5% on the note. Mohan kept a Buy rating and $370 price target, calling Apple an 'eventual winner of AI at the edge,' and cited Sensor Tower's estimate of 3.4M+ Muse downloads with Muse holding #1 on the US App Store's free chart for nearly two weeks.",
+    sourceName: "9to5Mac",
+    sourceUrl:
+      "https://9to5mac.com/2026/09/29/bank-of-america-says-metas-muse-highlights-a-new-risk-for-apples-services-revenue/",
+    tags: ["Traction"],
+  },
+  {
     slug: "openai-dots-always-on-agents",
     date: "2026-09-29",
     title: "OpenAI launches Dots, always-on AI agents for ChatGPT Pro and Business",

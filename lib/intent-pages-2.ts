@@ -323,7 +323,7 @@ export const INTENT_PAGES_2: IntentPage[] = [
           "As of September 2026, Muse AI is available in the US and Canada. Check the official availability page for updates.",
       },
     ],
-    relatedGuides: ["what-is-muse-ai", "muse-ai-use-cases", "muse-ai-privacy", "muse-ai-voice-mode"],
+    relatedGuides: ["muse-ai-small-business", "muse-ai-use-cases", "muse-ai-privacy", "muse-ai-voice-mode"],
   },
   {
     slug: "interview-prep",
