@@ -185,7 +185,22 @@ Connectors, channels, and ecosystem workflows.
 | 2026-09-28 | muse-ai-cheat-sheet | B | Built in roadmap session |
 | 2026-09-28 | muse-ai-glossary | B | Built in roadmap session |
 | 2026-09-28 | muse-ai-app-guide | A | Built in roadmap session |
+| 2026-09-30 | muse-ai-login-guide | Trend | Google Trends breakout "muse login"/"muse ai login"; 6 sections + entry-point table, 1,225 words |
+| 2026-09-30 | muse-ai-personal-agent | Trend | Google Trends "ai agent muse" top + "muse personal ai agent" breakout; 7 sections + channel table, 1,565 words |
+| 2026-09-30 | muse-ai-vs-instinct | Trend | Google Trends "instinct ai" breakout; Instinct $1B/$10B raise 2026-09-29; 8 sections + comparison table, 1,508 words |
 
 ## Count check
 
 A:13 + B:15 + C:12 + D:16 + E:16 + F:15 + G:13 = **100**
+
+## Trend-backed candidates (Google Trends, US, past 30d — pulled 2026-09-30)
+
+Source: trends.google.com related queries for "Muse AI" and "Meta AI". "Breakout" = >5000% growth. Gap-checked against lib/guides.ts (45 live).
+
+- [DONE 2026-09-30] `muse-ai-login-guide` — "Muse AI Login: Sign In & Fix Common Problems" — "muse login" + "muse ai login" both Breakout rising; NO guide exists (only troubleshooting TODO) — **P0** — links: /guides/how-to-get-muse-ai, /guides/muse-ai-availability, /guides/muse-ai-app-guide
+- [DONE 2026-09-30] `muse-ai-personal-agent` — "Muse as Your Personal AI Agent: What It Can Do for You" — "ai agent muse"/"muse agent" (38 top) + "muse personal ai agent"/"meta muse ai assistant" Breakout rising; no evergreen agent guide (only news roundup + Dots comparison) — **P0** — links: /guides/what-is-muse-ai, /guides/muse-ai-use-cases, /guides/muse-ai-privacy
+- [DONE 2026-09-30] `muse-ai-vs-instinct` — "Muse vs Instinct: Meta's Agent Against the $10B Startup" — "instinct"/"instinct ai" Breakout rising; Instinct raised $1B at $10B valuation 2026-09-29 (Barron's), invite-only SMS-native rival; time-sensitive — **P0** — links: /compare, /guides/muse-ai-vs-chatgpt-claude-meta-ai, /guides/muse-ai-privacy
+- [TODO] `muse-spark-1-3-explained` — "What Is Muse Spark 1.3? The Model Behind Muse" — "muse spark 1.3" Breakout rising; model released 2026-09-02 (research.meta.ai), powers Muse Code + Meta Model API — **P1** — links: /guides/what-is-muse-ai, /guides/muse-ai-personal-agent
+- PROMOTE (no new post): `muse-ai-charm` — "muse charm"/"meta charm"/"meta muse charm" Breakout rising on BOTH keywords; guide already live — feature on homepage + internal links from what-is/tutorial/app-guide
+- TWEAK (no new post): `muse-ai-pricing-explained` — "how much is muse" Breakout rising; guide exists — check GSC CTR, consider exact-query title "How Much Is Muse?"
+- WATCH: "meta muse reddit" Breakout — aligns with planned Reddit outreach; "meta ai glasses camera shutdown" Breakout — /news candidate (privacy controversy)

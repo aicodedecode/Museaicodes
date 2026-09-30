@@ -3016,6 +3016,301 @@ export const GUIDES: Guide[] = [
       ],
     },
   },
+  {
+  slug: "muse-ai-login-guide",
+  title: "Muse AI Login: Sign In & Fix Common Problems",
+  deck: "Every way to sign in to Muse — app, web, WhatsApp — plus fixes for the login problems people hit most.",
+  category: "Access",
+  keywords: "muse ai login, muse login, sign in to muse ai, muse ai sign in problems",
+  metaTitle: "Muse AI Login: Sign In & Fix Login Issues (2026)",
+  metaDescription: "How to log in to Muse AI on the app, web, and WhatsApp — requirements, sign-in steps, invite-code help, and fixes for common login problems.",
+  shortAnswer: "Sign in to Muse with the account tied to your invite or access, through the official app, web, or WhatsApp entry point. You must be 18 or older and located in a supported region — currently the US and Canada.",
+  image: "/images/guides/muse-ai-login-guide.jpg",
+  imageAlt: "Watercolor illustration of a phone and laptop showing a login screen with a key and shield motif",
+  sections: [
+    {
+      heading: "Where you can sign in",
+      list: {
+        ordered: false,
+        items: [
+          "You sign in once per account; every entry point — the phone apps, web, WhatsApp, and Mac — connects through the same Muse account.",
+          "Three things gate sign-in: being 18 or older, being physically located in a supported region (currently the US and Canada), and using the official route for your account.",
+          "Most 'I can't log in' cases are really 'I'm in the wrong account' cases — confirm you're signed in with the account tied to your invite before anything else.",
+          "Never type your Muse credentials into a third-party page, and never install the app from anywhere but the official store listing for your region.",
+        ],
+      },
+      paragraphs: [
+        "Muse has four main entry points: the iPhone and Android apps, the web app, WhatsApp, and the Mac app. You don't create a separate login for each one — you sign in once per account, and each surface connects through it. Keep every surface on the same account and your chats, memory, and settings follow you.",
+        "Which entry point you reach for is mostly about where you work. The phone apps are the everyday default, with voice input and the approval pings that need your go-ahead. The web and Mac apps suit longer desktop sessions. WhatsApp keeps Muse inside your messaging app for quick exchanges — the [WhatsApp guide](/guides/muse-ai-whatsapp) covers that channel's habits and limits.",
+        "If the official app doesn't appear in your store, or a surface you expected isn't there, that's usually an availability signal rather than a bug — rollouts are staggered by account and region. Check [where Muse is available](/guides/muse-ai-availability) before reinstalling anything, and read the [app setup guide](/guides/muse-ai-app-guide) once you're eligible on iPhone or Android.",
+      ],
+    },
+    {
+      heading: "Before you sign in: the requirements",
+      paragraphs: [
+        "Three things decide whether sign-in is even possible: your age, your location, and having a legitimate access route — everything else is troubleshooting.",
+        "You must be 18 or older, and you must be physically located in a country where Muse operates. As of September 2026 that means the United States and Canada; Meta has announced no dates for other regions, and using a VPN to bypass the restriction violates Meta's terms rather than changing your actual location. Our [availability guide](/guides/muse-ai-availability) keeps the current rollout map.",
+        "Third, you need the access route itself: the official invitation or product route for your region, tied to your account. If you haven't started there, begin with [how to get Muse AI](/guides/how-to-get-muse-ai) — sign-in is the last step of that journey, not a way to skip it.",
+      ],
+    },
+    {
+      heading: "Signing in, step by step",
+      list: {
+        ordered: true,
+        items: [
+          "Open the official entry point for your surface — the app from the official store listing, the web app, or WhatsApp — never a third-party download page.",
+          "Choose sign in (or create account) and use the same account your invite or access is tied to. Mixing accounts is the most common source of confusion later.",
+          "Complete whatever verification the screen asks for, using the email or phone number you registered with. If a verification code is involved, re-request it if it doesn't arrive rather than hammering repeated attempts.",
+          "If the product asks for an invite code, enter it in the invite or redeem screen inside Muse — not on any outside page. The [invite code guide](/guides/muse-ai-invite-code) explains how codes work.",
+          "Confirm you landed in the right place: check the signed-in account in settings or your profile and make sure it matches the one tied to your access.",
+          "On the phone apps, allow notifications — Muse pauses for your approval before consequential actions, and those pauses arrive as pings. Silenced notifications are the usual reason Muse seems 'stuck waiting.'",
+        ],
+      },
+      paragraphs: [
+        "Do the first sign-in carefully on one surface, then connect the others to the same account. Rushing through on two different accounts is how people end up with split chats and missing history — and there's usually no way to merge accounts later.",
+      ],
+    },
+    {
+      heading: "Invite codes and access",
+      paragraphs: [
+        "An invite code is entered inside the Muse product itself, in the invite or redeem screen — never on a third-party page. Any page that asks for your Muse login in exchange for a code is not legitimate.",
+        "Before redeeming, check the three things on the redeem screen itself: who is eligible, the deadline for entering the code, and what the current reward actually is. Promotions vary by account, region, and date, and the in-app screen is the source of truth — don't rely on a headline number someone quoted you.",
+        "If a code isn't accepted, re-check the exact characters first; codes are easy to mistype from screenshots. Then confirm your account's eligibility and that the promotion window hasn't closed. One careful retry beats five rushed ones — repeated failed submissions won't change the outcome and may trigger rate limits. The [redeem guide](/guides/muse-ai-redeem-code) walks through the process step by step.",
+      ],
+    },
+    {
+      heading: "Common login problems and fixes",
+      list: {
+        ordered: false,
+        items: [
+          "The app won't sign in: confirm you're using the account tied to your invite, update the app from the official listing, and confirm you're in a supported region.",
+          "A verification code never arrives: re-request it once, double-check you're watching the email or number you registered with, and give it a few minutes before trying again.",
+          "Chats or history are missing: you're almost certainly signed into a different account. Switch to the account tied to your invite — mixing accounts is the #1 cause of 'where did my chats go.'",
+          "A friend has a feature or surface you don't: rollouts are staggered by account and region, not just by app version. Waiting or updating is the fix, not reinstalling.",
+          "Muse seems stuck 'waiting': check that approval notifications aren't silenced — that fixes more apparent bugs than any reinstall.",
+          "A page promises access if you enter your Muse login: stop. That's the credential-harvesting pattern the [download safety guide](/guides/muse-ai-download) warns about. Access comes only through the official route.",
+        ],
+      },
+      paragraphs: [
+        "Work through these in order — account, updates, region, notifications — and most sign-in trouble resolves without anything dramatic. If nothing above applies, the official route you signed up through is the right place to look for help; an unofficial guide can't see your account state.",
+      ],
+    },
+    {
+      heading: "Staying signed in safely",
+      paragraphs: [
+        "Treat your Muse account like any account worth protecting: sign in only through official entry points, keep your details current, and don't share your login.",
+        "Keep the app updated from the official listing, and keep the email or phone on the account current so verification reaches you when it matters. If you use several surfaces, keep them all on the same account rather than scattering logins across devices.",
+        "Be wary of anything that rushes you: countdown timers on 'free access' pages, strangers offering codes in exchange for your password, and download links in forwarded messages. Around any hyped AI launch, clones and credential-harvesting pages multiply fast.",
+        "This is an unofficial guide — we're not Meta, and nothing here replaces the product's own screens. When in doubt, follow the official route for your region, starting with [how to get Muse AI](/guides/how-to-get-muse-ai).",
+      ],
+    },
+  ],
+  table: {
+    headers: ["Entry point", "What you need", "Best for"],
+    rows: [
+      ["iPhone and Android app", "The official Muse listing in your region's app store, plus the account your access is tied to", "Everyday chat, voice input, and approval pings"],
+      ["Web", "A current browser and your Muse account", "Long desktop sessions and typing-heavy tasks"],
+      ["WhatsApp", "Muse access connected to your account inside WhatsApp", "Quick questions without opening the app"],
+      ["Mac app", "The official Mac app", "Desktop tasks, including computer use"],
+    ],
+  },
+  modifiedTime: "2026-09-30",
+},
+  {
+  slug: "muse-ai-personal-agent",
+  title: "Muse as Your Personal AI Agent: What It Can Do for You",
+  deck: "From bookings to bill reminders — how Muse works as an always-on personal agent and how to get the most out of it.",
+  category: "Basics",
+  keywords: "muse ai agent, personal ai agent, what can muse ai do, meta ai assistant",
+  metaTitle: "Muse AI as Your Personal Agent: What It Does (2026)",
+  metaDescription:
+    "Muse AI is Meta's personal agent: it books travel, shops, drafts emails, and works on goals in the background — with approval cards for consequential actions.",
+  shortAnswer:
+    "As a personal agent, Muse AI can research, plan, write, and build — and with your connectors linked, it can book travel, shop and compare prices, draft emails, and run recurring goals in the background, pausing for your approval before anything consequential.",
+  image: "/images/guides/muse-ai-personal-agent.jpg",
+  imageAlt: "Watercolor illustration of a friendly AI assistant surrounded by floating task icons for calendar, email, shopping and travel",
+  sections: [
+    {
+      heading: "Key takeaways",
+      paragraphs: [
+        "A personal agent does work for you — it doesn't just answer. Muse books, drafts, shops, plans, and monitors, while you keep approval on anything consequential. Here's the essence:",
+      ],
+      list: {
+        ordered: false,
+        items: [
+          "Think agent, not chatbot: Muse carries a task from request to finished output — a plan, a purchase, a draft, a dashboard — instead of stopping at an answer.",
+          "Connect it before you test it: calendar and email connectors turn vague help into real scheduling, triage, and reminders.",
+          "Approvals are the safety model: emails, purchases, and messages sent as you stop for your confirmation. Keep them on.",
+          "It works in more places than the app: WhatsApp for quick asks, voice for hands-free briefings, and the Mac app for operating your desktop.",
+        ],
+      },
+    },
+    {
+      heading: "What \"personal agent\" actually means",
+      paragraphs: [
+        "The difference between a chatbot and an agent is the difference between advice and action. A chatbot answers \"how do I plan a trip?\" An agent plans the trip: it checks Expedia for stays, pulls OpenTable for restaurants, and hands you an itinerary with booking links — stopping for your approval before anything is reserved.",
+        "Meta designed Muse explicitly this way. The first line of its system prompt reads \"Your purpose is to make your user's life better,\" and the design gives it the means: its own computer with a file system and terminal for writing code and building tools, plus a full web browser for searching, filling forms, and completing bookings and purchases. Finished work arrives as artifacts — documents, PDFs, pages, trackers, dashboards — things you can use, not just read.",
+        "Three modes cover most of the value. Think: compare options, pressure-test a decision, explain a hard topic. Make: draft content, produce visuals, build a page or small tool. Operate: break a goal into steps, keep context across a multi-step project, and run repeatable work in the background while you review the checkpoints. The [beginner's guide to Muse](/guides/what-is-muse-ai) walks through this design in more detail.",
+        "One long-running main chat stays interruptible — you can send several tasks at once — and side chats hold separate topics so projects don't contaminate each other's context. Memory persists across conversations, so context from January is still available in September. The agent compounds context the way a good assistant does — but only if you keep the thread.",
+      ],
+    },
+    {
+      heading: "A day with Muse: what it handles",
+      paragraphs: [
+        "The best way to understand an agent is a concrete day. Imagine you start with a Sunday-evening briefing: Muse reads your calendar and messages, then reports what's due, what's moved, and what needs a reply. Set that as a recurring goal and it runs every week without being asked — it notifies you only when something is meaningfully new.",
+        "Morning errands show the connector story. With Google Calendar and Gmail linked, it can draft the follow-up email from last night's meeting while you keep the final approval; with your shopping accounts connected, it can compare prices across real listings and watch a product's price over days, proposing only when it drops under the ceiling you set. Household admin works the same way: a weekly meal plan built from what's already in the fridge, turned into an Instacart order you approve, or bill and subscription tracking with renewal nudges before money leaves your account.",
+        "For work, the pattern is delegation of the repeatable 20%: \"here are my notes from three client calls — turn them into a one-page brief with decisions, owners, and deadlines.\" For job seekers, the highest-value loop is resume-versus-job-description: paste both, ask where the resume undersells you, iterate. For managers, a weekly review — wins, blockers, next week's priorities — compiled from your own notes beats any generic template because it's built from your data.",
+        "Students get a tutor with a memory: hand it an exam date and a topic, and it builds a study plan with daily sessions and Friday quizzes; paste your own notes and it finds the gaps, then quizzes you on your own material. Creators get a production assistant: a month-long content calendar from a single topic, drafts run through critique-and-revise, the unglamorous half — titles, chapters, thumbnail text — handled. The honest caveat across all of these: review important claims instead of trusting polished output.",
+        "Bigger jobs chain everything together. Trip planning is the classic: hand it dates, a budget, and preferences, and it pulls stays from Expedia and restaurants from OpenTable into a day-by-day plan with booking links. Muse has also been tested calling US businesses on your behalf — that feature was temporarily rolled back after Meta routed some calls through human contractors without disclosure, so treat phone calls as experimental until the record changes. For more workflows like these, browse the [12 practical use cases](/guides/muse-ai-use-cases).",
+      ],
+    },
+    {
+      heading: "How it stays safe while acting for you",
+      paragraphs: [
+        "An agent that can spend your money and message people as you needs a safety model you can see. Muse's answer is approval gates: structured cards that stop the workflow before anything hard to undo — sending emails or messages, making purchases, changing settings — and wait for your confirmation. Ordinary browsing doesn't trigger them; anything that leaves your wallet or speaks as you does. Treat those cards as part of the workflow, not an interruption.",
+        "The architecture backs this up. Agent work runs inside what Meta calls a Secure VM — an isolated environment rather than loose on your device — and connectors are opt-in one at a time, with nothing linked by default and read-only as the safe starting point. On the Mac app, computer use is granted app by app, and permissions like Full Disk Access require system-level approval. The rule of thumb everywhere is least privilege: give the agent exactly what a task needs, revoke what it no longer needs, and audit connections every few months the way you'd audit app permissions on your phone.",
+        "Honesty requires the other side of the ledger. Security researchers have found real flaws — a Mac zero-day disclosed by Patrick Wardle that Meta patched within a day, and a Secure VM breach found by a bug-bounty researcher — and both were fixed. If you ever catch Muse doing something consequential without asking, treat it as a bug to report, not a convenience. Two hard rules from the [privacy guide](/guides/muse-ai-privacy): never share passwords, one-time codes, or payment credentials inside a chat — legitimate connections happen through official sign-in screens — and never train yourself to tap \"approve\" without reading. The [connector guide](/guides/muse-ai-connectors) walks through permissions and setup step by step.",
+      ],
+    },
+    {
+      heading: "Where Muse works",
+      paragraphs: [
+        "Muse meets you where you are, and each surface has a job.",
+        "Voice is the fastest way to direct the agent for fuzzy work — brainstorming, thinking through a decision, dictating a task while your hands are busy. Underneath it sits Muse Voice Transcribe, a real-time audio model that evaluates streaming audio every 80 milliseconds, handles speech, speaker identification, and endpoint detection in one model, and follows conversations across more than 20 speakers and 25 validated languages including mid-sentence switching. Live video chat with an animated avatar has rolled out too. Save the keyboard for precision work like reviewing a contract or editing a draft line by line.",
+        "Two patterns to remember: use WhatsApp for thinking and deciding, then move heavy production to the app — long threads and precise formatting are painful in a chat window. And on the Mac, start computer use narrow: grant one app, test with low-stakes tasks, and widen only when a task genuinely requires it. The [Mac computer-use guide](/guides/muse-ai-mac-computer-use) covers permissions in detail, and the [WhatsApp setup guide](/guides/muse-ai-whatsapp) covers connecting the chat. Meta has also announced a dedicated email address for Muse, video avatars, and smart-glasses integrations — roadmap items, not features you can use today.",
+      ],
+    },
+    {
+      heading: "What it can't do (yet) — and how to get the most from it",
+      paragraphs: [
+        "An honest agent guide needs the edges. As of September 2026, Muse is available in the US and Canada only — check the [availability guide](/guides/muse-ai-availability) before assuming access. It's an adults-only product: you must be 18+. It can't act on services it isn't connected to, can't do anything you've denied approval for, and it can be wrong with confidence — especially on prices, times, and niche facts. Treat its output as a strong draft, not a source of truth, and verify anything with money, bookings, or other people before you commit. Heavy agent use will also hit the free meter; the [pricing guide](/guides/muse-ai-pricing-explained) explains what the tiers buy.",
+        "With those limits in mind, here's how to get the most from it. Start with one real, repeatable task — not a test question — and give the four-part prompt: outcome, audience/context, constraints, format. Connect your calendar first; it's the highest-leverage connection. Park ongoing work in the Goals tab so it runs in the background and reports back, and keep one main chat plus side chats per project so context doesn't contaminate. Give finished work a home as an artifact rather than a wall of text. Tell Muse your standing preferences once (\"always ask before sending email\") so they become rules, not reminders. And when you'd rather talk than type, [voice mode](/guides/muse-ai-voice-mode) turns briefings into conversation. The [tutorial](/guides/muse-ai-tutorial) takes you through your first 15 minutes; the [prompt tips](/guides/muse-ai-prompt-tips) sharpen every request after that.",
+        "Make it yours, then make it quieter. Name Muse, design its avatar, and dial its proactive messages up, down, or off. Memory persists across conversations — and it's yours to read and edit — so the agent gets more useful the longer you keep the thread. When you tell it \"remind me every Sunday evening\" or \"always ask before sending email,\" that preference becomes a standing rule, not a reminder you have to repeat.",
+      ],
+    },
+    {
+      heading: "Sources & further reading",
+      list: {
+        ordered: false,
+        items: [
+          "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+          "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+        ],
+      },
+    },
+  ],
+  table: {
+    headers: ["Channel", "What it offers", "Best for"],
+    rows: [
+      ["iOS and Android apps + web", "The full agent: artifacts, side chats, Goals tab, voice mode, background work", "Deep projects and long-running goals"],
+      ["WhatsApp", "Chat with Muse like messaging a person; quick asks and follow-ups", "On-the-go questions, reminders, short threads"],
+      ["Voice mode", "Talk instead of typing — dictation, voice notes, and live video chat with an animated avatar", "Brainstorming, revision quizzes, hands-free briefings"],
+      ["Mac app (computer use)", "Operates native Mac apps — files, mail, messages, calendar, notes — and works through queued tasks while you're away", "Desktop errands and multi-step chains"],
+    ],
+  },
+  modifiedTime: "2026-09-30",
+},
+  {
+    slug: "muse-ai-vs-instinct",
+    modifiedTime: "2026-09-30",
+    image: "/images/guides/muse-ai-vs-instinct.jpg",
+    imageAlt: "Watercolor illustration of two AI assistant figures facing each other, one with a phone app motif and one with a text message motif",
+    title: "Muse vs Instinct: Meta's Agent Against the $10B Startup",
+    deck: "Meta's Muse meets its buzziest rival — how the two AI agents compare on access, price, safety, and what they can do.",
+    category: "Comparison",
+    keywords: "muse vs instinct, instinct ai, muse ai vs instinct, instinct ai agent",
+    metaTitle: "Muse vs Instinct: Meta's Agent vs the $10B Startup (2026)",
+    metaDescription:
+      "Muse vs Instinct compared: Meta's agent against Spear Street's $10B text-native rival — access, pricing, safety, and which one fits you. Honest 2026 guide.",
+    shortAnswer:
+      "Muse is the agent you can use today — a public, priced product from Meta available in the US and Canada with documented approval gates and connectors. Instinct is the agent everyone is talking about — a text-message-native rival from Spear Street Technology that raised $1B at a $10B valuation (reported by Barron's) but remains invite-only. The honest comparison is a finished product against a promising waitlist.",
+    sections: [
+      {
+        heading: "Key takeaways",
+        list: {
+          ordered: false,
+          items: [
+            "Instinct is a text-message-native AI agent from Spear Street Technology, founded by 23-year-old Noah Shinn. Barron's reported on September 29, 2026 that it raised $1 billion at a $10 billion valuation, with Sequoia, Benchmark, and Coatue as investors.",
+            "Muse is Meta's personal agent: iOS and Android apps, web, WhatsApp, and Mac, with public pricing — free with limits, Power at $20/month and Maximum at $100/month, per the usecarly.com comparison.",
+            "The practical difference today: Muse is downloadable in the US and Canada; Instinct is still invite-only on a waitlist, so for most readers this is a comparison of a finished product against a promising announcement.",
+            "Both agents act on your behalf, which makes approval gates and privacy design more important than the feature list. Read the privacy section before handing either one your payment card.",
+          ],
+        },
+      },
+      {
+        heading: "Meet the two contenders",
+        paragraphs: [
+          "The short version: Muse is the agent you can install today; Instinct is the agent everyone is talking about. Meta launched Muse on September 8, 2026 in the US — Canada followed on September 18 — as a full personal agent with its own apps, a web version, WhatsApp, and Mac support. It books, shops, and plans across connected accounts, pausing for your approval before consequential actions. If you want the full picture of what it does day to day, start with our [beginner's guide](/guides/what-is-muse-ai).",
+          "Instinct took the opposite route. Launched around August 2026 in private beta, it has no app at all — everything happens in a text-message thread, the way you would message a person. It is invite-only, with a waitlist controlling who gets in, so almost everything the public knows about it comes from press coverage rather than hands-on use.",
+          "The money is what put Instinct on the map. Barron's reported on September 29, 2026 that Spear Street Technology raised $1 billion at a $10 billion valuation, backed by Sequoia, Benchmark, and Coatue, with 23-year-old founder Noah Shinn at the center of the story. That number — for a product most people cannot try yet — says less about what Instinct does today and more about how much investors believe the agent race is still open.",
+        ],
+      },
+      {
+        heading: "Side by side",
+        paragraphs: [
+          "Positions shift as products evolve — verify the live details before making decisions. The table below reflects September 30, 2026. Where Instinct's details are blank, that is the story: a three-month-old company has simply not published them yet. Muse's pricing figures are per the usecarly.com comparison, attributed because Meta's own plan terms keep moving.",
+        ],
+      },
+      {
+        heading: "Where Muse wins",
+        paragraphs: [
+          "Muse's biggest advantage is that it is real, public, and priced. You can install it today, connect your accounts, and know exactly what the free tier and the two paid tiers cost — Power at $20/month and Maximum at $100/month, per the usecarly.com comparison. That is the opposite of Instinct's invite-only black box: with Muse, the product you are evaluating is the product, not a pitch deck.",
+          "Muse also runs a named, inspectable safety architecture. Its work happens inside what Meta calls a Secure VM — an isolated environment rather than loose access to your device — and Sentinel approval gates stop it before consequential actions like payments, messages, and account changes. Whether you trust Meta is a separate question, and our [privacy guide](/guides/muse-ai-privacy) and the [security-flaw timeline](/guides/muse-ai-security-flaw) are honest about both sides. But the design is public, which means it can be tested, criticized, and improved in the open.",
+          "The connector catalog is the practical edge. Shopping runs through Best Buy, Gap, Sephora, Walmart, Wayfair, and Expedia, with payment via PayPal or Shop Pay, alongside productivity connectors like GitHub and Notion and social ones like Facebook, Instagram, and Threads. An agent that cannot touch your accounts is a chatbot with ambition; Muse's reach is documented, not promised. For the broader field, our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) shows how that reach stacks up against ChatGPT, Claude, and Meta AI.",
+          "Finally, Muse improves in public. Meta's September announcements added a developer connector platform and business connectors for small companies, and the Mac app brought computer use to the desktop. You can watch the product move and judge each step. Instinct's roadmap is whatever its waitlist page implies — take that as marketing until it ships.",
+        ],
+      },
+      {
+        heading: "Where Instinct wins",
+        paragraphs: [
+          "Instinct's first win is distribution cost: zero. No download, no signup form, no learning a new app — you text a number the way you would text a person. For the large group of people who will never install another assistant app, that friction difference may be the entire ballgame. The phone's message thread is the most-used surface most people own; Instinct bets it is also the best home for an agent.",
+          "The second win is the interface bet itself. Muse meets you across apps, web, and WhatsApp, which is powerful but still asks you to come to it. Instinct removes even that step: the agent lives where your attention already is. If that sounds trivial, remember that every consumer product war of the last decade was won by whoever removed one step. Whether an agent can do serious work inside a text thread remains unproven — but the bet is not foolish.",
+          "The third win is the war chest. A $1 billion raise at a $10 billion valuation, reported by Barron's, buys talent, inference capacity, and years of runway. Valuations are not product quality, and investors are wrong often enough that you should never read a funding number as a review. But Sequoia, Benchmark, and Coatue backing a 23-year-old founder at that price means Instinct will get the chance to prove itself — which is more than most startups get.",
+          "And there is the clean-slate factor. Muse arrives with Meta's entire privacy reputation attached — the human-concierge phone test, the message-reading dispute, the Mac zero-day — all documented in our [privacy coverage](/guides/muse-ai-privacy). Instinct has no scandals yet because it has barely shipped. That absence is not virtue, but for users whose objection is specifically to Meta, a new brand is the point.",
+        ],
+      },
+      {
+        heading: "Privacy and trust: the fine print",
+        paragraphs: [
+          "Here is the honest asymmetry: we know a great deal about Muse's privacy risks and almost nothing about Instinct's. Muse's Secure VM and approval gates are public — and so are its failures. Reuters reported that Meta quietly routed some Muse phone calls to human contractors without telling users; a Meta vice president acknowledged the company had made a miss and the feature was rolled back. An Inc. columnist's claim that Muse read more than 187,000 of his iMessage records became a public dispute, amplified by Elon Musk. And security researcher Patrick Wardle disclosed a Mac zero-day that let malware bypass the privacy prompt protecting files Muse can see — Meta patched it within a day. Our [privacy guide](/guides/muse-ai-privacy) and [security-flaw timeline](/guides/muse-ai-security-flaw) cover each episode in full.",
+          "Instinct's privacy posture is currently a blank page. A text-native agent necessarily sees everything in its message thread — that is the product — and as of September 30, 2026 we do not have its data-retention policy, its training policy, or its approval model. Do not confuse a short track record with a clean one. The questions you should be asking Muse — what does it remember, who can see it, what is it trained on — apply to Instinct with even more force, because there are no published answers yet.",
+          "The rule applies to both: an agent that can act needs to know things, and anything it knows can leak, be breached, or be misused. Grant the least access that still does the job, keep approvals switched on for anything irreversible, and treat both products as young software carrying adult responsibilities. Skepticism is not cynicism here — it is the correct default for anything that can spend your money.",
+        ],
+      },
+      {
+        heading: "Which should you pick?",
+        paragraphs: [
+          "If you want an agent today, the choice is made for you. Muse is downloadable in the US and Canada; Instinct is a waitlist you may never clear. Join the waitlist if the texting idea appeals to you, but judge Muse on a real errand — the same one you would give Instinct — rather than on a demo you cannot touch.",
+          "If you are outside the US and Canada, neither is truly yours: Muse is region-limited and invite-limited. Your realistic field is the broader assistant market, which our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) covers in five minutes, and the [comparison hub](/compare) tracks as the space moves.",
+          "If you distrust Meta on privacy, Instinct is worth the waitlist — but wait for its privacy policy before handing it anything sensitive. And if you love the texting idea but want a product now, Muse's WhatsApp presence is the closest public version of that vision. Revisit this comparison in a quarter: both products are moving fast enough that today's answer has an expiry date.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Meta's Muse rival hits $10B valuation — Barron's, September 29, 2026](https://www.barrons.com/articles/meta-muse-rival-10b-valuation-ai-agent-778c97c3)",
+            "[Meta Muse vs Instinct: pricing and feature comparison — usecarly.com](https://www.usecarly.com/blog/meta-muse-vs-instinct/)",
+            "[What Is Muse AI? The Beginner's Guide](/guides/what-is-muse-ai)",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Aspect", "Muse AI", "Instinct"],
+      rows: [
+        ["Maker", "Meta", "Spear Street Technology — founder Noah Shinn (23)"],
+        ["Launched", "September 8, 2026 (US); September 18, 2026 (Canada)", "Around August 2026, private beta"],
+        ["How you reach it", "iOS/Android app, web, WhatsApp, Mac", "SMS/text thread — no app"],
+        ["Who can use it", "US + Canada, 18+", "Invite-only waitlist"],
+        ["Price", "Free with limits; Power $20/mo; Maximum $100/mo (per usecarly.com)", "Not publicly disclosed"],
+        ["Approvals / safety", "Secure VM; Sentinel approval gates on consequential actions", "Not publicly detailed"],
+        ["Data training policy", "Permissions opt-in and revocable; see our privacy guide", "Not publicly detailed"],
+      ],
+    },
+  },
+
 ];
 
 export function getGuide(slug: string): Guide | undefined {
