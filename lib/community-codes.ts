@@ -21,6 +21,7 @@ export interface CommunityCode {
  */
 export const COMMUNITY_CODES: CommunityCode[] = [
   { code: "ZB1CJM", name: "A010", added: "September 2026" },
+  { code: "9DO3IE", name: "Sagar Khengat", added: "September 2026" },
 ];
 
 /** Prefilled email for submitting a code for review. */
