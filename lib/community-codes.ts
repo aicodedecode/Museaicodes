@@ -20,6 +20,8 @@ export interface CommunityCode {
  * always featured and highlighted separately at the top of the section.
  */
 export const COMMUNITY_CODES: CommunityCode[] = [
+  { code: "RTI0UK", name: "Cloud", added: "September 2026" },
+  { code: "KJXX15", name: "angular", added: "September 2026" },
   { code: "ZB1CJM", name: "A010", added: "September 2026" },
   { code: "9DO3IE", name: "Sagar Khengat", added: "September 2026" },
 ];
