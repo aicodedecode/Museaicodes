@@ -45,7 +45,7 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
       </Reveal>
 
       <Reveal delay={40}>
-        <figure className="not-prose my-8 overflow-hidden rounded-2xl border border-line">
+        <figure className="figure-drift not-prose my-8 overflow-hidden rounded-2xl border border-line">
           <img
             src={guide.image}
             alt={guide.imageAlt}

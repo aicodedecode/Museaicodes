@@ -162,6 +162,16 @@ body {
   animation: ticker-scroll 26s linear infinite;
 }
 
+/* ---- Article hero: slow Ken Burns drift (editorial illustrations) ---- */
+@keyframes hero-drift {
+  from { transform: scale(1); }
+  to { transform: scale(1.055); }
+}
+.figure-drift img {
+  animation: hero-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
 /* ---- Reduced motion: content stays visible, motion becomes instant ---- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
