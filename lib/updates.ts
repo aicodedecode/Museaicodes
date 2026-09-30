@@ -28,6 +28,16 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "muse-ios-9-0-update",
+    date: "2026-09-26",
+    title: "Muse iOS app hits v9.0 with deeper app integrations",
+    summary:
+      "Apple's lookup data shows Muse from Meta updated to version 9.0 on September 26, a jump from 8.1. The release note reads in full: \"Muse now works with more of your favorite apps, so your personal agent can do more for you.\" In practice that means the connector-driven surfaces rolling out this week — Settings → Connectors on mobile — including the small-business skills added September 29 (Asana, Canva, Figma, HighLevel, QuickBooks, Shopify, Slack, Stripe, Zoom, and more) and the shopping connectors announced at Connect (Walmart, Best Buy, Sephora, Wayfair, Gap, Notion, PayPal, Shop Pay). We also checked for a visual redesign: we found none — the app looks the same, it just connects to more. Meanwhile on desktop, the Mac computer-control feature Meta announced at Connect is now live, and the web app's new screen-view tab and phone-call-style voice UI are spotted in testing but not yet public.",
+    sourceName: "Apple App Store lookup",
+    sourceUrl: "https://apps.apple.com/us/app/muse-from-meta/id6760173601",
+    tags: ["Features"],
+  },
+  {
     slug: "highlevel-connects-to-muse",
     date: "2026-09-30",
     title: "HighLevel connects to Muse, bringing the agent into business workflows",
