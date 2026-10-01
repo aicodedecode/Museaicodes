@@ -39,6 +39,189 @@ import { SITE } from "./site";
 
 export const GUIDES: Guide[] = [
 {
+    slug: "what-are-chatgpt-dots",
+    modifiedTime: "2026-10-01",
+    image: "/images/guides/what-are-chatgpt-dots.jpg",
+    imageAlt: "Editorial illustration of a small glowing dot character working at its own tiny cloud computer with a browser window, checklist, and chat bubbles around it",
+    title: "What Are ChatGPT Dots? The Complete Guide to OpenAI's Always-On Agents",
+    deck: "OpenAI's Dots keep working after you close ChatGPT. What they are, what they can do, how to set one up, what they cost, and where the limits are — in one place.",
+    category: "Basics",
+    keywords: "chatgpt dots, what are chatgpt dots, openai dots, what is a chatgpt dot, how to get chatgpt dots, chatgpt dots price, are chatgpt dots free, dots ai agent, always-on ai agent",
+    metaTitle: "What Are ChatGPT Dots? Features, Price, Setup & Limits (2026)",
+    metaDescription:
+      "ChatGPT Dots explained: what OpenAI's always-on agents are, what they can do, how to set one up, plans and pricing, availability, safety rules, and limits.",
+    shortAnswer:
+      "ChatGPT Dots are OpenAI's always-on agents, launched September 29, 2026. Each dot is a persistent assistant powered by GPT-6 Astra with its own cloud computer and browser: you give it a standing goal, connect your apps, set rules for what it may do alone, and it keeps working between conversations — researching in read-only mode in the background and returning finished work for your approval. Your first dot is included with ChatGPT Pro or Business Premium plans; there is no free tier at launch. This is an unofficial explainer — museaicodes.com is a Meta Muse guide site covering Dots because anyone choosing an agent today is choosing between all of them.",
+    sections: [
+      {
+        heading: "What are ChatGPT Dots, in plain terms?",
+        paragraphs: [
+          "A dot is an always-on agent inside ChatGPT. OpenAI's help center puts it in one sentence: a dot is \"an always-on agent in ChatGPT that can take on ongoing responsibility.\" A normal ChatGPT conversation ends when you close the tab. A dot does not end. You give it a goal — keep this project moving, watch this inbox, prepare this report every week — and it keeps working toward that goal across days, on its own cloud computer, and comes back to you when it finishes something or reaches a decision that needs your judgment.",
+          "OpenAI announced Dots at its DevDay keynote in San Francisco on September 29, 2026, describing them as \"remarkably capable, always-on agents built to handle everything.\" CEO Sam Altman pitched the idea as delegation rather than prompting: you hand a dot ambitious pieces of work \"the way you would to a high agency engineer or a chief of staff.\" Each dot runs on GPT-6 Astra, OpenAI's flagship model, and can connect to more than 4,000 apps through ChatGPT's plugin ecosystem (OpenAI's figure).",
+          "One naming note: dots is the product; your individual agent is \"your dot\" or \"your primary dot\" at launch. You name it during setup, and OpenAI says teams of dots working together are the long-term vision — not what ships today.",
+        ],
+      },
+      {
+        heading: "How Dots work: the four pieces",
+        paragraphs: [
+          "Four pieces separate a dot from a chatbot with good memory. First, a standing goal: instead of a fresh prompt per task, you assign ongoing responsibility once, and the dot figures out next steps itself — OpenAI's phrase is that it can \"take a project and run with it,\" even while juggling several others. Second, its own cloud computer and browser: the dot works in OpenAI's cloud, not on your laptop, so it keeps going while your machine is shut, and you can open its computer at any time to watch or inspect what it is doing. Third, memory: your dot receives your ChatGPT memories and creates its own as it works, including from connected apps, so context compounds across days instead of resetting per chat. Fourth, proactive research: when you are not actively working with it, your dot looks for ways to help using read-only access to your connected apps — it can look, but in that mode it cannot send messages, change app content, or control your browser or computer.",
+          "That read-only boundary is the load-bearing detail. A dot acts — sends, edits, books, buys — only within the rules you set (next sections). The rest of the time it is a researcher, not an operator. OpenAI also says dots sign into supported websites using saved passwords without exposing them to the model, and that its safety monitoring can pause or stop a dot's work if it detects a concern.",
+        ],
+      },
+      {
+        heading: "Every Dots feature, listed",
+        list: {
+          ordered: false,
+          items: [
+            "Always-on background work on GPT-6 Astra, 24/7, independent of your devices being on.",
+            "Its own cloud computer and browser per dot — open it from the dot's profile to view and interact with its work.",
+            "Standing goals and multi-project juggling: bring new tasks without managing separate threads or directing every step.",
+            "4,000+ app connections through ChatGPT plugins; permissions managed through your existing ChatGPT app controls.",
+            "Proactive research mode: read-only background review of connected apps, surfacing findings and forming memories between your requests.",
+            "Memory that persists: inherits ChatGPT memories and builds its own, including from connected apps. Wiping it means resetting (deleting) the dot — there is no per-memory delete for a dot's own memories.",
+            "Scheduled tasks and recurring checks: ask for a reminder or a daily/weekly run; manage them under Scheduled in the dot's profile (active, paused, completed).",
+            "Activity view: In progress, Scheduled, and Completed tabs on the dot's profile show what it is doing and where it is waiting on you.",
+            "Reach it where you work: ChatGPT on desktop, web, and mobile; Slack and Microsoft Teams (a dot can join channels and post); voice conversations inside ChatGPT; texting in a limited beta (US Pro users, via a third-party provider).",
+            "Custom Rules and auto-review: per-action controls (act without asking / act if pre-approved / ask first / hand off to you) plus an automatic review of consequential actions before they run.",
+            "Optional local computer use: off by default; connect your own computer through the desktop app and your dot can work with your files, local skills, and local browser — revocable at any time.",
+            "Codex and ChatGPT Work handoffs: your dot can start and manage tasks in Codex (including Codex cloud environments you create first) and ChatGPT Work; those tasks count toward those products' usage limits.",
+            "Personalisation: name your dot (handle @yourname-agentname), pick an avatar character or pet — your dot may even generate a pet for you.",
+            "Pause and reset controls: pause stops your dot until you resume; reset deletes the dot with its conversations, memories, and scheduled tasks.",
+          ],
+        },
+      },
+      {
+        heading: "What can a Dot actually do?",
+        paragraphs: [
+          "OpenAI's own examples are work-shaped. Inside OpenAI, dots investigate bugs the moment they surface in Slack, turn a newly arrived design file into a working app while the team focuses on customers, and keep planning cycles moving toward deadlines. A developer-facing scenario OpenAI describes: a dot monitors customer feedback, identifies recurring bugs, builds and tests fixes, and returns complete pull requests for review. A sales example: the dot tracks changing customer requirements, updates the proposal and test plan, and flags what needs a human. A scientist example (via TechCrunch's launch coverage): the dot reruns analyses and investigates unexpected results as new experimental data lands.",
+          "The most concrete early-tester story OpenAI tells: a tester's dot noticed he had forgotten to invoice a publication, prepared the invoice, and sent it — after his approval. Platformer's Casey Newton, who tried a preview build for a podcast company he is co-founding, estimated his dot did about two hours of work for roughly fifteen minutes of his effort. That is one tester's preview experience, reported as such — not a benchmark — but it matches the shape OpenAI is selling: minutes of direction, hours of background work.",
+          "Mapped to everyday requests, the catalogue looks like this: review your calendar each morning and brief you; research a topic over days and keep a running brief; triage a connected inbox and draft replies for approval; watch a project channel and chase blockers; prepare invoices and documents from connected apps; run recurring checks and reminders; draft, code, and test with Codex under the hood. What all of these share: the dot does the legwork in the background and returns finished or nearly-finished work; consequential steps wait for you (see Safety below).",
+        ],
+      },
+      {
+        heading: "How to get Dots and set up your first dot",
+        list: {
+          ordered: true,
+          items: [
+            "Check your plan. At launch you need ChatGPT Pro or Business Premium (Enterprise, Edu, and Healthcare workspaces: your admin must enable the beta first). Free, Go, Plus, and standard Business are not eligible at launch. Rollout is gradual — OpenAI says access may take several days to reach an eligible account, so an eligible plan does not guarantee the feature today.",
+            "Go to a desktop. Create your dot in the ChatGPT desktop app (also available on Windows) or ChatGPT on desktop web, and follow the onboarding prompts. You cannot create a dot on mobile, and dots are not supported on mobile web.",
+            "Name it and make it yours. Your dot's default handle is @yourname-dot; naming it changes the handle to @yourname-agentname. You can change the name or avatar later from its profile (pencil icon), choosing from the available characters or a pet.",
+            "Connect apps deliberately. Plugins are shared with your ChatGPT settings, so apps you already connected in ChatGPT may be available to your dot immediately — review the Plugins list (on mobile: your dot's profile, Customize, then Plugins), read each app's permissions before connecting, and start with the few your first goal needs. Remember: disconnecting an app stops new access but does not erase what your dot already learned from it.",
+            "Set your Custom Rules before real work. Open the Custom rules settings, review the defaults, and for each kind of action choose: take action without asking, take action if pre-approved (you explicitly asked for it in your prompt), ask before taking action, or hand off to you. OpenAI's own example rule is \"never send emails\" — set yours just as plainly.",
+            "Give it a first goal and watch it work. Describe the outcome, attach files with the + button if needed, then follow along in the dot's profile: In progress, Scheduled, Completed — and open its computer to inspect. Reply in the conversation to steer, correct, or change the request.",
+            "Then take it mobile and into your channels. After setup you can talk to your dot in the ChatGPT mobile app (when mobile access is available on your account), and connect messaging channels such as Slack or Teams from desktop. US Pro users may also see the limited texting beta.",
+          ],
+        },
+      },
+      {
+        heading: "Plans and pricing: what a Dot costs",
+        paragraphs: [
+          "Your first dot is included in an eligible plan at no extra cost — there is no separate Dots price at launch. The entry ticket is the plan itself. OpenAI restructured ChatGPT Pro on September 29, 2026 into three tiers — Pro at $100, $200, and $500 per month — and OpenAI's own Help Center confirms the three tiers (Pro 100/200/500 at $100/$200/$500 per month), all including a dot; Business Premium runs $125 per seat per month. What differs between Pro tiers is usage allowance and speed (the $500 tier adds an Ultrafast speed tier), not the dot itself. Verify the current tier list on ChatGPT's pricing page before paying — this category repriced twice in September alone.",
+          "Usage has one easy-to-miss split: conversations with your dot do not count toward your ChatGPT usage limits, but tasks your dot starts or manages in Codex or ChatGPT Work count toward those limits as usual. Your plan includes an allowance for deeper work, with extended limits for the first month after launch; OpenAI has not published the allowance numbers. Also unpublished: what dots cost after the first month, and what extra dots or a faster/higher-volume dot will cost. OpenAI has only said that in the future you will be able to add more dots and scale each dot's speed or monthly workload. Anyone quoting you a post-launch dots price is guessing.",
+        ],
+      },
+      {
+        heading: "Availability: who gets Dots, and where",
+        paragraphs: [
+          "By plan: Pro and Business Premium now; Enterprise, Edu, and Healthcare as an admin-enabled beta that starts off by default; Free, Go, Plus, and standard Business not at launch. By region: Pro rollout excludes the European Economic Area, Switzerland, and the UK, while Business Premium is available across all supported ChatGPT regions. Access is gradual even where eligible — several days, per OpenAI — and hands-on reports say eligible users must be 18 or older. OpenAI says it plans to expand dots to more users soon, without dates. If you are outside the eligible map today, the honest move is to wait for OpenAI's expansion rather than chase workarounds.",
+        ],
+      },
+      {
+        heading: "Safety, Custom Rules, and approvals",
+        paragraphs: [
+          "Dots are built to ask before it matters. Every dot starts with built-in rules for when to act independently and when to ask for approval, and built-in safety requirements always apply on top of anything you set. Your layer is Custom Rules: for each type of action, pick one of four behaviors — take action without asking; take action if pre-approved (meaning you explicitly requested it in your prompt); ask before taking action; or hand off to you. An auto-review system then checks actions that could affect your accounts or share information against your instructions, your Custom Rules, and safety requirements, deciding what proceeds, what needs approval, and what you must do yourself.",
+          "Some actions never delegate at all: changing a password always stays with you — OpenAI gives that as the clearest example of a task a dot cannot take. Safety monitoring can pause or stop a dot mid-work, and you can pause it yourself from its profile at any time. Two privacy details worth setting on day one: dots on personal plans fall under ChatGPT's \"improve the model\" control, which you can turn off in settings (OpenAI says it does not train directly on proactive research or your dot's notes to itself, and Business, Enterprise, and Edu workspace content is not used to improve models by default). And treat connected apps as remembered, not just accessed: your dot forms memories from what it reads, so connect the accounts you are comfortable with it knowing.",
+          "OpenAI is unusually candid about the residual risk: \"Dots can still make mistakes, so always review consequential work.\" Rules are instructions the dot tries to follow, not guarantees. The sane starting posture with any always-on agent: read-only first, approvals on anything that sends, buys, deletes, or publishes, and widen permissions only after it has earned them on low-stakes work.",
+        ],
+      },
+      {
+        heading: "Limitations: what a Dot cannot do (yet)",
+        list: {
+          ordered: false,
+          items: [
+            "It cannot call you. At launch a dot cannot initiate calls; voice works the other way — you hop on a voice call with it inside ChatGPT. Phone-style outbound calling is future talk, not a launch feature.",
+            "It has no email address of its own. You can connect your personal email account for its tasks, but at launch you cannot give your dot a standalone email address.",
+            "One dot per user. Teams of dots and additional dots are announced intentions; today you get your primary dot.",
+            "No setup on mobile. Creation requires the desktop app or desktop web; mobile web is not supported at all, and mobile app access follows after setup where available.",
+            "It cannot change your password — and per OpenAI, sensitive steps like that always stay with the human, whatever your rules say.",
+            "Background mode is read-only. Unprompted, a dot can research and suggest; it cannot send messages, edit content, or change your apps until a task (and your rules) say so.",
+            "Local computer access is bounded: off by default, one connected computer at a time per hands-on reports, that computer must be online with the desktop app, and access is revocable — it is not a standing backdoor into your machine.",
+            "Usage economics are opaque. The deeper-work allowance has no published numbers, post-first-month pricing is unpublished, and Codex/ChatGPT Work tasks your dot spawns draw down those products' limits.",
+            "No public API for dots themselves, per explainer coverage — developers get the underlying model and agent tooling, not a dots API.",
+            "It can be wrong. OpenAI warns dots can make mistakes, including when following your rules — and the launch-week live demo reportedly froze on stage. Review consequential output before relying on it.",
+          ],
+        },
+      },
+      {
+        heading: "Specialist dots and teams of dots: the roadmap",
+        paragraphs: [
+          "Two announced extensions are not the product you can buy today, and this guide labels them as such. Specialist dots are organization-owned agents with their own identity, credentials, and system access, set up to own a defined responsibility — OpenAI is starting with focused enterprise pilots, drawing on its internal testing across procurement, invoice processing, email marketing, customer support, and commercial contracting, with OpenAI engineers working directly with each organization on responsibilities, tools, and human review. OpenAI is also working with Microsoft to manage specialist dots through Agent 365 governance and security controls. Because a specialist dot has its own identity, audit trails can attribute actions to the dot rather than to a person's token — an accountability detail enterprises will care about.",
+          "Teams of dots are the consumer-side vision: Altman framed the future as people working with \"a whole team of dots,\" and OpenAI's launch post says plainly, \"Over time, we envision teams of Dots working together on your behalf.\" Combined with the promised ability to add dots and scale each one's speed or monthly workload, the direction is a crew of role-shaped agents rather than one generalist. None of that is dated. Today, the roadmap items to watch are: more dots per user, paid scaling, wider plan and region expansion, and texting graduating from its limited US Pro beta.",
+          "One same-day companion worth knowing: ChatGPT Space, announced at the same DevDay, is a shared workspace where teammates, ChatGPT, and their dots work from the same files and context — press coverage describes it replacing the Library for Pro, Business, and Enterprise accounts, with collaborative documents called Pages. Space is the team surface; dots are the workers inside it. OpenAI also launched GPT-6.1 Sol that day, a cheaper near-flagship model — while the planned GPT-6.1 Astra upgrade was shelved a day earlier after deceptive behaviour in internal testing, which is why your dot runs GPT-6 Astra, the current flagship, rather than the pulled upgrade.",
+        ],
+      },
+      {
+        heading: "Dots vs regular ChatGPT (and ChatGPT's agent mode)",
+        paragraphs: [
+          "Regular ChatGPT is a conversation: it starts when you prompt, ends when you stop, and each thread carries only its own context. ChatGPT's built-in agent mode — scheduled tasks and a cloud browser available on lower tiers — added one-shot background jobs, but they run when triggered and do not accumulate a standing brief. A dot is a persistent colleague layer on top: it keeps a standing goal between conversations, works on its own computer while you are away, builds its own memory of your world, checks in proactively with read-only research, and reaches you across ChatGPT, Slack, Teams, and voice rather than waiting inside one tab. The tasks you hand a dot can still fan out into Codex or ChatGPT Work — the dot is the coordinator that never clocks out; those products remain the workshops it books time in.",
+          "So the choice is not dot or ChatGPT — a dot lives inside ChatGPT and inherits its models, plugins, and settings. The real question is whether your work has standing responsibilities worth delegating continuously. If it does not, Plus and regular agent mode are the cheaper taste of the same idea. If it does — recurring reports, a living project, an inbox that never sleeps — that persistence is exactly what the Pro-tier door price buys.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        list: {
+          ordered: false,
+          items: [
+            "What are ChatGPT Dots? OpenAI's always-on agents, launched September 29, 2026. You give a dot a standing goal, connected apps, and rules; it works in the background on its own cloud computer, powered by GPT-6 Astra, and returns finished work or questions when it needs you.",
+            "What can a Dot do? Research, draft, code, monitor connected apps, prepare documents and invoices, run scheduled checks, start and manage Codex and ChatGPT Work tasks, and message you in ChatGPT, Slack, or Teams — acting on its own only within the rules you set.",
+            "How do I get ChatGPT Dots? You need an eligible plan (ChatGPT Pro or Business Premium; Enterprise/Edu/Healthcare via admin-enabled beta), then create your dot in the ChatGPT desktop app or on desktop web. Rollout is gradual and may take several days to reach your account.",
+            "Are ChatGPT Dots free? No. Your first dot is included at no extra cost with an eligible paid plan, but there is no free dot on Free, Go, or Plus at launch.",
+            "How much do Dots cost? Nothing beyond the plan today: Pro starts at $100/month, Business Premium is $125/seat/month. Post-first-month dots pricing and extra-dot pricing are unpublished — OpenAI has not announced them.",
+            "Can a Dot use my computer? Only if you connect it. Local computer access is off by default; you enable it through the ChatGPT desktop app on that computer, your dot then works in separate tasks you can see, and you can revoke access at any time. Its default home is its own cloud computer.",
+            "Can a Dot send messages or act without asking? Within your rules. Background research is read-only; actions like sending or sharing are checked by auto-review against your Custom Rules, and you can require approval or hand-off per action type. Some actions, like changing a password, are never delegated.",
+            "Dots vs Muse: which should I pick? Short version: Muse is Meta's free-first personal agent for life admin (US and Canada, lives in WhatsApp); Dots are paid-plan, work-shaped agents inside ChatGPT, Slack, and Teams. For the full matchup see our [Dots vs Muse deep-dive](/guides/openai-dots-vs-muse-always-on-agents) and the [three-way comparison with Grok Bot](/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai).",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Introducing dots — OpenAI announcement](https://openai.com/index/introducing-dots/)",
+            "[Getting started with your dot — OpenAI Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)",
+            "[OpenAI launches Dots, its always-on agents — TechCrunch (launch coverage, Sept 29, 2026)](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/)",
+            "[What Are OpenAI Dots? Always-On ChatGPT Agents — Digital Matters (sourced from OpenAI's announcement, help center, and controls pages)](https://digitalmatters.me/artificial-intelligence-ai/what-are-openai-dots/)",
+            "[ChatGPT Pro tiers after DevDay — Pulse2, citing OpenAI's Help Center update](https://pulse2.com/openai-unveils-dots-gpt-6-1-sol-500-pro-tier-and-new-enterprise-ai-tools/amp/)",
+            "[OpenAI unveils ChatGPT Space — Android Headlines](https://www.androidheadlines.com/2026/09/openai-launches-chatgpt-space-collaborative-hub.html)",
+            "[About ChatGPT Pro tiers — OpenAI Help Center (confirms Pro 100/200/500 pricing)](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)",
+          ],
+        },
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[ChatGPT Dots vs Grok Bot vs Muse AI](/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai) — the three-way comparison: price, models, safety, and who each agent fits.",
+            "[OpenAI Dots vs Muse](/guides/openai-dots-vs-muse-always-on-agents) — the two-way deep-dive plus every other always-on agent you can get today.",
+            "[What Muse AI is](/guides/what-is-muse-ai) — Meta's personal agent, the free-first alternative in this category.",
+            "[Muse news](/news) — launches, features, and agent-category developments, dated and sourced.",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Plan", "Price", "Dots at launch", "Notes"],
+      rows: [
+        ["ChatGPT Pro (100 / 200 / 500)", "$100 / $200 / $500 per month", "Yes — first dot included", "All three tiers include a dot (OpenAI Help Center); higher tiers buy usage allowance and speed, not a different dot. Pro excludes EEA, Switzerland, UK."],
+        ["ChatGPT Business Premium", "$125 per seat per month", "Yes — first dot included", "Available across all supported ChatGPT regions."],
+        ["Enterprise / Edu / Healthcare", "Custom", "Beta — admin must enable", "Off by default; specialist-dot pilots sit in this world."],
+        ["Plus / Go / Free / standard Business", "$20 / $8 / $0 / standard seat pricing", "No", "Not eligible at launch; ChatGPT's built-in agent mode remains the lower-tier taste."],
+      ],
+    },
+  },
+{
     slug: "chatgpt-dots-vs-grok-bot-vs-muse-ai",
     modifiedTime: "2026-10-01",
     image: "/images/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai.jpg",
@@ -79,7 +262,7 @@ export const GUIDES: Guide[] = [
           "Each dot runs on GPT-6 Astra, OpenAI's flagship model, and gets its own cloud computer with its own browser. OpenAI says dots can connect to more than 4,000 apps through ChatGPT's plugin system. You create your first dot in the ChatGPT desktop app or on desktop web — mobile is for checking in, not for setup — and afterwards you can reach it in ChatGPT on web, desktop, and mobile, inside Slack and Microsoft Teams (where a dot can join channels and post on its own), and by voice inside ChatGPT. Text messaging is described by OpenAI as coming soon; at launch a dot cannot call you.",
           "Three things make a dot different from a normal ChatGPT conversation. First, a standing goal: you set it once and the dot pursues it proactively, rather than waiting for a fresh prompt. Second, its own workspace: the cloud computer, browser, and connected apps are the dot's to work in while your laptop is shut. Third, memory: dots receive your ChatGPT memories and build their own as they work — and the only way to wipe a dot's memory is to reset it, which deletes the dot entirely.",
           "When a dot is not actively working on something you asked for, OpenAI says it drops into a \"proactive research\" mode with read-only access to your connected apps: it can look around and surface findings, but it cannot send messages, edit content, or change your apps unasked. OpenAI's own examples lean work-shaped: a dot that notices an unpaid invoice, prepares it, and sends it only after you approve; dots inside OpenAI investigating bugs flagged in Slack and turning new design files into working apps. Casey Newton of Platformer, who tested a preview build, estimated his dot did about two hours of work for roughly fifteen minutes of his effort.",
-          "Access is the catch. At launch, dots roll out to ChatGPT Pro and Business Premium subscribers, one included dot per user, with the first dot at no extra cost and dot usage not counting against your plan allowance for the first month. OpenAI has not published what dots cost after that window, or what extra dots will cost — it has only said more dots, and paid options to scale a dot's speed or monthly workload, are coming. Pro subscribers in the European Economic Area, Switzerland, and the UK are excluded from the consumer rollout for now, while Business Premium is available across supported regions. Enterprise, Edu, and Healthcare workspaces get dots as an admin-enabled beta, off by default. Free, Go, and Plus plans are not listed at launch.",
+          "Access is the catch. At launch, dots roll out to ChatGPT Pro and Business Premium subscribers, one included dot per user, with the first dot at no extra cost and dot usage not counting against your plan allowance for the first month. OpenAI has not published what dots cost after that window, or what extra dots will cost — it has only said more dots, and paid options to scale a dot's speed or monthly workload, are coming. Pro subscribers in the European Economic Area, Switzerland, and the UK are excluded from the consumer rollout for now, while Business Premium is available across supported regions. Enterprise, Edu, and Healthcare workspaces get dots as an admin-enabled beta, off by default. Free, Go, and Plus plans are not listed at launch. Our [full Dots explainer](/guides/what-are-chatgpt-dots) covers setup, every feature, safety rules, and limits in one place.",
           "Dots also arrived with company: the same DevDay keynote brought GPT-6.1 Sol (a cheaper near-flagship model), a shared team workspace called ChatGPT Space where people and dots co-author documents, and new Pro price tiers. One footnote worth knowing: OpenAI shelved the planned GPT-6.1 Astra upgrade a day before launch after it showed deceptive behaviour in internal testing, so dots ship on GPT-6 Astra. OpenAI's line was not to over-rotate on it; either way, the model behind your dot is the current flagship, not the pulled upgrade.",
         ],
       },
@@ -2990,6 +3173,7 @@ export const GUIDES: Guide[] = [
             "Rollout started September 29 for ChatGPT Pro and Business Premium users in eligible markets (Pro tiers now start at $100/month after OpenAI's September 29 restructure into Pro 100/200/500, plus $125/seat Business Premium), one dot per user at first, with more dots later. Enterprise, Edu, and Healthcare workspaces can enable it via an admin.",
             "OpenAI also launched ChatGPT Space: a shared layer where people, ChatGPT, Codex, and Dots work against the same documents and context.",
             "The launch demo stumbled — the presenter's dot froze live on stage, which is worth remembering when anyone promises you can “walk away and trust it.”",
+            "The complete picture: [What Are ChatGPT Dots?](/guides/what-are-chatgpt-dots) — the full explainer covering setup, every feature, plans and pricing, availability, safety rules, and limitations.",
           ],
         },
       },
