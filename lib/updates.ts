@@ -28,6 +28,28 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "muse-5-million-downloads",
+    date: "2026-09-30",
+    title: "Muse crosses 5 million downloads in 22 days, Sensor Tower estimates",
+    summary:
+      "9to5Mac reports that, per a Sensor Tower projection shared by Senior Insights Analyst Kara Lee, Muse crossed 5 million downloads, reaching the mark faster than ChatGPT (56 days), Grok (103 days) and Claude (492 days). Sensor Tower says only 23 apps have ever reached 5 million US downloads within 22 days of launch, and that Meta allocated Muse up to 50% of its daily house-ad impressions between September 14 and 27. These are Sensor Tower estimates, not Meta-published figures; Muse remains available only in the US and Canada.",
+    sourceName: "9to5Mac",
+    sourceUrl:
+      "https://9to5mac.com/2026/09/30/report-metas-muse-crosses-5-million-downloads-amid-massive-advertising-push/",
+    tags: ["Traction"],
+  },
+  {
+    slug: "meta-disputes-muse-messages-claim",
+    date: "2026-09-30",
+    title: "Meta disputes claim Muse read a user's private messages without permission",
+    summary:
+      "TechCrunch reports that Meta is disputing Inc. columnist Jason Aten's account that Muse read his private Messages on his Mac. Aten said Muse surfaced details from a private conversation while Full Disk Access was off, and that Muse told him it was 'syncing device notifications.' Meta's Andy Stone said on X that the Messages integration is 'entirely opt-in' and requires both Full Disk Access and the Messages connector; Meta Superintelligence Labs executive David Singleton said on Threads that the three permission steps 'can't be circumvented even if the Muse application had a bug,' calling Muse's notifications explanation incorrect. The two accounts remain unreconciled.",
+    sourceName: "TechCrunch",
+    sourceUrl:
+      "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/",
+    tags: ["Security"],
+  },
+  {
     slug: "muse-ios-9-0-update",
     date: "2026-09-26",
     title: "Muse iOS app hits v9.0 with deeper app integrations",
