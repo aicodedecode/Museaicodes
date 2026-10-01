@@ -3029,7 +3029,7 @@ export const GUIDES: Guide[] = [
             "Life admin on a budget → Muse (free tier, background goals, approval-gated actions).",
             "Team workflows in Slack/Teams → Dots, if you're already paying for Pro or Business Premium.",
             "Google Workspace household → Gemini Spark (AI Pro) or the free CC Labs experiment for families.",
-            "Just curious about background agents → ChatGPT's built-in agent mode or Muse's goals before spending $200/month.",
+            "Just curious about background agents → ChatGPT's built-in agent mode or Muse's goals before spending $100/month.",
           ],
         },
       },
@@ -3044,7 +3044,7 @@ export const GUIDES: Guide[] = [
     table: {
       headers: ["Agent", "Maker", "Price", "Availability", "Standout trait"],
       rows: [
-        ["Dots", "OpenAI", "ChatGPT Pro / Business Premium (reportedly $200/mo and $125/seat)", "Rolling out since Sept 29, 2026; one dot per user at first", "Own cloud computer + browser; 4,000+ apps; Slack/Teams-native"],
+        ["Dots", "OpenAI", "ChatGPT Pro (from $100/mo) / Business Premium ($125/seat)", "Rolling out since Sept 29, 2026; one dot per user at first", "Own cloud computer + browser; 4,000+ apps; Slack/Teams-native"],
         ["Muse", "Meta", "Free with usage limit; paid tiers available", "Launched Sept 2026; invite/region-gated", "Background goals with notifications; approval-gated actions"],
         ["Gemini Spark", "Google", "AI Pro ($19.99) and AI Ultra", "US only, per reports", "Deep Workspace integration; recurring schedules and triggers"],
         ["CC", "Google", "Free (Labs experiment)", "Limited rollout", "Family/group agent with its own Google account"],
