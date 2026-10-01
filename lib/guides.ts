@@ -40,16 +40,16 @@ import { SITE } from "./site";
 export const GUIDES: Guide[] = [
   {
     slug: "what-is-muse-ai",
-    modifiedTime: "2026-09-29",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/what-is-muse-ai.jpg",
     imageAlt: "Editorial illustration of Meta's Muse AI personal agent surrounded by task icons",
     title: "What Is Muse AI? A Clear Beginner's Guide",
     deck: "Understand what Muse is, what it can do, and where it fits among personal AI agents.",
     category: "Basics",
     keywords: "what is muse ai, muse ai explained, meta muse ai, muse ai kya hai",
-    metaTitle: "What Is Muse AI? Meta's Agent That Does Your Tasks (2026)",
+    metaTitle: "What Is Muse AI? Meta's Personal Agent Explained (2026)",
     metaDescription:
-      "Muse AI is Meta's personal agent that books travel, shops, and manages tasks for you. What it does, what it costs, and how to get access.",
+      "Muse AI is Meta's personal agent that books travel, shops, and runs tasks for you across Meta's apps. How it works, what it costs, and how to get access in the US and Canada.",
     shortAnswer:
       "Muse is Meta's personal AI agent: a conversational assistant designed to carry work from a request to a finished output — research, plans, writing, visuals, and digital artifacts. As of September 2026, it is available in the US and Canada.",
     sections: [
@@ -121,16 +121,16 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-invite-code",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-invite-code.jpg",
     imageAlt: "Illustration of a vintage key unlocking a glowing doorway, symbolizing a Muse AI invite code",
     title: "Muse AI Invite Code: How Access Works",
     deck: "Use an invite safely and verify the terms attached to your account.",
     category: "Access",
     keywords: "muse ai invite code, muse invite code, muse ai access code",
-    metaTitle: "Muse AI Invite Code: Get Access & Redeem Yours (2026)",
+    metaTitle: "Muse AI Invite Code: Working Codes & How Invites Work (2026)",
     metaDescription:
-      "Muse AI invite code guide: how invite codes work, when to redeem one in the app, what to verify first — plus working codes 3C77QC and N8DCUB with tap-to-copy.",
+      "How Muse AI invite codes work, where invites come from, and how to use one safely — plus working codes 3C77QC and N8DCUB with tap-to-copy.",
     shortAnswer:
       "A Muse AI invite code is a code shared by an existing user. If your account is eligible, enter it in Muse's invite or redeem screen within the window displayed there.",
     sections: [
@@ -246,16 +246,16 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-to-get-muse-ai",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/how-to-get-muse-ai.jpg",
     imageAlt: "Illustration of stepping stones leading to a glowing doorway, symbolizing getting Muse AI access",
     title: "How to Get Muse AI",
     deck: "A simple access path without relying on unofficial downloads.",
     category: "Access",
     keywords: "how to get muse ai, get muse ai access, muse ai sign up",
-    metaTitle: "How to Get Muse AI: Access Steps (2026)",
+    metaTitle: "How to Get Muse AI: Sign-Up Steps & Invite Codes (2026)",
     metaDescription:
-      "How to get Muse AI access: the official route, account setup, invite codes, and what to do if Muse isn't available in your region yet.",
+      "Step by step: how to get Muse AI through the official route, set up your account, and use an invite code — plus what to do if Muse isn't in your region yet.",
     shortAnswer:
       "Use the official Muse access route offered for your account and region, create an account, and enter an invite code if the product asks for one.",
     sections: [
@@ -534,16 +534,16 @@ export const GUIDES: Guide[] = [
 
   {
     slug: "muse-ai-vs-claude",
-    modifiedTime: "2026-09-29",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-vs-claude.jpg",
     imageAlt: "Illustration of two abstract forms in dialogue, symbolizing Muse AI vs Claude comparison",
     title: "Muse AI vs Claude: Which Fits Your Workflow?",
     deck: "Choose based on the work you repeat, not a generic ranking.",
     category: "Comparison",
     keywords: "muse ai vs claude, claude vs muse, which ai assistant",
-    metaTitle: "Muse AI vs Claude (2026): Which AI Assistant Should You Use?",
+    metaTitle: "Muse AI vs Claude (2026): Pricing, Features & Key Differences",
     metaDescription:
-      "Muse AI vs Claude head-to-head: pricing, connectors, privacy, and everyday tasks compared. See which assistant fits you before you commit.",
+      "Muse AI vs Claude compared: $20 tiers, connectors, privacy, and everyday tasks. The key differences that decide which assistant fits your workflow.",
     shortAnswer:
       "Choose Muse when its personal-agent workflows and product surface fit the job; choose Claude when its document, reasoning, or coding workflow better matches your process. Comparing the full field instead? Our [four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) adds ChatGPT and Meta AI to the picture. Test both with the same brief.",
     sections: [
