@@ -28,6 +28,49 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "grok-bot-spacexai-cursor-launch",
+    date: "2026-10-01",
+    title: "SpaceXAI and Cursor ship Grok Bot, persistent agents that sign into your apps",
+    summary:
+      "A joint announcement from SpaceXAI and Cursor introduces Grok Bot: persistent AI 'teammates' with their own cloud computer, browser, filesystem, and terminal that keep login state and context across tasks, run on macOS, Windows, iOS, and Linux, and can coordinate in group chats. It is available in early beta to SuperGrok Heavy, Cursor Ultra, and Cursor Premium Teams subscribers. This is a company announcement (carried by ABNewswire), not independent reporting, and it cautions enterprise buyers to verify credential storage, data isolation, and approval gates before handing over logins.",
+    sourceName: "ABNewswire",
+    sourceUrl:
+      "https://www.abnewswire.com/pressreleases/spacexai-and-cursor-team-up-on-grok-bot-persistent-ai-agents-that-sign-into-your-apps_829881.html",
+    tags: ["Launch"],
+  },
+  {
+    slug: "grok-for-intune-enterprise",
+    date: "2026-10-01",
+    title: "SpaceXAI releases 'Grok for Intune,' an enterprise-managed Grok app for iOS",
+    summary:
+      "9to5Mac reports that SpaceXAI has released Grok for Intune, a dedicated enterprise edition of the Grok iOS app deployed through Microsoft Intune. It honors an organization's app protection policies, including save, share, and data-transfer restrictions, and signs in with a work email; there are no in-app purchases. OpenAI released a similar enterprise edition of its app in May.",
+    sourceName: "9to5Mac",
+    sourceUrl:
+      "https://9to5mac.com/2026/10/01/spacexai-releases-a-separate-grok-ios-app-for-enterprise-users/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "dot-com-redirect-grok-bot",
+    date: "2026-10-01",
+    title: "dot.com now redirects to Grok, sparking speculation of a jab at OpenAI's Dots",
+    summary:
+      "Two days after OpenAI launched Dots, its always-on ChatGPT agent, users found that the domain dot.com — transferred to xAI in July, per the Whois registry — redirects to the Grok app's download page. The redirect was first flagged by X watcher @birdabo, and TechCrunch said it has asked xAI for comment. Whether it is a deliberate jab at Dots or ordinary traffic capture for mistyped 'bot' searches remains unknown.",
+    sourceName: "The AI Insider",
+    sourceUrl:
+      "https://theaiinsider.tech/2026/10/01/xais-dot-com-redirect-to-grok-sparks-speculation-of-a-jab-at-openais-dots/",
+    tags: ["Traction"],
+  },
+  {
+    slug: "claude-opus-5-5-swe-bench-pro-lead",
+    date: "2026-10-01",
+    title: "Claude Opus 5.5 leads the SWE-bench Pro leaderboard at 89.9%",
+    summary:
+      "The BenchLM October leaderboard shows Claude Opus 5.5 on top of SWE-bench Pro with 89.9%, ahead of Claude Sonnet 5.5 (81.3%) and Claude Fable 5.1 (81.2%), across 76 evaluated models. Treat it as a leaderboard snapshot, not a verdict: BenchLM itself warns that rows come from different providers' runs and are not directly comparable, and cites OpenAI's July 2026 audit estimating roughly 30% of the public task split is broken.",
+    sourceName: "BenchLM",
+    sourceUrl: "https://benchlm.ai/benchmarks/swe-bench-pro",
+    tags: ["Traction"],
+  },
+  {
     slug: "muse-3-million-weekly-users",
     date: "2026-10-01",
     title: "Muse passes 3 million weekly prompt users, The Information data shows",
@@ -59,6 +102,17 @@ export const UPDATES: UpdateEntry[] = [
     sourceUrl:
       "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/",
     tags: ["Security"],
+  },
+  {
+    slug: "spacexai-one-subscription-grok-x",
+    date: "2026-09-30",
+    title: "SpaceXAI reportedly studying a single subscription for Grok and X",
+    summary:
+      "Bloomberg, citing an internal document it reviewed, reports that SpaceXAI is studying a single subscription covering both the Grok chatbot and the X social network. The draft has four tiers: a free plan with tighter Grok caps, an $8/month lite plan with a verified profile mark, and a top $100/month 'Ultra' tier aimed at heavy users that includes the Grok Bot agent. Currently X runs $3/$8/$40 and SuperGrok tops out at $300/month for Heavy. No public launch date; the report says the new pricing is meant to arrive 'soon.'",
+    sourceName: "Stocktwits",
+    sourceUrl:
+      "https://stocktwits.com/news-articles/markets/equity/space-xai-studies-one-bill-for-grok-and-x-report/cZMF0lERBLL",
+    tags: ["Traction"],
   },
   {
     slug: "muse-ios-9-0-update",
