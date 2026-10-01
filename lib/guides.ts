@@ -2348,7 +2348,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-connectors",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-connectors.jpg",
     imageAlt: "Minimal navy title card reading Muse AI Connectors Guide",
     title: "Muse AI Connectors: The Beginner's Guide",
@@ -2357,7 +2357,7 @@ export const GUIDES: Guide[] = [
     keywords: "muse ai connectors, muse connectors, connect apps to muse ai, muse ai integrations",
     metaTitle: "Muse AI Connectors: The Beginner's Guide (2026)",
     metaDescription:
-      "What Muse AI connectors are, which connections to set up first, how permissions and approval checkpoints work, and how to stay safe.",
+      "What Muse AI connectors are, which connections to set up first, how permissions and approval checkpoints work, how unofficial community connectors differ, and how to stay safe.",
     shortAnswer:
       "Muse AI connectors link your agent to outside services — your calendar, email, or store accounts — so it can act on real information instead of guessing. Connect only what a task needs, keep approval checkpoints on, and review permissions regularly.",
     sections: [
@@ -2413,6 +2413,24 @@ export const GUIDES: Guide[] = [
           "Muse reaches the outside world three ways, and it helps to keep them straight. Connectors are persistent, permissioned links to your accounts — set up once, used for months. Channels are where you talk to Muse: the app, WhatsApp, or voice mode. Computer use is the heavy machinery: Muse operating a real browser or desktop to complete bookings, forms, and purchases step by step, usually with you watching the approval checkpoints.",
           "A good rule of thumb: connect for information (calendar, inbox, files), use channels for conversation, and reserve computer use for transactions. If you're curious about the heaviest of the three, the [Mac computer-use guide](/guides/muse-ai-mac-computer-use) explains what granting desktop access really means.",
         ],
+      },
+      {
+        heading: "Beyond the official directory: community-built connectors",
+        paragraphs: [
+          "Everything above is about the connectors Meta ships and lists officially. There is also a second, unofficial world worth knowing about: an open community catalog of 150+ connector skills that independent developers build and share as open-source (MIT-licensed) code — things like GitHub, Slack, Notion, web-search APIs (Brave, Exa, Tavily), and Spotify, organised into roughly 30 categories.",
+          "These are not Meta products and they don't appear in the [official connector directory](/connectors). The model is different: instead of Meta vouching for a partner, you (or your agent setup) run a small open-source script that talks to a service's public API using your own API key or token for that service. Your key stays in secure credential storage and is only ever sent to that one service's official API host — the script itself never sees the real secret.",
+          "Hold them to a stricter standard before trusting one. Most community connectors are labelled draft by the community itself: written from the API's public documentation, not yet tested end-to-end against the live service (Slack is a rare exception marked as live-tested). Treat every one as a starting point, not a guarantee:",
+        ],
+        list: {
+          ordered: true,
+          items: [
+            "Read the code before you run it. These are small, readable scripts — if you can't see what a connector does, don't give it a key.",
+            "Check the license and the destination. A trustworthy connector names exactly one API host (for example api.github.com) and sends your credential nowhere else.",
+            "Start read-only. List, search, and summarise first; let a connector create, post, or modify only after it has earned trust on reads.",
+            "Make writes ask first. The better community connectors refuse to post, create, or save anything unless the exact action is re-confirmed — steal that rule for anything you build yourself.",
+            "Keep keys out of chat. Add API keys and tokens through a secure credential flow, never by pasting them into a conversation.",
+          ],
+        },
       },
       {
         heading: "Stuck? Troubleshoot, then keep exploring",
