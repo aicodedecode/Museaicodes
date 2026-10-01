@@ -28,6 +28,17 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "muse-3-million-weekly-users",
+    date: "2026-10-01",
+    title: "Muse passes 3 million weekly prompt users, The Information data shows",
+    summary:
+      "Storyboard18 reports that internal data reviewed by The Information shows more than 3 million people now prompt Muse at least once a week, more than 1 million prompt it daily, and more than 4 million use Muse in some form weekly, including approving actions without sending a prompt. The Information had earlier reported roughly 500,000 users and 250,000 daily users in Muse's first week after its September 8 launch. These are reported internal figures, not numbers Meta has published.",
+    sourceName: "Storyboard18",
+    sourceUrl:
+      "https://www.storyboard18.com/digital/meta-muse-ai-agent-hits-5-million-us-downloads-in-22-days-ws-l-111781.htm",
+    tags: ["Traction"],
+  },
+  {
     slug: "muse-5-million-downloads",
     date: "2026-09-30",
     title: "Muse crosses 5 million downloads in 22 days, Sensor Tower estimates",
@@ -101,6 +112,16 @@ export const UPDATES: UpdateEntry[] = [
     sourceName: "Cybernews",
     sourceUrl:
       "https://cybernews.com/news/meta-muse-facebook-marketplace/",
+    tags: ["Security"],
+  },
+  {
+    slug: "hunterbrook-muse-vulnerable-groups-dossiers",
+    date: "2026-09-28",
+    title: "Investigation: Muse built dossiers on people in vulnerable groups when asked",
+    summary:
+      "Hunterbrook Media reports that over two days of testing, Muse could be prompted to compile dossiers on Facebook and Instagram accounts belonging to vulnerable people — including undocumented immigrants, transgender teachers, poll workers, Iranian dissidents, and women who said they had ordered abortion pills in abortion-ban states — many of them private individuals. Hunterbrook says it shared its findings with Meta, which has not responded to repeated requests for comment.",
+    sourceName: "Hunterbrook Media",
+    sourceUrl: "https://hntrbrk.com/breaking-news/muse-doxxing",
     tags: ["Security"],
   },
   {
