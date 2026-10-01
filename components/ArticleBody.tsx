@@ -61,6 +61,24 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
         </figure>
       </Reveal>
 
+      {guide.video && (
+        <Reveal>
+          <figure className="not-prose my-8 overflow-hidden rounded-2xl border border-line bg-raised">
+            <video
+              className="aspect-video w-full"
+              controls
+              preload="metadata"
+              playsInline
+              poster={guide.video.poster}
+              src={guide.video.src}
+            />
+            <figcaption className="border-t border-line px-5 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
+              {guide.video.caption}
+            </figcaption>
+          </figure>
+        </Reveal>
+      )}
+
       {guide.sections.map((section, si) => (
         <Reveal key={section.heading} delay={Math.min(si, 3) * 40}>
           <section aria-label={section.heading}>

@@ -89,9 +89,23 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     ],
   };
 
+  const videoJsonLd = guide.video
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: guide.video.title,
+        description: guide.metaDescription,
+        thumbnailUrl: [`${SITE.baseUrl}${guide.video.poster}`],
+        contentUrl: `${SITE.baseUrl}${guide.video.src}`,
+        uploadDate: "2026-10-01",
+        inLanguage: "en",
+      }
+    : null;
+
   return (
     <main id="main">
       <JsonLd data={articleJsonLd} />
+      {videoJsonLd && <JsonLd data={videoJsonLd} />}
 
       <article className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
         <Reveal>

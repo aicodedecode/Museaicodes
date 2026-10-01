@@ -14,6 +14,13 @@ export interface GuideTable {
   rows: string[][];
 }
 
+export interface GuideVideo {
+  src: string;
+  poster: string;
+  title: string;
+  caption: string;
+}
+
 export interface Guide {
   slug: string;
   title: string;
@@ -27,6 +34,7 @@ export interface Guide {
   imageAlt: string;
   sections: GuideSection[];
   table?: GuideTable;
+  video?: GuideVideo;
   modifiedTime: string;
 }
 
@@ -449,6 +457,12 @@ export const GUIDES: Guide[] = [
     modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-invite-code.jpg",
     imageAlt: "Illustration of a vintage key unlocking a glowing doorway, symbolizing a Muse AI invite code",
+    video: {
+      src: "/videos/muse-referral-code-walkthrough.mp4",
+      poster: "/videos/muse-referral-code-walkthrough-poster.jpg",
+      title: "Muse invite code walkthrough",
+      caption: "Watch: redeeming an invite code, step by step (0:30)",
+    },
     title: "Muse AI Invite Code: How Access Works",
     deck: "Use an invite safely and verify the terms attached to your account.",
     category: "Access",
@@ -488,16 +502,22 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-referral-code",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-referral-code.jpg",
     imageAlt: "Illustration of two people exchanging a glowing gift, symbolizing a Muse AI referral code",
-    title: "Muse AI Referral Code Guide",
-    deck: "What referrers and new users should check before sharing a code.",
+    video: {
+      src: "/videos/muse-referral-code-walkthrough.mp4",
+      poster: "/videos/muse-referral-code-walkthrough-poster.jpg",
+      title: "Muse referral code walkthrough",
+      caption: "Watch: redeeming a Muse referral code, step by step (0:30)",
+    },
+    title: "Muse AI Referral Code: How It Works & How to Redeem",
+    deck: "Working codes, a 30-second redeem walkthrough, and what to check before you share yours.",
     category: "Access",
     keywords: "muse ai referral code, muse referral code, muse ai refer",
-    metaTitle: "Muse AI Referral Code: How It Works & How to Redeem (2026)",
+    metaTitle: "Muse Referral Code: Working Codes & How to Redeem (2026)",
     metaDescription:
-      "Muse AI referral code explained: how referral codes work, where to redeem (Settings → General), eligibility, and working codes 3C77QC and N8DCUB with tap-to-copy.",
+      "Muse referral codes explained with a 30-second video walkthrough: tap-to-copy codes 3C77QC and N8DCUB, where to redeem (Settings → Redeem invite code), the window to enter it, and eligibility. Reward amounts vary — confirm in the app.",
     shortAnswer:
       "A Muse AI referral code connects a new eligible account with an existing user's invitation. Reward amounts are promotional, not universal guarantees.",
     sections: [
@@ -505,7 +525,7 @@ export const GUIDES: Guide[] = [
         heading: "Invite code vs referral code",
         paragraphs: [
           "People use the terms interchangeably, and in practice they usually mean the same thing: a code from an existing user that a new account enters. The important distinction is the in-app rule — the screen should explain who qualifies, the deadline, and whether both parties receive a benefit.",
-          "If you're the one sharing, you're the referrer; if you're entering it, you're the new user. Both sides should read the same terms screen. For the headline 1-billion-token offer specifically, see our [billion-tokens breakdown](/guides/muse-ai-billion-tokens); when you're ready to enter a code, use the [redeem guide](/guides/muse-ai-redeem-code).",
+          "If you're the one sharing, you're the referrer; if you're entering it, you're the new user. Both sides should read the same terms screen. For the headline token offer specifically, see our [billion-tokens breakdown](/guides/muse-ai-billion-tokens); when you're ready to enter a code, use the [redeem guide](/guides/muse-ai-redeem-code). Prefer to watch it done? The 30-second walkthrough at the top of this page shows the exact screens.",
         ],
       },
       {
@@ -533,6 +553,7 @@ export const GUIDES: Guide[] = [
           ordered: false,
           items: [
             "[Codes directory](/codes) — featured and community codes in one place, with the submit board.",
+            "[Video walkthroughs](/videos) — watch the redeem flow, step by step, in 30 seconds.",
           ],
         },
       },
@@ -607,16 +628,16 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-tutorial",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-tutorial.jpg",
     imageAlt: "Illustration of a compass over a map with a start flag, symbolizing a Muse AI beginner tutorial",
-    title: "Muse AI Tutorial: Your First 15 Minutes",
-    deck: "Turn a vague idea into one useful result with a repeatable workflow.",
+    title: "Muse AI Tutorial: Your First 15 Minutes, Step by Step",
+    deck: "From your first prompt to a finished result — the exact steps, in order. No experience needed.",
     category: "Tutorial",
     keywords: "muse ai tutorial, muse ai beginner tutorial, how to prompt muse ai",
-    metaTitle: "Muse AI Tutorial: Your First 15 Minutes (2026)",
+    metaTitle: "Muse AI Tutorial for Beginners: Step-by-Step (2026)",
     metaDescription:
-      "A beginner Muse AI tutorial: the four-part prompt formula (outcome, context, constraints, format) and how to refine results instead of restarting.",
+      "Beginner Muse AI tutorial, step by step: sign in, write your first four-part prompt, get a finished result, then refine it instead of restarting — your first real task done in about 15 minutes.",
     shortAnswer:
       "Start with one outcome, add the audience and constraints, ask for a concrete format, then review and refine instead of restarting.",
     sections: [
@@ -735,16 +756,16 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-vs-chatgpt-claude-meta-ai",
-    modifiedTime: "2026-09-29",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-vs-chatgpt-claude-meta-ai.jpg",
     imageAlt: "Illustration of four different pillars in a row, symbolizing Muse AI vs ChatGPT vs Claude vs Meta AI",
-    title: "Muse AI vs ChatGPT vs Claude vs Meta AI",
-    deck: "Compare positioning, workflow, access, and best-fit tasks — not just brand names.",
+    title: "Muse AI vs ChatGPT vs Claude vs Meta AI: Which Should You Use?",
+    deck: "Four assistants, four different jobs: who finishes tasks, who writes best, who costs what — and which one you should actually use.",
     category: "Comparison",
     keywords: "muse ai vs chatgpt, muse ai vs claude, muse ai vs meta ai, ai assistant comparison",
-    metaTitle: "Muse vs ChatGPT vs Claude vs Meta AI: Which to Use? (2026)",
+    metaTitle: "Muse vs ChatGPT vs Claude vs Meta AI: Honest Verdict (2026)",
     metaDescription:
-      "We compare 4 AI assistants side by side — features, pricing, availability, and best use cases — so you can pick the right one in 5 minutes. Honest, no hype.",
+      "Side-by-side verdict: Muse is the free agent that finishes tasks; ChatGPT has the biggest app ecosystem; Claude writes and codes best; Meta AI is free inside WhatsApp. Pricing, availability, and a winner by task — no hype.",
     shortAnswer:
       "Quick answer: choose Muse if you want an agent that completes tasks and delivers finished work; ChatGPT for the most mature all-round assistant and app ecosystem; Claude for careful long-form writing and coding; Meta AI for a free assistant already inside WhatsApp, Instagram, and Facebook. Trade-offs and details below.",
     sections: [
@@ -805,6 +826,7 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "Choose by the task and interface you will actually use. For the deeper Muse-versus-Claude matchup specifically, see our [Muse vs Claude guide](/guides/muse-ai-vs-claude); for how Muse holds up in daily use, read the [Muse review](/guides/muse-ai-review). Test the same real brief in each available app and compare factual accuracy, useful depth, control, speed, and how much editing the result needs.",
           "A shortcut that works for most people: if your week is errands with outcomes (shopping, travel, bookings, admin), start with Muse — it's the only one built to finish those. If your week is thinking with documents (research, writing, code), start with Claude. If you want the biggest ecosystem and the most mature all-rounder, start with ChatGPT. If you just want a free helper where you already chat, Meta AI is already there.",
+          "One more fork in the road: the newest assistants do not wait for you to come back — they keep working between conversations. OpenAI's version of that is ChatGPT Dots; xAI's is Grok Bot. Our [ChatGPT Dots vs Grok Bot vs Muse AI comparison](/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai) puts the three always-on agents head-to-head, and [what are ChatGPT Dots](/guides/what-are-chatgpt-dots) explains OpenAI's agents in full — setup, pricing, and limits.",
           "The honest answer for most people: the best assistant is the one whose workflow you enjoy enough to use daily. Features matter less than fit — and at $20/month across all three paid flagships, fit is the only differentiator that counts.",
         ],
       },
@@ -813,6 +835,8 @@ export const GUIDES: Guide[] = [
         list: {
           ordered: false,
           items: [
+            "[ChatGPT Dots vs Grok Bot vs Muse AI](/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai) — the always-on agents compared: who keeps working while you sleep.",
+            "[What are ChatGPT Dots?](/guides/what-are-chatgpt-dots) — OpenAI's always-on agents explained: setup, pricing, and limits.",
             "[Muse vs Claude](/guides/muse-ai-vs-claude) — the deep head-to-head on pricing, connectors, privacy, and everyday tasks.",
             "[Muse AI pricing explained](/guides/muse-ai-pricing-explained) — Free, Power, and Maximum with per-source attribution.",
             "[What people actually use Muse for](/guides/muse-ai-use-cases) — 12 practical ideas across 7 personas.",
@@ -1107,7 +1131,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-use-cases",
-    modifiedTime: "2026-09-29",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-use-cases.jpg",
     imageAlt: "Illustration of a grid of nine idea panels, symbolizing practical Muse AI use cases",
     title: "Muse AI Use Cases: 12 Practical Ideas",
@@ -1245,6 +1269,7 @@ export const GUIDES: Guide[] = [
             "[Muse vs Claude](/guides/muse-ai-vs-claude) — the head-to-head for serious work.",
             "[Four-way comparison](/guides/muse-ai-vs-chatgpt-claude-meta-ai) — Muse vs ChatGPT vs Claude vs Meta AI in five minutes.",
             "[Agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) — approvals, safety models, and what September 2026 changed.",
+            "[Voice mode guide](/guides/muse-ai-voice-mode) — talk to your agent instead of typing, with live video chat and custom voices.",
             "[Use-case directory](/use-cases) — 31 real workflows across 7 personas, with starter prompts.",
             "[Muse for students](/for/students) — one of 20 intent pages tuned to who you are.",
             "[Can Muse Do This?](/tools/can-muse-do-this) — honest yes / depends / no answers for 64 tasks.",
@@ -1706,7 +1731,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-availability",
-    modifiedTime: "2026-09-26",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/muse-ai-availability.jpg",
     imageAlt: "Editorial illustration of a world globe with North America glowing and other regions as faint outlines",
     title: "Is Muse AI Available in My Country?",
@@ -1715,14 +1740,14 @@ export const GUIDES: Guide[] = [
     keywords: "muse ai india, muse ai availability, muse ai uk release date, muse ai region, muse ai pakistan",
     metaTitle: "Muse AI Availability: Countries & Release Dates",
     metaDescription:
-      "Muse AI is available in the US and Canada only, as of September 2026. No India, UK, or EU date yet — and VPNs violate the terms. What to use instead.",
+      "Muse AI availability in October 2026: live in the US and Canada; the UK, EU, India, and Pakistan still have no launch date. Full country table, the UK picture, and what to use while you wait.",
     shortAnswer:
-      "As of September 2026, Muse is available only in the US and Canada. Meta has announced no dates for India, the UK, or Europe, and using a VPN to bypass the restriction violates Meta's terms.",
+      "As of October 2026, Muse is available only in the US and Canada. Meta has announced no launch dates for the UK, Europe, India, or Pakistan, and using a VPN to bypass the restriction violates Meta's terms.",
     sections: [
       {
         heading: "Where Muse works today",
         paragraphs: [
-          "Muse launched in the United States on September 8, 2026, and reached Canada on September 18. Those two countries are the complete list as of late September 2026. Access is limited to adults 18 and older, and the product runs on iOS, Android, the web, and a Mac app.",
+          "Muse launched in the United States on September 8, 2026, and reached Canada on September 18. Those two countries are the complete list as of October 2026. Access is limited to adults 18 and older, and the product runs on iOS, Android, the web, and a Mac app.",
           "Meta's help centre describes availability plainly: subscriptions are 'in limited testing and aren't available in all locations yet,' and you must be located in a country where Muse operates. Meta publishes no country list and no expansion timeline.",
           "A note on Mexico: a few press outlets (GSMArena, Gulf News) have reported that Muse also covers Mexico, and one Connect live blog claims Meta's event materials listed the US, Canada, and Mexico. We could not find any direct statement from Meta confirming Mexico, and major outlets as recent as September 25 still describe availability as US and Canada only — so we treat Mexico as reported but unconfirmed, and this page will be updated the moment Meta says otherwise.",
           "The demand outside those two countries is real: searches for Muse availability come heavily from India, Pakistan, the UK, South Korea, and South Africa — regions where the product doesn't exist yet. If you're searching from one of them, this page is for you: the short version is that waiting is currently the only legitimate option. Not sure where your country stands? [Check instantly with our availability checker](/tools/availability-checker)."
@@ -1733,6 +1758,14 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "Muse is not available in India or Pakistan, and Meta has said nothing about when — or whether — that changes. This surprises people because Meta AI is already everywhere in both countries through WhatsApp, Instagram, and Facebook. But Muse is a different product: Meta AI answers questions inside Meta's apps, while Muse is a standalone agent with its own computer and browser that completes tasks across apps.",
           "The pricing often quoted alongside availability — a free tier, a $20/month Power plan, and a $100/month Maximum plan — only matters once the product reaches you. For now, those tiers describe the US and Canadian product.",
+        ],
+      },
+      {
+        heading: "Coming to the UK: what we know (October 2026)",
+        paragraphs: [
+          "If you're searching from the UK, the honest answer is short: Muse AI is not available in the UK yet, and Meta has announced no UK release date. There is no waitlist with a timeline attached, no UK pricing, and nothing to pre-register for — anyone promising you early UK access is guessing.",
+          "What we can say: the UK is one of the most-searched regions for Muse, and Meta's usual pattern is to expand once a product's safety and compliance setup is ready for a new regulatory regime. That is context, not a promise — Meta has published no expansion roadmap for Muse at all. The moment a UK date is announced, this page and our [Muse news feed](/news) will carry it, and our [availability checker](/tools/availability-checker) already tracks country status.",
+          "While you wait, the practical options are the ones in the last section below: Meta AI inside WhatsApp, Instagram, or Facebook gives you Meta's assistant today, and when Muse does open in the UK, new accounts are likely to meet the invite system — our [invite code guide](/guides/muse-ai-invite-code) explains how those codes work.",
         ],
       },
       {
@@ -1769,6 +1802,18 @@ export const GUIDES: Guide[] = [
         },
       },
     ],
+    table: {
+      headers: ["Country", "Status — October 2026", "Notes"],
+      rows: [
+        ["United States", "Available", "Launched September 8, 2026. iOS, Android, web, and Mac app; adults 18+."],
+        ["Canada", "Available", "Joined September 18, 2026."],
+        ["Mexico", "Reported — unconfirmed", "Some launch coverage listed Mexico; Meta has not confirmed it. We treat it as unconfirmed."],
+        ["United Kingdom", "Not available", "No launch date announced. See the UK section above."],
+        ["European Union", "Not available", "No launch date announced."],
+        ["India", "Not available", "No launch date announced; among the highest-demand regions."],
+        ["Pakistan", "Not available", "No launch date announced."],
+      ],
+    },
   },
   {
     slug: "muse-ai-jolly-avatar",
