@@ -1,0 +1,10 @@
+# ads.txt — Authorized Digital Sellers
+# https://iabtechlab.com/ads-txt
+#
+# TODO (after AdSense approval): replace the line below with your publisher ID.
+# Google gives you this exact line in AdSense > Account > Account information.
+# Format:
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Until then this file ships as a comment-only placeholder so /ads.txt resolves
+# cleanly (Google's crawler checks for it during site review).

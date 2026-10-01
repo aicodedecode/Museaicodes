@@ -1,13 +1,9 @@
 /**
- * AdSense placeholder — DISABLED by default.
+ * AdSense ad unit — DISABLED by default (renders nothing until enabled).
  *
- * To enable:
- *  1. Set NEXT_PUBLIC_ADSENSE_ENABLED=true in your Vercel environment variables.
- *  2. Set NEXT_PUBLIC_ADSENSE_CLIENT to your publisher ID (ca-pub-XXXXXXXXXXXXXXXX).
- *  3. Replace AD_SLOT_ID below with your ad unit's data-ad-slot value.
- *  4. Add the AdSense script tag to app/layout.tsx <head>.
- *
- * Until then this component renders nothing — no layout shift, no requests.
+ * Enable via NEXT_PUBLIC_ADSENSE_ENABLED=true + NEXT_PUBLIC_ADSENSE_CLIENT in
+ * Vercel env. The adsbygoogle.js script is loaded by components/AdSenseScript.tsx
+ * (same flags). See that file for the consent/CMP requirement and policy rules.
  */
 const ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";

@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { SITE } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import AdSenseScript from "@/components/AdSenseScript";
 import JsonLd from "@/components/JsonLd";
 import { ToastProvider } from "@/components/Toast";
 import "./globals.css";
@@ -117,6 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body className="font-body">
+        <AdSenseScript />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
