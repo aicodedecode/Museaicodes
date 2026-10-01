@@ -38,6 +38,148 @@ import { SITE } from "./site";
  */
 
 export const GUIDES: Guide[] = [
+{
+    slug: "chatgpt-dots-vs-grok-bot-vs-muse-ai",
+    modifiedTime: "2026-10-01",
+    image: "/images/guides/chatgpt-dots-vs-grok-bot-vs-muse-ai.jpg",
+    imageAlt: "Illustration of three AI agent workstations side by side — a glowing dot, a robot teammate, and a friendly assistant — each working through a to-do list",
+    title: "ChatGPT Dots vs Grok Bot vs Muse AI: Which Always-On Agent Fits You?",
+    deck: "Three always-on agents launched within seven weeks of each other. What each one actually does, what it costs, and which one matches your week.",
+    category: "Comparison",
+    keywords: "chatgpt dots, openai dots, dots vs muse, grok bot, grok bot vs muse, muse ai vs chatgpt dots, what are chatgpt dots, best personal ai agent 2026",
+    metaTitle: "ChatGPT Dots vs Grok Bot vs Muse AI Compared (2026)",
+    metaDescription:
+      "ChatGPT Dots vs Grok Bot vs Muse AI: price, models, where you talk to each agent, safety controls, and who each one is really for — with every claim sourced and labelled.",
+    shortAnswer:
+      "Short answer: pick Muse for free, everyday life admin in the US and Canada (it also lives in WhatsApp); pick OpenAI Dots for work projects inside ChatGPT, Slack, and Teams if you already pay for ChatGPT Pro or Business Premium; pick Grok Bot if you want several named AI teammates working in parallel and you are already on a SuperGrok or paid Cursor plan. All three run on their own cloud computers and ask before consequential actions — the differences are price of entry, where you reach them, and whether you want one helper or a small team.",
+    sections: [
+      {
+        heading: "AI Takeaway",
+        list: {
+          ordered: false,
+          items: [
+            "All three are the same new product shape: an always-on agent with its own cloud computer that keeps working after you close the app and returns only when it needs your approval.",
+            "The real divider is the door price. Muse starts free. Dots start at a paid ChatGPT Pro or Business Premium plan. Grok Bot starts with a SuperGrok or paid Cursor plan — none of the three sells the agent on its own.",
+            "Muse is one personal agent for one person. Dots start as one agent per user, with teams of dots promised later. Grok Bot is built around several named teammates that hand work to each other from day one.",
+            "Every price, date, and capability below is labelled as company-confirmed or press-reported. This category reprices and re-rolls-out fast — verify the plan page before paying.",
+            "This site is an unofficial guide to Meta's Muse. We cover Dots and Grok Bot because anyone choosing an agent today is choosing between all three.",
+          ],
+        },
+      },
+      {
+        heading: "Side-by-side comparison",
+        paragraphs: [
+          "Positions shift as these products evolve — all three launched between August and September 2026 and are still rolling out. The table reflects verified sources as of October 1, 2026; press-reported items are marked, and the fact table after this guide lists every source.",
+        ],
+      },
+      {
+        heading: "What are ChatGPT Dots? The features deep-dive",
+        paragraphs: [
+          "OpenAI announced Dots at its DevDay keynote in San Francisco on September 29, 2026 — three weeks after Muse launched. OpenAI's help center defines a dot as \"an always-on agent in ChatGPT that can take on ongoing responsibility.\" That one sentence is the whole product: unlike a chat, which ends when you close the tab, a dot keeps a standing goal and keeps working on it across days.",
+          "Each dot runs on GPT-6 Astra, OpenAI's flagship model, and gets its own cloud computer with its own browser. OpenAI says dots can connect to more than 4,000 apps through ChatGPT's plugin system. You create your first dot in the ChatGPT desktop app or on desktop web — mobile is for checking in, not for setup — and afterwards you can reach it in ChatGPT on web, desktop, and mobile, inside Slack and Microsoft Teams (where a dot can join channels and post on its own), and by voice inside ChatGPT. Text messaging is described by OpenAI as coming soon; at launch a dot cannot call you.",
+          "Three things make a dot different from a normal ChatGPT conversation. First, a standing goal: you set it once and the dot pursues it proactively, rather than waiting for a fresh prompt. Second, its own workspace: the cloud computer, browser, and connected apps are the dot's to work in while your laptop is shut. Third, memory: dots receive your ChatGPT memories and build their own as they work — and the only way to wipe a dot's memory is to reset it, which deletes the dot entirely.",
+          "When a dot is not actively working on something you asked for, OpenAI says it drops into a \"proactive research\" mode with read-only access to your connected apps: it can look around and surface findings, but it cannot send messages, edit content, or change your apps unasked. OpenAI's own examples lean work-shaped: a dot that notices an unpaid invoice, prepares it, and sends it only after you approve; dots inside OpenAI investigating bugs flagged in Slack and turning new design files into working apps. Casey Newton of Platformer, who tested a preview build, estimated his dot did about two hours of work for roughly fifteen minutes of his effort.",
+          "Access is the catch. At launch, dots roll out to ChatGPT Pro and Business Premium subscribers, one included dot per user, with the first dot at no extra cost and dot usage not counting against your plan allowance for the first month. OpenAI has not published what dots cost after that window, or what extra dots will cost — it has only said more dots, and paid options to scale a dot's speed or monthly workload, are coming. Pro subscribers in the European Economic Area, Switzerland, and the UK are excluded from the consumer rollout for now, while Business Premium is available across supported regions. Enterprise, Edu, and Healthcare workspaces get dots as an admin-enabled beta, off by default. Free, Go, and Plus plans are not listed at launch.",
+          "Dots also arrived with company: the same DevDay keynote brought GPT-6.1 Sol (a cheaper near-flagship model), a shared team workspace called ChatGPT Space where people and dots co-author documents, and new Pro price tiers. One footnote worth knowing: OpenAI shelved the planned GPT-6.1 Astra upgrade a day before launch after it showed deceptive behaviour in internal testing, so dots ship on GPT-6 Astra. OpenAI's line was not to over-rotate on it; either way, the model behind your dot is the current flagship, not the pulled upgrade.",
+        ],
+      },
+      {
+        heading: "Grok Bot: xAI's team of AI teammates",
+        paragraphs: [
+          "xAI (now SpaceXAI) launched Grok Bot in beta on August 11, 2026 — the earliest of the three. Where Dots and Muse give you one agent, Grok Bot's pitch is a crew: you create named Bots — a researcher, a writer, a chief of staff — and each one is a persistent teammate with a name, a job title, and standing instructions. Put two to six of them in one chat thread and they @-mention each other, share context, and pass work between themselves, so you talk to one owner Bot instead of refereeing every handoff.",
+          "Every Bot on an account shares one persistent cloud computer — xAI is explicit that isolation is per user, not per Bot, so separate Bots are not a security boundary. That shared machine (press coverage of xAI's docs puts it around 8 vCPUs, 16 GB of RAM, and roughly 120 GB of usable disk) has a browser, a filesystem, and a terminal, and Bots sign into your apps and websites and operate them the way you would — clicking and typing through interfaces that have no clean API. Work continues while your laptop is closed; a Bot comes back when it needs approval or has finished work to show you. You reach your Bots from the Grok Bot apps on macOS and Windows, with an iOS companion; xAI lists no Android app yet.",
+          "Two Grok Bot features have no direct equivalent in Dots or Muse today. Routines are scheduled or event-triggered runs — up to 50 per Bot by xAI's documentation — so a Bot can do the Friday report every Friday without being asked. And teach-by-showing: ask a Bot to follow along while you do a workflow once, and it saves that workflow as a reusable skill or routine to run on its own next time. Skills themselves are reusable capability packs you can invoke, create from a chat, or pull from xAI's Bot Marketplace, which lists ready-made roles from an Outbound Prospecting bot to a Nightly Audit Engineer.",
+          "Access is bundled, never standalone, and the pricing picture changed within weeks of launch — this is the section to re-check before paying. At the August 11 beta launch, Grok Bot rode on premium tiers (SuperGrok Heavy at $300/month, Cursor Ultra at $200/month, Cursor Premium Teams at $120/seat/month, with enterprise on a waitlist). On August 26, xAI expanded it to SuperGrok and Cursor Pro plans, and xAI's own pricing page now lists SuperGrok at $30/month including Grok Bot access, with Cursor Pro shown at $20/month on the Grok Bot page. Enterprise went generally available in early September with SSO, SCIM, audit logs, and network controls. There is no free tier for Grok Bot — the free Grok chatbot is a different product — and exact per-plan Bot usage allowances are not published; xAI says Bot usage is its own allowance, separate from your Grok or Cursor usage, with extra usage billed at token cost.",
+          "Which model runs a Bot? xAI's pricing page pairs SuperGrok with the Grok 4.6 model, and press coverage reports the Grok 4.7 model (released September 21) was trained to work natively with the Grok Bot harness. xAI does not offer a model picker inside Grok Bot: you get Grok models, chosen for you.",
+        ],
+      },
+      {
+        heading: "Muse AI: Meta's personal agent",
+        paragraphs: [
+          "Meta launched Muse on September 8, 2026, powered by the Muse Spark model family. Muse is the consumer entry in this comparison: a personal agent for one person and their own accounts, reachable in the Muse app on iOS and Android, on the web at muse.ai, and natively inside WhatsApp — the surface neither OpenAI nor xAI can match, because it rides on apps billions of people already have. Per Meta's official FAQ, Muse is free with a usage limit (paid plans raise the ceiling), asks permission before sending messages, making purchases, or sharing information, and keeps working in the background after you close the app.",
+          "Muse's shape will sound familiar by now: it has its own computer (a file system and terminal for building tools, plus a full web browser for searching, filling forms, and completing bookings and purchases), persistent memory you can read and edit, a Goals tab for long-running work it pursues in the background, and finished output delivered as Artifacts — documents, PDFs, web pages, trackers, and dashboards. Its connector catalogue is the most shopping-and-errands flavoured of the three: 29 named connectors plus the full Shopify merchant catalogue, spanning stores, travel, food delivery, payments, Gmail and Google Calendar, and Meta's own Facebook, Instagram, and Threads.",
+          "Pricing is free-first, which is Muse's biggest structural advantage in this comparison: a free tier with a usage meter, then Power at $20/month and Maximum at $100/month as reported from Meta's Help Center by press. Two honest catches: a payment card is required even for the free tier, and availability is currently the US and Canada only (Meta's Help Center says it is \"not yet available everywhere\"; a third market, Mexico, is press-reported but not Meta-confirmed). Meta has also announced, but not yet shipped, video chat with the Muse avatar, Mac computer use rolling out, a dedicated Muse email address, and smart-glasses integration.",
+        ],
+      },
+      {
+        heading: "Safety and approvals: who asks before acting?",
+        paragraphs: [
+          "All three vendors gate consequential actions, but the mechanisms differ — and this is where an always-on agent earns or loses your trust.",
+          "Dots use three layers, per OpenAI's help and controls pages. Custom Rules (Settings, then Personalization, then Custom rules) let you set each type of action to act without asking, act when you say so, ask first, or hand it off to you. An auto-review system then checks consequential actions against your rules and built-in safety requirements before they run, and can pause or stop a dot mid-task. Some actions never delegate at all: changing a password always stays with the human. OpenAI is candid that a dot \"can still make mistakes,\" that rules are instructions it tries to follow rather than guarantees, and it published a dedicated Dots safety post at launch. An Activity view on the dot's profile shows progress, files, and where it is waiting on you.",
+          "Grok Bot's model, per xAI's documentation, is per-action approval: a Bot asks before sending messages, publishing, deleting, buying, or changing production systems, with an \"always allow\" option for actions you are tired of approving — and passwords, two-factor codes, and CAPTCHAs always stay with you. Sensitive actions can pass through an Auto Review check first. Because all your Bots share one cloud computer and its logins, xAI's own security guidance says not to treat separate Bots as separate security boundaries; enterprise plans add the organisational layer (SSO, SCIM, advanced audit logs, data-loss-prevention and network controls set at boot). Independent hands-on testing by RuntimeWire (September 16, 2026) found Grok Bot's approval behaviour the strongest of the agents it ran that week — treat that as one tester's bake-off, not a certification.",
+          "Muse splits the decision between you and a second agent. Consequential actions surface as structured approval cards (allow once, always allow, or deny), and behind them sits Sentinel, a separate guard layer on Muse's secure virtual machine that can allow, deny, or escalate outbound actions — Muse cannot override its egress decisions. Meta's FAQ confirms the user-facing rule: permission before messages, purchases, or sharing information. In the same RuntimeWire bake-off, Muse's safety held on the trap tasks (it refused a lookalike payee and a hidden email instruction) but scored lowest overall on task completion — a reminder that the tightest gate is also friction. Our [agent safety roundup](/guides/ai-agent-safety-roundup-september-2026) tracks how all three models evolve.",
+          "The shared bottom line: start any of the three read-only, require approval for anything that sends, buys, deletes, or publishes, and widen permissions only after it has earned them on low-stakes work. No vendor's approval system is a guarantee — all three say so themselves.",
+        ],
+      },
+      {
+        heading: "Who should pick which?",
+        paragraphs: [
+          "Pick Muse if your week is life admin with outcomes — shopping, travel, bookings, inbox and calendar wrangling — and you want to start free today in the US or Canada, especially if WhatsApp is where you already live. It is the only one of the three built for a single person's errands rather than a team's workflows. Start with [what Muse AI is](/guides/what-is-muse-ai) and the [invite code guide](/guides/muse-ai-invite-code) if you need access.",
+          "Pick Dots if your work already lives in ChatGPT, Slack, and Teams and you are on (or willing to buy) ChatGPT Pro or Business Premium. One deeply-connected agent that runs projects in the background, posts where your team talks, and sits under workspace admin controls is the work-shaped option — and if you already pay for an eligible plan, the first dot costs nothing extra during the launch window. Our [Dots vs Muse deep-dive](/guides/openai-dots-vs-muse-always-on-agents) goes further on the two-way matchup.",
+          "Pick Grok Bot if one agent is not the point — you want several named teammates dividing work in parallel, routines running on a schedule, and agents that can be taught a workflow by watching you do it once. It fits founders and operators already paying for SuperGrok or Cursor, who are comfortable that the crew shares one computer and one set of logins. Still in beta, so expect the pricing page to keep moving.",
+          "And the honest fourth option: pick none of them yet. All three products are weeks old, two are gated behind premium plans, and the category repriced itself twice in September alone. If your need is \"keep an eye on this and ping me,\" Muse's free tier covers it; if it is \"run my operation while I sleep,\" nobody's launch demo — including the one where the agent froze on stage — has earned blind trust yet.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        list: {
+          ordered: false,
+          items: [
+            "What are ChatGPT Dots? Always-on agents inside ChatGPT, launched September 29, 2026. You give a dot a standing goal and permissions; it works in the background on its own cloud computer, connects to 4,000+ apps, and comes back when it needs a decision.",
+            "How much do ChatGPT Dots cost? Your first dot is included at no extra cost with ChatGPT Pro (from $100/month) or Business Premium, and dot usage does not count against your allowance for the first month. OpenAI has not published pricing after that window, or for additional dots.",
+            "Is ChatGPT Dots free? No. Dots are not listed for the Free, Go, or Plus plans at launch — an eligible Pro or Business Premium plan is the entry ticket. Enterprise, Edu, and Healthcare workspaces can enable a beta through an admin.",
+            "Dots vs Muse: which is better? Different doors to the same idea. Muse is free-first, consumer-shaped, US and Canada only, and lives in WhatsApp. Dots are paid-plan, work-shaped, live in ChatGPT, Slack, and Teams, and exclude Pro subscribers in the EEA, Switzerland, and the UK at launch. Pick by where your life already happens.",
+            "What is Grok Bot? xAI's always-on agent product, in beta since August 11, 2026: named AI teammates, each with standing instructions, sharing one persistent cloud computer, signing into your apps, running scheduled routines, and handing work to each other in group threads.",
+            "Is Grok Bot free? No — there is no free Grok Bot tier (the free Grok chatbot is separate). Grok Bot is bundled with SuperGrok (from $30/month per xAI's pricing page) and paid Cursor plans (from $20/month), with enterprise plans on top. Per-plan Bot usage allowances are not published.",
+            "Can these agents act without asking me? Within limits you set. All three ask before consequential actions like sending, buying, deleting, or publishing by default, and all three let you widen or tighten that. Some actions — like changing a password — are never delegated. All three vendors warn their agents can still make mistakes.",
+            "Do I need a separate app for each? Mostly no. Dots live inside ChatGPT (plus Slack and Teams). Muse has its own app and web version, and works inside WhatsApp. Grok Bot has its own desktop apps for macOS and Windows with an iOS companion.",
+          ],
+        },
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[What Are OpenAI Dots? Always-On ChatGPT Agents — Digital Matters (sourced from OpenAI's announcement, help center, and controls pages)](https://digitalmatters.me/artificial-intelligence-ai/what-are-openai-dots/)",
+            "[Best Personal AI Agents 2026: Dots vs Muse vs Grok Bot — maarket.ai](https://maarket.ai/blogs/best-personal-ai-agents)",
+            "[Grok Bot — xAI product and pricing page](https://x.ai/bot)",
+            "[Grok pricing — xAI](https://x.ai/pricing)",
+            "[Grok Bot is now included with more plans — xAI](https://x.ai/news/grok-bot-more-plans)",
+            "[AI assistant showdown: Grok Bot, Instinct, Claude, ChatGPT Work, Muse — RuntimeWire, September 16, 2026](https://runtimewire.com/article/ai-assistant-showdown-grok-bot-instinct-claude-chatgpt-work-muse)",
+            "[Muse FAQ — Meta](https://ai.meta.com/muse/)",
+            "[How We Designed Muse — Meta's official design notes](https://introducing.muse.ai/)",
+          ],
+        },
+      },
+      {
+        heading: "Keep exploring",
+        list: {
+          ordered: false,
+          items: [
+            "[OpenAI Dots vs Muse](/guides/openai-dots-vs-muse-always-on-agents) — the two-way deep-dive on always-on agents.",
+            "[Muse vs ChatGPT vs Claude vs Meta AI](/guides/muse-ai-vs-chatgpt-claude-meta-ai) — the four-way assistant comparison.",
+            "[Muse AI pricing explained](/guides/muse-ai-pricing-explained) — what Free, Power, and Maximum actually buy.",
+            "[Muse news](/news) — launches, features, and traction, dated and sourced.",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["", "ChatGPT Dots", "Grok Bot", "Muse AI"],
+      rows: [
+        ["Maker", "OpenAI", "xAI (SpaceXAI)", "Meta"],
+        ["Launched", "September 29, 2026 (DevDay)", "August 11, 2026 (beta)", "September 8, 2026"],
+        ["Cheapest way in", "ChatGPT Pro from $100/mo or Business Premium; first dot included, usage free for month one (pricing after that unpublished)", "SuperGrok from $30/mo or Cursor Pro from $20/mo (xAI pages); no free tier", "Free tier (card required); Power $20/mo, Maximum $100/mo (press-reported from Meta Help Center)"],
+        ["Model", "GPT-6 Astra", "Grok models (Grok 4.6 per xAI pricing page; no model picker)", "Muse Spark"],
+        ["Where you talk to it", "ChatGPT (web, desktop, mobile), Slack, Teams; voice in ChatGPT; texting coming soon", "Grok Bot apps: macOS, Windows, iOS (no Android yet)", "Muse app (iOS, Android), muse.ai web, WhatsApp"],
+        ["Agent shape", "One dot per user at launch; teams of dots promised", "Several named teammates (2–6 per thread) handing work to each other", "One personal agent with background Goals"],
+        ["Availability", "Eligible markets; Pro excludes EEA, Switzerland, UK; Enterprise/Edu/Healthcare beta via admin", "Beta; tied to SuperGrok/Cursor plans; enterprise generally available", "US and Canada (Mexico press-reported, not Meta-confirmed)"],
+        ["Safety model", "Custom Rules + auto-review; password changes never delegated", "Per-action approvals (always-allow optional); Auto Review; Bots share one computer — not a security boundary", "Approval cards (allow once / always / deny) + Sentinel guard layer on a secure VM"],
+        ["Best for", "Work projects across ChatGPT, Slack, and Teams", "Running several agents in parallel; scheduled routines", "Everyday life admin, free to start"],
+      ],
+    },
+  },
   {
     slug: "what-is-muse-ai",
     modifiedTime: "2026-10-01",
@@ -2813,7 +2955,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "openai-dots-vs-muse-always-on-agents",
-    modifiedTime: "2026-09-30",
+    modifiedTime: "2026-10-01",
     image: "/images/guides/openai-dots-vs-muse-always-on-agents.jpg",
     imageAlt: "Editorial illustration of a desk lamp glowing at night beside chat bubbles, a calendar, and a small robot working through a to-do list",
     title: "OpenAI Dots vs Muse: Every 24/7 AI Agent, Compared",
@@ -2845,7 +2987,7 @@ export const GUIDES: Guide[] = [
             "Dots connect to more than 4,000 apps through OpenAI's plugin ecosystem, and can reach you via ChatGPT, Slack, and Microsoft Teams — texting and voice calls are coming.",
             "You set approval rules: Dots ship with defaults for when to act alone vs. ask, and you can add custom rules to allow, gate, or block specific actions. An auto-review system checks actions against your rules.",
             "When idle, a dot does “proactive research” with read-only access — it can look but not send messages, edit files, or change your apps without approval.",
-            "Rollout started September 29 for ChatGPT Pro and Business Premium users in eligible markets (reportedly the $200/month Pro tier and $125/seat Business Premium), one dot per user at first, with more dots later. Enterprise, Edu, and Healthcare workspaces can enable it via an admin.",
+            "Rollout started September 29 for ChatGPT Pro and Business Premium users in eligible markets (Pro tiers now start at $100/month after OpenAI's September 29 restructure into Pro 100/200/500, plus $125/seat Business Premium), one dot per user at first, with more dots later. Enterprise, Edu, and Healthcare workspaces can enable it via an admin.",
             "OpenAI also launched ChatGPT Space: a shared layer where people, ChatGPT, Codex, and Dots work against the same documents and context.",
             "The launch demo stumbled — the presenter's dot froze live on stage, which is worth remembering when anyone promises you can “walk away and trust it.”",
           ],
