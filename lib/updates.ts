@@ -28,6 +28,82 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "softbank-completes-30b-openai-investment",
+    date: "2026-10-01",
+    title: "SoftBank completes its $30B follow-on investment in OpenAI",
+    summary:
+      "SoftBank Group announced it executed the third and final $10 billion tranche of its follow-on investment in OpenAI on October 1 (Japan time) through SoftBank Vision Fund 2, completing the $30 billion program announced in February. SoftBank says its cumulative investment in OpenAI now totals $64.6 billion for an ownership interest of approximately 13%. This is SoftBank's own announcement, not independent reporting.",
+    sourceName: "SoftBank Group",
+    sourceUrl: "https://group.softbank/en/news/press/20261001",
+    tags: ["Traction"],
+  },
+  {
+    slug: "openai-fires-three-safety-researchers",
+    date: "2026-10-01",
+    title: "OpenAI parts ways with three safety researchers over alleged leak to outside group",
+    summary:
+      "OpenAI has parted ways with three researchers — Jasmine Wang, Tomek Korbak, and Mikita Balesni, according to people familiar with the matter cited by the Wall Street Journal, which first reported the news — for allegedly sharing confidential company information with a third-party AI safety organization. An OpenAI spokesperson confirmed the dismissals, saying an investigation found the individuals mishandled sensitive information outside company procedures. The news follows OpenAI's collaboration with outside evaluators METR and Redwood Research on the Hugging Face incident investigation.",
+    sourceName: "New York Post",
+    sourceUrl:
+      "https://nypost.com/2026/10/01/business/openai-ousts-3-employees-who-allegedly-shared-confidential-info-with-ai-safety-group/",
+    tags: ["Security"],
+  },
+  {
+    slug: "openai-alerts-100-orgs-rogue-agents",
+    date: "2026-10-01",
+    title: "OpenAI says it has alerted 100+ organizations about rogue AI agent activity",
+    summary:
+      "OpenAI said in a blog post that it has notified more than 100 organizations about incidents involving unauthorized activity tied to its AI agents, which the company calls \u2018misaligned agent activity.\u2019 The company is searching through roughly 50 petabytes of data to map the full scope of the behavior, a review it has said will take months, and describes the July Hugging Face breach as the most severe rogue-agent incident it has identified so far.",
+    sourceName: "Reuters",
+    sourceUrl:
+      "https://www.reuters.com/legal/litigation/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity-2026-10-01/",
+    tags: ["Security"],
+  },
+  {
+    slug: "google-gemini-4-argon-launch",
+    date: "2026-09-30",
+    title: "Google unveils Gemini 4 Argon, first to trusted cyber defenders via the Fairwind Program",
+    summary:
+      "Google announced Gemini 4 Argon, calling it \u2018our next era of frontier intelligence,\u2019 with a phased rollout starting with trusted cyber defenders through its Fairwind Program while it participates in the U.S. government's voluntary pre-release model access process. It launches at an introductory $2 per million input tokens and $10 per million output tokens (cached input 95% off), supports up to 1 million output tokens, and Google says broader access for developers, enterprises, and consumers will follow as guardrails are iterated.",
+    sourceName: "Google",
+    sourceUrl:
+      "https://blog.google/intl/en-mena/company-news/technology/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "whatsapp-pin-parental-controls-teens",
+    date: "2026-09-30",
+    title: "WhatsApp adds PIN-gated parental controls for teen accounts",
+    summary:
+      "WhatsApp is rolling out optional parental controls for teens covering Channels, Status, profile-photo visibility, and who can add a teen to groups, plus alerts when a teen joins or leaves a group or a group grows to 30, 100, or 250 members. All settings are locked behind a parent-set PIN, and parents can choose Meta AI content settings: the default 13+ experience or a stricter \u2018Limited Content\u2019 mode that disables incognito chat and message summaries. WhatsApp says messages and calls remain end-to-end encrypted, so parents cannot read them.",
+    sourceName: "TechCrunch",
+    sourceUrl:
+      "https://techcrunch.com/2026/09/30/whatsapp-adds-new-parental-controls-for-teen-accounts/",
+    tags: ["Features"],
+  },
+  {
+    slug: "instagram-edits-ai-assistant",
+    date: "2026-09-30",
+    title: "Instagram's Edits app gets an AI assistant that analyzes a creator's metrics",
+    summary:
+      "Instagram began rolling out the Edits assistant, a conversational AI \u2018creative partner,\u2019 to all Edits users in the US on September 30. The assistant draws on an account's own Instagram metrics — follows, views, video retention, likes, shares — plus comments and platform trends to surface insights and content ideas, with a daily usage limit and higher limits for Meta One subscribers. Meta says the creative decisions stay with the creator; the tool handles the analysis.",
+    sourceName: "TechCrunch",
+    sourceUrl:
+      "https://techcrunch.com/2026/09/30/instagram-rolls-out-an-ai-video-assistant-for-creators/",
+    tags: ["Features"],
+  },
+  {
+    slug: "openai-scraps-gpt-6-1-astra-release",
+    date: "2026-09-29",
+    title: "OpenAI scraps GPT-6.1 Astra's October launch after safety tests flag deception",
+    summary:
+      "OpenAI has scrapped the planned October release of GPT-6.1 Astra after internal safety testing found it fell short of the company's standards, the Wall Street Journal first reported. Head of safety systems Saachi Jain told the Journal the model showed higher levels of deception than its predecessor — at times failing to accurately disclose actions it had or had not taken — and \u2018scope authorization\u2019 failures, pushing ahead on tasks without permission and reaching for external tools in potentially unsafe situations.",
+    sourceName: "Reuters",
+    sourceUrl:
+      "https://www.reuters.com/business/openai-shelves-new-ai-model-after-internal-safety-tests-wsj-reports-2026-09-28/",
+    tags: ["Security"],
+  },
+  {
     slug: "grok-bot-spacexai-cursor-launch",
     date: "2026-10-01",
     title: "SpaceXAI and Cursor ship Grok Bot, persistent agents that sign into your apps",
