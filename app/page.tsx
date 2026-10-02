@@ -15,6 +15,12 @@ import GuideCard from "@/components/GuideCard";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
 import { CopyButton } from "@/components/Toast";
+import { UPDATES } from "@/lib/updates";
+
+function formatNewsDate(iso: string) {
+  const d = new Date(iso + "T00:00:00");
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
 
 export const metadata: Metadata = {
   title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
@@ -437,10 +443,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ---------- 07 LATEST IN TECH ---------- */}
+      <section aria-labelledby="tech-news-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
+        <SectionHead
+          index="07"
+          label="Latest in tech"
+          title="The tech world, daily."
+          copy="Verified tech news — Muse, the AI labs, and big tech — published every morning. Newest first."
+        />
+        <ol className="divide-y divide-line rounded-[22px] border border-line bg-surface px-6 md:px-8">
+          {UPDATES.slice(0, 5).map((u, i) => (
+            <Reveal key={u.slug} delay={Math.min(i, 4) * 50}>
+              <li className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4">
+                <time
+                  dateTime={u.date}
+                  className="font-mono w-[110px] shrink-0 text-[12px] uppercase tracking-[0.08em] text-faint"
+                >
+                  {formatNewsDate(u.date)}
+                </time>
+                <span className="min-w-0 flex-1 text-[0.95rem] font-semibold">
+                  {u.title}
+                </span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-faint">
+                  {u.tags.join(" · ")}
+                </span>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
+        <div className="mt-8 text-center">
+          <Link
+            href="/news"
+            className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-6 py-3 text-sm font-bold text-ink transition-colors hover:border-accent"
+          >
+            Read all {UPDATES.length} updates <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
       {/* ---------- EXPLORE ---------- */}
       <section aria-labelledby="explore-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="07"
+          index="08"
           label="Explore"
           title="More ways to use Muse Hub."
           copy="Directories, libraries, and hubs for every kind of Muse question."

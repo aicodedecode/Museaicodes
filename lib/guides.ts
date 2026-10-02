@@ -502,7 +502,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-referral-code",
-    modifiedTime: "2026-10-01",
+    modifiedTime: "2026-10-02",
     image: "/images/guides/muse-ai-referral-code.jpg",
     imageAlt: "Illustration of two people exchanging a glowing gift, symbolizing a Muse AI referral code",
     video: {
@@ -529,6 +529,20 @@ export const GUIDES: Guide[] = [
         ],
       },
       {
+        heading: "How to redeem a referral code, step by step",
+        list: {
+          ordered: true,
+          items: [
+            "Check the offer window in your Muse account first — some invitations must be redeemed within a short time after joining, so don't sit on a code.",
+            "Make sure you're signed into the right account. Rewards attach to the account that redeems the code and usually can't be moved later.",
+            "Open the invite or redeem screen in Muse (look under Settings for “Redeem invite code” — the exact menu can shift as the product evolves).",
+            "Enter the code exactly as shared — as text, not from a screenshot that might misread a character.",
+            "Confirm it worked: look for the on-screen confirmation and check your balance or usage screen for the reward.",
+            "If it's rejected, re-check the characters, your account's eligibility, and the current promotion terms rather than hammering submit — repeated failed attempts won't change the outcome. Full troubleshooting is in the [redeem guide](/guides/muse-ai-redeem-code).",
+          ],
+        },
+      },
+      {
         heading: "Referral checklist",
         list: {
           ordered: false,
@@ -544,7 +558,17 @@ export const GUIDES: Guide[] = [
       {
         heading: "Terms vary — confirm in the app",
         paragraphs: [
-          "Referral rewards are promotional offers, not permanent pricing. Amounts, eligibility, timing, and availability can differ by account and region, and offers can change without notice. Treat any headline number as a starting point and confirm the live terms in Muse's invite or redeem screen.",
+          "Referral rewards are promotional offers, not permanent pricing. Amounts, eligibility, timing, and availability can differ by account and region, and offers can change without notice. Treat any headline number as a starting point and confirm the live terms in Muse's invite or redeem screen. And remember: codes only work where Muse itself operates — [check availability](/guides/muse-ai-availability) for your region before planning around a code.",
+        ],
+      },
+      {
+        heading: "Referral code questions, answered",
+        paragraphs: [
+          "**Do referral codes expire?** Often, yes. Many invitations carry a redemption window shown in your account — sometimes a short one after joining. If you have a code, don't sit on it; check the deadline first.",
+          "**Can I use a referral code if Muse isn't available in my country?** No. Codes are tied to eligible accounts in supported regions. Start with the [availability guide](/guides/muse-ai-availability) (or [check your country instantly](/tools/availability-checker)); the code comes after.",
+          "**Can I share my code publicly?** You can, but share it as exact text — screenshots get misread — and never promise a fixed reward amount. The in-app screen is the source of truth, and terms change. Our [community code board](/codes) accepts submissions if you'd like your code listed.",
+          "**What if my code is rejected?** Check three things: the characters (exact text, no lookalike mix-ups), your account's eligibility, and whether the promotion is still current. One careful retry beats five rushed ones; repeated failures can trigger rate limits.",
+          "**Is it safe to get a code from a stranger?** The code itself is just text — the risk is what comes with it. Never enter a code on a third-party page that asks for your login, and never share your password or payment details in exchange for one. Codes go inside the official Muse product only.",
         ],
       },
       {
@@ -1131,7 +1155,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-use-cases",
-    modifiedTime: "2026-10-01",
+    modifiedTime: "2026-10-02",
     image: "/images/guides/muse-ai-use-cases.jpg",
     imageAlt: "Illustration of a grid of nine idea panels, symbolizing practical Muse AI use cases",
     title: "Muse AI Use Cases: 12 Practical Ideas",
@@ -1245,8 +1269,27 @@ export const GUIDES: Guide[] = [
       {
         heading: "What Muse won't do for you",
         paragraphs: [
-          "Honest limits, so you don't waste an afternoon. Muse is in limited testing — availability, limits, and features vary by account and region (currently the US and Canada; [check availability](/guides/muse-ai-availability) for the latest). It won't browse or act on sites and apps it isn't connected to, it can't do anything you've denied approval for, and heavy use hits the free meter — [pricing](/guides/muse-ai-pricing-explained) explains the tiers.",
+          "Honest limits, so you don't waste an afternoon. Muse is in limited testing — availability, limits, and features vary by account and region (currently the US and Canada; [check availability](/guides/muse-ai-availability) for the latest, or [check your country instantly](/tools/availability-checker)). It won't browse or act on sites and apps it isn't connected to, it can't do anything you've denied approval for, and heavy use hits the free meter — [pricing](/guides/muse-ai-pricing-explained) explains the tiers.",
           "It can be wrong with confidence, especially on prices, times, and niche facts; treat its output as a strong draft, not a source of truth. And it won't replace judgment on sensitive calls — hiring, medical, legal, and financial decisions deserve a professional, with the agent as research help. The [safety roundup](/guides/ai-agent-safety-roundup-september-2026) and our [review](/guides/muse-ai-review) go deeper on where the edges are.",
+        ],
+      },
+      {
+        heading: "26 real-world uses, reported by a power user",
+        paragraphs: [
+          "Beyond the curated ideas above, one experienced user — who says they've spent 60+ hours with Muse over a couple of weeks and is not affiliated with Meta — published a list of 26 ways they actually use the agent day to day. We've condensed and reworded their list here because it shows what agent-style usage looks like once the setup investment pays off. Treat it as one person's reported experience, not verified fact: features, connectors, and limits vary by account and region, and some of these need connected apps or paid tiers.",
+          "**Watching and alerting.** They have Muse monitor topics they care about (their example: humanoid robotics) and report back with a summary plus sources when something significant happens. They also run price alerts — “check every six hours, tell me if it moved more than 2%” — for crypto and stocks, and a security watch on a crypto wallet: Muse holds a watch-only key that can see addresses but move nothing, checks the chain every 30 minutes, and pings them about any outgoing transaction.",
+          "**Bookings and errands.** They ask what's free and have Muse book it: tennis courts, movie showtimes and tickets, restaurant reservations wherever there's an online booking portal. Phone-call booking, they note, is supposedly coming.",
+          "**Building personal software.** They described a custom project board, coded from scratch by Muse, that they now run all their projects and ideas through — and when they want a tweak, they ask in plain language instead of editing code.",
+          "**Calendar and inbox.** With Google Calendar connected, they add, edit, and delete events by voice, and Muse watches incoming messages and email to update the calendar as plans change. Their work inbox gets draft replies written in their voice, trained on past writing; they review every draft, and Muse learns from the edits. Drafts only — nothing sends without approval.",
+          "**Communication.** They text people through Muse over SMS and RCS (no group texts on Android yet, they note), under a standing rule: Muse drafts, they approve, nothing sends unseen. They also gave Muse its own Google Voice number so it can text directly with their partner — sharing things like phone battery status or location when they can't be reached.",
+          "**Voice-first usage.** With no real-time voice mode, voice notes are their main interface: they record one, Muse transcribes it, and can reply as a voice note for listening on the go — often used to have a deep-research briefing read back while driving.",
+          "**Research and knowledge work.** Deep-research requests come back as proper reports — multiple sources, different viewpoints, pictures, links, conclusions — built as shareable artifacts. They co-edit Google Docs live with Muse (“add a paragraph here,” “reformat these headers”) while watching it happen.",
+          "**Money.** After ~25 years of doing a monthly financial statement by hand in Excel, they connected accounts read-only and now get the whole statement generated in about fifteen minutes, with Muse asking about anything it can't see (like cash). A personal interactive dashboard is their next project.",
+          "**Audience and content.** Every Monday Muse scans one of their YouTube channels for new comments and drafts replies; they approve, then Muse posts via its browser. Social posts for a community page and X are drafted and co-written, but they haven't let it post autonomously yet.",
+          "**Developer workflows.** Their mobile app's crash reporting feeds Muse: when a new error surfaces, it goes to the GitHub repo, diagnoses the issue, and drafts a fix — sometimes before they've noticed. They also use a screenshot stream (their monitor to Muse every few seconds, only when switched on) to get “where do I click?” help in unfamiliar software.",
+          "**AI managing AI.** They describe themselves as president, Muse as vice president, and specialist models as employees: Muse holds all their context and goals, so it prompts the specialist models better than they could directly — via API keys or a self-hosted model.",
+          "**Media and play.** Muse generates multi-voice podcast episodes debating a topic (they tried it once; prefer concise voice notes). Image generation through Meta's models is “good enough”; video is rough with aggressive content filters. They handed it 90 minutes of tennis footage to cut down to just the points — promising, still being refined. As a dungeon master, they keep campaign notes and house rules with Muse for session prep and mid-game pivots. And for fun: Muse picks the avatar's daily outfit from the calendar and holidays — tennis whites on match day, zombie-apocalypse-survivor for a horror movie outing.",
+          "The through-line in their list matches this guide's thesis: the wins come from repeatable workflows with clear outputs and human approval at the checkpoints — not from one-off demos. If any of these appeal, the [prompt patterns](/guides/muse-ai-prompt-tips) and [connector directory](/connectors) are the practical starting points.",
         ],
       },
       {
@@ -1731,7 +1774,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-availability",
-    modifiedTime: "2026-10-01",
+    modifiedTime: "2026-10-02",
     image: "/images/guides/muse-ai-availability.jpg",
     imageAlt: "Editorial illustration of a world globe with North America glowing and other regions as faint outlines",
     title: "Is Muse AI Available in My Country?",
@@ -1786,7 +1829,18 @@ export const GUIDES: Guide[] = [
         paragraphs: [
           "If you want the closest available experience today, Meta AI inside WhatsApp, Instagram, or Facebook is the practical option on Meta's own platforms — it's the assistant, not the agent, but it's there now.",
           "If you're technically inclined, the model behind Muse — Muse Spark 1.3 — is available through OpenRouter on a pay-per-token basis. That gives you the model, not the full Muse agent experience with tasks, browsing, and memory, so set expectations accordingly.",
-          "And when Muse does arrive in your country, access will likely involve the invite system — our [invite code guide](/guides/muse-ai-invite-code) and [referral code guide](/guides/muse-ai-referral-code) explain how that works. Start with [how to get Muse AI](/guides/how-to-get-muse-ai) for the full access walkthrough, and read [how to download safely](/guides/muse-ai-download) once you're eligible.",
+          "And when Muse does arrive in your country, access will likely involve the invite system — our [invite code guide](/guides/muse-ai-invite-code) and [referral code guide](/guides/muse-ai-referral-code) explain how that works. Start with [how to get Muse AI](/guides/how-to-get-muse-ai) for the full access walkthrough, read [how to download safely](/guides/muse-ai-download) once you're eligible, and browse [what people actually use Muse for](/guides/muse-ai-use-cases) so you hit the ground running on day one.",
+        ],
+      },
+      {
+        heading: "Availability questions, answered",
+        paragraphs: [
+          "**Is Muse AI available in the UK?** No — not yet. Muse is not available in the UK as of October 2026, and Meta has announced no UK release date. See “Coming to the UK” above for the full picture, and [check your country instantly](/tools/availability-checker).",
+          "**When is Muse AI coming to the UK?** Nobody outside Meta knows. There is no announced date, no waitlist with a timeline, and nothing to pre-register for. When a date is announced, this page and our [news feed](/news) will carry it.",
+          "**Which countries is Muse AI available in?** The United States and Canada — that's the complete confirmed list. Mexico has appeared in some launch coverage but Meta has never confirmed it, so we treat it as unconfirmed. The country table above and the [availability checker](/tools/availability-checker) track every region.",
+          "**Is Muse AI available in India?** No, and Meta has said nothing about an India launch date. India is one of the highest-demand regions, which is why the question comes up constantly. While you wait, Meta AI inside WhatsApp, Instagram, or Facebook is the practical alternative — the assistant, not the agent, but available today.",
+          "**Can I use a VPN to access Muse from an unsupported country?** No — and you shouldn't try. Meta's terms require you to be physically located in a supported country, so a VPN breaks the rules and risks your linked Meta account. It usually doesn't work technically either; see “Why a VPN won't help” above.",
+          "**Will my invite or referral code work if Muse isn't available in my country?** No — codes only work where Muse itself operates. [Check availability](/guides/muse-ai-availability) for your region first, then read the [referral code guide](/guides/muse-ai-referral-code) and [invite code guide](/guides/muse-ai-invite-code).",
         ],
       },
       {
