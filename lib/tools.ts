@@ -87,6 +87,13 @@ export const INTERACTIVE_TOOLS: ToolEntry[] = [
     badge: "New",
   },
   {
+    href: "/tools/avatar-studio",
+    title: "Avatar Studio",
+    deck: "100 avatar names + 100 characters with a shuffle generator",
+    tag: "Builder",
+    badge: "New",
+  },
+  {
     href: "/tools/availability-checker",
     title: "Muse Availability Checker",
     deck: "Is Muse available in your country? Check instantly",

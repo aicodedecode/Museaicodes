@@ -1871,7 +1871,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-jolly-avatar",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-jolly-avatar.jpg",
     imageAlt: "Jolly, Muse's fluffy cream-colored default avatar, smiling on a warm watercolor background",
     title: "Meet Jolly: Muse's Avatar & How to Personalize Yours",
@@ -1895,7 +1895,7 @@ export const GUIDES: Guide[] = [
         heading: "What you can customize",
         paragraphs: [
           "Jolly is only the starting point. Meta built Muse's identity to be reshaped: users can change their agent's name, redesign its appearance, and even dress it — Zuckerberg's own agent, for example, is named Agrippa after the Roman general, and wears a toga with a laurel wreath.",
-          "Personality is adjustable too. Muse can be proactive — checking in with reminders, suggestions, and updates — and you control the volume: keep its messages frequent, quiet them down, or switch proactive nudges off entirely. If you want the full walkthrough of what Muse can do day to day, start with our [beginner's guide](/guides/what-is-muse-ai).",
+          "Personality is adjustable too. Muse can be proactive — checking in with reminders, suggestions, and updates — and you control the volume: keep its messages frequent, quiet them down, or switch proactive nudges off entirely. If you want the full walkthrough of what Muse can do day to day, start with our [beginner's guide](/guides/what-is-muse-ai). Stuck on a name? Our [Avatar Studio](/tools/avatar-studio) has 100 avatar names and 100 character presets with a shuffle generator.",
         ],
       },
       {
