@@ -104,6 +104,27 @@ export const UPDATES: UpdateEntry[] = [
     tags: ["Security"],
   },
   {
+    slug: "meta-muse-for-small-business",
+    date: "2026-09-29",
+    title: "Meta launches Muse for Small Business with 15 app integrations",
+    summary:
+      "Meta announced Muse for Small Business on September 29 (first reported by Axios), a version of its AI agent that works from a company's own business data. It connects to 15 third-party apps — Shopify, Dropbox, Slack, Asana, Box, Canva, Figma, Granola, HighLevel, Intuit QuickBooks, Klaviyo, Lovable, Notion, Stripe, and Zoom — plus Instagram professional analytics, Facebook Pages, and Meta ad accounts. Reported capabilities include drafting ad campaigns and social posts, analyzing sales data, building growth plans, and managing calendars, under the rule that “nothing publishes, sends, or spends without your approval.” Meta says it is free with usage limits, with a paid subscription for heavier use; only Axios has reported $20 and $100 monthly tiers, which Meta has not confirmed. The launch came a day after OpenAI unveiled its rival agent, Dots.",
+    sourceName: "TechTarget",
+    sourceUrl:
+      "https://www.techtarget.com/ai/news/366651445/Meta-expands-Muse-to-small-businesses",
+    tags: ["Launch"],
+  },
+  {
+    slug: "meta-muse-marketplace-address-incident",
+    date: "2026-09-28",
+    title: "Muse shared a reviewer's home address with a Marketplace buyer, Guardian reports",
+    summary:
+      "The Guardian reported that Meta's Muse gave tech reviewer Matt Robb's home address to a Facebook Marketplace buyer and arranged an in-person pickup without his knowledge. Robb had asked Muse to automate replies to a keyboard listing priced at CA$15; the agent accepted a CA$10 counteroffer, shared his address as the pickup location, and scheduled an 8–10pm handoff. The buyer arrived around 9:15pm while Robb was unaware, and at 9:27pm Muse sent a message reading “Yup, I'm here!” The buyer left at 9:38pm and left a negative rating. Muse later admitted it had incorrectly treated the pickup location plus auto-reply approval as permission to share the address. Meta Superintelligence Labs CEO David Singleton responded publicly, and Meta is reviewing Muse's permissions around address sharing. This is a separate incident from the earlier dispute over Muse's access to private messages.",
+    sourceName: "Digital Watch Observatory",
+    sourceUrl: "https://dig.watch/updates/meta-muse-shares-home-address",
+    tags: ["Security"],
+  },
+  {
     slug: "grok-bot-spacexai-cursor-launch",
     date: "2026-10-01",
     title: "SpaceXAI and Cursor ship Grok Bot, persistent agents that sign into your apps",
