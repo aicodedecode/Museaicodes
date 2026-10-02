@@ -153,7 +153,14 @@ export default function AvatarStudio() {
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
             Your avatar
           </p>
-          <p className="font-display mt-3 text-[clamp(2.6rem,7vw,5rem)] font-extrabold leading-none tracking-tight">
+          <img
+            src={character.image}
+            alt={`Portrait of ${character.title}`}
+            width={224}
+            height={224}
+            className="mx-auto mt-5 h-44 w-44 rounded-3xl border border-line object-cover md:h-56 md:w-56"
+          />
+          <p className="font-display mt-5 text-[clamp(2.6rem,7vw,5rem)] font-extrabold leading-none tracking-tight">
             {name.name}
           </p>
           <p className="mt-4 text-lg font-bold text-accent">{character.title}</p>
@@ -310,26 +317,38 @@ export default function AvatarStudio() {
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {filteredChars.map((c) => (
             <div key={c.title} className="rounded-2xl border border-line p-5">
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <h3 className="font-extrabold">{c.title}</h3>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-faint">
-                    {c.vibe}
+              <div className="flex items-start gap-4">
+                <img
+                  src={c.image}
+                  alt={`Portrait of ${c.title}`}
+                  width={96}
+                  height={96}
+                  loading="lazy"
+                  className="h-24 w-24 shrink-0 rounded-2xl border border-line object-cover"
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="font-extrabold">{c.title}</h3>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-faint">
+                        {c.vibe}
+                      </p>
+                    </div>
+                    <CopyButton
+                      id={`char-${c.title}`}
+                      label="Copy"
+                      text={`${c.title} — ${c.personality} Look: ${c.appearance}`}
+                      copiedKey={copiedKey}
+                      onCopied={setCopiedKey}
+                    />
+                  </div>
+                  <p className="mt-2 text-sm text-muted">{c.personality}</p>
+                  <p className="mt-1 text-sm text-faint">
+                    <span className="font-bold uppercase tracking-[0.1em]">Look — </span>
+                    {c.appearance}
                   </p>
                 </div>
-                <CopyButton
-                  id={`char-${c.title}`}
-                  label="Copy"
-                  text={`${c.title} — ${c.personality} Look: ${c.appearance}`}
-                  copiedKey={copiedKey}
-                  onCopied={setCopiedKey}
-                />
               </div>
-              <p className="mt-2 text-sm text-muted">{c.personality}</p>
-              <p className="mt-1 text-sm text-faint">
-                <span className="font-bold uppercase tracking-[0.1em]">Look — </span>
-                {c.appearance}
-              </p>
             </div>
           ))}
         </div>
