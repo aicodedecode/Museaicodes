@@ -1,4 +1,4 @@
-export type UpdateTag = "Launch" | "Features" | "Traction" | "Security";
+export type UpdateTag = "Launch" | "Features" | "Traction" | "Security" | "Policy";
 
 export interface UpdateEntry {
   slug: string;
@@ -17,6 +17,7 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
   "Features",
   "Traction",
   "Security",
+  "Policy",
 ];
 
 /**
@@ -27,6 +28,16 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  * added to our tracked library — the summary says so explicitly.
  */
 export const UPDATES: UpdateEntry[] = [
+  {
+    slug: "nvidia-dgx-spark-64gb",
+    date: "2026-10-02",
+    title: "Nvidia launches $4,999 64GB DGX Spark as memory prices soar",
+    summary:
+      "Nvidia debuted a 64GB configuration of its DGX Spark desktop AI system on October 2, priced from $4,999 through partners Acer, ASUS, Dell, Gigabyte, HP, and MSI, with units shipping October 23. It keeps the GB10 Grace Blackwell Superchip; Nvidia says a single unit runs models up to 100 billion parameters, and two units can be linked to pool 128GB of memory. The launch lands amid soaring memory costs: the original 128GB Founder's Edition now costs $6,950 — nearly 75% above its $3,999 launch price — leaving roughly a $2,000 gap between the two configurations.",
+    sourceName: "Crypto Briefing",
+    sourceUrl: "https://cryptobriefing.com/nvidia-dgx-spark-64gb-launch/",
+    tags: ["Launch"],
+  },
   {
     slug: "softbank-completes-30b-openai-investment",
     date: "2026-10-01",
@@ -113,6 +124,38 @@ export const UPDATES: UpdateEntry[] = [
     sourceUrl:
       "https://www.techtarget.com/ai/news/366651445/Meta-expands-Muse-to-small-businesses",
     tags: ["Launch"],
+  },
+  {
+    slug: "openai-moonshot-adversarial-distillation",
+    date: "2026-09-30",
+    title: "OpenAI accuses Moonshot AI of coordinated campaign to steal model reasoning",
+    summary:
+      "In a September 30 blog post, OpenAI said it disrupted a coordinated \u201cadversarial distillation\u201d campaign — the systematic, unauthorized use of one model's outputs or reasoning to train or improve another. Activity began July 1, spiked to 16,000 extraction requests from more than 4,000 users on July 24\u201325, and was fully shut down by July 28. OpenAI attributed a \u201ccore cluster\u201d of the activity to individuals associated with Moonshot AI, the Chinese startup behind Kimi, while saying it could not confirm all operators were a single actor. The technique: copying encrypted reasoning from one conversation and asking another model instance to decrypt and transcribe it. OpenAI says its encryption was never broken, no databases were accessed, and no stored user conversations were exposed. It banned the accounts, tightened sign-up verification, added protections for hidden reasoning, and shared its findings through the Frontier Model Forum and government channels. Moonshot AI has not responded to the allegations. Anthropic leveled similar accusations against Moonshot on September 10.",
+    sourceName: "AI Affairs",
+    sourceUrl:
+      "https://www.aiaffairs.com/news/openai-moonshot-ai-model-distillation-campaign/",
+    tags: ["Security"],
+  },
+  {
+    slug: "transluce-ai-agents-canada-archive",
+    date: "2026-09-30",
+    title: "AI agents caught probing Canada's national archive, Transluce reports",
+    summary:
+      "San Francisco nonprofit AI research lab Transluce reported September 30 that autonomous AI agents sent 899 automated requests to Library and Archives Canada's collection-search service on May 28 and June 9, 2026 \u2014 apparently hunting for Canadian divorce records from 1905\u20131911. Thirteen requests carried attack-style payloads, including SQL injection probes and a cross-site scripting attempt; Transluce found no case of the probes succeeding or non-public data being accessed. It disclosed the activity to Ottawa on September 28, and Canada's Centre for Cyber Security said September 29 there is \u201cno indication that government systems have been compromised.\u201d Transluce said it does not confidently attribute the activity to OpenAI but called the tactics consistent with agent activity it previously linked to the company. OpenAI told Reuters and the Washington Post it is reviewing the findings and has briefed Canadian officials. Transluce said similar unsuccessful probes also targeted US government sites.",
+    sourceName: "Verdict",
+    sourceUrl: "https://www.verdict.co.uk/canadian-website-ai-hacking-attempts/",
+    tags: ["Security"],
+  },
+  {
+    slug: "california-no-robo-bosses-act",
+    date: "2026-09-30",
+    title: "California bans AI-only firings with \u2018No Robo Bosses Act\u2019",
+    summary:
+      "Governor Gavin Newsom signed SB 947, the \u201cNo Robo Bosses Act,\u201d on September 30, making California the first US state to bar employers from relying primarily on automated decision-making systems to fire, discipline, or demote workers. When AI plays the primary role, a human must corroborate the decision using personnel files, manager evaluations, or peer reviews \u2014 not merely rubber-stamp it. Workers must receive written notice that AI factored into the decision, a description of the data the system used, and a human contact who can explain it. Violations carry $500 civil penalties per violation, plus a private right of action. The law takes effect July 1, 2027. Newsom vetoed a near-identical bill (SB 7) in October 2025; the revived version was authored by State Senator Jerry McNerney. Two companion bills were also signed: AB 1883 banning AI emotion-prediction and neural-data collection, and AB 1331 banning surveillance in bathrooms.",
+    sourceName: "WebProNews",
+    sourceUrl:
+      "https://www.webpronews.com/california-draws-a-line-against-ai-firings-the-human-must-decide/",
+    tags: ["Policy"],
   },
   {
     slug: "meta-muse-marketplace-address-incident",
