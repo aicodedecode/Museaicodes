@@ -1,12 +1,17 @@
 /**
- * AdSense ad unit — DISABLED by default (renders nothing until enabled).
+ * AdSense ad unit — DISABLED until the account is approved (renders nothing).
  *
- * Enable via NEXT_PUBLIC_ADSENSE_ENABLED=true + NEXT_PUBLIC_ADSENSE_CLIENT in
- * Vercel env. The adsbygoogle.js script is loaded by components/AdSenseScript.tsx
- * (same flags). See that file for the consent/CMP requirement and policy rules.
+ * Verification script is already live site-wide (components/AdSenseScript.tsx).
+ * After the user confirms AdSense approval: set NEXT_PUBLIC_ADSENSE_ENABLED=true
+ * in Vercel env vars (or flip it in code) and redeploy, then replace
+ * AD_SLOT_ID with a real ad-unit ID from the AdSense dashboard (or use Auto
+ * Ads, which needs no slot IDs). See AdSenseScript.tsx for the consent/CMP
+ * requirement and policy rules.
  */
 const ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
-const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
+// Publisher IDs are public by design (they ship in page source and ads.txt).
+const CLIENT =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1661535262455084";
 const AD_SLOT_ID = "REPLACE_WITH_AD_SLOT_ID";
 
 export default function AdSlot({ label = "Advertisement" }: { label?: string }) {
