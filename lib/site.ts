@@ -9,6 +9,7 @@ export const SITE = {
   skillsUrl: "https://museai-eight.vercel.app/",
   skillsRepoUrl: "https://github.com/aicodedecode/awesome-muse-skills",
   telegramUrl: "https://t.me/museaicode",
+  instagramUrl: "https://www.instagram.com/museaicodes",
   contactEmail: "aiprofit.in@gmail.com",
   updated: "October 3, 2026",
 } as const;

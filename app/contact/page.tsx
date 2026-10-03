@@ -113,6 +113,31 @@ export default function ContactPage() {
           </div>
         </div>
       </Reveal>
+      <Reveal delay={120}>
+        <div className="mt-8 rounded-3xl border border-line bg-surface p-8 md:p-10">
+          <p className="kicker">Instagram</p>
+          <h2 className="font-display mt-3 max-w-[520px] text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-[1.05] tracking-tight">
+            Daily reels & visual guides.
+          </h2>
+          <p className="mt-4 max-w-[560px] text-muted">
+            Muse tips, AI news in 30 seconds, and prompt demos — follow
+            @museaicodes for the visual side of the site.
+          </p>
+          <div className="mt-6">
+            <a
+              href={SITE.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-accent px-8 py-3.5 font-bold text-accent-ink transition-all duration-150 hover:-translate-y-0.5"
+            >
+              Follow @museaicodes{" "}
+              <span aria-hidden="true" className="text-sm">
+                ↗
+              </span>
+            </a>
+          </div>
+        </div>
+      </Reveal>
     </LegalPage>
   );
 }

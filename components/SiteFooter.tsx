@@ -152,6 +152,20 @@ export default function SiteFooter() {
                 </span>
               </a>
             </li>
+            <li>
+              <a
+                href={SITE.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram profile (opens in a new tab)"
+                className={linkCls}
+              >
+                Instagram{" "}
+                <span aria-hidden="true" className="text-xs">
+                  ↗
+                </span>
+              </a>
+            </li>
           </FooterGroup>
           <FooterGroup title="Tools">
             <li>
