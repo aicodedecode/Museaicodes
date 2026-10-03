@@ -4,6 +4,7 @@ import { GUIDES } from "@/lib/guides";
 import { CONNECTORS } from "@/lib/connectors";
 import { INTENT_PAGES_1 } from "@/lib/intent-pages-1";
 import { INTENT_PAGES_2 } from "@/lib/intent-pages-2";
+import { TIMELINES } from "@/lib/timelines";
 
 /**
  * Full sitemap: homepage + hubs (guides/compare/news/tools/prompts/use-cases/
@@ -102,6 +103,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/guides/${g.slug}`,
       lastModified: today,
       changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...TIMELINES.map((t) => ({
+      url: `${base}/timeline/${t.date}`,
+      lastModified: t.date,
+      changeFrequency: "never" as const,
       priority: 0.8,
     })),
     ...infoPages.map((p) => ({

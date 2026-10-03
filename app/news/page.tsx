@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { UPDATES } from "@/lib/updates";
+import {
+  latestTimeline,
+  timelineUrl,
+  formatTimelineDate,
+} from "@/lib/timelines";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import UpdatesFeed from "@/components/UpdatesFeed";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -47,6 +53,8 @@ export default function NewsPage() {
     })),
   };
 
+  const timeline = latestTimeline();
+
   return (
     <main id="main">
       <JsonLd data={jsonLd} />
@@ -67,6 +75,33 @@ export default function NewsPage() {
             are labeled as estimates.
           </p>
         </Reveal>
+
+        {timeline && (
+          <Reveal>
+            <Link
+              href={timelineUrl(timeline.date)}
+              className="group mt-10 flex items-center justify-between gap-6 overflow-hidden rounded-[22px] border border-line bg-ink px-6 py-6 text-bg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow)] md:px-10 md:py-8"
+            >
+              <div className="min-w-0">
+                <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-bg/70">
+                  Today in AI · {formatTimelineDate(timeline.date)}
+                </p>
+                <p className="font-display mt-2 text-[1.5rem] font-extrabold leading-tight tracking-tight md:text-[2rem]">
+                  {timeline.entries.length} stories, in chronological order
+                </p>
+                <p className="mt-2 max-w-[560px] text-[0.95rem] leading-relaxed text-bg/80">
+                  {timeline.entries.map((e) => e.headline).join(" · ")}
+                </p>
+              </div>
+              <span
+                aria-hidden
+                className="shrink-0 rounded-full bg-accent px-6 py-3 font-mono text-[12px] uppercase tracking-[0.1em] text-white transition-transform duration-200 group-hover:translate-x-1"
+              >
+                Read →
+              </span>
+            </Link>
+          </Reveal>
+        )}
 
         <div className="mt-10">
           <UpdatesFeed />
