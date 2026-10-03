@@ -66,9 +66,27 @@ export default function SiteFooter() {
                 href={SITE.skillsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Skills catalog (opens in a new tab)"
                 className={linkCls}
               >
-                Skills catalog
+                Skills catalog{" "}
+                <span aria-hidden="true" className="text-xs">
+                  ↗
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={SITE.skillsRepoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Skills repo on GitHub (opens in a new tab)"
+                className={linkCls}
+              >
+                Skills repo on GitHub{" "}
+                <span aria-hidden="true" className="text-xs">
+                  ↗
+                </span>
               </a>
             </li>
           </FooterGroup>
@@ -176,6 +194,14 @@ export default function SiteFooter() {
             </li>
           </FooterGroup>
         </nav>
+      </div>
+      <div className="border-t border-line">
+        <div className="mx-auto flex max-w-shell flex-col gap-1 px-5 py-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between md:px-6">
+          <p>© 2026 museaicodes.com. All rights reserved.</p>
+          <p className="font-mono uppercase tracking-[0.12em] text-faint">
+            Unofficial guide — not affiliated with Meta
+          </p>
+        </div>
       </div>
     </footer>
   );
