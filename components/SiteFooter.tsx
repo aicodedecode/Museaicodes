@@ -166,6 +166,20 @@ export default function SiteFooter() {
                 </span>
               </a>
             </li>
+            <li>
+              <a
+                href={SITE.profitAiUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ProfitAI.in — our finance and AI tools hub (opens in a new tab)"
+                className={linkCls}
+              >
+                ProfitAI.in{" "}
+                <span aria-hidden="true" className="text-xs">
+                  ↗
+                </span>
+              </a>
+            </li>
           </FooterGroup>
           <FooterGroup title="Tools">
             <li>
