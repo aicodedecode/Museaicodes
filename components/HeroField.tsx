@@ -4,13 +4,13 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 /**
- * HeroField — a soft dot swarm ("fireflies over field notes").
+ * HeroField — dust motes in warm light.
  *
- * Replaces the earlier index-card field: ~140 light, soft dots drift on
- * wander currents, and on desktop (fine pointer) they swarm gently toward
- * the cursor, trailing it like fireflies. Procedural soft-dot shader —
- * no textures. Theme-aware, DPR-clamped, pauses offscreen, and renders a
- * single static frame under prefers-reduced-motion.
+ * Thesis: the hero background should feel like sunlit dust over a desk —
+ * calm, soft, ignorable. ~120 fine dots drift on barely-there currents;
+ * near the cursor they breathe aside softly and settle back. No glow,
+ * no gathering blobs, no perpetual showboating. Theme-aware, DPR-clamped,
+ * pauses offscreen, single static frame under prefers-reduced-motion.
  */
 export default function HeroField() {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -40,12 +40,12 @@ export default function HeroField() {
     interface Palette { base: THREE.Color; baseA: [number, number]; accent: THREE.Color; accentA: [number, number]; }
     const palettes = {
       dark: {
-        base: new THREE.Color("#c9b992"), baseA: [0.22, 0.5],
-        accent: new THREE.Color("#ff8a66"), accentA: [0.45, 0.75],
+        base: new THREE.Color("#a79c85"), baseA: [0.12, 0.3],
+        accent: new THREE.Color("#c98f6f"), accentA: [0.14, 0.3],
       } as Palette,
       light: {
-        base: new THREE.Color("#a89a7c"), baseA: [0.25, 0.52],
-        accent: new THREE.Color("#ff6b47"), accentA: [0.5, 0.8],
+        base: new THREE.Color("#a89d88"), baseA: [0.1, 0.28],
+        accent: new THREE.Color("#c07a58"), accentA: [0.12, 0.28],
       } as Palette,
     };
 
@@ -64,17 +64,17 @@ export default function HeroField() {
       dots.length = 0;
       const w = host.clientWidth || 1;
       const h = host.clientHeight || 1;
-      const count = Math.round(THREE.MathUtils.clamp((w * h) / 4500, 90, 230));
+      const count = Math.round(THREE.MathUtils.clamp((w * h) / 6000, 70, 150));
       const rand = (a: number, b: number) => a + Math.random() * (b - a);
       for (let i = 0; i < count; i++) {
-        const tone = Math.random() < 0.12 ? 1 : 0; // ~12% coral accents
-        const halo = Math.random() < 0.08; // a few large faint halos for depth
+        const tone = Math.random() < 0.04 ? 1 : 0; // whisper of clay, not neon
+        const halo = Math.random() < 0.04; // a few large faint halos for depth
         dots.push({
           x: rand(-W / 2 - 0.5, W / 2 + 0.5),
           y: rand(-H / 2 - 0.5, H / 2 + 0.5),
           z: 0, baseZ: rand(-1.4, 1.2),
-          vx: rand(-0.1, 0.1), vy: rand(-0.1, 0.1),
-          size: halo ? rand(0.42, 0.6) : rand(0.1, 0.26),
+          vx: rand(-0.05, 0.05), vy: rand(-0.05, 0.05),
+          size: halo ? rand(0.3, 0.45) : rand(0.08, 0.2),
           phase: rand(0, Math.PI * 2),
           tone, social: rand(0.6, 1.4),
           halo, alphaT: Math.random(),
@@ -118,8 +118,8 @@ export default function HeroField() {
         varying vec3 vColor;
         void main() {
           float d = length(gl_PointCoord - 0.5);
-          float a = smoothstep(0.5, 0.06, d);
-          a *= a; // soft falloff, no hard edge
+          float a = smoothstep(0.5, 0.0, d); // wide feather, no edge at all
+          a = pow(a, 1.6);
           float alpha = a * vAlpha;
           if (alpha < 0.004) discard;
           gl_FragColor = vec4(vColor, alpha);
@@ -133,6 +133,7 @@ export default function HeroField() {
     const paint = () => {
       const p = isDark() ? palettes.dark : palettes.light;
       const c = new THREE.Color();
+      const qx = W * 0.08; // quiet zone: keep the headline area calm
       for (let i = 0; i < dots.length; i++) {
         const d = dots[i];
         let range: [number, number];
@@ -141,10 +142,12 @@ export default function HeroField() {
           range = p.accentA;
         } else {
           c.copy(p.base);
-          range = d.halo ? [0.08, 0.14] : p.baseA;
+          range = d.halo ? [0.05, 0.09] : p.baseA;
         }
         colArr[i * 3] = c.r; colArr[i * 3 + 1] = c.g; colArr[i * 3 + 2] = c.b;
-        alphaArr[i] = range[0] + (range[1] - range[0]) * d.alphaT;
+        let a = range[0] + (range[1] - range[0]) * d.alphaT;
+        if (d.x < qx) a *= 0.45;
+        alphaArr[i] = a;
       }
       (geo.getAttribute("aColor") as THREE.BufferAttribute).needsUpdate = true;
       (geo.getAttribute("aAlpha") as THREE.BufferAttribute).needsUpdate = true;
@@ -178,15 +181,20 @@ export default function HeroField() {
         (h * dpr) / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)));
     };
 
-    // ---- pointer (desktop swarm) ----
+    // ---- pointer (desktop): whisper of parallax + soft local disturbance ----
     const mouse = { x: 0, y: 0 };
+    const ndc = { x: 0, y: 0 };
     let hasPointer = false;
     const onMove = (e: PointerEvent) => {
       if (e.pointerType === "touch") return;
       const r = host.getBoundingClientRect();
       if (r.width === 0 || r.height === 0) return;
-      mouse.x = ((e.clientX - r.left) / r.width - 0.5) * W;
-      mouse.y = -((e.clientY - r.top) / r.height - 0.5) * H;
+      const nx = (e.clientX - r.left) / r.width - 0.5;
+      const ny = (e.clientY - r.top) / r.height - 0.5;
+      ndc.x = nx * 2;
+      ndc.y = -ny * 2;
+      mouse.x = nx * W;
+      mouse.y = -ny * H;
       hasPointer = true;
     };
     window.addEventListener("pointermove", onMove, { passive: true });
@@ -213,24 +221,24 @@ export default function HeroField() {
     let running = false;
 
     const step = (t: number, dt: number) => {
-      const R = 3.4; // mouse influence radius (world units)
+      const R = 2.2; // disturbance radius (world units)
       const bx = W / 2 + 0.6;
       const by = H / 2 + 0.6;
       for (const d of dots) {
-        // wander currents: fast wobble + slow directional drift (period ~1 min,
-        // so dots visibly travel between stills instead of jiggling in place)
-        const wx = Math.sin(t * 0.4 + d.phase) * 0.3 + Math.sin(t * 0.11 + d.phase * 1.7) * 0.35;
-        const wy = Math.cos(t * 0.33 + d.phase * 1.3) * 0.3 + Math.cos(t * 0.13 + d.phase * 2.1) * 0.35;
-        let ax = wx * 0.7;
-        let ay = wy * 0.7;
-        // desktop swarm: drift toward the cursor
+        // barely-there currents: slow directional drift + faint wobble.
+        // Calm by design — this loop runs forever, so it must whisper.
+        const wx = Math.sin(t * 0.07 + d.phase) * 0.5 + Math.sin(t * 0.23 + d.phase * 1.7) * 0.12;
+        const wy = Math.cos(t * 0.06 + d.phase * 1.3) * 0.5 + Math.cos(t * 0.19 + d.phase * 2.1) * 0.12;
+        let ax = wx * 0.22;
+        let ay = wy * 0.22;
+        // soft disturbance: dots breathe aside near the cursor, settle back after
         if (finePointer && hasPointer) {
-          const dx = mouse.x - d.x;
-          const dy = mouse.y - d.y;
+          const dx = d.x - mouse.x;
+          const dy = d.y - mouse.y;
           const dist = Math.hypot(dx, dy);
           if (dist < R && dist > 0.001) {
-            const pull = 1 - dist / R;
-            const s = pull * pull * 4.5 * d.social;
+            const push = 1 - dist / R;
+            const s = push * push * 1.4 * d.social;
             ax += (dx / dist) * s;
             ay += (dy / dist) * s;
           }
@@ -241,15 +249,19 @@ export default function HeroField() {
         if (d.y > by) ay -= (d.y - by) * 3;
         else if (d.y < -by) ay -= (d.y + by) * 3;
         // integrate + damp
-        d.vx = (d.vx + ax * dt) * 0.965;
-        d.vy = (d.vy + ay * dt) * 0.965;
+        d.vx = (d.vx + ax * dt) * 0.97;
+        d.vy = (d.vy + ay * dt) * 0.97;
         const sp = Math.hypot(d.vx, d.vy);
-        const max = 1.6;
+        const max = 0.9;
         if (sp > max) { d.vx = (d.vx / sp) * max; d.vy = (d.vy / sp) * max; }
         d.x += d.vx * dt;
         d.y += d.vy * dt;
         d.z = d.baseZ + Math.sin(t * 0.3 + d.phase) * 0.3;
       }
+      // whisper of camera parallax for depth — felt, not seen
+      camera.position.x += (ndc.x * 0.35 - camera.position.x) * 0.03;
+      camera.position.y += (ndc.y * 0.25 - camera.position.y) * 0.03;
+      camera.lookAt(0, 0, -2);
     };
 
     const render = () => {
