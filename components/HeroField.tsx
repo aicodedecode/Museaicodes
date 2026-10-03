@@ -11,8 +11,17 @@ import * as THREE from "three";
  * near the cursor they breathe aside softly and settle back. No glow,
  * no gathering blobs, no perpetual showboating. Theme-aware, DPR-clamped,
  * pauses offscreen, single static frame under prefers-reduced-motion.
+ *
+ * Props let a section band reuse the field as a quieter echo of the hero:
+ * densityScale trims the dot count, alphaScale dims it further.
  */
-export default function HeroField() {
+export default function HeroField({
+  densityScale = 1,
+  alphaScale = 1,
+}: {
+  densityScale?: number;
+  alphaScale?: number;
+}) {
   const hostRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -64,7 +73,9 @@ export default function HeroField() {
       dots.length = 0;
       const w = host.clientWidth || 1;
       const h = host.clientHeight || 1;
-      const count = Math.round(THREE.MathUtils.clamp((w * h) / 6000, 70, 150));
+      const count = Math.round(
+        THREE.MathUtils.clamp(((w * h) / 6000) * densityScale, 8, 150)
+      );
       const rand = (a: number, b: number) => a + Math.random() * (b - a);
       for (let i = 0; i < count; i++) {
         const tone = Math.random() < 0.04 ? 1 : 0; // whisper of clay, not neon
@@ -147,7 +158,7 @@ export default function HeroField() {
         colArr[i * 3] = c.r; colArr[i * 3 + 1] = c.g; colArr[i * 3 + 2] = c.b;
         let a = range[0] + (range[1] - range[0]) * d.alphaT;
         if (d.x < qx) a *= 0.45;
-        alphaArr[i] = a;
+        alphaArr[i] = a * alphaScale;
       }
       (geo.getAttribute("aColor") as THREE.BufferAttribute).needsUpdate = true;
       (geo.getAttribute("aAlpha") as THREE.BufferAttribute).needsUpdate = true;
@@ -191,8 +202,9 @@ export default function HeroField() {
       if (r.width === 0 || r.height === 0) return;
       const nx = (e.clientX - r.left) / r.width - 0.5;
       const ny = (e.clientY - r.top) / r.height - 0.5;
-      ndc.x = nx * 2;
-      ndc.y = -ny * 2;
+      // clamp: a pointer far outside this instance must not swing the camera
+      ndc.x = THREE.MathUtils.clamp(nx * 2, -1.5, 1.5);
+      ndc.y = THREE.MathUtils.clamp(-ny * 2, -1.5, 1.5);
       mouse.x = nx * W;
       mouse.y = -ny * H;
       hasPointer = true;

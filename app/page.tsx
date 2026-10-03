@@ -558,8 +558,9 @@ export default function HomePage() {
       {/* ---------- SKILLS BANNER ---------- */}
       <section aria-labelledby="skills-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <Reveal>
-          <div className="grid items-center gap-8 rounded-[30px] bg-ink p-8 text-bg md:p-14 lg:grid-cols-[1fr_auto]">
-            <div>
+          <div className="relative grid items-center gap-8 overflow-hidden rounded-[30px] bg-ink p-8 text-bg md:p-14 lg:grid-cols-[1fr_auto]">
+            <HeroField densityScale={0.5} alphaScale={0.65} />
+            <div className="relative z-10">
               <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-moss">
                 899 originals + 1,466 curated imports · Open catalog
               </span>
@@ -579,7 +580,7 @@ export default function HomePage() {
               href={SITE.skillsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-moss px-6 py-4 font-bold text-moss-ink transition-transform duration-150 hover:-translate-y-0.5 lg:justify-self-end"
+              className="relative z-10 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-moss px-6 py-4 font-bold text-moss-ink transition-transform duration-150 hover:-translate-y-0.5 lg:justify-self-end"
             >
               Explore awesome-muse-skills <span aria-hidden="true">↗</span>
             </a>
