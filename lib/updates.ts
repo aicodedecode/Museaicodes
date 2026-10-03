@@ -29,6 +29,16 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "apple-tightens-full-disk-access-ai-agents",
+    date: "2026-10-03",
+    title: "Apple tightens Mac disk-access rules after Muse Messages privacy row",
+    summary:
+      "Apple announced October 2 it will require apps to re-request Full Disk Access through “explicit user action,” saying “as AI agents become increasingly capable and autonomous, the risks associated with this level of access will grow substantially.” Apple didn't name Meta, but the move follows Inc. columnist Jason Aten's report that Muse synced ~187,000 rows of his Messages database after he declined access — a claim Meta disputes, calling Messages access “entirely opt-in.”",
+    sourceName: "Startup Fortune",
+    sourceUrl: "https://startupfortune.com/apple-tightens-mac-disk-access-rules-after-an-ai-agent-read-private-messages/",
+    tags: ["Policy"],
+  },
+  {
     slug: "paid-ai-subscriptions-2-percent-a16z",
     date: "2026-10-03",
     title: "Only 2.2% of US households pay for AI, a16z's State of Markets finds",
