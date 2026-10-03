@@ -4187,6 +4187,112 @@ export const GUIDES: Guide[] = [
     ],
   },
 
+  {
+    slug: "what-is-jev",
+    modifiedTime: "2026-10-03",
+    image: "/images/guides/ai-model-price-war-september-2026.jpg",
+    imageAlt: "Illustration of AI model architectures in competition, representing Jev and the System One model class",
+    title: "What Is Jev? TypeSafe's System One AI Model Explained",
+    deck: "Jev doesn't chat — it decides. TypeSafe's new model class trades text generation for 70–500ms structured decisions your software can use directly.",
+    category: "Basics",
+    keywords: "what is jev, jev ai, jev typesafe, typesafe jev, system one model, jev model explained",
+    metaTitle: "What Is Jev? TypeSafe's System One AI Model Explained (2026)",
+    metaDescription:
+      "Jev explained: TypeSafe's 'System One' model that returns structured decisions instead of generating text — how it works, speed and pricing, limits, and how to try it.",
+    shortAnswer:
+      "Jev is TypeSafe AI's first 'System One' model, launched in early access on September 15, 2026. Instead of generating text like ChatGPT or Claude, it takes unstructured state plus a fixed set of typed questions and returns structured decisions with calibrated probabilities — in 70–500ms per call, at $0.042 per million input tokens with outputs free.",
+    sections: [
+      {
+        heading: "Jev in one paragraph",
+        paragraphs: [
+          "TypeSafe AI was founded by Diogo Almeida — an ex-OpenAI researcher who worked on the instruction-following methods behind ChatGPT — and spent two years in stealth. On September 15, 2026, the company opened early access to Jev, the first public model of a new class it calls “System One” models: frontier models built to make fast, structured decisions that software can consume directly, rather than chat with humans.",
+          "The pitch, in TypeSafe's own words: think of Jev as a frontier-intelligence function call — unstructured state in, typed probabilistic decisions out. It spent launch day at the top of Hacker News, and within a week developers were building Doom bots, wiki-racing agents, and browser automation on it.",
+        ],
+      },
+      {
+        heading: "Decide, don't chat: how Jev differs from LLMs",
+        paragraphs: [
+          "Every number below comes from TypeSafe's launch post — this is the company's framing of its own product, not independent benchmarking:",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "**Outputs:** LLMs generate strings — chat replies, code, and occasionally hallucinations that must be parsed and validated before software can use them. Jev returns type-safe structured values defined in advance, each accompanied by calibrated probabilities and confidence scores.",
+            "**Sampling:** LLMs generate one token at a time, each conditioned on the last. Jev generates all outputs in a single parallel query.",
+            "**Speed:** TypeSafe reports 70–500ms end-to-end per call for Jev — 40–200x faster than frontier LLMs on the same class of queries.",
+            "**Cost:** LLM pricing ranges from $0.20 to $10 per million input tokens, with outputs roughly 5x pricier. Jev charges $0.042 per million input tokens — and output tokens are free, described as “too cheap to meter.”",
+            "**Confidence:** LLMs tend to be overconfident and inconsistent when asked how sure they are. Jev communicates calibrated uncertainty with every output: higher confidence means higher accuracy, and similar inputs return similar answers.",
+            "**Training:** LLMs are tuned with RLHF or RLVR (human preference / verifiable rewards). Jev uses a new method TypeSafe calls Reinforcement Learning for Calibrated Decisions (RLCD), optimizing for epistemically honest probabilities.",
+          ],
+        },
+      },
+      {
+        heading: "Why 'can't hallucinate' — and the honest caveat",
+        paragraphs: [
+          "TypeSafe's boldest claim is that Jev “can't hallucinate.” The logic: hallucination is a property of string generation, and Jev never generates strings — its outputs are schema-constrained values, so type errors are, in the company's words, mathematically impossible.",
+          "Skeptics have a fair counter, and it's worth stating plainly: a model constrained to three categories can still confidently pick the wrong one. Not generating text eliminates hallucinated prose, not wrong decisions. TypeSafe itself publishes nuance notes alongside its demos — including that its eye-catching figures (193.6x faster, 444.6x cheaper) come from its own workflow evals, built by its own team, and likely sit at the higher end of real-world gains.",
+        ],
+      },
+      {
+        heading: "What's in a name",
+        paragraphs: [
+          "“System One” borrows from Daniel Kahneman's Thinking, Fast and Slow — the distinction between fast, intuitive System 1 thinking and slow, deliberate System 2 reasoning. TypeSafe's argument: most software doesn't need deliberation, it needs fast judgment with honest confidence.",
+          "“Jev” honors William Stanley Jevons, the economist behind the Jevons paradox — the observation that making a resource dramatically cheaper tends to increase total demand for it. The bet: every order-of-magnitude drop in the cost of intelligence unlocks orders of magnitude more use cases.",
+        ],
+      },
+      {
+        heading: "Proof it's real: what developers are building",
+        paragraphs: [
+          "The most striking early demo isn't from TypeSafe at all. Browser-use's open-source jev-ultrafast project (21,800+ GitHub stars, MIT-licensed) wires Jev into a browser agent: one Jev request picks both the operation (click, type, scroll…) and the target element per decision cycle, with a small conventional LLM used only to write text when typing is needed. The result: a real Google Flights search from Zürich to London completed in about 7 seconds.",
+          "TypeSafe's own demos include a Doom bot making decisions from structured game state roughly 10 times a second, and a Wikipedia-racing agent choosing between hundreds of links per step. Community reports also mention emerging open-weights alternatives in the same spirit — Laya, Nimble, and Kev — for developers who want to self-host rather than use the API.",
+        ],
+      },
+      {
+        heading: "Limitations to know",
+        list: {
+          ordered: false,
+          items: [
+            "Jev only works when the possible answers are defined up front. Open-ended questions, creative writing, and anything needing an explanation are outside its design — that missing capability is the product, not a bug.",
+            "Access is early-access via waitlist; this is brand-new infrastructure, not a mature platform.",
+            "The headline speed and cost multiples are TypeSafe's own measurements. Independent, large-scale benchmarking hasn't caught up yet.",
+            "It's built for decisions inside software — routing tickets, scoring leads, classifying content, guardrailing agent outputs — not as a chatbot you'd talk to.",
+          ],
+        },
+      },
+      {
+        heading: "Why this matters if you use Muse",
+        paragraphs: [
+          "Muse is a conversational agent: brilliant at open-ended work, reasoning through ambiguity with you. Jev is the complement — the fast, cheap decision layer that can sit inside software and answer “which of these options, and how sure are you?” in milliseconds. The emerging agent pattern is exactly this split: let the decision model classify and score, and let ordinary code (plus a chat agent for the fuzzy parts) authorize and act.",
+          "As agents take on more real-world work — shopping, scheduling, triaging — expect this division of labor to become the standard architecture. Jev is the first high-profile attempt to productize the decision half.",
+        ],
+      },
+      {
+        heading: "Jev questions, answered",
+        paragraphs: [
+          "**What is Jev?** TypeSafe AI's first “System One” model (early access since September 15, 2026) that returns structured, typed decisions with calibrated probabilities instead of generating text.",
+          "**Is Jev an LLM?** Not in the usual sense. It's a new model class trained with RLCD for calibrated decisions, with parallel rather than sequential sampling — built for decisions, not dialogue.",
+          "**How fast is Jev?** TypeSafe reports 70–500ms end-to-end per call, claiming 40–200x the speed of frontier LLMs on decision-shaped queries.",
+          "**How much does Jev cost?** $0.042 per million input tokens, with output tokens free — per TypeSafe's published pricing.",
+          "**Can Jev hallucinate?** It can't hallucinate text, because it never generates text. It can still make wrong decisions within its fixed options — confidence scores are meant to tell you when to trust it.",
+          "**How can I try Jev?** Through TypeSafe's early access waitlist, or via the open-source browser-use/jev-ultrafast project on GitHub, which needs a TypeSafe API key.",
+          "**What is a System One model?** TypeSafe's term for models optimized for fast, structured, software-consumable decisions — named for Kahneman's fast System 1 thinking.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Introducing System One Models & Jev — TypeSafe](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — the launch post this guide is built on.",
+            "[browser-use/jev-ultrafast — GitHub](https://github.com/browser-use/jev-ultrafast) — the open-source ultrafast browser agent (MIT).",
+            "[TypeSafe docs](https://docs.typesafe.ai) — API reference and evals.",
+            "[Muse AI Personal Agent](/guides/muse-ai-personal-agent) — how conversational agents handle approvals and actions.",
+          ],
+        },
+      },
+    ],
+  },
+
 ];
 
 export function getGuide(slug: string): Guide | undefined {
