@@ -559,7 +559,7 @@ export default function HomePage() {
       <section aria-labelledby="skills-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <Reveal>
           <div className="relative grid items-center gap-8 overflow-hidden rounded-[30px] bg-ink p-8 text-bg md:p-14 lg:grid-cols-[1fr_auto]">
-            <HeroField densityScale={0.5} alphaScale={0.65} />
+            <HeroField densityScale={0.6} alphaScale={1} />
             <div className="relative z-10">
               <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-moss">
                 899 originals + 1,466 curated imports · Open catalog
