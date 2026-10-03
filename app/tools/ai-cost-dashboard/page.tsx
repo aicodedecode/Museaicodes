@@ -111,7 +111,7 @@ export default function AiCostDashboardPage() {
           <iframe
             src="/dashboards/ai-cost-dashboard.html"
             title="Interactive AI model cost dashboard"
-            className="h-[2600px] w-full"
+            className="h-[1800px] w-full"
             loading="lazy"
           />
         </div>
