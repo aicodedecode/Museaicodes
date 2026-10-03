@@ -1323,7 +1323,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-whatsapp",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-whatsapp.jpg",
     imageAlt: "Illustration of flowing chat bubbles, symbolizing using Muse AI on WhatsApp",
     title: "Muse AI on WhatsApp: Connect, Setup & What Works",
@@ -1339,6 +1339,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "How to connect Muse on WhatsApp",
         paragraphs: [
+          "Is there a WhatsApp number for Muse AI? There is no published phone number to message — as of October 2026, Meta has not released one. Instead, Muse appears as a chat contact inside WhatsApp itself: you connect through the official flow below rather than by adding a number. Never trust a ‘Muse WhatsApp number’ posted online; those are scams.",
           "Muse has been a WhatsApp surface since its September 2026 launch — TechCrunch, CNET, SiliconANGLE, and the Associated Press all confirmed WhatsApp alongside the iOS app, Android app, and web at launch. You talk to it like messaging another person: no separate download required.",
         ],
         list: {
@@ -1548,13 +1549,13 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-mac-computer-use",
-    modifiedTime: "2026-09-26",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-mac-computer-use.jpg",
     imageAlt: "Editorial illustration of a laptop with a glowing cursor arranging floating app windows",
     title: "Muse AI on Mac: Computer Use Explained",
     deck: "What the Mac app's computer-use feature does, how to use it, and the permissions to understand first.",
     category: "Tutorial",
-    keywords: "muse ai mac, muse mac computer use, muse mac app",
+    keywords: "muse ai mac, muse mac computer use, muse mac app, muse ai for macbook, muse ai macbook",
     metaTitle: "Muse AI on Mac: Computer Use Explained (2026)",
     metaDescription:
       "Muse's Mac app can now operate apps on your computer with permission. How computer use works, what it can do, and the safety prompts to know.",
@@ -1564,19 +1565,19 @@ export const GUIDES: Guide[] = [
       {
         heading: "What 'computer use' actually means",
         paragraphs: [
-          "Computer use means Muse stops being a chat window and starts operating your Mac's graphical interface the way you would: opening applications, clicking buttons, typing into fields, and moving between apps to complete a task. You describe the outcome — 'organize these downloads into folders by project' — and Muse drives the apps to do it.",
+          "Computer use means Muse stops being a chat window and starts operating your Mac's graphical interface the way you would on a MacBook: opening applications, clicking buttons, typing into fields, and moving between apps to complete a task. You describe the outcome — 'organize these downloads into folders by project' — and Muse drives the apps to do it.",
           "This is the same category as Anthropic's computer-use capability and OpenAI's Operator. What makes Muse's version notable is that it combines desktop control with everything else Muse already does: its own cloud computer, browser, connectors, and memory of your goals.",
         ],
       },
       {
-        heading: "What it can do today",
+        heading: "What it can do on your MacBook today",
         paragraphs: [
           "Reporting on the Mac app describes it interacting with files, messages, calendar, notes, and mail inside their native applications. The signature move, per Meta's chief AI officer Alexandr Wang: you queue up tasks, walk away from your desk, and Muse keeps working through the list.",
         ],
         list: {
           ordered: false,
           items: [
-            "Work across native Mac apps — files, mail, messages, calendar, and notes.",
+            "Work across native Mac apps on your MacBook — files, mail, messages, calendar, and notes.",
             "Chain multi-step tasks: research in the browser, draft in notes, attach in mail.",
             "Continue through a queued task list while you're away from the computer.",
             "Combine with connectors so desktop work and cloud work happen in one flow.",
@@ -1588,7 +1589,7 @@ export const GUIDES: Guide[] = [
         list: {
           ordered: true,
           items: [
-            "Install the Muse Mac app from the official source — never a third-party download. (See our [download safety guide](/guides/muse-ai-download).)",
+            "Install the Muse Mac app on your MacBook from the official source — never a third-party download. (See our [download safety guide](/guides/muse-ai-download).)",
             "Grant access app by app. Computer use is opt-in: decide which applications Muse may operate, and start narrow.",
             "Describe the task in plain language, including the outcome you want and anything that must not happen.",
             "Queue follow-up tasks while the first runs — Muse works through the list in order.",
@@ -1774,7 +1775,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-availability",
-    modifiedTime: "2026-10-02",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-availability.jpg",
     imageAlt: "Editorial illustration of a world globe with North America glowing and other regions as faint outlines",
     title: "Is Muse AI Available in My Country?",
@@ -1838,6 +1839,10 @@ export const GUIDES: Guide[] = [
           "**Is Muse AI available in the UK?** No — not yet. Muse is not available in the UK as of October 2026, and Meta has announced no UK release date. See “Coming to the UK” above for the full picture, and [check your country instantly](/tools/availability-checker).",
           "**When is Muse AI coming to the UK?** Nobody outside Meta knows. There is no announced date, no waitlist with a timeline, and nothing to pre-register for. When a date is announced, this page and our [news feed](/news) will carry it.",
           "**Which countries is Muse AI available in?** The United States and Canada — that's the complete confirmed list. Mexico has appeared in some launch coverage but Meta has never confirmed it, so we treat it as unconfirmed. The country table above and the [availability checker](/tools/availability-checker) track every region.",
+          "**Is Muse available in Sweden?** No — not as of October 2026. Sweden sits in the same European position as the rest of the EU: no availability and no announced launch date. [Check your country](/tools/availability-checker) for the latest status.",
+          "**Is Muse AI available in Canada?** Yes. Canada joined on September 18, 2026, and is one of the two supported countries alongside the United States. See ‘Where Muse works today’ above.",
+          "**Is Muse AI available in the US?** Yes — the US was the launch country on September 8, 2026 and remains fully supported across iOS, Android, web, and the Mac app for adults 18 and older.",
+          "**Is Muse AI available in Europe?** No. Europe — the EU and the UK alike — has no availability and no announced launch date as of October 2026. See ‘UK and Europe: also waiting’ above.",
           "**Is Muse AI available in India?** No, and Meta has said nothing about an India launch date. India is one of the highest-demand regions, which is why the question comes up constantly. While you wait, Meta AI inside WhatsApp, Instagram, or Facebook is the practical alternative — the assistant, not the agent, but available today.",
           "**Can I use a VPN to access Muse from an unsupported country?** No — and you shouldn't try. Meta's terms require you to be physically located in a supported country, so a VPN breaks the rules and risks your linked Meta account. It usually doesn't work technically either; see “Why a VPN won't help” above.",
           "**Will my invite or referral code work if Muse isn't available in my country?** No — codes only work where Muse itself operates. [Check availability](/guides/muse-ai-availability) for your region first, then read the [referral code guide](/guides/muse-ai-referral-code) and [invite code guide](/guides/muse-ai-invite-code).",
@@ -1866,6 +1871,7 @@ export const GUIDES: Guide[] = [
         ["European Union", "Not available", "No launch date announced."],
         ["India", "Not available", "No launch date announced; among the highest-demand regions."],
         ["Pakistan", "Not available", "No launch date announced."],
+        ["Sweden", "Not available", "No launch date announced; same European position as the EU."],
       ],
     },
   },
@@ -2011,7 +2017,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-voice-mode",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-voice-mode.jpg",
     imageAlt: "Jolly, Muse's cream avatar, with watercolor sound waves flowing across the scene",
     title: "Muse Voice Mode: Talking to Your Agent",
@@ -2066,6 +2072,13 @@ export const GUIDES: Guide[] = [
         },
       },
       {
+        heading: "Voice questions, answered",
+        paragraphs: [
+          "**Does Muse have voice chat?** Yes. Voice mode is built into the Muse app: hold to talk, and Muse transcribes your speech and replies out loud while it keeps working on your task in the background. Live video chat with real-time voice was added around September 23, 2026 \u2014 see \u2018Live video chat and custom voices\u2019 above.",
+          "**Does voice chat work on WhatsApp?** No \u2014 voice mode is an app and web feature. On WhatsApp, Muse is text-only; see our [WhatsApp guide](/guides/muse-ai-whatsapp).",
+        ],
+      },
+      {
         heading: "Sources & further reading",
         list: {
           ordered: false,
@@ -2080,7 +2093,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "muse-ai-charm",
-    modifiedTime: "2026-09-28",
+    modifiedTime: "2026-10-03",
     image: "/images/guides/muse-ai-charm.jpg",
     imageAlt: "Watercolor illustration of the Muse Charm keychain gadget with a tiny screen and fingerprint sensor",
     title: "Muse Charm: Meta's AI Keychain Gadget Explained",
@@ -2111,7 +2124,7 @@ export const GUIDES: Guide[] = [
         heading: "Release date and price",
         paragraphs: [
           "The Charm ships in December 2026 \u2014 timing Meta surely chose with the holiday gift season in mind. Pricing, however, remains undisclosed; Meta hasn't said what the little keychain will cost.",
-          "That leaves the value question open. If it's priced like an accessory, it's an impulse buy for Muse enthusiasts. If it's priced like hardware, it'll need to prove it's more than a novelty. Watch for pricing news closer to launch \u2014 we'll update this guide when it's announced.",
+          "That leaves the value question open. If it's priced like an accessory, it's an impulse buy for Muse enthusiasts. If it's priced like hardware, it'll need to prove it's more than a novelty. Watch for pricing news closer to launch \u2014 we'll update this guide when it's announced, and you can follow the [latest Muse news](/news) for Charm updates as they land.",
         ],
       },
       {
@@ -3869,6 +3882,108 @@ export const GUIDES: Guide[] = [
       ],
     },
     modifiedTime: "2026-09-30",
+  },
+  {
+    slug: "muse-ai-limits-explained",
+    modifiedTime: "2026-10-03",
+    image: "/images/guides/muse-ai-pricing-explained.jpg",
+    imageAlt: "Editorial illustration of a usage meter gauge showing remaining Muse AI allowance",
+    title: "Muse AI Limits Explained: Free Meter, Paid Ceilings & What Happens Next",
+    deck: "Yes, Muse has limits \u2014 here is how they work on every tier, what happens when you hit one, and when paying changes the picture.",
+    category: "Cost",
+    keywords: "muse ai limits, does muse have limits, muse ai usage limit, muse free tier limit, muse ai power limit, muse ai maximum limit",
+    metaTitle: "Muse AI Limits: Free Usage Meter, Power & Maximum Caps (2026)",
+    metaDescription:
+      "Does Muse AI have limits? Yes \u2014 a free usage meter plus weekly token ceilings on paid plans. What happens when you hit a limit, how to check usage, and how upgrades change things.",
+    shortAnswer:
+      "Yes. The free tier runs on a usage meter that warns you before it runs out; paid tiers have weekly ceilings of 500 million Muse tokens on Power and 3 billion on Maximum, per Meta's Help Center. When you hit a limit, you either wait for the refresh or upgrade.",
+    sections: [
+      {
+        heading: "Does Muse have limits?",
+        paragraphs: [
+          "Yes \u2014 every Muse tier has a ceiling, and knowing which one applies to you is the difference between a smooth week and a mid-task surprise. The free tier runs on a usage meter inside the app that shows how much of your allowance remains and warns you before it runs out. Paid tiers replace the meter with weekly token ceilings published in Meta's Help Center: 500 million Muse tokens a week on Power ($20/month) and 3 billion a week on Maximum ($100/month).",
+          "One caveat worth stating plainly: Meta has not published what a \u2018Muse token\u2019 buys in real tasks, so treat these ceilings as a relative scale \u2014 Maximum is roughly six times Power \u2014 rather than a task budget. For the full pricing picture, see our [pricing guide](/guides/muse-ai-pricing-explained).",
+        ],
+      },
+      {
+        heading: "The free meter \u2014 the limit most people meet",
+        paragraphs: [
+          "The free tier is \u2018free with a meter,\u2019 not free without strings. The app shows what percentage of your allowance you have left and warns you before it runs out \u2014 that meter is what makes the free tier usable, because you can see your usage before committing to anything.",
+          "What Meta will not pin down is the size of the free allowance. Its own FAQ says only that free use is limited and refreshes; on launch day, Zuckerberg wrote that Meta was providing Muse free for up to 100 million tokens a week, but that figure does not appear in Meta's public product pages \u2014 so treat it as a launch-day statement, not a guarantee. And note the signup fine print: a payment card is required to create an account even if you never pay, because subscriptions kick in as usage rises.",
+        ],
+      },
+      {
+        heading: "Paid tier ceilings: Power vs Maximum",
+        paragraphs: [
+          "Power and Maximum buy the same thing \u2014 more headroom. Per Meta's Help Center, Power ($20/month) gets 500 million Muse tokens a week and Maximum ($100/month) gets 3 billion. Neither plan requires an annual commitment; both renew monthly.",
+          "In practice the tiers map to usage styles: casual users asking questions and doing occasional tasks fit the free tier Meta designed for them; people who lean on the agent daily across email, scheduling, and household admin fit Power; Maximum is priced for the heaviest users running Muse continuously. If you are choosing between them, start with the [pricing guide](/guides/muse-ai-pricing-explained) \u2014 and remember the token figures describe a relative ladder, not a task count.",
+        ],
+      },
+      {
+        heading: "What happens when you hit a limit",
+        paragraphs: [
+          "Meta's own FAQ puts it plainly: when you reach your free limit, you can upgrade to a paid subscription \u2014 or wait until your free usage limit refreshes. There is no penalty and nothing breaks; the agent simply stops taking on new work until your allowance returns.",
+          "On a paid tier the logic is the same at a bigger scale: the weekly ceiling resets each week, and if you consistently slam into it, that is the signal to step up a tier rather than fight the cap.",
+        ],
+        list: {
+          ordered: true,
+          items: [
+            "Check the usage meter or subscription screen in your app to confirm you have actually hit the ceiling.",
+            "Decide: wait for the refresh (free) or the weekly reset (paid), or upgrade for more headroom.",
+            "If you upgrade, verify the live plan terms in the app or at muse.ai first \u2014 terms can move while the product is in limited testing.",
+          ],
+        },
+      },
+      {
+        heading: "How to check your usage",
+        list: {
+          ordered: false,
+          items: [
+            "The usage meter in the Muse app \u2014 the percentage-remaining indicator that warns you before the free allowance runs out.",
+            "Your account or subscription screen, which shows your current plan and its terms.",
+            "The invite or redeem screen, if you are running on promotional tokens \u2014 promotions add a one-time balance with their own deadlines.",
+            "Any usage indicator or limit notice shown before a task runs \u2014 Muse tells you when a task would exceed what is left.",
+          ],
+        },
+      },
+      {
+        heading: "When upgrading actually makes sense",
+        paragraphs: [
+          "Upgrade when the free meter is consistently the thing stopping you \u2014 not because a headline made the paid tiers sound exciting. Meta's own expectation is that the vast majority of users stay on free; the paid tiers exist for people who hand Muse real daily workloads.",
+          "Two things to verify before paying: the live plan copy in your app (launch numbers can shift during limited testing), and whether a referral promotion could cover your first stretch instead \u2014 see [is Muse AI free](/guides/is-muse-ai-free) for how promotions and plans interact.",
+        ],
+      },
+      {
+        heading: "Limits questions, answered",
+        paragraphs: [
+          "**Does Muse have limits?** Yes. The free tier has a usage meter with an unpublished allowance, and paid tiers have weekly ceilings \u2014 500 million Muse tokens a week on Power, 3 billion on Maximum, per Meta's Help Center.",
+          "**What happens when I hit my free limit?** You wait for the free usage to refresh, or upgrade to a paid plan. Nothing breaks and there is no penalty \u2014 the agent just pauses new work until your allowance returns.",
+          "**How do I check my Muse usage?** Open the usage meter in the Muse app, which shows your remaining percentage and warns you before it runs out. Your account's subscription screen shows the plan terms.",
+          "**Do Muse limits reset?** The free limit refreshes (Meta's FAQ confirms it refreshes but does not publish the exact cadence), and paid-tier ceilings reset weekly.",
+          "**Is there a way around the limits?** No legitimate one. Third-party \u2018unlimited Muse\u2019 offers are scams \u2014 the only real levers are waiting for the refresh or paying for a higher tier.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse AI Pricing Explained](/guides/muse-ai-pricing-explained) \u2014 the full tier breakdown this guide builds on.",
+            "[Is Muse AI Free?](/guides/is-muse-ai-free) \u2014 how promotions, plans, and limits interact.",
+            "[Muse FAQ \u2014 Meta](https://ai.meta.com/muse/)",
+            "[Meta Muse AI agent launch: $20 & $100 tiers \u2014 Tech Insider, September 2026](https://tech-insider.org/meta-muse-personal-ai-agent-launch-2026/)",
+          ],
+        },
+      },
+    ],
+    table: {
+      headers: ["Tier", "Limit", "When you hit it"],
+      rows: [
+        ["Free", "Usage meter; allowance unpublished, refreshes", "Wait for the refresh, or upgrade"],
+        ["Power ($20/month)", "500 million Muse tokens / week", "Wait for the weekly reset, or step up to Maximum"],
+        ["Maximum ($100/month)", "3 billion Muse tokens / week", "Wait for the weekly reset"],
+      ],
+    },
   },
 
 ];
