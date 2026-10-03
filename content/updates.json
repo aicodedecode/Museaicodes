@@ -1,5 +1,82 @@
 [
   {
+    "slug": "meta-muse-gadgets-open-source-hardware",
+    "date": "2026-10-03",
+    "title": "Meta launches Muse Gadgets, an open-source hardware platform for DIY Muse devices",
+    "summary": "Meta on October 2 launched Muse Gadgets, an open-source project that lets developers and hobbyists build their own Muse-powered hardware: open-source ESP32 firmware plus a Linux SDK, with project ideas ranging from a color e-ink reminder display to an HDMI stick that puts Muse on a TV. Meta also showed its own reference device, Muse Home Link — a USB-C gadget connecting Muse to smart-home devices — and made 5,000 units, free to Muse subscribers while supplies last, shipping within weeks. A Discord channel supports builders.",
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+    "tags": [
+      "Launch"
+    ]
+  },
+  {
+    "slug": "softbank-final-10b-openai-tranche",
+    "date": "2026-10-03",
+    "title": "SoftBank wires final $10B to OpenAI, taking cumulative bet to $64.6B for ~13%",
+    "summary": "SoftBank executed the third and final $10 billion tranche of its $30 billion follow-on investment in OpenAI on October 1 via Vision Fund 2, bringing its cumulative investment to $64.6 billion for roughly 13% ownership. The tranche was funded with proceeds from SoftBank's $11.1 billion high-yield bond issuance in September — the largest junk-bond sale by a Japan/Asia-Pacific issuer on record, according to Reuters.",
+    "sourceName": "SoftBank Group (official)",
+    "sourceUrl": "https://group.softbank/en/news/press/20261001",
+    "tags": [
+      "Traction"
+    ]
+  },
+  {
+    "slug": "chatgpt-virtual-try-on-favorites",
+    "date": "2026-10-03",
+    "title": "ChatGPT adds virtual clothing try-on and a shopping Favorites library",
+    "summary": "OpenAI rolled out virtual try-on in ChatGPT on October 1: a “Try on” button on clothing and accessory listings in ChatGPT Shopping renders the item on a user's selfie or full-body photo, powered by the Images 2.5 model. Users can also save products to a Favorites library, upload an item photo from any site to try on, or upload a celebrity-outfit photo to find similar items for sale. Available globally on mobile and web.",
+    "sourceName": "PYMNTS",
+    "sourceUrl": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-adds-virtual-try-on-feature-chatgpt/",
+    "tags": [
+      "Features"
+    ]
+  },
+  {
+    "slug": "openai-fires-safety-researchers-data-sharing",
+    "date": "2026-10-03",
+    "title": "OpenAI fires three safety researchers over alleged data sharing with outside AI-safety group",
+    "summary": "OpenAI confirmed to the Wall Street Journal it “parted ways” with three safety-team researchers — Jasmine Wang, Tomek Korbak and Mikita Balesni — after an internal investigation found they mishandled sensitive company information outside approved procedures, allegedly sharing it with a third-party AI-safety organization. The ousters follow a string of agent security incidents including the Hugging Face breach, and come days after OpenAI shelved the GPT-6.1 Astra launch over safety concerns.",
+    "sourceName": "The Wall Street Journal",
+    "sourceUrl": "https://www.wsj.com/tech/ai/openai-parts-ways-with-researchers-who-allegedly-shared-confidential-information-aebac528",
+    "tags": [
+      "Policy"
+    ]
+  },
+  {
+    "slug": "openai-moonshot-reasoning-extraction",
+    "date": "2026-10-03",
+    "title": "OpenAI disrupts Moonshot-linked campaign to extract its models' hidden reasoning",
+    "summary": "OpenAI disclosed September 30 it dismantled a coordinated “adversarial distillation” campaign that tried to extract the protected internal reasoning of its models — peaking at roughly 16,000 requests from 4,000+ users on July 24–25 — attributing a core cluster to individuals associated with China's Moonshot AI (Kimi). OpenAI says its encryption was not broken and no user conversations were exposed; offending accounts were banned and findings shared with industry and government channels. Moonshot has not responded.",
+    "sourceName": "The Hacker News",
+    "sourceUrl": "http://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html",
+    "tags": [
+      "Security"
+    ]
+  },
+  {
+    "slug": "anthropic-claude-frontier-academy-100m",
+    "date": "2026-10-03",
+    "title": "Anthropic commits $100M to train 10,000 engineers through Claude Frontier Academy",
+    "summary": "Anthropic on October 2 launched Claude Frontier Academy, backed by a $100 million commitment to train 10,000 “frontier deployed engineers” by the end of 2027. First cohorts draw engineers from Accenture, Bain, Capgemini, Deloitte, McKinsey, Morgan Stanley and others; the program begins with in-person simulated enterprise deployments, then a 12-week residency leading a real Claude project inside each participant's own company.",
+    "sourceName": "Anthropic (official)",
+    "sourceUrl": "https://www.anthropic.com/news/claude-frontier-academy",
+    "tags": [
+      "Traction"
+    ]
+  },
+  {
+    "slug": "chatgpt-macos-flaw-patched",
+    "date": "2026-10-03",
+    "title": "Patched ChatGPT macOS flaw could have exposed chat logs and files, researchers say",
+    "summary": "Researchers at the Objective-See Foundation found a vulnerability in ChatGPT's macOS app that could have let an attacker take over the app and access chat logs, stored files and connected browser sessions; OpenAI patched it quietly in its September 25 system change log. The flaw lived in the inter-component trust handshake of the desktop client — a warning, researcher Patrick Wardle notes, about how much system access AI agents are being granted.",
+    "sourceName": "AI Daily Post",
+    "sourceUrl": "https://aidailypost.com/news/patched-chatgpt-macos-app-flaw-exposed",
+    "tags": [
+      "Security"
+    ]
+  },
+  {
     "slug": "apple-tightens-full-disk-access-ai-agents",
     "date": "2026-10-03",
     "title": "Apple tightens Mac disk-access rules after Muse Messages privacy row",
