@@ -11,7 +11,10 @@ body[data-theme="light"]{--bg:#f4f1e6;--surface:#fcfbf5;--raised:#efe9d8;--ink:#
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 .dash-wrap{max-width:980px;margin:0 auto;padding:10px 14px 30px}
-.dash-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;margin:22px 0;box-shadow:0 24px 64px rgba(0,0,0,.18)}
+.dash-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;margin:22px 0;box-shadow:0 24px 64px rgba(0,0,0,.18);
+opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.22,1)}
+.dash-card.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.dash-card{opacity:1!important;transform:none!important;transition:none}}
 .kicker{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
 .dash-card h3{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
 .dash-sub{margin:0 0 18px;color:var(--muted);font-size:.94rem;line-height:1.55;max-width:62ch}
@@ -90,7 +93,7 @@ function renderExplorer() {
     marker: { color: rows.map(r => r.color), cornerradius: 8 },
     hovertemplate: "<b>%{x}</b><br>%{y:$,.2f} / month<extra></extra>",
   };
-  Plotly.react("explorer-chart", [trace], {
+  const layout = {
     title: { text: "Estimated monthly bill", font: { family: "Georgia, serif", size: 17, color: t.ink }, x: 0, xanchor: "left" },
     font: { family: "system-ui, sans-serif", color: t.muted, size: 12 },
     paper_bgcolor: t.surface, plot_bgcolor: t.surface,
@@ -98,11 +101,38 @@ function renderExplorer() {
     xaxis: { tickfont: { color: t.muted } },
     hoverlabel: { bgcolor: t.raised, font: { color: t.ink }, bordercolor: t.line },
     margin: { t: 56, b: 110, l: 70, r: 20 }, height: 420,
-  }, { displayModeBar: false, responsive: true });
+  };
+  drawExplorer(trace, layout);
   const c = rows[0], p = rows[rows.length - 1];
-  document.getElementById("explorer-note").innerHTML =
-    "<strong>" + c.model + "</strong> wins at " + money(c.cost) + "/mo — saving " +
-    money(p.cost - c.cost) + "/mo vs <strong>" + p.model + "</strong> (" + money(p.cost) + "/mo).";
+  tweenBill(c, p);
+}
+let explorerReady = false;
+function drawExplorer(trace, layout) {
+  if (!explorerReady || REDUCED) {
+    Plotly.react("explorer-chart", [trace], layout, { displayModeBar: false, responsive: true });
+    explorerReady = true;
+  } else {
+    Plotly.animate("explorer-chart",
+      { data: [trace], layout: layout },
+      { transition: { duration: 350, easing: "cubic-in-out" }, frame: { duration: 350 }, mode: "immediate" });
+  }
+}
+let lastBill = { c: 0, s: 0 };
+function tweenBill(c, p) {
+  const note = document.getElementById("explorer-note");
+  const target = { c: c.cost, s: p.cost - c.cost };
+  const html = (cc, ss) =>
+    "<strong>" + c.model + "</strong> wins at " + money(cc) + "/mo — saving " +
+    money(ss) + "/mo vs <strong>" + p.model + "</strong> (" + money(p.cost) + "/mo).";
+  if (REDUCED) { note.innerHTML = html(target.c, target.s); lastBill = target; return; }
+  const from = { c: lastBill.c, s: lastBill.s };
+  lastBill = target;
+  const t0 = performance.now(), dur = 380;
+  (function frame(t) {
+    const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    note.innerHTML = html(from.c + (target.c - from.c) * e, from.s + (target.s - from.s) * e);
+    if (k < 1) requestAnimationFrame(frame);
+  })(t0);
 }
 document.getElementById("ex-in").addEventListener("input", renderExplorer);
 document.getElementById("ex-out").addEventListener("input", renderExplorer);
@@ -132,6 +162,7 @@ document.querySelectorAll(".dash-presets button").forEach(b => b.addEventListene
 <script>
 const THEMES = {"dark": {"bg": "#0c0d0a", "surface": "#141611", "raised": "#1b1e16", "ink": "#f2efe4", "muted": "#a6ab99", "faint": "#7c8172", "line": "#2a2e24", "accent": "#ff6b47", "grid": "#23281d"}, "light": {"bg": "#f4f1e6", "surface": "#fcfbf5", "raised": "#efe9d8", "ink": "#171510", "muted": "#5f5b4c", "faint": "#8a8471", "line": "#dcd5bf", "accent": "#c23f14", "grid": "#e7dfc9"}};
 let themeName = "dark";
+const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function detectTheme() {
   try {
     if (window.parent && window.parent.document) {
@@ -172,6 +203,17 @@ function watchParentTheme() {
     }).observe(root, { attributes: true, attributeFilter: ["class"] });
   } catch (e) {}
 }
+// Gentle card entrances on scroll (site motion language: 400-800ms, ease-out settle).
+function watchCards() {
+  if (REDUCED || !("IntersectionObserver" in window)) {
+    document.querySelectorAll(".dash-card").forEach(c => c.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: 0.08 });
+  document.querySelectorAll(".dash-card").forEach(c => io.observe(c));
+}
 </script>
 
 <script>
@@ -183,6 +225,7 @@ function fitFrame() {
 }
 applyTheme(detectTheme());
 watchParentTheme();
+watchCards();
 window.addEventListener("load", fitFrame);
 setTimeout(fitFrame, 600);
 setTimeout(fitFrame, 2500);
