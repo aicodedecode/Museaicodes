@@ -278,6 +278,16 @@ export const UPDATES: UpdateEntry[] = [
     tags: ["Security"],
   },
   {
+    slug: "typesafe-jev-system-one-model-launch",
+    date: "2026-09-15",
+    title: "TypeSafe launches Jev, a 'System One' AI model that decides instead of chatting",
+    summary:
+      "TypeSafe AI — founded by ex-OpenAI researcher Diogo Almeida after two years in stealth — opened early access on September 15 to Jev, the first of a new model class it calls “System One” models. Instead of generating text token-by-token, Jev takes unstructured state plus a fixed set of typed questions and returns structured decisions with calibrated probabilities in a single parallel pass: 70–500ms per call, which TypeSafe claims is 40–200x faster than frontier LLMs on such tasks. Pricing is $0.042 per million input tokens with output tokens free, and training uses a method called Reinforcement Learning for Calibrated Decisions (RLCD). Because it never generates strings, TypeSafe says it “can't hallucinate” — though skeptics note a constrained model can still confidently pick the wrong option. The names nod to Daniel Kahneman's “fast” System 1 thinking and to economist William Stanley Jevons. Developer traction is already visible: browser-use's open-source jev-ultrafast agent (21,800+ GitHub stars, MIT-licensed) completes a Google Flights search in about 7 seconds with one Jev request per decision. TypeSafe's boldest figures (193.6x faster, 444.6x cheaper) come from its own workflow evals, which the company admits may carry bias.",
+    sourceName: "TypeSafe",
+    sourceUrl: "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    tags: ["Launch"],
+  },
+  {
     slug: "grok-bot-spacexai-cursor-launch",
     date: "2026-10-01",
     title: "SpaceXAI and Cursor ship Grok Bot, persistent agents that sign into your apps",
