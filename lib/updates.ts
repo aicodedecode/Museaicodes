@@ -29,6 +29,16 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "paid-ai-subscriptions-2-percent-a16z",
+    date: "2026-10-03",
+    title: "Only 2.2% of US households pay for AI, a16z's State of Markets finds",
+    summary:
+      "Andreessen Horowitz's September 2026 State of Markets report, drawing on PNC Research payment data, finds just 2.2% of US households paid for an AI service as of April 2026 — about $31 a month on average. That sits against roughly 41% of US workers using generative AI for work tasks (per Federal Reserve research) and ~50% non-work usage: adoption is spreading far faster than direct spending. Bank of America card data tells a similar story at ~3% in March; a Menlo Ventures survey using a broader definition of 'paying' reports much higher figures, so the headline depends on what's counted.",
+    sourceName: "Tech Startups",
+    sourceUrl: "https://techstartups.com/2026/10/02/only-2-of-u-s-households-pay-for-ai-even-as-ai-adoption-reaches-41-of-u-s-workers/",
+    tags: ["Traction"],
+  },
+  {
     slug: "china-humanoid-robot-domestic-architecture",
     date: "2026-10-03",
     title: "China unveils first humanoid robot on fully domestic electronic architecture",

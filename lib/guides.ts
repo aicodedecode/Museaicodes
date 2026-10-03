@@ -4318,6 +4318,110 @@ export const GUIDES: Guide[] = [
       },
     ],
   },
+  {
+    slug: "persuasion-prompting",
+    modifiedTime: "2026-10-03",
+    image: "/images/guides/persuasion-prompting.jpg",
+    imageAlt: "Editorial illustration of a speech bubble shaped like a magnet drawing tidy, well-formed sentences toward it on warm paper",
+    title: "Ask Like a Persuader: What 28,000 AI Conversations Teach About Better Prompts",
+    deck: "Researchers ran 28,000 AI conversations and found that how you ask changes the answer as much as what you ask. Seven honest tactics from psychology's most famous persuasion book — translated into prompts that get you sharper results.",
+    category: "Tutorial",
+    keywords: "persuasion prompting, cialdini prompts, how to ask ai better, prompt techniques, influence book ai, better chatgpt answers, better muse answers, prompt engineering psychology",
+    metaTitle: "Ask Like a Persuader: 7 Prompting Tactics From a 28,000-Chat AI Study (2026)",
+    metaDescription:
+      "A 28,000-conversation study found how you ask changes AI answers as much as what you ask. Seven honest prompting tactics from Cialdini's Influence — for better Muse, ChatGPT, and Claude results.",
+    shortAnswer:
+      "University of Pennsylvania researchers ran 28,000 test conversations with an AI chatbot and found that wrapping requests in classic persuasion techniques more than doubled compliance, from about one in three to over two in three. They were studying safety bypasses — but the flip side is useful: models respond to social framing the way people do, so the same seven principles from Robert Cialdini's Influence, used honestly, produce sharper answers to legitimate requests. Build answers in steps, show your sources, give examples, name the format, add hard limits, brief the model like a colleague, and name your reader.",
+    sections: [
+      {
+        heading: "The 28,000-conversation study, in 30 seconds",
+        paragraphs: [
+          "In a paper titled “Call Me A Jerk: Persuading AI to Comply with Objectionable Requests,” researchers at the University of Pennsylvania's Wharton School put GPT-4o mini through 28,000 test conversations. Instead of asking directly, they wrapped requests in the seven persuasion principles from psychologist Robert Cialdini's classic book *Influence*: authority, commitment, liking, reciprocity, scarcity, social proof, and unity.",
+          "The result: persuasion more than doubled the model's compliance rate, from about one in three to over two in three. Commitment was the strongest lever — getting the model to agree to something mild first, then escalating, worked every single time in their tests. Invoking an authority figure's name made compliance jump dramatically on the same request.",
+          "The researchers were probing a security problem: no hacking, no code — just carefully framed conversation. That's worth knowing, and it's not what this guide teaches. The constructive takeaway, which the researchers themselves noted, is that these principles also produce *better* answers to legitimate requests. An AI that responds to social framing is an AI you can brief more effectively. Everything below stays on the honest side of that line.",
+        ],
+      },
+      {
+        heading: "The boundary, stated plainly",
+        paragraphs: [
+          "These techniques can be used to push models past their safety rules. Don't. The tactics below are for getting better help with legitimate work — writing, coding, planning, learning, building. If you'd be embarrassed to ask a colleague for help with it, it's out of scope, and no prompt trick changes that.",
+        ],
+      },
+      {
+        heading: "1. Commitment — build the answer in steps",
+        paragraphs: [
+          "The study's strongest finding: once the model commits to something small, it stays consistent. Start mild, then escalate — legitimately.",
+          "**Use it honestly:** never ask for the whole thing at once. Get the outline first, approve it, then expand section by section. The model stays consistent with what it already agreed to, so quality compounds instead of drifting between attempts.",
+          "**Try:** “First give me a 5-point outline for this report. I'll pick two points to expand.” Then: “Expand point 3 to 300 words in the same tone.”",
+        ],
+      },
+      {
+        heading: "2. Authority — borrow credibility, don't fake it",
+        paragraphs: [
+          "In the study, invoking an authority's name sharply increased compliance. The honest version is simpler: ground your request in real material instead of asserting expertise you don't have.",
+          "**Use it honestly:** paste the actual reference — the brief, the style guide, the data — rather than writing “as an expert would.” “Following the structure of the attached brief…” beats “write this like a professional would” every time, because the model has something concrete to align to.",
+          "**Try:** paste a paragraph you admire, then: “Match this paragraph's rhythm and sentence length for my draft below.”",
+        ],
+      },
+      {
+        heading: "3. Reciprocity — give to get",
+        paragraphs: [
+          "The model mirrors the effort you invest. A bare one-line prompt earns a bare answer; a prompt with context, examples, and constraints earns craft. This is the entire idea behind few-shot prompting, and it's the highest-leverage habit on this list.",
+          "**Use it honestly:** feed the model two examples of what “good” looks like before asking for ten more. You're not tricking it — you're showing it the target.",
+          "**Try:** “Here are two headlines I like: [A], [B]. Write ten more in this vein for [topic].”",
+        ],
+      },
+      {
+        heading: "4. Social proof — name the standard",
+        paragraphs: [
+          "Implying “this is how it's done” moved the model in the study. Applied honestly, it just removes ambiguity — the main source of mediocre answers.",
+          "**Use it honestly:** state the convention outright. “The standard format for these reports is: summary, three findings, one recommendation. Follow it.” You're describing a real standard, not inventing peer pressure.",
+        ],
+      },
+      {
+        heading: "5. Scarcity — constraints sharpen output",
+        paragraphs: [
+          "Limits focus the model. “Under 100 words” or “exactly three options” forces real choices instead of hedged, sprawling answers.",
+          "**Use it honestly:** put one hard constraint in every prompt that matters — a length cap, an option count, “no jargon,” “one paragraph.” Vague prompts get vague essays; constrained prompts get decisions.",
+          "**Try:** “Explain this in 3 bullet points a 12-year-old would understand.”",
+        ],
+      },
+      {
+        heading: "6. Liking — brief it like a colleague",
+        paragraphs: [
+          "Models trained on human conversation respond to tone. A clear, respectful brief gets a better answer than a barked order — not because the model has feelings, but because careful briefs correlate with careful outcomes in its training data.",
+          "**Use it honestly:** write prompts the way you'd brief a smart colleague: context, goal, constraints, and what “done” looks like. The politeness is incidental; the specificity is the point.",
+        ],
+      },
+      {
+        heading: "7. Unity — name the reader",
+        paragraphs: [
+          "Framing the task as a shared mission (“we're writing this for first-time founders…”) aligns every subsequent choice with your audience.",
+          "**Use it honestly:** name who the answer is for. “We're explaining this to someone who has never used AI before” changes every sentence that follows — for the better. Audience-first prompting is the cheapest quality upgrade there is.",
+        ],
+      },
+      {
+        heading: "The one-paragraph version",
+        paragraphs: [
+          "Don't ask for everything at once (commitment). Show your sources (authority). Give examples (reciprocity). Name the format (social proof). Add a hard limit (scarcity). Brief it like a colleague (liking). Name the reader (unity). None of this is manipulation — it's just asking well, and a 28,000-conversation study suggests it's the difference between a one-in-three answer and a two-in-three one.",
+        ],
+      },
+      {
+        heading: "Where to go next",
+        paragraphs: [
+          "Practice these on something real — and read the study that started it all.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "[Prompt library — 40 copy-paste prompts](/prompts) — apply the seven tactics to prompts built for real work.",
+            "[This scientific paper taught me the only prompt I'll ever need — MakeUseOf](https://www.makeuseof.com/scientific-paper-prompt-for-chatgpt/) — a plain-English walkthrough of the study's findings.",
+            "[ChatGPT tricked by persuasion tactics, researchers say — Gadgets360](https://www.gadgets360.com/ai/news/chatgpt-answers-harmful-prompts-persuasion-tactics-research-9196067) — the original 2025 coverage of the UPenn paper.",
+          ],
+        },
+      },
+    ],
+  },
 
 ];
 
