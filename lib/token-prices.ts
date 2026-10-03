@@ -31,13 +31,13 @@ export interface PricedModel {
   pricingNote?: string;
 }
 
-export const PRICE_VERIFIED = "September 29, 2026";
+export const PRICE_VERIFIED = "October 03, 2026";
 
 export const PRICED_MODELS: PricedModel[] = [
   {
     id: "openai-gpt6-sol",
     provider: "OpenAI",
-    model: "GPT-6 Sol",
+    model: "GPT-6.1 Sol",
     inputPerMillion: 2.0,
     outputPerMillion: 10.0,
     contextWindow: "≈1M",
@@ -94,6 +94,17 @@ export const PRICED_MODELS: PricedModel[] = [
     outputPerMillion: 1.5,
     contextWindow: "256K",
     pricingUrl: "https://mistral.ai/pricing",
+  },
+  {
+    id: "typesafe-jev",
+    provider: "TypeSafe",
+    model: "Jev",
+    inputPerMillion: 0.042,
+    outputPerMillion: 0.0,
+    contextWindow: "—",
+    pricingUrl: "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    pricingNote:
+      "Early-access pricing from the official launch post; output tokens are free (\"too cheap to meter\").",
   },
 ];
 

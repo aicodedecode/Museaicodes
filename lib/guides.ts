@@ -4227,6 +4227,25 @@ export const GUIDES: Guide[] = [
         },
       },
       {
+        heading: "Jev vs the competition: what it actually costs",
+        paragraphs: [
+          "Jev's headline pricing is **$0.042 per million input tokens, with outputs free**. Here's what that means next to the frontier chat models — worked out for 1M input + 500K output tokens in a month, from our price table (verified against each provider's official pricing page on October 3, 2026):",
+          "One honest caveat before the numbers: this is apples-to-oranges by design. Jev's outputs are tiny typed decisions, not essays or code — it can't do what the chat models do, so “cheaper” only matters for decision-shaped work.",
+        ],
+        list: {
+          ordered: false,
+          items: [
+            "**TypeSafe Jev:** $0.042 — output tokens free",
+            "**Mistral Large 3:** $1.25",
+            "**Gemini 3.8 Flash:** $2.63 (introductory rate through Dec 31, 2026)",
+            "**DeepSeek V4 Pro:** $3.30 (peak hours; half off-peak)",
+            "**Grok 4.7:** $5.00",
+            "**Claude Sonnet 5.5:** $7.00",
+            "**GPT-6.1 Sol:** $7.00",
+          ],
+        },
+      },
+      {
         heading: "Why 'can't hallucinate' — and the honest caveat",
         paragraphs: [
           "TypeSafe's boldest claim is that Jev “can't hallucinate.” The logic: hallucination is a property of string generation, and Jev never generates strings — its outputs are schema-constrained values, so type errors are, in the company's words, mathematically impossible.",
@@ -4290,6 +4309,7 @@ export const GUIDES: Guide[] = [
             "[Introducing System One Models & Jev — TypeSafe blog](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — the launch post this guide is built on.",
             "[browser-use/jev-ultrafast — GitHub](https://github.com/browser-use/jev-ultrafast) — the open-source ultrafast browser agent (MIT license).",
             "[TypeSafe docs](https://docs.typesafe.ai) — API reference and evals.",
+            "[AI model cost calculator — our tool](/tools/token-price-compare) — plug in your own token volumes and compare Jev against six frontier models side by side.",
             "[awesome-muse-skills — our GitHub repo](https://github.com/aicodedecode/awesome-muse-skills) — 899 original open-source skills for AI agents and automation builders.",
             "[Muse AI Personal Agent](/guides/muse-ai-personal-agent) — how conversational agents handle approvals and actions.",
           ],

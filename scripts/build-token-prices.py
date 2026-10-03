@@ -2,8 +2,9 @@
 """Build lib/token-prices.ts from data/token-prices.csv.
 
 Source of truth for the /tools/token-price-compare dashboard is the CSV.
-To update prices: edit data/token-prices.csv (one row per model per
-verification date; the newest verified_date wins), then run:
+To update prices: edit data/token-prices.csv (one row per model — REPLACE
+the row when re-verifying a price, since ids must be unique across the file),
+then run:
 
     ~/workspace/.venvs/scrape/bin/python scripts/build-token-prices.py
 
@@ -66,9 +67,18 @@ def main() -> None:
 
     for num_col in ["input_per_million", "output_per_million"]:
         vals = pd.to_numeric(df[num_col], errors="coerce")
-        bad = df.index[vals.isna() | (vals <= 0)].tolist()
-        if bad:
-            fail(f"non-positive {num_col} on rows {bad}")
+        if num_col == "output_per_million":
+            # Free outputs are real (e.g. TypeSafe Jev) — allow 0, flag it.
+            bad = df.index[vals.isna() | (vals < 0)].tolist()
+            if bad:
+                fail(f"negative {num_col} on rows {bad}")
+            free = df.index[vals == 0].tolist()
+            if free:
+                print(f"NOTE: free outputs (0) on rows {free}", file=sys.stderr)
+        else:
+            bad = df.index[vals.isna() | (vals <= 0)].tolist()
+            if bad:
+                fail(f"non-positive {num_col} on rows {bad}")
         df[num_col] = vals
 
     weird_ratio = df.index[df["output_per_million"] < df["input_per_million"]].tolist()
