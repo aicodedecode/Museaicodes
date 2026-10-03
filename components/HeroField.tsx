@@ -39,7 +39,8 @@ export default function HeroField({
 
     let renderer: THREE.WebGLRenderer;
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      // soft feathered dots gain nothing from MSAA — skip it for GPU headroom
+      renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "low-power" });
     } catch {
       return; // no WebGL — hero simply renders without the swarm
     }
@@ -54,14 +55,14 @@ export default function HeroField({
     interface Palette { base: THREE.Color; baseA: [number, number]; accent: THREE.Color; accentA: [number, number]; haloA: [number, number]; }
     const palettes = {
       dark: {
-        base: new THREE.Color("#a79c85"), baseA: [0.12, 0.3],
-        accent: new THREE.Color("#c98f6f"), accentA: [0.14, 0.3],
-        haloA: [0.05, 0.09],
+        base: new THREE.Color("#a79c85"), baseA: [0.22, 0.5],
+        accent: new THREE.Color("#c98f6f"), accentA: [0.24, 0.5],
+        haloA: [0.09, 0.16],
       } as Palette,
       light: {
-        base: new THREE.Color("#a89d88"), baseA: [0.1, 0.28],
-        accent: new THREE.Color("#c07a58"), accentA: [0.12, 0.28],
-        haloA: [0.05, 0.09],
+        base: new THREE.Color("#a89d88"), baseA: [0.2, 0.48],
+        accent: new THREE.Color("#c07a58"), accentA: [0.22, 0.48],
+        haloA: [0.09, 0.16],
       } as Palette,
       // for a dark panel (banner in light page-mode): warm paper dots that
       // read clearly on near-black without glowing
@@ -99,7 +100,7 @@ export default function HeroField({
           y: rand(-H / 2 - 0.5, H / 2 + 0.5),
           z: 0, baseZ: rand(-1.4, 1.2),
           vx: rand(-0.05, 0.05), vy: rand(-0.05, 0.05),
-          size: halo ? rand(0.3, 0.45) : rand(0.08, 0.2),
+          size: halo ? rand(0.34, 0.5) : rand(0.1, 0.26),
           phase: rand(0, Math.PI * 2),
           tone, social: rand(0.6, 1.4),
           halo, alphaT: Math.random(),
@@ -109,11 +110,12 @@ export default function HeroField({
     };
 
     // ---- geometry + soft-dot shader ----
+    const MAX_DOTS = 160; // seed() clamps count to 150; small headroom
     const geo = new THREE.BufferGeometry();
-    const posArr = new Float32Array(230 * 3);
-    const colArr = new Float32Array(230 * 3);
-    const sizeArr = new Float32Array(230);
-    const alphaArr = new Float32Array(230);
+    const posArr = new Float32Array(MAX_DOTS * 3);
+    const colArr = new Float32Array(MAX_DOTS * 3);
+    const sizeArr = new Float32Array(MAX_DOTS);
+    const alphaArr = new Float32Array(MAX_DOTS);
     geo.setAttribute("position", new THREE.BufferAttribute(posArr, 3));
     geo.setAttribute("aColor", new THREE.BufferAttribute(colArr, 3));
     geo.setAttribute("aSize", new THREE.BufferAttribute(sizeArr, 1));
@@ -251,6 +253,7 @@ export default function HeroField({
 
     const step = (t: number, dt: number) => {
       const R = 2.2; // disturbance radius (world units)
+      const R2 = R * R; // squared — avoids a sqrt per dot per frame
       const bx = W / 2 + 0.6;
       const by = H / 2 + 0.6;
       for (const d of dots) {
@@ -264,8 +267,9 @@ export default function HeroField({
         if (finePointer && hasPointer) {
           const dx = d.x - mouse.x;
           const dy = d.y - mouse.y;
-          const dist = Math.hypot(dx, dy);
-          if (dist < R && dist > 0.001) {
+          const dist2 = dx * dx + dy * dy;
+          if (dist2 < R2 && dist2 > 1e-6) {
+            const dist = Math.sqrt(dist2); // only sqrt when inside the radius
             const push = 1 - dist / R;
             const s = push * push * 1.4 * d.social;
             ax += (dx / dist) * s;

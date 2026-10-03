@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
+import ScrollTop from "./ScrollTop";
 import AdSenseScript from "./AdSenseScript";
 
 /**
@@ -19,6 +20,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
       <SiteHeader />
       {children}
       <SiteFooter />
+      <ScrollTop />
     </>
   );
 }
