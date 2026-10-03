@@ -6,6 +6,7 @@ import CompareTool from "@/components/CompareTool";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Muse vs Alternatives: Cost & Time Comparator (2026)",
@@ -31,6 +32,39 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "What does this comparator actually calculate?",
+    answer:
+      "For each option it multiplies your weekly hours saved by \u22484.33 weeks and your hourly value, subtracts the monthly price, and ranks the options by net value. It is a strict arithmetic check on your own inputs, not a review of features, quality, or privacy trade-offs.",
+  },
+  {
+    question: "Is the comparator free? Do I need an account?",
+    answer:
+      "Yes, it is completely free, and no account or sign-in is needed. Everything runs in your browser: nothing is uploaded, stored, or tracked, and your numbers exist only while the page is open. Close the tab and they are gone for good.",
+  },
+  {
+    question: "Where do the prices come from?",
+    answer:
+      "From you. The page ships with zero prices baked in because plans, promotions, and regional pricing change constantly. Every price in the results table is one you typed, so the comparison only ever says what your own inputs say \u2014 nothing is skewed by stale or sponsored data.",
+  },
+  {
+    question: "How should I estimate \u201chours saved\u201d honestly?",
+    answer:
+      "Be conservative: count only time you genuinely would not have spent another way, not the whole task duration. Track a week of real usage first, then enter that weekly average. Inflated hours are the main reason these comparisons lie, so underestimate rather than round up.",
+  },
+  {
+    question: "Does the verdict capture quality, features, or privacy?",
+    answer:
+      "No \u2014 it compares money value only. It cannot weigh differences in answer quality, which features you actually use, or privacy trade-offs between options. Treat the verdict as one input to your decision, not the whole decision, and read the honest notes for what the math leaves out.",
+  },
+  {
+    question: "Does this tool ever go out of date?",
+    answer:
+      "The math never goes stale because it runs on your numbers. The only thing that ages is the prices you entered: if a plan price changes, just retype the new price and the ranking recalculates instantly, with no data on our side to update.",
+  },
+];
+
 export default function CompareToolsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -44,9 +78,20 @@ export default function CompareToolsPage() {
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <main id="main">
       <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
       <div className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
         <Reveal>
           <Breadcrumbs
@@ -106,6 +151,87 @@ export default function CompareToolsPage() {
               </li>
             </ul>
           </div>
+        </Reveal>
+
+        <Reveal>
+          <section aria-label="How this tool works" className="mt-16 max-w-[760px]">
+            <p className="kicker">How it works</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Turn hours saved into a number you can compare
+            </h2>
+            <div className="mt-4 space-y-4 leading-relaxed text-muted">
+              <p>
+                The comparator gives you three side-by-side columns: Muse and up
+                to two alternatives you name yourself. Fill each column with
+                your own numbers — the price you actually pay, a realistic
+                weekly hours-saved estimate, and what an hour of your time is
+                worth — and it ranks the options by net monthly value.
+              </p>
+              <p>
+                It is for anyone weighing an AI-assistant subscription against
+                the clock it gives back. The tool keeps the math visible: each
+                month&rsquo;s time value is your weekly hours saved times
+                &asymp;4.33 weeks times your hourly value, minus the price. The
+                first column comes pre-labeled &ldquo;Muse&rdquo;; every price
+                still has to come from you, because plans change by region and
+                over time.
+              </p>
+            </div>
+            <h3 className="font-display mt-8 text-[1.25rem] font-bold tracking-tight text-ink">
+              What each part does
+            </h3>
+            <ul className="mt-3 list-disc space-y-3 pl-5 leading-relaxed text-muted">
+              <li>
+                <strong className="text-ink">Option name field</strong> —
+                labels each column (the first is pre-filled with
+                &ldquo;Muse&rdquo;). A column needs a name before it can appear
+                in the ranking.
+              </li>
+              <li>
+                <strong className="text-ink">Monthly price (your currency)</strong> —
+                what you actually pay per month for that option. Leave it blank
+                and the column stays unranked.
+              </li>
+              <li>
+                <strong className="text-ink">Hours saved per week</strong> —
+                your conservative estimate of weekly time the assistant gives
+                back. This is the input that matters most, so keep it honest.
+              </li>
+              <li>
+                <strong className="text-ink">Your hourly value (same currency)</strong> —
+                what one hour of your time is worth to you, used to convert
+                saved hours into money.
+              </li>
+              <li>
+                <strong className="text-ink">Results table</strong> — shows
+                Monthly cost, Monthly time value, and Net value per option,
+                recalculated as you type.
+              </li>
+              <li>
+                <strong className="text-ink">Verdict chips</strong> —
+                &ldquo;Pays for itself&rdquo; for a positive net,
+                &ldquo;Costs more than it saves&rdquo; for a negative net, and
+                &ldquo;Breaks even&rdquo; for zero. The top-ranked option also
+                gets a &ldquo;Best value&rdquo; tag.
+              </li>
+              <li>
+                <strong className="text-ink">Bottom line panel</strong> — a
+                plain-language summary: whether the best option pays for itself
+                and by roughly how much, plus the formula it used.
+              </li>
+            </ul>
+          </section>
+        </Reveal>
+        <Reveal>
+          <section aria-label="Frequently asked questions" className="mt-16 max-w-[760px]">
+            <p className="kicker">FAQ</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Comparator questions, answered
+            </h2>
+            <div className="mt-6">
+              <FaqAccordion faqs={faqs} />
+            </div>
+          </section>
         </Reveal>
 
         <div className="mt-12 max-w-[760px]">

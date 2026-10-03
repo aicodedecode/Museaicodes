@@ -6,6 +6,7 @@ import TokenPriceCompare from "@/components/TokenPriceCompare";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "AI Token Price Comparison: GPT vs Claude vs Gemini vs Grok (2026)",
@@ -44,9 +45,54 @@ export default function TokenPriceComparePage() {
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
+  const faqs: { question: string; answer: string }[] = [
+    {
+      question: "What does the AI Token Price Comparison tool do?",
+      answer:
+        "It compares per-token API pricing for six models — GPT-6 Sol, Claude Sonnet 5.5, Grok 4.7, Gemini 3.8 Flash, DeepSeek V4 Pro, and Mistral Large 3 — at your monthly input and output volumes. It ranks the models cheapest to priciest and shows each provider’s estimated bill, updating instantly as you move the sliders.",
+    },
+    {
+      question: "Is the price comparison tool free?",
+      answer:
+        "Yes, it is free with no account, no sign-in, and no usage limits. The tool runs entirely in your browser and recalculates every row instantly as you change volumes, so you can test as many scenarios as you want without paying or handing over any details.",
+    },
+    {
+      question: "Do I need an account or an API key to use it?",
+      answer:
+        "No. Nothing on this page requires a sign-in, an API key, or an email address. Your input and output volumes never leave your browser — the page stores nothing and sends nothing to a server, so you can compare prices without sharing your usage data.",
+    },
+    {
+      question: "How accurate are the prices shown?",
+      answer:
+        "The per-token rates were last verified against each provider’s official pricing page on September 29, 2026, but API prices change often — always confirm the live rate before signing a budget to it. The tool is a planning estimate, not a quote: it ignores prompt-caching discounts, batch rates, tool-call charges, and regional premiums.",
+    },
+    {
+      question: "Why is Muse listed but not ranked?",
+      answer:
+        "Muse is a consumer app, and Meta publishes no per-token API rate for it, so there is no number to rank against the API models. It appears as an unranked reference row at the bottom of the table so readers don’t mistake this for a full Muse comparison — it is context only.",
+    },
+    {
+      question:
+        "Why does the tool ask for input and output tokens separately?",
+      answer:
+        "Because output tokens cost more than input tokens on every model in the table — generation is priced higher than processing. A workload that mostly sends context costs notably less than one that generates long answers, so entering both volumes separately gives a far more honest estimate than a single blended number.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <main id="main">
       <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
       <div className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
         <Reveal>
           <Breadcrumbs
@@ -128,6 +174,123 @@ export default function TokenPriceComparePage() {
               </li>
             </ul>
           </div>
+        </Reveal>
+
+        <Reveal>
+          <section
+            aria-label="How this tool works"
+            className="mt-16 max-w-[760px]"
+          >
+            <p className="kicker">How it works</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Cheapest to priciest, at your exact volume
+            </h2>
+            <div className="mt-4 space-y-4 leading-relaxed text-muted">
+              <p>
+                This tool answers a concrete buying question: at your actual
+                monthly volume, which AI API costs the least? It compares
+                per-token API pricing for six models — GPT-6 Sol from OpenAI,
+                Claude Sonnet 5.5 from Anthropic, Grok 4.7 from xAI, Gemini 3.8
+                Flash from Google, DeepSeek V4 Pro, and Mistral Large 3 — plus
+                a Muse reference row for context.
+              </p>
+              <p>
+                Enter your monthly input tokens (prompts, documents, and
+                context you send) and output tokens (answers, code, and drafts
+                the model writes), or jump in with a Light, Medium, or Heavy
+                volume preset. Every change recalculates instantly: the cost
+                dashboard ranks the models cheapest to priciest with
+                proportional bars, and the detail table shows each
+                model&rsquo;s per-million-token rates, context window, and
+                your cost at the chosen volume.
+              </p>
+              <p>
+                The Monthly/Annual toggle switches the whole page between
+                monthly bills and yearly projections (annual is simply monthly
+                × 12), and a summary banner names the cheapest model and how
+                much it saves versus the priciest option at your volume. Each
+                model name links to its provider&rsquo;s official pricing
+                page, since API rates move often and those pages are the only
+                authoritative numbers.
+              </p>
+            </div>
+            <h3 className="font-display mt-8 text-[1.25rem] font-bold tracking-tight text-ink">
+              What each part does
+            </h3>
+            <ul className="mt-3 list-disc space-y-3 pl-5 leading-relaxed text-muted">
+              <li>
+                <strong className="text-ink">Volume presets</strong> — Light
+                (0.5M input / 0.1M output), Medium (2M / 0.5M, the default),
+                and Heavy (10M / 3M) buttons that fill both volume fields at
+                once.
+              </li>
+              <li>
+                <strong className="text-ink">Input tokens per month</strong> —
+                a number field paired with a slider (0–50M, in 0.5M steps) for
+                tokens you send: prompts, documents, and context.
+              </li>
+              <li>
+                <strong className="text-ink">Output tokens per month</strong> —
+                a number field paired with a slider (0–20M, in 0.25M steps)
+                for tokens the model writes: answers, code, and drafts.
+              </li>
+              <li>
+                <strong className="text-ink">Monthly / Annual toggle</strong> —
+                switches every figure on the page between monthly bills and
+                annual projections; changing either volume clears the active
+                preset.
+              </li>
+              <li>
+                <strong className="text-ink">Cost dashboard</strong> — the
+                ranked bar list from cheapest to priciest, with a
+                “Cheapest” badge on the winner and each bar&rsquo;s width
+                proportional to the priciest option.
+              </li>
+              <li>
+                <strong className="text-ink">Prices-verified pill</strong> —
+                states when the per-token rates were last checked against
+                official pricing pages: September 29, 2026.
+              </li>
+              <li>
+                <strong className="text-ink">Savings summary box</strong> —
+                names the cheapest model and states how much it saves versus
+                the priciest option at your exact volume, since only the model
+                changes.
+              </li>
+              <li>
+                <strong className="text-ink">Ranked table</strong> — full
+                detail for each model: $/1M input, $/1M output, context window,
+                and your cost; each row links to the provider&rsquo;s official
+                pricing page.
+              </li>
+              <li>
+                <strong className="text-ink">Muse reference row</strong> — an
+                unranked row noting that Muse is a consumer app with no public
+                per-token API rate, so it cannot be ranked; included for
+                context only.
+              </li>
+              <li>
+                <strong className="text-ink">Planning-estimate note</strong> —
+                the disclaimer that this is a planning estimate, not a quote:
+                it ignores prompt-caching discounts, batch rates, tool-call
+                charges, and regional premiums.
+              </li>
+            </ul>
+          </section>
+        </Reveal>
+        <Reveal>
+          <section
+            aria-label="Frequently asked questions"
+            className="mt-16 max-w-[760px]"
+          >
+            <p className="kicker">FAQ</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Token price questions, answered
+            </h2>
+            <div className="mt-6">
+              <FaqAccordion faqs={faqs} />
+            </div>
+          </section>
         </Reveal>
 
         <div className="mt-12 max-w-[760px]">

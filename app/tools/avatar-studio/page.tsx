@@ -6,6 +6,7 @@ import AvatarStudio from "@/components/AvatarStudio";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "AI Avatar Name Generator: 100 Names + 100 Characters (2026)",
@@ -31,6 +32,39 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "What is Avatar Studio?",
+    answer:
+      "It is a name-and-character generator for personalizing your AI assistant: 100 original avatar names and 100 character presets, each with a personality and a look. Shuffle for random combos, filter by vibe, and copy your favorite into Muse AI, Grok Bot, or ChatGPT Dots.",
+  },
+  {
+    question: "Is Avatar Studio free? Do I need an account?",
+    answer:
+      "Yes, it is free, and no account or sign-in is needed. Shuffling, filtering, and browsing all run entirely in your browser, and copied text goes straight to your clipboard \u2014 nothing is stored, tracked, or sent anywhere by this tool.",
+  },
+  {
+    question: "Where do I actually apply a name I picked?",
+    answer:
+      "Copy a combo above, then apply it where your assistant app lets you change its name and look. The \u201cUse it in your app\u201d section has step-by-step guides for Muse AI, ChatGPT Dots, and Grok Bot, with steps reflecting each app's actual settings.",
+  },
+  {
+    question: "What are the vibe filters?",
+    answer:
+      "Names and characters are tagged with one of six tones \u2014 Cosmic, Cozy, Bold, Playful, Techy, or Elegant. Filtering narrows both the Shuffle pool and the browsers, and the counter shows how many names and characters match your current filter.",
+  },
+  {
+    question: "Does renaming my assistant change what it can do?",
+    answer:
+      "No. A name and character are purely cosmetic and personal: they change how the assistant addresses itself and how it feels to talk to, not its capabilities, data access, or settings. Think of it as a costume \u2014 the person underneath is unchanged.",
+  },
+  {
+    question: "How current are the apply guides?",
+    answer:
+      "The guides describe each app's actual settings as documented in this site's avatar guide. App settings do change over time, so if a menu looks different, check the app's own settings screen and treat the guide's steps as a starting point rather than gospel.",
+  },
+];
+
 export default function AvatarStudioPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -44,9 +78,20 @@ export default function AvatarStudioPage() {
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <main id="main">
       <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
       <div className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
         <Reveal>
           <Breadcrumbs
@@ -91,6 +136,94 @@ export default function AvatarStudioPage() {
             >
               Meet Jolly — the avatar guide
             </Link>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section aria-label="How this tool works" className="mt-16 max-w-[760px]">
+            <p className="kicker">How it works</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Shuffle a name and character worth talking to
+            </h2>
+            <div className="mt-4 space-y-4 leading-relaxed text-muted">
+              <p>
+                Avatar Studio is a generator for personalizing your AI
+                assistant: 100 original avatar names and 100 character
+                presets, each character with a title, personality, look
+                description, and portrait. The generator shows one combo at a
+                time — press Shuffle for a new random pair, or filter by vibe
+                (Cosmic, Cozy, Bold, Playful, Techy, Elegant) to narrow the
+                pool.
+              </p>
+              <p>
+                Once you have a combo you like, copy the name, the character,
+                or the full combo to your clipboard and paste it into your
+                app&rsquo;s settings. The &ldquo;Use it in your app&rdquo;
+                section walks you through applying it in Muse AI, ChatGPT
+                Dots, or Grok Bot, and the two browsers below let you scroll
+                all 100 names (searchable) and all 100 characters (filterable)
+                at your own pace.
+              </p>
+            </div>
+            <h3 className="font-display mt-8 text-[1.25rem] font-bold tracking-tight text-ink">
+              What each part does
+            </h3>
+            <ul className="mt-3 list-disc space-y-3 pl-5 leading-relaxed text-muted">
+              <li>
+                <strong className="text-ink">Vibe filter pills</strong> —
+                filter names by tone and characters by vibe; the pool
+                counter updates to show how many match.
+              </li>
+              <li>
+                <strong className="text-ink">Portrait + name display</strong> —
+                the current combo: the character&rsquo;s portrait, the
+                avatar name in large type, the character title, its
+                personality, and its look description.
+              </li>
+              <li>
+                <strong className="text-ink">Shuffle button</strong> — picks a
+                new random name and character from the currently filtered
+                pool.
+              </li>
+              <li>
+                <strong className="text-ink">Copy buttons</strong> — Copy name
+                copies just the name; Copy character copies the title,
+                personality, and look; Copy combo copies the whole card in
+                one pasteable block.
+              </li>
+              <li>
+                <strong className="text-ink">Pool counter</strong> — reads
+                &ldquo;N names · M characters&rdquo;, confirming what the
+                current filter is drawing from.
+              </li>
+              <li>
+                <strong className="text-ink">Use it in your app</strong> —
+                three cards (Muse AI, ChatGPT Dots, Grok Bot) with numbered
+                steps reflecting each app&rsquo;s actual name and look
+                settings.
+              </li>
+              <li>
+                <strong className="text-ink">All 100 names browser</strong> —
+                a searchable, tone-filtered grid; tapping any name copies it
+                to your clipboard.
+              </li>
+              <li>
+                <strong className="text-ink">All 100 characters browser</strong> —
+                vibe-filtered cards with portrait, personality, look, and a
+                per-card copy button.
+              </li>
+            </ul>
+          </section>
+        </Reveal>
+        <Reveal>
+          <section aria-label="Frequently asked questions" className="mt-16 max-w-[760px]">
+            <p className="kicker">FAQ</p>
+            <h2 className="font-display mt-3 text-[1.9rem] font-bold tracking-tight">
+              Avatar Studio questions, answered
+            </h2>
+            <div className="mt-6">
+              <FaqAccordion faqs={faqs} />
+            </div>
           </section>
         </Reveal>
 
