@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { SITE } from "@/lib/site";
@@ -131,6 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SiteHeader />
             {children}
             <SiteFooter />
+            <Analytics />
           </ToastProvider>
         </ThemeProvider>
       </body>
