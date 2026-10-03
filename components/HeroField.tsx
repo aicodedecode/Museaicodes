@@ -14,13 +14,18 @@ import * as THREE from "three";
  *
  * Props let a section band reuse the field as a quieter echo of the hero:
  * densityScale trims the dot count, alphaScale dims it further.
+ * invertPanel is for panels that invert against the page theme (like the
+ * dark skills banner in light mode): dots go bright-warm when the panel
+ * itself is dark, so they stay visible instead of washing out.
  */
 export default function HeroField({
   densityScale = 1,
   alphaScale = 1,
+  invertPanel = false,
 }: {
   densityScale?: number;
   alphaScale?: number;
+  invertPanel?: boolean;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
 
@@ -46,15 +51,24 @@ export default function HeroField({
     camera.position.set(0, 0, 11);
 
     // ---- palette (repainted on theme switch) ----
-    interface Palette { base: THREE.Color; baseA: [number, number]; accent: THREE.Color; accentA: [number, number]; }
+    interface Palette { base: THREE.Color; baseA: [number, number]; accent: THREE.Color; accentA: [number, number]; haloA: [number, number]; }
     const palettes = {
       dark: {
         base: new THREE.Color("#a79c85"), baseA: [0.12, 0.3],
         accent: new THREE.Color("#c98f6f"), accentA: [0.14, 0.3],
+        haloA: [0.05, 0.09],
       } as Palette,
       light: {
         base: new THREE.Color("#a89d88"), baseA: [0.1, 0.28],
         accent: new THREE.Color("#c07a58"), accentA: [0.12, 0.28],
+        haloA: [0.05, 0.09],
+      } as Palette,
+      // for a dark panel (banner in light page-mode): warm paper dots that
+      // read clearly on near-black without glowing
+      panel: {
+        base: new THREE.Color("#d9cfb6"), baseA: [0.2, 0.4],
+        accent: new THREE.Color("#d69a6b"), accentA: [0.22, 0.4],
+        haloA: [0.08, 0.14],
       } as Palette,
     };
 
@@ -142,7 +156,10 @@ export default function HeroField({
     scene.add(points);
 
     const paint = () => {
-      const p = isDark() ? palettes.dark : palettes.light;
+      // the banner panel inverts against the page theme: dark panel in light
+      // mode, cream panel in dark mode — pick dots for the PANEL, not the page
+      const panelDark = invertPanel ? !isDark() : isDark();
+      const p = panelDark && invertPanel ? palettes.panel : isDark() ? palettes.dark : palettes.light;
       const c = new THREE.Color();
       const qx = W * 0.08; // quiet zone: keep the headline area calm
       for (let i = 0; i < dots.length; i++) {
@@ -153,7 +170,7 @@ export default function HeroField({
           range = p.accentA;
         } else {
           c.copy(p.base);
-          range = d.halo ? [0.05, 0.09] : p.baseA;
+          range = d.halo ? p.haloA : p.baseA;
         }
         colArr[i * 3] = c.r; colArr[i * 3 + 1] = c.g; colArr[i * 3 + 2] = c.b;
         let a = range[0] + (range[1] - range[0]) * d.alphaT;
