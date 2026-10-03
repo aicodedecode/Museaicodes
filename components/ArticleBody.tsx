@@ -4,13 +4,15 @@ import CompareTable from "./CompareTable";
 import Reveal from "./Reveal";
 
 /**
- * Renders the tiny inline-link syntax used in article content:
- * [anchor text](https://url) — no raw HTML in content, external links
- * get rel="noopener noreferrer" and open in a new tab.
+ * Renders the tiny inline syntax used in article content:
+ * [anchor text](https://url) and **bold** — no raw HTML in content,
+ * external links get rel="noopener noreferrer" and open in a new tab.
  */
 function renderInline(text: string): ReactNode {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((part, i) => {
+    const b = part.match(/^\*\*([^*]+)\*\*$/);
+    if (b) return <strong key={i}>{b[1]}</strong>;
     const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (!m) return <Fragment key={i}>{part}</Fragment>;
     const [, label, url] = m;
