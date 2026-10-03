@@ -4011,6 +4011,89 @@ export const GUIDES: Guide[] = [
       ],
     },
   },
+  {
+    slug: "muse-ai-general-settings",
+    modifiedTime: "2026-10-03",
+    image: "/images/guides/muse-ai-redeem-code.jpg",
+    imageAlt: "Illustration of a redeem-code entry screen, representing the General settings in Muse AI",
+    title: "Muse AI General Settings: Usage, Redeem Code & Account Basics",
+    deck: "General is the first screen in Muse's Settings — your token usage, the invite-code redemption box, and account basics all live here.",
+    category: "Settings",
+    keywords: "muse ai general settings, muse settings, where is muse settings, muse.ai settings, muse general settings explained",
+    metaTitle: "Muse AI General Settings: Where Everything Lives (2026)",
+    metaDescription:
+      "Muse's General settings screen explained: how to find it in the app and on the web, check your token usage, redeem an invite code, and manage the basics.",
+    shortAnswer:
+      "General is the first screen under Settings in the Muse app and on muse.ai. On the web, go to Settings → General → Usage to see your remaining tokens and redeem an invite code; in the app, Settings → Redeem token appears for the first 48 hours after joining. The Invite button at the top right of the chat header gives you your share link and invite code.",
+    sections: [
+      {
+        heading: "Where to find General settings",
+        paragraphs: [
+          "General sits at the top of the Settings menu, so it's the screen you'll land on first. In the Muse app, open Settings and tap General. On the web at muse.ai, open the Settings sheet — General is the first item in the list, above Connectors, Wallet, and the rest.",
+          "Meta rearranges settings as the product evolves, so if an option has moved, check the remaining screens before assuming it's gone — nothing here requires a workaround or a third-party tool.",
+        ],
+      },
+      {
+        heading: "Usage: your token meter",
+        paragraphs: [
+          "The Usage section under General is where your token allowance lives. It shows how much of your current allowance remains — the free tier runs on a usage meter that refreshes, while paid tiers show their weekly ceilings. Glance at it before starting a big research task so a long job doesn't stall halfway.",
+          "For the full picture on allowances, resets, and what happens when you hit a ceiling, see the [limits guide](/guides/muse-ai-limits-explained) and [pricing breakdown](/guides/muse-ai-pricing-explained).",
+        ],
+      },
+      {
+        heading: "Redeem invite code",
+        paragraphs: [
+          "The invite-code redemption box also lives under General, but the exact path depends on where you are — and on timing:",
+        ],
+        list: {
+          ordered: true,
+          items: [
+            "In the app: Settings → Redeem token. Note this option only appears for the first 48 hours after you join — after that window it disappears.",
+            "On the web: muse.ai → Settings → General → Usage → Redeem invite code.",
+            "Enter the code exactly as shared and confirm — the reward terms show on the redeem screen itself.",
+          ],
+        },
+      },
+      {
+        heading: "The Invite button",
+        paragraphs: [
+          "Your own invite tools aren't buried in Settings at all: the Invite button sits at the top right of the chat header in the Muse app. Tapping it gives you a share link plus your personal invite code to send to friends. The [invite-code guide](/guides/muse-ai-invite-code) walks through how the program works, and the [redeem guide](/guides/muse-ai-redeem-code) covers the receiving end step by step.",
+        ],
+      },
+      {
+        heading: "Worth checking monthly",
+        list: {
+          ordered: false,
+          items: [
+            "Glance at Usage before kicking off a large project — a stalled long job is almost always an empty meter.",
+            "Redeem any invite code promptly: the in-app Redeem token option vanishes 48 hours after joining.",
+            "Confirm which plan tier you're on if usage feels tighter than expected — the [pricing guide](/guides/muse-ai-pricing-explained) lists what each tier includes.",
+          ],
+        },
+      },
+      {
+        heading: "General settings questions, answered",
+        paragraphs: [
+          "**Where is General settings in Muse?** It's the first item in the Settings menu — in the app under Settings → General, and on muse.ai as the top entry in the Settings sheet.",
+          "**Where do I redeem a Muse invite code?** In the app: Settings → Redeem token (first 48 hours only). On the web: muse.ai → Settings → General → Usage → Redeem invite code.",
+          "**How do I check my Muse token usage?** Open Settings → General → Usage on the web, or the usage meter in the app — it shows your remaining allowance and warns before it runs out.",
+          "**Why can't I see the Redeem token option?** It only appears for the first 48 hours after you join. After that window, use the web path (Settings → General → Usage → Redeem invite code) instead.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse AI Redeem Code: Step-by-Step](/guides/muse-ai-redeem-code) — the full redemption walkthrough.",
+            "[Muse AI Invite Code: How Access Works](/guides/muse-ai-invite-code) — how the invite program works.",
+            "[Muse AI Limits Explained](/guides/muse-ai-limits-explained) — allowances, meters, and resets.",
+            "[Muse AI Pricing Explained](/guides/muse-ai-pricing-explained) — Free, Power, and Maximum tiers.",
+          ],
+        },
+      },
+    ],
+  },
 
 ];
 
