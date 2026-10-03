@@ -29,6 +29,66 @@ export const UPDATE_TAGS: ("All" | UpdateTag)[] = [
  */
 export const UPDATES: UpdateEntry[] = [
   {
+    slug: "china-humanoid-robot-domestic-architecture",
+    date: "2026-10-03",
+    title: "China unveils first humanoid robot on fully domestic electronic architecture",
+    summary:
+      "LimX Dynamics and Kyland Technology unveiled what Chinese media describe as the country's first humanoid robot running on a fully domestic electronic architecture — indigenous operating systems, networking protocols, developer software and AI compute chips — at an industry conference in Yichang, Hubei. The announcement, reported by a single outlet so far, frames it as a step toward bypassing Western tech controls on robotics hardware.",
+    sourceName: "ChinaTechNews",
+    sourceUrl: "https://www.chinatechnews.com/2026/10/03/130239-china-deploys-first-humanoid-robot-built-on-fully-domestic-electronic-architecture-to-bypass-western-tech-controls",
+    tags: ["Launch"],
+  },
+  {
+    slug: "takeme2space-moi-1a-launch",
+    date: "2026-10-02",
+    title: "India's TakeMe2Space launches AI-computing satellite on SpaceX",
+    summary:
+      "Hyderabad startup TakeMe2Space launched its MOI-1A satellite on October 2 aboard SpaceX's Transporter-18 rideshare from Vandenberg — described as India's first orbital computing satellite. The 14kg spacecraft carries 117 TOPS of onboard compute, 2TB of storage and a nine-band multispectral imager, letting customers run containerized AI models on Earth-observation imagery in orbit and downlink only the insights. The company says 23 customers are signed up; it follows the loss of its MOI-1 predecessor on ISRO's failed PSLV-C62 mission in January.",
+    sourceName: "ThePrint",
+    sourceUrl: "https://theprint.in/feature/takeme2space-launches-ai-powered-satellite-on-spacex-eyes-orbital-data-centre/3059872/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "bull-doubles-supercomputer-output",
+    date: "2026-10-01",
+    title: "France's Bull doubles supercomputer output in Europe's AI compute push",
+    summary:
+      "French state-owned Bull reopened its expanded Angers factory after an €80M upgrade, doubling supercomputer rack output from 6 to 12 a month, with room to reach 24 in 2027. Bull has won 15 of 18 EuroHPC tenders and is building France's 94-rack Alice Recoque system alongside Finland's €388M LUMI-AI — its biggest contract ever. The expansion backs the EU's €7B 2021–2027 push to close its AI compute gap with the US and China.",
+    sourceName: "Reuters",
+    sourceUrl: "https://www.reuters.com/world/europe/french-supercomputer-maker-bull-doubles-output-boost-europes-ai-ambitions-2026-10-01/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "apple-pay-india-launch",
+    date: "2026-09-30",
+    title: "Apple Pay launches in India with Axis Bank cards",
+    summary:
+      "Apple Pay launched in India on September 30, starting with Axis Bank-issued Visa and Mastercard credit cards on iPhone, iPad and Apple Watch, with Mac support coming soon. Tap-to-pay works at millions of merchants including Zomato, Blinkit, Croma and Tata 1mg, using tokenised cards with no PIN or OTP at checkout, via payment providers including Razorpay, Paytm and Pine Labs.",
+    sourceName: "Business Standard",
+    sourceUrl: "https://www.business-standard.com/technology/tech-news/apple-pay-india-launch-axis-bank-visa-mastercard-credit-cards-126093000115_1.html",
+    tags: ["Launch"],
+  },
+  {
+    slug: "google-eu-court-search-data",
+    date: "2026-09-30",
+    title: "Google asks EU court to suspend order to share search data with AI chatbots",
+    summary:
+      "Google has asked the EU's General Court in Luxembourg to suspend the European Commission's July order requiring it to share search data with rival engines and AI chatbots, also seeking an interim measure. Google argues the order risks 'serious harm' to European users' privacy; the Commission says its decisions account for data protection. MLex first reported the interim-measure request.",
+    sourceName: "Economic Times",
+    sourceUrl: "https://economictimes.indiatimes.com/tech/technology/google-asks-eu-court-to-suspend-order-to-open-up-to-ai-chatbots-search-engine-rivals/articleshow/134599933.cms?from=mdr",
+    tags: ["Policy"],
+  },
+  {
+    slug: "china-telecom-teleocr",
+    date: "2026-09-30",
+    title: "China Telecom open-sources TeleOCR, a 1.2B model topping document-parsing benchmarks",
+    summary:
+      "China Telecom's Xingchen AGI Lab announced TeleOCR, a 1.2B-parameter open-source document-parsing model it says sets a new state of the art on OmniDocBench v1.6 (96.87) and won the ICDAR 2026 Sci-ImageMiner challenge — outperforming larger models including Gemini 3 Pro and GPT-5.2 on document tasks, per the company. Code and weights are on GitHub and Hugging Face. The benchmark claims are the company's own and independently unverified.",
+    sourceName: "GlobeNewswire",
+    sourceUrl: "https://www.globenewswire.com/news-release/2026/09/30/3371534/0/en/china-telecom-unveils-teleocr-lightweight-1-2b-model-tops-global-document-parsing-benchmarks.html",
+    tags: ["Launch"],
+  },
+  {
     slug: "nvidia-dgx-spark-64gb",
     date: "2026-10-02",
     title: "Nvidia launches $4,999 64GB DGX Spark as memory prices soar",
