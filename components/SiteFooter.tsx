@@ -138,6 +138,20 @@ export default function SiteFooter() {
                 Contact
               </Link>
             </li>
+            <li>
+              <a
+                href={SITE.telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram channel (opens in a new tab)"
+                className={linkCls}
+              >
+                Telegram{" "}
+                <span aria-hidden="true" className="text-xs">
+                  ↗
+                </span>
+              </a>
+            </li>
           </FooterGroup>
           <FooterGroup title="Tools">
             <li>

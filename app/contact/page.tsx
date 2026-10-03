@@ -88,6 +88,31 @@ export default function ContactPage() {
           <EmailDirect />
         </Reveal>
       )}
+      <Reveal delay={80}>
+        <div className="mt-8 rounded-3xl border border-line bg-surface p-8 md:p-10">
+          <p className="kicker">Telegram</p>
+          <h2 className="font-display mt-3 max-w-[520px] text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-[1.05] tracking-tight">
+            Follow along on Telegram.
+          </h2>
+          <p className="mt-4 max-w-[560px] text-muted">
+            Quick updates, new guides, and AI news as it happens — join the
+            channel and never miss a post.
+          </p>
+          <div className="mt-6">
+            <a
+              href={SITE.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-accent px-8 py-3.5 font-bold text-accent-ink transition-all duration-150 hover:-translate-y-0.5"
+            >
+              Join @museaicode{" "}
+              <span aria-hidden="true" className="text-sm">
+                ↗
+              </span>
+            </a>
+          </div>
+        </div>
+      </Reveal>
     </LegalPage>
   );
 }
