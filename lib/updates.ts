@@ -39,6 +39,56 @@ export const UPDATES: UpdateEntry[] = [
     tags: ["Launch"],
   },
   {
+    slug: "meta-muse-gadgets-open-source",
+    date: "2026-10-02",
+    title: "Meta open-sources Muse Gadgets and gives away 5,000 Home Link dongles",
+    summary:
+      "Meta introduced Muse Gadgets on October 2, an open-source project (ESP32 firmware + Linux SDK, Apache 2.0) that lets developers build their own hardware for the Muse agent using Raspberry Pi or ESP32 boards. Superintelligence Labs' Nat Friedman also announced 5,000 Muse Home Link USB-C dongles — letting Muse talk to smart home devices over a home network — free to Muse subscribers while supplies last.",
+    sourceName: "TechCrunch",
+    sourceUrl: "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "anthropic-claude-code-mods",
+    date: "2026-10-01",
+    title: "Anthropic launches Claude Code Mods, TypeScript extensions that rewrite prompts and permissions",
+    summary:
+      "Anthropic launched Claude Code Mods on October 1: small TypeScript functions that hook the agent loop — rewriting prompts, blocking or retrying tool calls, approving or denying permission requests, redacting secrets, and drawing custom UI — packaged inside plugins and installable via /plugin in the CLI and desktop app. Anthropic warns mods run unsandboxed with full machine access (install only from trusted sources); Team and Enterprise plans load a built-in sec-default mod first to block policy-violating overrides.",
+    sourceName: "RuntimeWire",
+    sourceUrl: "https://runtimewire.com/article/anthropic-claude-code-mods-typescript-permissions",
+    tags: ["Features"],
+  },
+  {
+    slug: "microsoft-mai-voice-models",
+    date: "2026-10-01",
+    title: "Microsoft ships its first streaming transcription model plus two text-to-speech models",
+    summary:
+      "Microsoft AI released three voice models on October 1: MAI-Transcribe-2-Streaming, its first real-time speech-to-text model (60 languages, first partial transcript in ~100ms, tops the Artificial Analysis accuracy leaderboard per Microsoft, $0.54 per audio hour), and MAI-Voice-2.1 / MAI-Voice-2.1-Flash, text-to-speech models that keep a single voice consistent across 23 languages with native accents. All are available in public preview through Microsoft Foundry.",
+    sourceName: "The Decoder",
+    sourceUrl: "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "huawei-mate-90-kirin-logicfolding",
+    date: "2026-10-01",
+    title: "Huawei launches Mate 90 with Kirin 9050 Pro built on 'LogicFolding' chip design",
+    summary:
+      "Huawei unveiled the Mate 90 series on October 1, with premium models powered by the Kirin 9050 Pro — built with a technique Huawei calls LogicFolding that restructures a chip's wiring in three dimensions for denser, faster processing. Consumer chief Richard Yu said advanced semiconductor capacity remains 'very limited' in China, framing the design as Huawei's workaround under US export curbs.",
+    sourceName: "Reuters",
+    sourceUrl: "https://www.reuters.com/business/retail-consumer/huawei-unveils-mate-90-phones-leans-homegrown-chip-design-offset-us-curbs-2026-10-01/",
+    tags: ["Launch"],
+  },
+  {
+    slug: "apple-homepad-october-13",
+    date: "2026-10-01",
+    title: "Apple reportedly launching smart-home hub, new HomePod mini and Apple TV on October 13",
+    summary:
+      "Bloomberg's Mark Gurman reports Apple will introduce its long-delayed smart-home hub on October 13, alongside a refreshed HomePod mini and Apple TV 4K — all with refreshed Siri AI. The hub (codenamed J490) is said to have a 6-inch display and target ~$350. Apple has not confirmed the launch or the date; the hub was held back for years waiting for the new Siri.",
+    sourceName: "Economic Times",
+    sourceUrl: "https://economictimes.indiatimes.com/news/new-updates/apple-is-launching-a-new-product-on-october-13-what-it-is-expected-price-and-its-features/articleshow/134609995.cms",
+    tags: ["Launch"],
+  },
+  {
     slug: "softbank-completes-30b-openai-investment",
     date: "2026-10-01",
     title: "SoftBank completes its $30B follow-on investment in OpenAI",
