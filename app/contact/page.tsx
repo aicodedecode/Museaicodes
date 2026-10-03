@@ -8,14 +8,14 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Muse Hub — questions about Muse AI, corrections, or partnership ideas. We read every message.",
+    "Get in touch with museaicodes — questions about Muse AI, corrections, or partnership ideas. We read every message.",
   alternates: { canonical: `${SITE.baseUrl}/contact` },
 };
 
 /** Primary contact method when no form backend is configured: a clean tap-to-email card. */
 function EmailDirect() {
   const mailto = `mailto:${SITE.contactEmail}?subject=${encodeURIComponent(
-    "Question for Muse Hub"
+    "Question for museaicodes"
   )}`;
   return (
     <div className="mt-8 rounded-3xl border border-line bg-surface p-8 md:p-10">

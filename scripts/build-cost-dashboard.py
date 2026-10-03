@@ -81,7 +81,7 @@ def axis_style(layout: dict, **kwargs) -> dict:
     for ax in ("xaxis", "yaxis"):
         layout.setdefault(ax, {}).update(
             dict(gridcolor=DARK["grid"], zerolinecolor=DARK["line"],
-                 tickfont=dict(color=DARK["muted"]), title_font=dict(color=DARK["muted"]))
+                 tickfont=dict(color=DARK["muted"], size=12), title_font=dict(color=DARK["muted"]))
         )
     layout.update(kwargs)
     return layout
@@ -198,9 +198,9 @@ function applyTheme(name) {
         "font.color": t.muted,
         "title.font.color": t.ink,
         "xaxis.gridcolor": t.grid, "xaxis.zerolinecolor": t.line,
-        "xaxis.tickfont.color": t.muted, "xaxis.title.font.color": t.muted,
+        "xaxis.tickfont.color": t.muted, "xaxis.tickfont.size": 12, "xaxis.title.font.color": t.muted,
         "yaxis.gridcolor": t.grid, "yaxis.zerolinecolor": t.line,
-        "yaxis.tickfont.color": t.muted, "yaxis.title.font.color": t.muted,
+        "yaxis.tickfont.color": t.muted, "yaxis.tickfont.size": 12, "yaxis.title.font.color": t.muted,
         "legend.font.color": t.muted,
         "hoverlabel.bgcolor": t.raised, "hoverlabel.font.color": t.ink,
         "hoverlabel.bordercolor": t.line,
@@ -288,8 +288,8 @@ function renderExplorer() {{
     title: {{ text: "Estimated monthly bill", font: {{ family: "Georgia, serif", size: 17, color: t.ink }}, x: 0, xanchor: "left" }},
     font: {{ family: "system-ui, sans-serif", color: t.muted, size: 12 }},
     paper_bgcolor: t.surface, plot_bgcolor: t.surface,
-    yaxis: {{ title: "$ / month", gridcolor: t.grid, zerolinecolor: t.line, tickfont: {{ color: t.muted }} }},
-    xaxis: {{ tickfont: {{ color: t.muted }} }},
+    yaxis: {{ title: "$ / month", gridcolor: t.grid, zerolinecolor: t.line, tickfont: {{ color: t.muted, size: 12 }} }},
+    xaxis: {{ tickfont: {{ color: t.muted, size: 12 }} }},
     hoverlabel: {{ bgcolor: t.raised, font: {{ color: t.ink }}, bordercolor: t.line }},
     margin: {{ t: 56, b: 110, l: 70, r: 20 }}, height: 420,
   }};

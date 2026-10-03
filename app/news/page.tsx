@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "muse ai news, muse ai updates, muse ai download numbers, meta connect muse, muse charm",
   alternates: { canonical: `${SITE.baseUrl}/news` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI News (2026)",
     description:
@@ -57,14 +57,14 @@ export default function NewsPage() {
           />
           <p className="kicker mt-10">News feed</p>
           <h1 className="font-display mt-4 max-w-[900px] text-[clamp(2.6rem,6vw,5rem)] font-extrabold leading-[0.95] tracking-tight">
-            Muse AI news,{" "}
+            Tech news,{" "}
             <em className="font-medium italic text-accent">verified.</em>
           </h1>
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
-            Launches, feature announcements, security incidents, traction, and
-            official resources — every entry dated and linked to the source we
-            verified. No rumors presented as fact, and estimates are labeled as
-            estimates.
+            Launches, feature announcements, security incidents, and market
+            moves across the tech industry — every entry dated and linked to
+            the source we verified. No rumors presented as fact, and estimates
+            are labeled as estimates.
           </p>
         </Reveal>
 

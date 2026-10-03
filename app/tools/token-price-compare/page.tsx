@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "ai token price comparison, llm api pricing comparison, gpt vs claude price per token, gemini api pricing, grok api pricing, cheapest ai api",
   alternates: { canonical: `${SITE.baseUrl}/tools/token-price-compare` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "AI Token Price Comparison: GPT vs Claude vs Gemini vs Grok",
     description:

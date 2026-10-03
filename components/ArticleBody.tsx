@@ -58,7 +58,7 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
             className="h-auto w-full"
           />
           <figcaption className="border-t border-line bg-raised px-5 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-            Illustration: Muse Hub
+            Illustration: museaicodes
           </figcaption>
         </figure>
       </Reveal>
@@ -84,7 +84,9 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
       {guide.sections.map((section, si) => (
         <Reveal key={section.heading} delay={Math.min(si, 3) * 40}>
           <section aria-label={section.heading}>
-            <h2>{section.heading}</h2>
+            <h2 id={`section-${si}`} className="scroll-mt-24">
+              {section.heading}
+            </h2>
             {section.paragraphs?.map((p, i) => (
               <p key={i}>{renderInline(p)}</p>
             ))}

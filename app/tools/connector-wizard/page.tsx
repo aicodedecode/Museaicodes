@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "muse ai connector setup, how to connect gmail to muse ai, muse ai connectors guide, muse ai setup wizard, connect apps to muse",
   alternates: { canonical: `${SITE.baseUrl}/tools/connector-wizard` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse Connector Setup Wizard: Connect Gmail, Calendar & More",
     description:

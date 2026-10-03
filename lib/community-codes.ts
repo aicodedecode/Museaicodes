@@ -32,7 +32,7 @@ export const COMMUNITY_CODES: CommunityCode[] = [
 
 /** Prefilled email for submitting a code for review. */
 export function submitCodeMailto(): string {
-  const subject = encodeURIComponent("My Muse AI referral code for Muse Hub");
+  const subject = encodeURIComponent("My Muse AI referral code for museaicodes");
   const body = encodeURIComponent(
     `Hi,\n\nPlease consider publishing my Muse referral code:\n\nMy code: \nName to display: \n\nI confirm this is my own referral code from my Muse account.\n\nThanks!`
   );

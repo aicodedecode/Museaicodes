@@ -67,6 +67,7 @@ export default function GuideLibrary() {
         >
           {CATEGORIES.map((cat, i) => {
             const selected = active === cat;
+            const count = categoryCount(cat);
             return (
               <button
                 key={cat}
@@ -75,6 +76,7 @@ export default function GuideLibrary() {
                 }}
                 role="tab"
                 aria-selected={selected}
+                aria-label={`${cat}, ${count} guides`}
                 tabIndex={selected ? 0 : -1}
                 onClick={() => selectTab(cat)}
                 className={`relative rounded-full px-4 py-2.5 text-sm font-bold transition-colors duration-150 ${
@@ -82,8 +84,8 @@ export default function GuideLibrary() {
                 }`}
               >
                 {cat}
-                <span className="ml-1.5 font-mono text-[11px] text-faint">
-                  {categoryCount(cat)}
+                <span aria-hidden="true" className="ml-1.5 font-mono text-[11px] text-faint">
+                  {count}
                 </span>
                 <span
                   aria-hidden="true"

@@ -169,7 +169,6 @@ body {
 }
 .figure-drift img {
   animation: hero-drift 26s ease-in-out infinite alternate;
-  will-change: transform;
 }
 
 /* ---- Reduced motion: content stays visible, motion becomes instant ---- */

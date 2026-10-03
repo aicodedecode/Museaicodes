@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "muse ai prompt optimizer, improve muse ai prompt, muse ai prompt structure, weak prompt fix muse",
   alternates: { canonical: `${SITE.baseUrl}/tools/prompt-optimizer` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Prompt Optimizer",
     description:

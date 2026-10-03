@@ -36,7 +36,7 @@ export function generateMetadata({
     keywords: `muse ai ${c.name.toLowerCase()}, does muse connect to ${c.name.toLowerCase()}, muse ai connectors, muse ai integration`,
     alternates: { canonical: `${SITE.baseUrl}/connectors/${c.slug}` },
     openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
       type: "article",
       title,
       description,

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "muse ai tokens how far, muse ai token calculator, muse ai token usage estimate",
   alternates: { canonical: `${SITE.baseUrl}/token-calculator` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Token Calculator: How Far Do Tokens Go?",
     description:

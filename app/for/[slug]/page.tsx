@@ -51,7 +51,7 @@ export function generateMetadata({
     keywords: page.keywords,
     alternates: { canonical },
     openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
       type: "article",
       title: page.metaTitle,
       description: page.metaDescription,

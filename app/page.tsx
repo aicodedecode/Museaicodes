@@ -6,6 +6,8 @@ import { GUIDES, getGuide } from "@/lib/guides";
 import { INTENT_PAGES_1 } from "@/lib/intent-pages-1";
 import { INTENT_PAGES_2 } from "@/lib/intent-pages-2";
 import Reveal from "@/components/Reveal";
+import dynamic from "next/dynamic";
+const HeroField = dynamic(() => import("@/components/HeroField"), { ssr: false });
 import HeroConsole from "@/components/HeroConsole";
 import PromptLibrary from "@/components/PromptLibrary";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -25,10 +27,10 @@ function formatNewsDate(iso: string) {
 export const metadata: Metadata = {
   title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
   description:
-    "museaicodes (Muse Hub) — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
+    "museaicodes — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   alternates: { canonical: SITE.baseUrl },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
     description:
       "museaicodes: 38 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",
@@ -41,24 +43,33 @@ function SectionHead({
   label,
   title,
   copy,
+  dark = false,
+  headingId,
 }: {
-  index: string;
+  index?: string;
   label: string;
   title: string;
   copy?: string;
+  dark?: boolean;
+  headingId?: string;
 }) {
   return (
     <Reveal>
       <div className="mb-8 grid gap-6 md:grid-cols-[170px_1fr]">
-        <p className="kicker md:pt-3">
-          {index} / {label}
+        <p className={`kicker md:pt-3${dark ? " !text-bg/60" : ""}`}>
+          {index ? `${index} / ${label}` : label}
         </p>
         <div>
-          <h2 className="font-display max-w-[850px] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.02] tracking-tight">
+          <h2
+            id={headingId}
+            className="font-display max-w-[850px] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.02] tracking-tight"
+          >
             {title}
           </h2>
           {copy && (
-            <p className="mt-4 max-w-[670px] text-[1.05rem] text-muted">{copy}</p>
+            <p className={`mt-4 max-w-[670px] text-[1.05rem]${dark ? " text-bg/70" : " text-muted"}`}>
+              {copy}
+            </p>
           )}
         </div>
       </div>
@@ -158,8 +169,9 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd} />
 
       {/* ---------- HERO ---------- */}
-      <section aria-labelledby="hero-title" className="mx-auto grid max-w-shell items-center gap-12 px-5 pb-12 pt-14 md:grid-cols-[1.05fr_0.75fr] md:px-6 md:pt-20">
-        <Reveal>
+      <section aria-labelledby="hero-title" className="relative mx-auto grid max-w-shell items-center gap-12 overflow-hidden px-5 pb-12 pt-14 md:grid-cols-[1.05fr_0.75fr] md:px-6 md:pt-20">
+        <HeroField />
+        <Reveal className="relative z-10">
           <p className="flex justify-between gap-4 border-b border-line pb-3 font-mono text-xs uppercase tracking-[0.1em] text-faint">
             <span>Muse field notes / 01</span>
             <span className="hidden sm:inline">Learn · Prompt · Build</span>
@@ -197,7 +209,7 @@ export default function HomePage() {
             ))}
           </ul>
         </Reveal>
-        <Reveal delay={120}>
+        <Reveal delay={120} className="relative z-10">
           <HeroConsole />
         </Reveal>
       </section>
@@ -279,20 +291,14 @@ export default function HomePage() {
       {/* ---------- 03 USE CASES (inverted) ---------- */}
       <section aria-labelledby="use-h" className="bg-ink text-bg">
         <div className="mx-auto max-w-shell px-5 py-16 md:px-6 md:py-20">
-          <Reveal>
-            <div className="mb-8 grid gap-6 md:grid-cols-[170px_1fr]">
-              <p className="kicker !text-bg/60 md:pt-3">03 / Use cases</p>
-              <div>
-                <h2 id="use-h" className="font-display max-w-[850px] text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.02] tracking-tight">
-                  One agent. Many kinds of work.
-                </h2>
-                <p className="mt-4 max-w-[670px] text-[1.05rem] text-bg/70">
-                  Use Muse as a thinking partner, maker, researcher, and
-                  operator — then keep human judgment at the important checkpoints.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+          <SectionHead
+            dark
+            index="03"
+            label="Use cases"
+            title="One agent. Many kinds of work."
+            copy="Use Muse as a thinking partner, maker, researcher, and operator — then keep human judgment at the important checkpoints."
+            headingId="use-h"
+          />
           <div className="grid gap-x-8 md:grid-cols-2">
             {USE_CASES.map((u, i) => (
               <Reveal key={u.n} delay={Math.min(i, 3) * 60}>
@@ -482,12 +488,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---------- EXPLORE ---------- */}
+      {/* ---------- EXPLORE (nav band, unnumbered) ---------- */}
       <section aria-labelledby="explore-h" className="mx-auto max-w-shell px-5 pb-16 md:px-6 md:pb-20">
         <SectionHead
-          index="08"
           label="Explore"
-          title="More ways to use Muse Hub."
+          title="More ways to use museaicodes."
           copy="Directories, libraries, and hubs for every kind of Muse question."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

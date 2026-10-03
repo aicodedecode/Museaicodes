@@ -3,13 +3,15 @@
     "next": "14.2.35",
     "next-themes": "^0.4.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "three": "^0.186.1"
   },
-  "description": "Muse Hub \u2014 the ultimate unofficial Muse AI guide hub. 15 SEO guides, comparisons, referral codes.",
+  "description": "Muse Hub — the ultimate unofficial Muse AI guide hub. 15 SEO guides, comparisons, referral codes.",
   "devDependencies": {
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.186.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.35",

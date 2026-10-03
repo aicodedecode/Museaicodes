@@ -50,8 +50,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
-    default: "Muse AI Guide: Invite Codes, Tutorials & Comparisons | Muse Hub",
-    template: "%s | Muse Hub",
+    default: "Muse AI Guide: Invite Codes, Tutorials & Comparisons | museaicodes",
+    template: "%s | museaicodes",
   },
   description: SITE.description,
   // Brand icons: app/favicon.ico, app/icon.png and app/apple-icon.png are
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     title: "Muse AI Guide: Invite Codes, Tutorials & Comparisons",
     description: SITE.description,
     url: SITE.baseUrl,
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub — Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes — Muse AI guides, codes & tutorials" }],
   },
   twitter: {
     card: "summary",
@@ -90,10 +90,9 @@ const ORG_JSON_LD = {
       "@type": "Organization",
       "@id": `${SITE.baseUrl}#organization`,
       name: "museaicodes",
-      alternateName: "Muse Hub",
       url: SITE.baseUrl,
       description:
-        "museaicodes (Muse Hub) is an independent, unofficial guide hub for Meta's Muse AI — practical guides, invite and referral codes, tools, and honest comparisons.",
+        "museaicodes is an independent, unofficial guide hub for Meta's Muse AI — practical guides, invite and referral codes, tools, and honest comparisons.",
       logo: {
         "@type": "ImageObject",
         url: `${SITE.baseUrl}/images/brand/jolly-logo.png`,
@@ -103,7 +102,6 @@ const ORG_JSON_LD = {
       "@type": "WebSite",
       "@id": `${SITE.baseUrl}#website`,
       name: "museaicodes",
-      alternateName: "Muse Hub",
       url: SITE.baseUrl,
       publisher: { "@id": `${SITE.baseUrl}#organization` },
     },

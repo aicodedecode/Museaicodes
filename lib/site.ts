@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Muse Hub",
+  name: "museaicodes",
   domain: "museaicodes.com",
   baseUrl: "https://www.museaicodes.com",
   tagline: "The ultimate unofficial Muse AI guide hub",

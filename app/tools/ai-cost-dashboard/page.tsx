@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "ai model cost dashboard, llm pricing charts, ai api cost comparison, gpt vs claude cost chart, jev pricing chart",
   alternates: { canonical: `${SITE.baseUrl}/tools/ai-cost-dashboard` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "AI Model Cost Dashboard: Interactive API Price Charts",
     description:

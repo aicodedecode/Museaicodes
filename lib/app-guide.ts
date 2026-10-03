@@ -154,6 +154,6 @@ export const appFaqs: Faq[] = [
   {
     question: "Is this an official Meta website?",
     answer:
-      "No. This App Guide is published by Muse Hub, an independent learning resource. It is not affiliated with or endorsed by Meta — for authoritative details, check the Muse app itself or Meta's official pages.",
+      "No. This App Guide is published by museaicodes, an independent learning resource. It is not affiliated with or endorsed by Meta — for authoritative details, check the Muse app itself or Meta's official pages.",
   },
 ];

@@ -65,7 +65,7 @@ export default function UpdatesFeed() {
       <div className="mt-6 space-y-5">
         {entries.map((u, i) => (
           <Reveal key={u.slug} delay={Math.min(i, 4) * 50}>
-            <article className="rounded-[22px] border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow)] md:p-8">
+            <article className="relative rounded-[22px] border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow)] md:p-8">
               <div className="flex flex-wrap items-center gap-2.5">
                 <time
                   dateTime={u.date}
@@ -94,7 +94,7 @@ export default function UpdatesFeed() {
                   href={u.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-accent underline-offset-4 hover:underline"
+                  className="font-bold text-accent underline-offset-4 hover:underline after:absolute after:inset-0 after:content-['']"
                 >
                   {u.sourceName} <span aria-hidden="true">↗</span>
                 </a>

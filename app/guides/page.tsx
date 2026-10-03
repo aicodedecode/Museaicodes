@@ -7,16 +7,16 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "All 49 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
+  title: "All 50 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
   description:
     "Browse every Muse AI guide: invite & referral codes, tutorials, WhatsApp tips, token rewards, use cases, reviews, and comparisons with ChatGPT, Claude, and Meta AI.",
   keywords:
     "muse ai guides, muse ai tutorials, muse ai invite code, muse ai vs chatgpt, muse ai whatsapp",
   alternates: { canonical: `${SITE.baseUrl}/guides` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
-    title: "All 49 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
+    title: "All 50 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
     description:
       "Every Muse AI guide in one place — access, prompting, WhatsApp, tokens, use cases, reviews, and honest comparisons.",
     url: `${SITE.baseUrl}/guides`,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "All 49 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
+    title: "All 50 Muse AI Guides: Tutorials, Invite Codes & Comparisons",
     description:
       "Every Muse AI guide in one place — access, prompting, WhatsApp, tokens, use cases, reviews, and honest comparisons.",
   },
@@ -47,7 +47,7 @@ export default function GuidesIndexPage() {
         headline: g.title,
         description: g.metaDescription,
         inLanguage: "en",
-        author: { "@type": "Organization", name: "Muse Hub" },
+        author: { "@type": "Organization", name: "museaicodes" },
       },
     })),
   };
@@ -66,7 +66,7 @@ export default function GuidesIndexPage() {
             <em className="font-medium italic text-accent">in one place.</em>
           </h1>
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
-            49 focused guides covering access and invite codes, prompting,
+            50 focused guides covering access and invite codes, prompting,
             WhatsApp, token rewards, real use cases, honest reviews, and
             head-to-head comparisons. Each one starts with a direct answer,
             then adds the steps that matter.

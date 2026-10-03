@@ -10,6 +10,7 @@ import CommunityCodes from "@/components/CommunityCodes";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import AdSlot from "@/components/AdSlot";
+import CopyLinkButton from "@/components/CopyLinkButton";
 
 export function generateStaticParams() {
   return GUIDES.map((g) => ({ slug: g.slug }));
@@ -123,9 +124,13 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             {guide.title}
           </h1>
           <p className="mt-5 max-w-[640px] text-[1.15rem] text-muted">{guide.deck}</p>
-          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.12em] text-faint">
-            Updated {SITE.updated} · {Math.max(3, Math.round(guide.sections.length * 1.4))} min read
-          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-faint">
+              By museaicodes editorial · Updated {SITE.updated} ·{" "}
+              {Math.max(3, Math.round(guide.sections.length * 1.4))} min read
+            </p>
+            <CopyLinkButton />
+          </div>
         </Reveal>
 
         <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1fr_360px]">
@@ -162,7 +167,24 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             </Reveal>
           </div>
 
-          <aside aria-label="Referral codes" className="lg:pt-2">
+          <aside aria-label="On this page and referral codes" className="lg:sticky lg:top-24 lg:pt-2">
+            <nav aria-label="Table of contents" className="mb-8 hidden lg:block">
+              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-faint">
+                On this page
+              </p>
+              <ol className="mt-3 space-y-2 border-l border-line pl-4">
+                {guide.sections.map((s, i) => (
+                  <li key={s.heading}>
+                    <a
+                      href={`#section-${i}`}
+                      className="text-sm leading-snug text-muted underline-offset-4 transition-colors hover:text-accent hover:underline"
+                    >
+                      {s.heading}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
             <ReferralCodes />
             <div className="mt-6 rounded-2xl border border-line bg-surface p-5">
               <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-faint">

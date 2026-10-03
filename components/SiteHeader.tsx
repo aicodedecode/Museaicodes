@@ -37,7 +37,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-line bg-bg">
       <SearchPalette open={searchOpen} onOpenChange={setSearchOpen} />
       <nav aria-label="Main navigation" className="mx-auto flex min-h-[68px] max-w-shell items-center justify-between gap-4 px-5 md:px-6">
-        <Link href="/" className="flex items-center gap-2.5" aria-label="Muse Hub home">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="museaicodes home">
           {/* Animated brand mark: Jolly in the Christmas dress, smiling and waving.
               Static poster shows for prefers-reduced-motion. */}
           <span className="block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-1 ring-line">
@@ -59,7 +59,7 @@ export default function SiteHeader() {
             />
           </span>
           <span className="font-display text-[1.45rem] font-bold tracking-tight">
-            Muse<span className="text-accent">·</span>Hub
+            museai<span className="text-accent">·</span>codes
           </span>
           <span className="hidden font-mono text-[11px] uppercase tracking-[0.12em] text-faint sm:inline">
             Field notes

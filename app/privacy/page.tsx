@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Muse Hub collects, uses, and protects your information — including cookies, Google advertising, and contact-form data.",
+    "How museaicodes collects, uses, and protects your information — including cookies, Google advertising, and contact-form data.",
   alternates: { canonical: `${SITE.baseUrl}/privacy` },
 };
 
@@ -15,10 +15,10 @@ export default function PrivacyPage() {
       slug="privacy"
       kicker="Legal · Privacy"
       title="Privacy Policy"
-      deck="What Muse Hub collects, why it collects it, and the choices you have — including how advertising cookies work on this site."
+      deck="What museaicodes collects, why it collects it, and the choices you have — including how advertising cookies work on this site."
     >
       <p>
-        Muse Hub (“we”, “this site”) is an independent guide to Muse AI, published at{" "}
+        museaicodes (“we”, “this site”) is an independent guide to Muse AI, published at{" "}
         {SITE.domain}. This policy explains what information we collect when you visit, how we
         use it, and your options. If you have questions about this policy, email us at{" "}
         <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.

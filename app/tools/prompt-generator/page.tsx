@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "muse ai prompt builder, how to write muse ai prompts, better ai prompts, muse ai prompt tips",
   alternates: { canonical: `${SITE.baseUrl}/tools/prompt-generator` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Prompt Generator: Write Better Prompts",
     description:

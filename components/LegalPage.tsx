@@ -29,7 +29,7 @@ export default function LegalPage({ slug, kicker, title, deck, children }: Legal
       name: SITE.name,
       url: SITE.baseUrl,
     },
-    publisher: { "@type": "Organization", name: "Muse Hub" },
+    publisher: { "@type": "Organization", name: "museaicodes" },
   };
 
   return (

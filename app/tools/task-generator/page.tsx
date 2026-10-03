@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "muse ai task generator, muse ai instruction generator, how to ask muse ai, muse ai task prompt",
   alternates: { canonical: `${SITE.baseUrl}/tools/task-generator` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Task Generator",
     description:

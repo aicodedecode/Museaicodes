@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "muse ai connectors, does muse connect to gmail, muse ai google calendar, muse ai instagram integration, muse ai spotify, muse ai shopify, muse ai github, muse ai notion",
   alternates: { canonical: `${SITE.baseUrl}/connectors` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Connectors: The Official Directory",
     description:

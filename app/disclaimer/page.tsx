@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Disclaimer",
   description:
-    "Muse Hub is an unofficial, independent guide — not affiliated with Meta. Content is informational; referral rewards vary and are never guaranteed.",
+    "museaicodes is an unofficial, independent guide — not affiliated with Meta. Content is informational; referral rewards vary and are never guaranteed.",
   alternates: { canonical: `${SITE.baseUrl}/disclaimer` },
 };
 
@@ -19,7 +19,7 @@ export default function DisclaimerPage() {
     >
       <h2>Unofficial and independent</h2>
       <p>
-        Muse Hub is an independent publication. It is <strong>not affiliated with, endorsed
+        museaicodes is an independent publication. It is <strong>not affiliated with, endorsed
         by, or sponsored by Meta</strong> or any of its products, including Muse. “Muse” and
         related marks belong to their respective owners, and references on this site are for
         identification only.
@@ -59,7 +59,7 @@ export default function DisclaimerPage() {
 
       <h2>Advertising</h2>
       <p>
-        This site may display third-party advertising. Advertisers — not Muse Hub — are
+        This site may display third-party advertising. Advertisers — not museaicodes — are
         responsible for the claims in their ads. See our{" "}
         <a href="/affiliate-disclosure">Affiliate Disclosure</a> for how we may earn from
         codes and links.

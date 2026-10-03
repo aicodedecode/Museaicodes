@@ -48,7 +48,7 @@ export default function CommunityCodes() {
                   <code className="font-mono text-[1.5rem] font-semibold tracking-[0.08em]">
                     {code}
                   </code>
-                  <p className="mt-1 text-xs text-faint">Muse Hub · verified</p>
+                  <p className="mt-1 text-xs text-faint">museaicodes · verified</p>
                 </div>
                 <CopyButton text={code} label={`Copy our referral code ${code}`} />
               </div>

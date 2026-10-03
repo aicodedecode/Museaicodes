@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "muse ai tools, muse ai token calculator, muse ai prompt builder, muse ai integrations, muse ai shopping walmart, muse ai opentable",
   alternates: { canonical: `${SITE.baseUrl}/tools` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Tools: Estimators, Quiz, Prompt Generator & Integrations",
     description:

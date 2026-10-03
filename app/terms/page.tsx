@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "The rules for using Muse Hub: acceptable use, intellectual property, warranties, liability, and how terms may change.",
+    "The rules for using museaicodes: acceptable use, intellectual property, warranties, liability, and how terms may change.",
   alternates: { canonical: `${SITE.baseUrl}/terms` },
 };
 
@@ -15,7 +15,7 @@ export default function TermsPage() {
       slug="terms"
       kicker="Legal · Terms"
       title="Terms of Use"
-      deck="The ground rules for using this site. By browsing Muse Hub, you agree to these terms."
+      deck="The ground rules for using this site. By browsing museaicodes, you agree to these terms."
     >
       <h2>Acceptance</h2>
       <p>
@@ -26,7 +26,7 @@ export default function TermsPage() {
 
       <h2>What this site is</h2>
       <p>
-        Muse Hub is a free, independent information resource about Muse AI. We may change,
+        museaicodes is a free, independent information resource about Muse AI. We may change,
         update, or remove content at any time without notice.
       </p>
 
@@ -47,7 +47,7 @@ export default function TermsPage() {
 
       <h2>Intellectual property</h2>
       <p>
-        The site’s original text, design, and code are owned by Muse Hub and protected by
+        The site’s original text, design, and code are owned by museaicodes and protected by
         applicable intellectual-property laws. You may read, share links to, and quote
         brief excerpts with attribution. Product names, logos, and marks mentioned on the
         site belong to their respective owners.
@@ -63,7 +63,7 @@ export default function TermsPage() {
 
       <h2>Limitation of liability</h2>
       <p>
-        To the maximum extent permitted by law, Muse Hub and its operators are not liable
+        To the maximum extent permitted by law, museaicodes and its operators are not liable
         for any direct, indirect, incidental, or consequential damages arising from your
         use of (or inability to use) the site — including any loss related to referral
         codes, promotions, or third-party products mentioned here.

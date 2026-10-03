@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description:
-    "Muse Hub may earn benefits from referral codes and links on this site. Read how that works and what it means for you.",
+    "museaicodes may earn benefits from referral codes and links on this site. Read how that works and what it means for you.",
   alternates: { canonical: `${SITE.baseUrl}/affiliate-disclosure` },
 };
 
@@ -19,7 +19,7 @@ export default function AffiliateDisclosurePage() {
     >
       <h2>How we may earn</h2>
       <p>
-        Muse Hub publishes referral and invite codes (for example, Muse AI invite codes) and
+        museaicodes publishes referral and invite codes (for example, Muse AI invite codes) and
         may link to products, apps, or services. If you use one of our codes or links, we
         may receive a benefit — such as referral tokens, credits, a commission, or another
         promotional reward from the provider.

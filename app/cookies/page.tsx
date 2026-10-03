@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
-    "Which cookies and browser storage Muse Hub uses — essential, preference, and advertising cookies — and how to manage them.",
+    "Which cookies and browser storage museaicodes uses — essential, preference, and advertising cookies — and how to manage them.",
   alternates: { canonical: `${SITE.baseUrl}/cookies` },
 };
 

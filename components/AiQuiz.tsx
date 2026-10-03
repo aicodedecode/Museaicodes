@@ -223,7 +223,7 @@ export default function AiQuiz() {
 
   if (done && result) {
     const r = RESULTS[result.key];
-    const shareText = `My AI match: ${r.name} — ${r.tagline} (via Muse Hub quiz)`;
+    const shareText = `My AI match: ${r.name} — ${r.tagline} (via museaicodes quiz)`;
     return (
       <Reveal>
         <div className="mx-auto max-w-[720px] rounded-[26px] border border-line bg-surface p-6 md:p-10">

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "which ai should i use, muse vs chatgpt quiz, best ai assistant for me",
   alternates: { canonical: `${SITE.baseUrl}/quiz` },
   openGraph: {
-    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "museaicodes \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Which AI Fits You? 5-Question Quiz",
     description:
