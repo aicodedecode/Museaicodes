@@ -4,220 +4,194 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 /**
- * HeroField — "the field notes desk".
+ * HeroField — a soft dot swarm ("fireflies over field notes").
  *
- * A calm, shallow 3D field of editorial index cards drifting behind the hero,
- * each letterpressed with a word from the site's own vocabulary. Paper, ink,
- * and one accent card — no particles, no wireframes, no glow.
- *
- * Respects: prefers-reduced-motion (renders one static frame), offscreen
- * pause, tab-hidden pause, theme changes (dark/light), DPR clamp.
+ * Replaces the earlier index-card field: ~140 light, soft dots drift on
+ * wander currents, and on desktop (fine pointer) they swarm gently toward
+ * the cursor, trailing it like fireflies. Procedural soft-dot shader —
+ * no textures. Theme-aware, DPR-clamped, pauses offscreen, and renders a
+ * single static frame under prefers-reduced-motion.
  */
-
-const WORDS = [
-  "invite code", "prompt", "token", "compare",
-  "whatsapp", "voice", "news", "guide",
-  "quiz", "tools", "referral", "redeem",
-  "meta ai", "chatgpt", "claude", "field notes",
-  "how-to", "setup", "privacy", "update",
-  "ideas", "library",
-];
-
-type Theme = {
-  card: string;
-  cardEdge: string;
-  ink: string;
-  faint: string;
-};
-
-const DARK: Theme = { card: "#35312a", cardEdge: "#57503f", ink: "#ece4cf", faint: "#a49c85" };
-const LIGHT: Theme = { card: "#fffdf6", cardEdge: "#d9d0b8", ink: "#2b2d29", faint: "#8a8471" };
-const ACCENT_BG = "#ff6b47";
-const ACCENT_INK = "#241005";
-
-function makeCardTexture(word: string, n: number, theme: Theme, accent: boolean): THREE.CanvasTexture {
-  const W = 512;
-  const H = 320;
-  const c = document.createElement("canvas");
-  c.width = W;
-  c.height = H;
-  const g = c.getContext("2d")!;
-
-  const bg = accent ? ACCENT_BG : theme.card;
-  const ink = accent ? ACCENT_INK : theme.ink;
-  const faint = accent ? "rgba(36,16,5,0.62)" : theme.faint;
-  const edge = accent ? "rgba(36,16,5,0.35)" : theme.cardEdge;
-
-  // paper
-  g.fillStyle = bg;
-  g.fillRect(0, 0, W, H);
-
-  // subtle top light (paper, not glow)
-  const grad = g.createLinearGradient(0, 0, 0, H);
-  grad.addColorStop(0, "rgba(255,255,255,0.10)");
-  grad.addColorStop(0.35, "rgba(255,255,255,0)");
-  g.fillStyle = grad;
-  g.fillRect(0, 0, W, H);
-
-  // frame
-  g.strokeStyle = edge;
-  g.lineWidth = 5;
-  g.strokeRect(14, 14, W - 28, H - 28);
-
-  // index №
-  g.fillStyle = faint;
-  g.font = "600 26px ui-monospace, SFMono-Regular, Menlo, monospace";
-  g.textBaseline = "alphabetic";
-  g.fillText(`№ ${String(n + 1).padStart(2, "0")}`, 40, 66);
-
-  // word — Georgia, the site's display voice
-  g.fillStyle = ink;
-  g.font = "italic 600 62px Georgia, 'Times New Roman', serif";
-  g.textAlign = "center";
-  // shrink long words to fit
-  const maxW = W - 120;
-  let size = 62;
-  while (g.measureText(word).width > maxW && size > 30) {
-    size -= 4;
-    g.font = `italic 600 ${size}px Georgia, 'Times New Roman', serif`;
-  }
-  g.fillText(word, W / 2, H / 2 + size * 0.28);
-
-  // footer rule + site mark
-  g.strokeStyle = faint;
-  g.lineWidth = 2;
-  g.beginPath();
-  g.moveTo(40, H - 62);
-  g.lineTo(W - 40, H - 62);
-  g.stroke();
-  g.fillStyle = faint;
-  g.font = "600 22px ui-monospace, SFMono-Regular, Menlo, monospace";
-  g.textAlign = "left";
-  g.fillText("museaicodes · field notes", 40, H - 30);
-
-  const tex = new THREE.CanvasTexture(c);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  tex.anisotropy = 4;
-  return tex;
-}
-
-type Card = {
-  mesh: THREE.Mesh;
-  mat: THREE.MeshStandardMaterial;
-  word: string;
-  index: number;
-  accent: boolean;
-  baseX: number;
-  baseY: number;
-  phase: number;
-  speed: number;
-  depth: number; // 0 near … 1 far
-};
-
 export default function HeroField() {
   const hostRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const host = hostRef.current;
-    if (!host || typeof window === "undefined") return;
+    if (!host) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
     const isDark = () => document.documentElement.classList.contains("dark");
-    let theme: Theme = isDark() ? DARK : LIGHT;
 
     let renderer: THREE.WebGLRenderer;
     try {
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     } catch {
-      return; // no WebGL — hero simply renders without the card field
+      return; // no WebGL — hero simply renders without the swarm
     }
-    renderer.setClearColor(0x000000, 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    renderer.setClearColor(0x000000, 0); // transparent: site bg shows through
     host.appendChild(renderer.domElement);
-    renderer.domElement.setAttribute("aria-hidden", "true");
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 60);
     camera.position.set(0, 0, 11);
 
-    // warm editorial lighting — one key, one soft fill
-    const key = new THREE.DirectionalLight(0xfff2dd, 1.15);
-    key.position.set(4, 6, 8);
-    scene.add(key);
-    const fill = new THREE.DirectionalLight(0xffd9c4, 0.35);
-    fill.position.set(-6, -2, 4);
-    scene.add(fill);
-    scene.add(new THREE.AmbientLight(0xffffff, 0.55));
-
-    const isMobile = host.clientWidth < 640;
-    const COUNT = isMobile ? 13 : WORDS.length;
-
-    const cards: Card[] = [];
-    const geo = new THREE.PlaneGeometry(2.5, 1.5625);
-
-    const buildCard = (word: string, i: number, accent: boolean): Card => {
-      const tex = makeCardTexture(word, i, theme, accent);
-      const mat = new THREE.MeshStandardMaterial({
-        map: tex,
-        roughness: 0.92,
-        metalness: 0,
-        transparent: true,
-      });
-      const mesh = new THREE.Mesh(geo, mat);
-
-      // spread wider than the viewport; z layers give the parallax depth
-      const depth = Math.random(); // 0 near … 1 far
-      const z = -1.5 - depth * 6;
-      const spanX = 11 - depth * 3;
-      const spanY = 6.5 - depth * 2;
-      const baseX = (Math.random() * 2 - 1) * spanX;
-      const baseY = (Math.random() * 2 - 1) * spanY;
-      mesh.position.set(baseX, baseY, z);
-      mesh.rotation.set(
-        (Math.random() - 0.5) * 0.22,
-        (Math.random() - 0.5) * 0.35,
-        (Math.random() - 0.5) * 0.16
-      );
-      const s = 0.75 + Math.random() * 0.6 - depth * 0.25;
-      mesh.scale.setScalar(Math.max(0.45, s));
-      mat.opacity = 0.88 - depth * 0.48;
-
-      scene.add(mesh);
-      return {
-        mesh, mat, word, index: i, accent,
-        baseX, baseY,
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.35 + Math.random() * 0.5,
-        depth,
-      };
+    // ---- palette (repainted on theme switch) ----
+    interface Palette { base: THREE.Color; baseA: [number, number]; accent: THREE.Color; accentA: [number, number]; }
+    const palettes = {
+      dark: {
+        base: new THREE.Color("#c9b992"), baseA: [0.22, 0.5],
+        accent: new THREE.Color("#ff8a66"), accentA: [0.45, 0.75],
+      } as Palette,
+      light: {
+        base: new THREE.Color("#a89a7c"), baseA: [0.25, 0.52],
+        accent: new THREE.Color("#ff6b47"), accentA: [0.5, 0.8],
+      } as Palette,
     };
 
-    for (let i = 0; i < COUNT; i++) {
-      cards.push(buildCard(WORDS[i % WORDS.length], i, i === 3));
+    // ---- dot state ----
+    interface Dot {
+      x: number; y: number; z: number; baseZ: number;
+      vx: number; vy: number;
+      size: number; phase: number; tone: number; social: number;
+      halo: boolean; alphaT: number; // alphaT: 0..1 position within the theme's alpha range
     }
+    let W = 10; // visible width at z=0, recomputed on resize
+    let H = 6;
+    const dots: Dot[] = [];
 
+    const seed = () => {
+      dots.length = 0;
+      const w = host.clientWidth || 1;
+      const h = host.clientHeight || 1;
+      const count = Math.round(THREE.MathUtils.clamp((w * h) / 4500, 90, 230));
+      const rand = (a: number, b: number) => a + Math.random() * (b - a);
+      for (let i = 0; i < count; i++) {
+        const tone = Math.random() < 0.12 ? 1 : 0; // ~12% coral accents
+        const halo = Math.random() < 0.08; // a few large faint halos for depth
+        dots.push({
+          x: rand(-W / 2 - 0.5, W / 2 + 0.5),
+          y: rand(-H / 2 - 0.5, H / 2 + 0.5),
+          z: 0, baseZ: rand(-1.4, 1.2),
+          vx: rand(-0.1, 0.1), vy: rand(-0.1, 0.1),
+          size: halo ? rand(0.42, 0.6) : rand(0.1, 0.26),
+          phase: rand(0, Math.PI * 2),
+          tone, social: rand(0.6, 1.4),
+          halo, alphaT: Math.random(),
+        });
+        dots[i].z = dots[i].baseZ;
+      }
+    };
+
+    // ---- geometry + soft-dot shader ----
+    const geo = new THREE.BufferGeometry();
+    const posArr = new Float32Array(230 * 3);
+    const colArr = new Float32Array(230 * 3);
+    const sizeArr = new Float32Array(230);
+    const alphaArr = new Float32Array(230);
+    geo.setAttribute("position", new THREE.BufferAttribute(posArr, 3));
+    geo.setAttribute("aColor", new THREE.BufferAttribute(colArr, 3));
+    geo.setAttribute("aSize", new THREE.BufferAttribute(sizeArr, 1));
+    geo.setAttribute("aAlpha", new THREE.BufferAttribute(alphaArr, 1));
+
+    const mat = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      uniforms: { uFactor: { value: 1000 } },
+      vertexShader: /* glsl */ `
+        attribute float aSize;
+        attribute float aAlpha;
+        attribute vec3 aColor;
+        varying float vAlpha;
+        varying vec3 vColor;
+        uniform float uFactor;
+        void main() {
+          vAlpha = aAlpha;
+          vColor = aColor;
+          vec4 mv = modelViewMatrix * vec4(position, 1.0);
+          gl_PointSize = aSize * uFactor / -mv.z;
+          gl_Position = projectionMatrix * mv;
+        }
+      `,
+      fragmentShader: /* glsl */ `
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          float d = length(gl_PointCoord - 0.5);
+          float a = smoothstep(0.5, 0.06, d);
+          a *= a; // soft falloff, no hard edge
+          float alpha = a * vAlpha;
+          if (alpha < 0.004) discard;
+          gl_FragColor = vec4(vColor, alpha);
+        }
+      `,
+    });
+    const points = new THREE.Points(geo, mat);
+    points.frustumCulled = false;
+    scene.add(points);
+
+    const paint = () => {
+      const p = isDark() ? palettes.dark : palettes.light;
+      const c = new THREE.Color();
+      for (let i = 0; i < dots.length; i++) {
+        const d = dots[i];
+        let range: [number, number];
+        if (d.tone === 1) {
+          c.copy(p.accent);
+          range = p.accentA;
+        } else {
+          c.copy(p.base);
+          range = d.halo ? [0.08, 0.14] : p.baseA;
+        }
+        colArr[i * 3] = c.r; colArr[i * 3 + 1] = c.g; colArr[i * 3 + 2] = c.b;
+        alphaArr[i] = range[0] + (range[1] - range[0]) * d.alphaT;
+      }
+      (geo.getAttribute("aColor") as THREE.BufferAttribute).needsUpdate = true;
+      (geo.getAttribute("aAlpha") as THREE.BufferAttribute).needsUpdate = true;
+    };
+
+    const syncAttributes = () => {
+      for (let i = 0; i < dots.length; i++) {
+        const d = dots[i];
+        posArr[i * 3] = d.x; posArr[i * 3 + 1] = d.y; posArr[i * 3 + 2] = d.z;
+        sizeArr[i] = d.size;
+      }
+      geo.setDrawRange(0, dots.length);
+      (geo.getAttribute("position") as THREE.BufferAttribute).needsUpdate = true;
+      (geo.getAttribute("aSize") as THREE.BufferAttribute).needsUpdate = true;
+    };
+
+    // ---- sizing ----
     const resize = () => {
       const w = host.clientWidth || 1;
       const h = host.clientHeight || 1;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+      renderer.setPixelRatio(dpr);
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
+      const dist = camera.position.z;
+      H = 2 * dist * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      W = H * camera.aspect;
+      // worldSize -> px: size * (h*dpr) / (2*tan(fov/2)) / dist
+      (mat.uniforms.uFactor as THREE.Uniform).value =
+        (h * dpr) / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)));
     };
-    resize();
-    const ro = new ResizeObserver(resize);
-    ro.observe(host);
 
-    // gentle mouse parallax (pointer only; harmless on touch)
-    const target = { x: 0, y: 0 };
+    // ---- pointer (desktop swarm) ----
+    const mouse = { x: 0, y: 0 };
+    let hasPointer = false;
     const onMove = (e: PointerEvent) => {
       if (e.pointerType === "touch") return;
       const r = host.getBoundingClientRect();
-      target.x = ((e.clientX - r.left) / r.width - 0.5) * 2;
-      target.y = -((e.clientY - r.top) / r.height - 0.5) * 2;
+      if (r.width === 0 || r.height === 0) return;
+      mouse.x = ((e.clientX - r.left) / r.width - 0.5) * W;
+      mouse.y = -((e.clientY - r.top) / r.height - 0.5) * H;
+      hasPointer = true;
     };
     window.addEventListener("pointermove", onMove, { passive: true });
 
-    // pause when offscreen / tab hidden
+    // ---- pause when offscreen / tab hidden ----
     let visible = true;
     const io = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
@@ -225,45 +199,60 @@ export default function HeroField() {
     });
     io.observe(host);
     const onVis = () => {
-      visible = !document.hidden && visible !== false ? !document.hidden : visible;
       if (!document.hidden && !reduced) tick();
     };
     document.addEventListener("visibilitychange", onVis);
 
-    // theme switch: repaint card faces
-    const mo = new MutationObserver(() => {
-      const next = isDark() ? DARK : LIGHT;
-      if (next === theme) return;
-      theme = next;
-      for (const card of cards) {
-        const old = card.mat.map;
-        card.mat.map = makeCardTexture(card.word, card.index, theme, card.accent);
-        card.mat.needsUpdate = true;
-        old?.dispose();
-      }
-    });
+    // ---- theme switch: repaint dot colors ----
+    const mo = new MutationObserver(paint);
     mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
+    // ---- animation ----
     const clock = new THREE.Clock();
     let raf = 0;
     let running = false;
 
-    const render = () => {
-      const t = clock.getElapsedTime();
-      for (const card of cards) {
-        const w = Math.sin(t * card.speed + card.phase);
-        const w2 = Math.cos(t * card.speed * 0.7 + card.phase * 1.7);
-        card.mesh.position.y = card.baseY + w * 0.28 * (1 - card.depth * 0.5);
-        card.mesh.position.x = card.baseX + w2 * 0.18 * (1 - card.depth * 0.5);
-        card.mesh.rotation.z += Math.sin(t * 0.2 + card.phase) * 0.0004;
+    const step = (t: number, dt: number) => {
+      const R = 2.6; // mouse influence radius (world units)
+      const bx = W / 2 + 0.6;
+      const by = H / 2 + 0.6;
+      for (const d of dots) {
+        // wander currents
+        const wx = Math.sin(t * 0.4 + d.phase) * 0.25 + Math.sin(t * 0.17 + d.phase * 1.7) * 0.15;
+        const wy = Math.cos(t * 0.33 + d.phase * 1.3) * 0.25 + Math.cos(t * 0.21 + d.phase * 2.1) * 0.15;
+        let ax = wx * 0.35;
+        let ay = wy * 0.35;
+        // desktop swarm: drift toward the cursor
+        if (finePointer && hasPointer) {
+          const dx = mouse.x - d.x;
+          const dy = mouse.y - d.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < R && dist > 0.001) {
+            const pull = 1 - dist / R;
+            const s = pull * pull * 2.4 * d.social;
+            ax += (dx / dist) * s;
+            ay += (dy / dist) * s;
+          }
+        }
+        // soft containment
+        if (d.x > bx) ax -= (d.x - bx) * 3;
+        else if (d.x < -bx) ax -= (d.x + bx) * 3;
+        if (d.y > by) ay -= (d.y - by) * 3;
+        else if (d.y < -by) ay -= (d.y + by) * 3;
+        // integrate + damp
+        d.vx = (d.vx + ax * dt) * 0.96;
+        d.vy = (d.vy + ay * dt) * 0.96;
+        const sp = Math.hypot(d.vx, d.vy);
+        const max = 1.6;
+        if (sp > max) { d.vx = (d.vx / sp) * max; d.vy = (d.vy / sp) * max; }
+        d.x += d.vx * dt;
+        d.y += d.vy * dt;
+        d.z = d.baseZ + Math.sin(t * 0.3 + d.phase) * 0.3;
       }
-      // ease camera toward the pointer, layered over a slow autonomous sway
-      // (the sway keeps the field alive even where pointer events never arrive)
-      const swayX = Math.sin(t * 0.12) * 0.35;
-      const swayY = Math.cos(t * 0.09) * 0.2;
-      camera.position.x += (target.x * 1.4 + swayX - camera.position.x) * 0.045;
-      camera.position.y += (target.y * 0.9 + swayY - camera.position.y) * 0.045;
-      camera.lookAt(0, 0, -2);
+    };
+
+    const render = () => {
+      syncAttributes();
       renderer.render(scene, camera);
     };
 
@@ -273,10 +262,20 @@ export default function HeroField() {
       const loop = () => {
         raf = requestAnimationFrame(loop);
         if (!visible || document.hidden) return;
+        const dt = Math.min(clock.getDelta(), 0.05);
+        step(clock.elapsedTime, dt);
         render();
       };
       loop();
     };
+
+    // ---- boot ----
+    resize();
+    seed();
+    paint();
+    syncAttributes();
+    const ro = new ResizeObserver(() => { resize(); });
+    ro.observe(host);
 
     if (reduced) {
       render(); // one static frame — composition without motion
@@ -292,14 +291,11 @@ export default function HeroField() {
       mo.disconnect();
       window.removeEventListener("pointermove", onMove);
       document.removeEventListener("visibilitychange", onVis);
-      for (const card of cards) {
-        card.mat.map?.dispose();
-        card.mat.dispose();
-        scene.remove(card.mesh);
-      }
+      scene.remove(points);
       geo.dispose();
+      mat.dispose();
       renderer.dispose();
-      host.removeChild(renderer.domElement);
+      if (renderer.domElement.parentElement === host) host.removeChild(renderer.domElement);
     };
   }, []);
 
