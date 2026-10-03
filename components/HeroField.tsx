@@ -213,15 +213,16 @@ export default function HeroField() {
     let running = false;
 
     const step = (t: number, dt: number) => {
-      const R = 2.6; // mouse influence radius (world units)
+      const R = 3.4; // mouse influence radius (world units)
       const bx = W / 2 + 0.6;
       const by = H / 2 + 0.6;
       for (const d of dots) {
-        // wander currents
-        const wx = Math.sin(t * 0.4 + d.phase) * 0.25 + Math.sin(t * 0.17 + d.phase * 1.7) * 0.15;
-        const wy = Math.cos(t * 0.33 + d.phase * 1.3) * 0.25 + Math.cos(t * 0.21 + d.phase * 2.1) * 0.15;
-        let ax = wx * 0.35;
-        let ay = wy * 0.35;
+        // wander currents: fast wobble + slow directional drift (period ~1 min,
+        // so dots visibly travel between stills instead of jiggling in place)
+        const wx = Math.sin(t * 0.4 + d.phase) * 0.3 + Math.sin(t * 0.11 + d.phase * 1.7) * 0.35;
+        const wy = Math.cos(t * 0.33 + d.phase * 1.3) * 0.3 + Math.cos(t * 0.13 + d.phase * 2.1) * 0.35;
+        let ax = wx * 0.7;
+        let ay = wy * 0.7;
         // desktop swarm: drift toward the cursor
         if (finePointer && hasPointer) {
           const dx = mouse.x - d.x;
@@ -229,7 +230,7 @@ export default function HeroField() {
           const dist = Math.hypot(dx, dy);
           if (dist < R && dist > 0.001) {
             const pull = 1 - dist / R;
-            const s = pull * pull * 2.4 * d.social;
+            const s = pull * pull * 4.5 * d.social;
             ax += (dx / dist) * s;
             ay += (dy / dist) * s;
           }
@@ -240,8 +241,8 @@ export default function HeroField() {
         if (d.y > by) ay -= (d.y - by) * 3;
         else if (d.y < -by) ay -= (d.y + by) * 3;
         // integrate + damp
-        d.vx = (d.vx + ax * dt) * 0.96;
-        d.vy = (d.vy + ay * dt) * 0.96;
+        d.vx = (d.vx + ax * dt) * 0.965;
+        d.vy = (d.vy + ay * dt) * 0.965;
         const sp = Math.hypot(d.vx, d.vy);
         const max = 1.6;
         if (sp > max) { d.vx = (d.vx / sp) * max; d.vy = (d.vy / sp) * max; }
