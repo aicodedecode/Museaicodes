@@ -4095,6 +4095,98 @@ export const GUIDES: Guide[] = [
     ],
   },
 
+  {
+    slug: "muse-ai-wallet-settings",
+    modifiedTime: "2026-10-03",
+    image: "/images/guides/muse-ai-shopping.jpg",
+    imageAlt: "Illustration of shopping bags and a checkout flow, representing the Wallet settings in Muse AI",
+    title: "Muse AI Wallet Settings: Payments Your Agent Can Make",
+    deck: "The Wallet holds the payment methods Muse may use for purchases you approve — what it is, how to set it up, and the safety rails around it.",
+    category: "Settings",
+    keywords: "muse ai wallet, muse wallet settings, muse.ai wallet, add payment method muse, muse wallet stripe",
+    metaTitle: "Muse AI Wallet Settings: Payment Methods Explained (2026)",
+    metaDescription:
+      "Muse's Wallet settings explained: what the wallet is for, how to add Link by Stripe or Shop Pay, and how approval gates keep every purchase under your control.",
+    shortAnswer:
+      "The Wallet lives under Settings → Wallet in the Muse app and on muse.ai. It holds the payment methods your agent may use for purchases you approve — Link by Stripe and Shop Pay, added via the Add button. Adding a method doesn't hand Muse a blank check: approval gates still pause before anything hard to undo and wait for your confirmation.",
+    sections: [
+      {
+        heading: "What the Wallet is for",
+        paragraphs: [
+          "Muse is a personal agent, and agents sometimes need to pay for things — booking a ticket, ordering an item, completing a checkout you asked for. The Wallet is where you give it the means: as the screen itself puts it, you “add payment methods to allow Dot to make secure purchases and transactions for you.”",
+          "The key word is allow. The Wallet stores the methods; your approval still authorizes each spend. Think of it as putting a card on file with a very careful assistant — one that asks before every single purchase.",
+        ],
+      },
+      {
+        heading: "How to open Wallet settings",
+        paragraphs: [
+          "In the Muse app or on muse.ai, open Settings and tap Wallet. It sits in the main settings list between Connectors and Secure credentials store.",
+        ],
+        images: [
+          {
+            src: "/images/guides/muse-ai-wallet-settings.webp",
+            alt: "Muse Wallet settings screen showing Link by Stripe and Shop Pay as available payment methods",
+            caption: "Settings → Wallet: add Link by Stripe or Shop Pay so your agent can complete purchases you approve.",
+          },
+        ],
+      },
+      {
+        heading: "Adding a payment method",
+        paragraphs: [
+          "As of October 2026, the Wallet offers two payment methods, each with its own Add button:",
+        ],
+        list: {
+          ordered: true,
+          items: [
+            "Tap Add next to Link by Stripe or Shop Pay — whichever you already use.",
+            "Follow the secure setup prompts to link your method. Card details are entered in the provider's own secure flow, not in a chat.",
+            "Confirm the method appears in your Wallet. You can return to Settings → Wallet any time to review or change your methods.",
+          ],
+        },
+      },
+      {
+        heading: "What happens when Muse wants to buy something",
+        paragraphs: [
+          "Adding a payment method does not let Muse spend freely. Every consequential action runs through approval gates — structured cards that stop the workflow before anything hard to undo and wait for your confirmation. Making a purchase is explicitly one of the gated actions, alongside sending messages as you or changing settings. Ordinary browsing and research never trigger a gate; anything that moves money does.",
+          "In practice: you ask Muse to buy something, it finds the option, and a card appears showing exactly what it plans to spend and where. Nothing is charged until you say yes. The [personal-agent guide](/guides/muse-ai-personal-agent) explains the approval model in more depth.",
+        ],
+      },
+      {
+        heading: "Wallet safety checklist",
+        list: {
+          ordered: false,
+          items: [
+            "Only add payment methods you're comfortable with an agent using — a dedicated card or account beats your primary one.",
+            "Read every approval card before confirming: check the amount, the merchant, and what you're getting.",
+            "Review your Wallet periodically and remove methods you no longer want available.",
+            "Muse never needs your passwords, one-time codes, or banking logins — if anything asks for those, it's a scam, not Muse.",
+          ],
+        },
+      },
+      {
+        heading: "Wallet questions, answered",
+        paragraphs: [
+          "**What is the Muse Wallet?** The screen under Settings → Wallet where you store the payment methods your Muse agent may use for purchases and transactions you approve.",
+          "**Which payment methods can I add?** Link by Stripe and Shop Pay — those are the two options shown in the Wallet screen as of October 2026. Meta may add more over time.",
+          "**Does adding a payment method let Muse spend freely?** No. Approval gates pause before every purchase and wait for your explicit confirmation. The Wallet enables payment; your tap authorizes it.",
+          "**Where do I manage my payment methods?** In the same place: Settings → Wallet, in the Muse app or on muse.ai.",
+        ],
+      },
+      {
+        heading: "Sources & further reading",
+        list: {
+          ordered: false,
+          items: [
+            "[Muse AI Personal Agent](/guides/muse-ai-personal-agent) — the approval-gate safety model in depth.",
+            "[Muse AI Shopping](/guides/muse-ai-shopping) — what Muse can do around shopping tasks.",
+            "[Muse AI General Settings](/guides/muse-ai-general-settings) — the rest of the Settings screens.",
+            "[Muse AI Pricing Explained](/guides/muse-ai-pricing-explained) — Free, Power, and Maximum tiers.",
+          ],
+        },
+      },
+    ],
+  },
+
 ];
 
 export function getGuide(slug: string): Guide | undefined {
