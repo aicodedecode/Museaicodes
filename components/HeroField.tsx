@@ -257,9 +257,12 @@ export default function HeroField() {
         card.mesh.position.x = card.baseX + w2 * 0.18 * (1 - card.depth * 0.5);
         card.mesh.rotation.z += Math.sin(t * 0.2 + card.phase) * 0.0004;
       }
-      // ease camera toward the pointer
-      camera.position.x += (target.x * 1.1 - camera.position.x) * 0.045;
-      camera.position.y += (target.y * 0.7 - camera.position.y) * 0.045;
+      // ease camera toward the pointer, layered over a slow autonomous sway
+      // (the sway keeps the field alive even where pointer events never arrive)
+      const swayX = Math.sin(t * 0.12) * 0.35;
+      const swayY = Math.cos(t * 0.09) * 0.2;
+      camera.position.x += (target.x * 1.4 + swayX - camera.position.x) * 0.045;
+      camera.position.y += (target.y * 0.9 + swayY - camera.position.y) * 0.045;
       camera.lookAt(0, 0, -2);
       renderer.render(scene, camera);
     };
