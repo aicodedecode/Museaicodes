@@ -4274,18 +4274,23 @@ export const GUIDES: Guide[] = [
           "**How fast is Jev?** TypeSafe reports 70–500ms end-to-end per call, claiming 40–200x the speed of frontier LLMs on decision-shaped queries.",
           "**How much does Jev cost?** $0.042 per million input tokens, with output tokens free — per TypeSafe's published pricing.",
           "**Can Jev hallucinate?** It can't hallucinate text, because it never generates text. It can still make wrong decisions within its fixed options — confidence scores are meant to tell you when to trust it.",
-          "**How can I try Jev?** Through TypeSafe's early access waitlist, or via the open-source browser-use/jev-ultrafast project on GitHub, which needs a TypeSafe API key.",
+          "**How can I try Jev?** Through the early-access waitlist at typesafe.ai, or via the open-source browser-use/jev-ultrafast project on GitHub, which needs a TypeSafe API key.",
           "**What is a System One model?** TypeSafe's term for models optimized for fast, structured, software-consumable decisions — named for Kahneman's fast System 1 thinking.",
         ],
       },
       {
-        heading: "Sources & further reading",
+        heading: "Where to go next",
+        paragraphs: [
+          "Start with the official sources to try Jev — and if you build agents and automations, our open-source skills library is linked below too.",
+        ],
         list: {
           ordered: false,
           items: [
-            "[Introducing System One Models & Jev — TypeSafe](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — the launch post this guide is built on.",
-            "[browser-use/jev-ultrafast — GitHub](https://github.com/browser-use/jev-ultrafast) — the open-source ultrafast browser agent (MIT).",
+            "[TypeSafe — official website](https://typesafe.ai) — join the Jev early-access waitlist.",
+            "[Introducing System One Models & Jev — TypeSafe blog](https://typesafe.ai/blog/introducing-system-one-models-and-jev) — the launch post this guide is built on.",
+            "[browser-use/jev-ultrafast — GitHub](https://github.com/browser-use/jev-ultrafast) — the open-source ultrafast browser agent (MIT license).",
             "[TypeSafe docs](https://docs.typesafe.ai) — API reference and evals.",
+            "[awesome-muse-skills — our GitHub repo](https://github.com/aicodedecode/awesome-muse-skills) — 899 original open-source skills for AI agents and automation builders.",
             "[Muse AI Personal Agent](/guides/muse-ai-personal-agent) — how conversational agents handle approvals and actions.",
           ],
         },
