@@ -4310,6 +4310,7 @@ export const GUIDES: Guide[] = [
             "[browser-use/jev-ultrafast — GitHub](https://github.com/browser-use/jev-ultrafast) — the open-source ultrafast browser agent (MIT license).",
             "[TypeSafe docs](https://docs.typesafe.ai) — API reference and evals.",
             "[AI model cost calculator — our tool](/tools/token-price-compare) — plug in your own token volumes and compare Jev against six frontier models side by side.",
+            "[AI model cost dashboard — our tool](/tools/ai-cost-dashboard) — interactive charts: per-token rate bars, a monthly bill explorer, and cost-vs-volume curves.",
             "[awesome-muse-skills — our GitHub repo](https://github.com/aicodedecode/awesome-muse-skills) — 899 original open-source skills for AI agents and automation builders.",
             "[Muse AI Personal Agent](/guides/muse-ai-personal-agent) — how conversational agents handle approvals and actions.",
           ],

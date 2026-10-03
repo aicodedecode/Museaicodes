@@ -49,7 +49,7 @@ export default function TokenPriceComparePage() {
     {
       question: "What does the AI Token Price Comparison tool do?",
       answer:
-        "It compares per-token API pricing for six models — GPT-6 Sol, Claude Sonnet 5.5, Grok 4.7, Gemini 3.8 Flash, DeepSeek V4 Pro, and Mistral Large 3 — at your monthly input and output volumes. It ranks the models cheapest to priciest and shows each provider’s estimated bill, updating instantly as you move the sliders.",
+        "It compares per-token API pricing for seven models — GPT-6.1 Sol, Claude Sonnet 5.5, Grok 4.7, Gemini 3.8 Flash, DeepSeek V4 Pro, Mistral Large 3, and TypeSafe Jev — at your monthly input and output volumes. It ranks the models cheapest to priciest and shows each provider’s estimated bill, updating instantly as you move the sliders.",
     },
     {
       question: "Is the price comparison tool free?",
@@ -64,7 +64,7 @@ export default function TokenPriceComparePage() {
     {
       question: "How accurate are the prices shown?",
       answer:
-        "The per-token rates were last verified against each provider’s official pricing page on September 29, 2026, but API prices change often — always confirm the live rate before signing a budget to it. The tool is a planning estimate, not a quote: it ignores prompt-caching discounts, batch rates, tool-call charges, and regional premiums.",
+        "The per-token rates were last verified against each provider’s official pricing page on October 3, 2026, but API prices change often — always confirm the live rate before signing a budget to it. The tool is a planning estimate, not a quote: it ignores prompt-caching discounts, batch rates, tool-call charges, and regional premiums.",
     },
     {
       question: "Why is Muse listed but not ranked?",
@@ -76,6 +76,11 @@ export default function TokenPriceComparePage() {
         "Why does the tool ask for input and output tokens separately?",
       answer:
         "Because output tokens cost more than input tokens on every model in the table — generation is priced higher than processing. A workload that mostly sends context costs notably less than one that generates long answers, so entering both volumes separately gives a far more honest estimate than a single blended number.",
+    },
+    {
+      question: "Why is TypeSafe Jev so much cheaper than the rest?",
+      answer:
+        "Jev charges $0.042 per million input tokens and nothing for outputs, because its outputs are tiny typed decisions rather than generated text — there is no expensive token-by-token generation. That makes it dramatically cheaper for decision-shaped work like classification, scoring, and routing. The catch: it cannot write essays or code, so compare within your workload, not across model classes.",
     },
   ];
 
@@ -108,12 +113,12 @@ export default function TokenPriceComparePage() {
             <em className="font-medium italic text-accent">cheapest?</em>
           </h1>
           <p className="mt-5 max-w-[670px] text-[1.1rem] leading-relaxed text-muted">
-            This tool compares per-token API pricing for six leading models —
-            GPT-6 Sol, Claude Sonnet 5.5, Gemini 3.8 Flash, Grok 4.7, DeepSeek V4
+            This tool compares per-token API pricing for seven leading models —
+            GPT-6.1 Sol, Claude Sonnet 5.5, Gemini 3.8 Flash, Grok 4.7, DeepSeek V4
             Pro, and Mistral Large 3 — plus a Muse reference row. Enter your
             monthly input and output tokens to see each provider&rsquo;s
             estimated monthly bill, ranked cheapest to priciest, with prices
-            verified on September 29, 2026.
+            verified on October 3, 2026.
           </p>
         </Reveal>
 
@@ -141,6 +146,21 @@ export default function TokenPriceComparePage() {
                 API prices change often. We re-check this page against official
                 pricing pages; always confirm the live rate before signing a
                 budget to it.
+              </li>
+              <li>
+                <Link
+                  href="/tools/ai-cost-dashboard"
+                  className="font-bold text-accent underline-offset-4 hover:underline"
+                >
+                  Interactive cost dashboard (charts) →
+                </Link>{" "}
+                ·{" "}
+                <Link
+                  href="/guides/what-is-jev"
+                  className="font-bold text-accent underline-offset-4 hover:underline"
+                >
+                  What is Jev? →
+                </Link>
               </li>
               <li>
                 <Link
@@ -189,7 +209,7 @@ export default function TokenPriceComparePage() {
               <p>
                 This tool answers a concrete buying question: at your actual
                 monthly volume, which AI API costs the least? It compares
-                per-token API pricing for six models — GPT-6 Sol from OpenAI,
+                per-token API pricing for seven models — GPT-6.1 Sol from OpenAI,
                 Claude Sonnet 5.5 from Anthropic, Grok 4.7 from xAI, Gemini 3.8
                 Flash from Google, DeepSeek V4 Pro, and Mistral Large 3 — plus
                 a Muse reference row for context.
@@ -249,7 +269,7 @@ export default function TokenPriceComparePage() {
               <li>
                 <strong className="text-ink">Prices-verified pill</strong> —
                 states when the per-token rates were last checked against
-                official pricing pages: September 29, 2026.
+                official pricing pages: October 3, 2026.
               </li>
               <li>
                 <strong className="text-ink">Savings summary box</strong> —

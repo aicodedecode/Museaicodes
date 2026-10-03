@@ -121,6 +121,13 @@ export const INTERACTIVE_TOOLS: ToolEntry[] = [
     tag: "Comparator",
     badge: "New",
   },
+  {
+    href: "/tools/ai-cost-dashboard",
+    title: "AI Model Cost Dashboard",
+    deck: "Interactive price charts: rate bars, bill explorer & volume curves",
+    tag: "Dashboard",
+    badge: "New",
+  },
 ];
 
 export interface Integration {
