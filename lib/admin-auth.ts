@@ -9,7 +9,7 @@ export function adminConfigured(): boolean {
   return Boolean(
     process.env.ADMIN_PASSWORD &&
       process.env.ADMIN_SESSION_SECRET &&
-      process.env.ADMIN_GITHUB_TOKEN
+      (process.env.ADMIN_GITHUB_TOKEN || process.env.ADMIN_LOCAL_CONTENT === "1")
   );
 }
 

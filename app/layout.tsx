@@ -3,9 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { SITE } from "@/lib/site";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
-import AdSenseScript from "@/components/AdSenseScript";
+import SiteChrome from "@/components/SiteChrome";
 import JsonLd from "@/components/JsonLd";
 import { ToastProvider } from "@/components/Toast";
 import "./globals.css";
@@ -117,7 +115,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body className="font-body">
-        <AdSenseScript />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -129,9 +126,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="#main" className="skip-link">
               Skip to content
             </a>
-            <SiteHeader />
-            {children}
-            <SiteFooter />
+            <SiteChrome>
+              {children}
+            </SiteChrome>
             <Analytics />
           </ToastProvider>
         </ThemeProvider>

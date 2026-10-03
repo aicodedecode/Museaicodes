@@ -5,6 +5,14 @@ const OWNER = process.env.ADMIN_GITHUB_OWNER || "aicodedecode";
 const REPO = process.env.ADMIN_GITHUB_REPO || "Museaicodes";
 const BRANCH = "main";
 
+/**
+ * Local-dev escape hatch: set ADMIN_LOCAL_CONTENT=1 to read/write the repo's
+ * own content/*.json files instead of going through the GitHub API. Never set
+ * this in production — it exists so the admin UI can be developed and
+ * screenshot-tested without a GitHub token.
+ */
+const LOCAL = process.env.ADMIN_LOCAL_CONTENT === "1";
+
 export type ContentFile = "updates" | "timelines";
 
 export const CONTENT_PATHS: Record<ContentFile, string> = {
@@ -33,6 +41,12 @@ export interface RemoteFile {
 
 /** Fetch the current file from GitHub (source of truth for the admin). */
 export async function readRemoteFile(file: ContentFile): Promise<RemoteFile> {
+  if (LOCAL) {
+    const { readFile } = await import("fs/promises");
+    const { join } = await import("path");
+    const text = await readFile(join(process.cwd(), CONTENT_PATHS[file]), "utf8");
+    return { sha: "local", data: JSON.parse(text) };
+  }
   const res = await fetch(api(CONTENT_PATHS[file]), { headers: headers() });
   if (!res.ok) throw new Error(`GitHub read failed: ${res.status}`);
   const json = await res.json();
@@ -116,6 +130,17 @@ export async function writeRemoteFile(
 ): Promise<{ ok: true } | { ok: false; reason: "conflict" | string }> {
   const validationError = validateContent(file, data);
   if (validationError) return { ok: false, reason: validationError };
+
+  if (LOCAL) {
+    const { writeFile } = await import("fs/promises");
+    const { join } = await import("path");
+    await writeFile(
+      join(process.cwd(), CONTENT_PATHS[file]),
+      JSON.stringify(data, null, 2) + "\n",
+      "utf8"
+    );
+    return { ok: true };
+  }
 
   let current: RemoteFile;
   try {

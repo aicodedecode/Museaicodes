@@ -5,22 +5,19 @@ import Dashboard from "@/components/admin/Dashboard";
 export default async function AdminPage() {
   if (!adminConfigured()) {
     return (
-      <main id="main">
-        <div className="mx-auto max-w-shell px-5 py-24">
-          <p className="kicker">museaicodes</p>
-          <h1 className="font-display mt-3 text-[2rem] font-extrabold tracking-tight">
-            Admin is not configured
-          </h1>
-          <p className="mt-4 max-w-[560px] leading-relaxed text-muted">
+      <div className="flex min-h-screen items-center justify-center bg-bg px-4 text-ink antialiased">
+        <div className="w-full max-w-[480px] rounded-xl border border-line bg-surface p-8">
+          <h1 className="text-lg font-bold tracking-tight">Admin is not configured</h1>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
             This deployment is missing its admin secrets. Set{" "}
-            <code className="font-mono text-[0.9em]">ADMIN_PASSWORD</code>,{" "}
-            <code className="font-mono text-[0.9em]">ADMIN_SESSION_SECRET</code>{" "}
+            <code className="font-mono text-[0.85em]">ADMIN_PASSWORD</code>,{" "}
+            <code className="font-mono text-[0.85em]">ADMIN_SESSION_SECRET</code>{" "}
             and{" "}
-            <code className="font-mono text-[0.9em]">ADMIN_GITHUB_TOKEN</code> in
+            <code className="font-mono text-[0.85em]">ADMIN_GITHUB_TOKEN</code> in
             the Vercel project environment variables, then redeploy.
           </p>
         </div>
-      </main>
+      </div>
     );
   }
   if (!(await isAdminRequest())) redirect("/admin/login");
