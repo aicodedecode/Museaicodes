@@ -101,6 +101,23 @@ export default function ArticleBody({ guide }: { guide: Guide }) {
                 </ul>
               )
             )}
+            {section.images?.map((img) => (
+              <figure
+                key={img.src}
+                className="not-prose my-8 overflow-hidden rounded-2xl border border-line bg-raised"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="mx-auto h-auto w-full max-w-[420px]"
+                />
+                <figcaption className="border-t border-line px-5 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
+                  {img.caption}
+                </figcaption>
+              </figure>
+            ))}
           </section>
         </Reveal>
       ))}

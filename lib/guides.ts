@@ -3,10 +3,17 @@ export interface GuideListItem {
   items: string[];
 }
 
+export interface GuideSectionImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 export interface GuideSection {
   heading: string;
   paragraphs?: string[];
   list?: GuideListItem;
+  images?: GuideSectionImage[];
 }
 
 export interface GuideTable {
@@ -1345,13 +1352,25 @@ export const GUIDES: Guide[] = [
         list: {
           ordered: true,
           items: [
-            "Open WhatsApp on your phone and look for the Muse chat — it appears as a contact you can message directly.",
+            "Link WhatsApp from the Muse side: in the Muse app or on muse.ai, open Settings → Messaging channels and connect WhatsApp — it shows under Connected once linked (see screenshots below).",
             "If prompted, sign in with your Meta account. Muse uses the same Meta login tied to your Facebook, Instagram, or WhatsApp identity — you can create one with an email address or phone number if you don't have one.",
             "Confirm you're 18 or older. Muse is an adults-only product across every surface.",
             "Send your first message. Start small — ask a question or give it a quick task — to confirm the connection is live on your account.",
             "The exact entry point can vary by account as Meta rolls features out in stages, so if the chat isn't visible yet, check back — and never install an unofficial 'Muse for WhatsApp' app or share login codes with strangers promising access.",
           ],
         },
+        images: [
+          {
+            src: "/images/guides/muse-ai-whatsapp-settings-menu.webp",
+            alt: "Muse app Settings menu with the Messaging channels option",
+            caption: "Step 1 — in the Muse app or on muse.ai, open Settings and tap Messaging channels.",
+          },
+          {
+            src: "/images/guides/muse-ai-whatsapp-messaging-channels.webp",
+            alt: "Messaging channels screen showing WhatsApp as Connected",
+            caption: "Step 2 — WhatsApp appears under Connected once linked. You're all set.",
+          },
+        ],
       },
       {
         heading: "What works well on WhatsApp",
@@ -1365,6 +1384,13 @@ export const GUIDES: Guide[] = [
             "Planning something small: a weekend trip, a dinner, a shopping shortlist.",
           ],
         },
+        images: [
+          {
+            src: "/images/guides/muse-ai-whatsapp-chat.webp",
+            alt: "WhatsApp conversation with the Dot assistant confirming the connection is live",
+            caption: "The real thing — a connected WhatsApp chat with your Muse agent, ready for quick asks.",
+          },
+        ],
       },
       {
         heading: "What belongs in the app instead",
