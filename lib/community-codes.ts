@@ -28,6 +28,7 @@ export const COMMUNITY_CODES: CommunityCode[] = [
   { code: "X6V7XP", name: "Hsrih148", added: "October 2026" },
   { code: "7LC71W", name: "Paul", added: "October 2026" },
   { code: "EGQO2I", name: "wanbo", added: "October 2026" },
+  { code: "977IAR", name: "SSAB", added: "October 2026" },
 ];
 
 /** Prefilled email for submitting a code for review. */
