@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai referral share card, muse ai invite code image, muse ai referral code card, share muse ai invite",
   alternates: { canonical: `${SITE.baseUrl}/tools/share-card` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Referral Share Card Generator",
     description:

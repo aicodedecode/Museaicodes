@@ -9,15 +9,16 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Muse AI Encyclopedia: 40 Plain-English Definitions (2026)",
+  title: "Muse AI Encyclopedia: 41 Plain-English Definitions (2026)",
   description:
-    "The Muse AI glossary: 40 plain-English definitions of tokens, agents, approval cards, Jolly, connectors, voice mode, Mac computer use, Charm, and more — each linked to the relevant in-depth guide.",
+    "The Muse AI glossary: 41 plain-English definitions of tokens, agents, approval cards, Jolly, connectors, voice mode, Mac computer use, Charm, and more — each linked to the relevant in-depth guide.",
   keywords:
     "muse ai glossary, muse ai terms, muse ai tokens explained, muse ai dictionary, what is muse jolly",
   alternates: { canonical: `${SITE.baseUrl}/encyclopedia` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
-    title: "Muse AI Encyclopedia: 40 Plain-English Definitions",
+    title: "Muse AI Encyclopedia: 41 Plain-English Definitions",
     description:
       "Tokens, agents, approvals, Jolly, connectors, voice mode — every Muse term defined plainly, each with links to the full guide.",
     url: `${SITE.baseUrl}/encyclopedia`,
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Muse AI Encyclopedia: 40 Plain-English Definitions",
+    title: "Muse AI Encyclopedia: 41 Plain-English Definitions",
     description:
       "Tokens, agents, approvals, Jolly, connectors, voice mode — every Muse term defined plainly, each with links to the full guide.",
   },
@@ -37,7 +38,7 @@ export default function EncyclopediaPage() {
     "@type": "ItemList",
     name: "Muse AI Encyclopedia",
     description:
-      "40 plain-English definitions of Muse AI terms: tokens, agents, approval cards, Jolly, connectors, voice mode, computer use, and more.",
+      "41 plain-English definitions of Muse AI terms: tokens, agents, approval cards, Jolly, connectors, voice mode, computer use, and more.",
     url: `${SITE.baseUrl}/encyclopedia`,
     itemListElement: TERMS.map((t, i) => ({
       "@type": "ListItem",
@@ -76,7 +77,7 @@ export default function EncyclopediaPage() {
               The 30-second version
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              Muse AI glossary: 40 plain-English definitions of tokens, agents,
+              Muse AI glossary: 41 plain-English definitions of tokens, agents,
               approval cards, Jolly, connectors, voice mode, Mac computer use,
               Charm, goals, side chats, and more. Each entry links to the
               relevant in-depth guide, and anything announced but not yet

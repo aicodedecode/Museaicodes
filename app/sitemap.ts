@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "connector-wizard",
     "muse-challenge",
     "token-price-compare",
+    "avatar-studio",
   ];
 
   const appSurfaces = ["android", "iphone", "web", "whatsapp", "mac"];

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "can muse do this, what can muse ai do, muse ai capabilities, muse ai tasks, muse ai limitations",
   alternates: { canonical: `${SITE.baseUrl}/tools/can-muse-do-this` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Can Muse Do This? 64 Tasks, Honest Verdicts",
     description:

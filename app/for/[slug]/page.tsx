@@ -51,6 +51,7 @@ export function generateMetadata({
     keywords: page.keywords,
     alternates: { canonical },
     openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
       type: "article",
       title: page.metaTitle,
       description: page.metaDescription,
@@ -94,7 +95,7 @@ export default function IntentPageView({ params }: { params: { slug: string } })
   };
 
   return (
-    <div className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
+    <main className="mx-auto max-w-shell px-5 pb-24 pt-10 md:px-6 md:pt-14">
       <JsonLd data={faqJsonLd} />
 
       <Reveal>
@@ -263,6 +264,6 @@ export default function IntentPageView({ params }: { params: { slug: string } })
       <div className="mt-12 max-w-[46rem]">
         <NewsletterSignup />
       </div>
-    </div>
+    </main>
   );
 }

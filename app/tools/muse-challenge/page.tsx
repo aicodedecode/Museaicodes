@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "muse ai challenge, 30 things to try with muse, muse ai checklist, what can muse ai do, muse ai getting started",
   alternates: { canonical: `${SITE.baseUrl}/tools/muse-challenge` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "30 Things to Try with Muse: The Interactive Challenge",
     description:

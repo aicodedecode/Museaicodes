@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "is muse ai available in my country, muse ai availability checker, muse ai region, muse ai country list, muse ai release date",
   alternates: { canonical: `${SITE.baseUrl}/tools/availability-checker` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Is Muse AI Available in Your Country?",
     description:

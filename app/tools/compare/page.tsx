@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai vs alternatives, muse ai cost comparison, is muse ai worth it, ai assistant value calculator",
   alternates: { canonical: `${SITE.baseUrl}/tools/compare` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse vs Alternatives: Cost & Time Comparator",
     description:

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "ai avatar names, ai assistant names, cute ai names, cool robot names, muse ai avatar, grok bot avatar, chatgpt dots avatar, avatar character ideas",
   alternates: { canonical: `${SITE.baseUrl}/tools/avatar-studio` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Avatar Studio: 100 AI Avatar Names + 100 Characters",
     description:

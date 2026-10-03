@@ -9,17 +9,18 @@ import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Muse AI Connectors: The Official Directory (2026) — 29 Verified + Shopify",
+  title: "Muse AI Connectors: The Official Directory (2026) — 30 Verified",
   description:
     "The official-only Muse connector directory, verified against Meta's own channels: Facebook, Instagram, Threads, Gmail, Google Calendar, Spotify, Plaid, OpenTable, the full Shopify catalogue, Walmart, Best Buy, Sephora, and 17 more.",
   keywords:
     "muse ai connectors, does muse connect to gmail, muse ai google calendar, muse ai instagram integration, muse ai spotify, muse ai shopify, muse ai github, muse ai notion",
   alternates: { canonical: `${SITE.baseUrl}/connectors` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Connectors: The Official Directory",
     description:
-      "29 connectors verified against Meta's own announcements — plus the entire Shopify catalogue — stamped and dated.",
+      "30 connectors verified against Meta's own announcements — stamped and dated.",
     url: `${SITE.baseUrl}/connectors`,
     siteName: SITE.name,
   },
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Muse AI Connectors: The Official Directory",
     description:
-      "29 connectors verified against Meta's own announcements — stamped and dated.",
+      "30 connectors verified against Meta's own announcements — stamped and dated.",
   },
 };
 

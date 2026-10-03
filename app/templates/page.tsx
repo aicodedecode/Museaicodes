@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai agent templates, muse ai templates, muse ai system prompts, copy paste muse ai templates, muse ai custom instructions",
   alternates: { canonical: `${SITE.baseUrl}/templates` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "10 Ready-to-Paste Muse AI Agent Templates",
     description:

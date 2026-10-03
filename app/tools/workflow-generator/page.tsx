@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai workflow generator, muse ai step plan, who does what muse ai, muse ai approval checkpoints",
   alternates: { canonical: `${SITE.baseUrl}/tools/workflow-generator` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Workflow Generator",
     description:

@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "muse ai invite code, muse ai referral code, muse ai redeem code, muse ai code directory, muse ai promo code",
   alternates: { canonical: CODES_URL },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Invite & Referral Codes: Directory (2026)",
     description:

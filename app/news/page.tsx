@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai news, muse ai updates, muse ai download numbers, meta connect muse, muse charm",
   alternates: { canonical: `${SITE.baseUrl}/news` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI News (2026)",
     description:

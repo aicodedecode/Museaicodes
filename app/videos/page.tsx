@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   keywords: "muse ai video, muse ai tutorial video, muse ai walkthrough",
   alternates: { canonical: `${SITE.baseUrl}/videos` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Video Guides",
     description:

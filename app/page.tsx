@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "museaicodes (Muse Hub) — the ultimate unofficial Muse AI guide hub: invite & referral codes, 38 in-depth guides, interactive tools, prompt library, use cases, and honest comparisons with ChatGPT, Claude, and Meta AI.",
   alternates: { canonical: SITE.baseUrl },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     title: "museaicodes — Muse AI Guides, Invite Codes & Tutorials (2026)",
     description:
       "museaicodes: 38 practical Muse AI guides covering access, prompts, WhatsApp, tokens, use cases, and AI app comparisons.",

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "muse ai referral offer, muse ai invite offer, muse ai promo, muse ai referral terms",
   alternates: { canonical: `${SITE.baseUrl}/offer-status` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Referral Offer: Current Status (2026)",
     description:

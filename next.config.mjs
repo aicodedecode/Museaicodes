@@ -14,6 +14,9 @@ const nextConfig = {
       { source: "/invite-code", destination: "/codes", permanent: true },
       { source: "/community-codes", destination: "/codes", permanent: true },
       { source: "/share", destination: "/codes", permanent: true },
+      // /updates was a redirect() page that misfired (307 with no Location);
+      // handle it at the config level with a clean 308 instead.
+      { source: "/updates", destination: "/news", permanent: true },
     ];
   },
 };

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "muse ai token runway, how long do muse tokens last, muse ai token balance, muse ai usage estimate",
   alternates: { canonical: `${SITE.baseUrl}/tools/token-runway` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "Muse AI Token Runway: How Long Will Your Tokens Last?",
     description:

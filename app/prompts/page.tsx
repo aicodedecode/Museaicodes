@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "muse ai prompts, muse ai prompt library, best muse ai prompts, copy paste prompts for muse ai",
   alternates: { canonical: `${SITE.baseUrl}/prompts` },
   openGraph: {
+    images: [{ url: "/images/brand/og-default.jpg", width: 1200, height: 630, alt: "Muse Hub \u2014 Muse AI guides, codes & tutorials" }],
     type: "website",
     title: "40 Copy-Paste Muse AI Prompts Across 8 Categories",
     description:

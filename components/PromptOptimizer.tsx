@@ -531,7 +531,7 @@ export default function PromptOptimizer() {
             Fill in every [BRACKET] before pasting — those are the gaps Muse
             would otherwise have to guess at. Want to build a prompt from
             scratch instead? Try the{" "}
-            <a href="/tools/prompt-builder" className="font-bold text-accent underline-offset-4 hover:underline">
+            <a href="/tools/prompt-generator" className="font-bold text-accent underline-offset-4 hover:underline">
               prompt builder
             </a>
             .
